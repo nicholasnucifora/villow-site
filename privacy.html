@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; Villow browser extension</title>
+<style>
+  :root { color-scheme: light dark; --bg:#fdfcfb; --fg:#1b1613; --mid:#574e49;
+          --line:#e4ddd9; --accent:#c4302b; --code:#f2eeec; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141110; --fg:#ece7e4; --mid:#b1a7a1;
+            --line:#332d2b; --accent:#ff6259; --code:#232020; }
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--fg); margin: 0;
+         padding: 56px 22px 96px; line-height: 1.65;
+         font: 17px/1.65 ui-serif, Georgia, "Times New Roman", serif; }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 .6em; text-wrap: balance; }
+  h2 { font-size: 1.35rem; margin: 2.2em 0 .5em; text-wrap: balance; }
+  h3 { font-size: 1.08rem; margin: 1.8em 0 .4em; }
+  h1, h2, h3 { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+               letter-spacing: -.015em; }
+  p, li { color: var(--mid); }
+  strong { color: var(--fg); font-weight: 600; }
+  ul { padding-left: 1.25em; }
+  li { margin: .45em 0; }
+  a { color: var(--accent); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 2.6em 0; }
+  code { background: var(--code); border-radius: 3px; padding: .1em .35em;
+         font: .85em ui-monospace, Menlo, Consolas, monospace; }
+  em { color: var(--mid); }
+</style>
+</head>
+<body>
+<main>
+<h1>Villow browser extension — Privacy Policy</h1>
+<p><strong>Last updated:</strong> 28 August 2026</p>
+<p>This policy covers the <strong>Villow browser extension</strong>. Villow the web application has its own policy, which covers the Google account authorization and everything stored on your instance.</p>
+<hr>
+<h2>The short version</h2>
+<p>The extension sends data to <strong>one place: the Villow instance whose address you typed in yourself.</strong> It has no server of its own, contacts no analytics service, and contacts no third party of any kind. Before you connect it to an instance, it sends nothing anywhere at all.</p>
+<p>You can also choose, during setup, to <strong>run it without a Villow instance.</strong> In that mode there is nowhere for anything to go, and nothing is sent anywhere, ever. Everything below about sending applies only once you have connected one.</p>
+<p>We — the developers — never receive your data. We could not, because there is nowhere for it to go.</p>
+<hr>
+<h2>What the extension collects, and why</h2>
+<h3>Sent to your Villow instance</h3>
+<p><strong>Videos you click on YouTube.</strong> When you click a video tile while blocking is on and the extension is connected, it reads what is already visible on that tile and sends it to your instance so the video can enter your queue:</p>
+<ul>
+<li>the video's YouTube ID, title, and page URL</li>
+<li>the channel name and channel URL</li>
+<li>the duration, whether it is a live stream, the view count and upload age as YouTube displays them</li>
+<li>the thumbnail image URL</li>
+</ul>
+<p>This is the extension's core function. Nothing is sent for videos you do not click, and nothing is sent when the extension is disconnected.</p>
+<p><strong>How long you spend on YouTube.</strong> A daily total in seconds, sent roughly once a minute while you are actively using YouTube, so your Villow dashboard can display it. Time accrues only while a YouTube tab is focused and visible.</p>
+<p>Alongside it we send a <strong>random identifier for this browser profile</strong>, generated locally on install. Its only purpose is to keep totals from two browsers apart so they can be added rather than overwriting each other. It is a random value; it is not derived from your device, and it is not a fingerprint. We also send a plain-text browser name — "Chrome", "Firefox" — for display.</p>
+<p><strong>Your pairing token,</strong> on every request, as proof the request is yours.</p>
+<h3>Received from your Villow instance</h3>
+<p><strong>Your subscribed channel list</strong>, if the "hide subscribed channels" option is on. The extension cannot ask YouTube for this and holds no Google credentials — it asks your Villow instance, which already has it. The list is cached in your browser and refreshed every few hours.</p>
+<p><strong>This cache is deleted as soon as it stops being authorized.</strong> If your Villow instance rejects the pairing token — because you revoked the extension's access, revoked Villow's access to your Google account, or deleted your Villow data — the extension deletes its local copy of the list. Pressing <strong>Disconnect</strong> deletes it too.</p>
+<h3>Stored only in your browser, never sent anywhere</h3>
+<ul>
+<li>Your instance address and pairing token</li>
+<li>Which videos you have marked, so tiles stay greyed out when you scroll back</li>
+<li>Videos waiting to be delivered when your instance is unreachable</li>
+<li><strong>Which</strong> recommendations you were shown — the video ids behind the daily count. Only the count itself is reported; the list never leaves your browser.</li>
+<li><strong>Which videos you watched today</strong>, when running without an instance: the video ids and their titles, so the day can be listed back to you and so the daily cap knows what it has already counted. This is deleted at the end of the day it belongs to, and <strong>it is never sent anywhere — including if you connect an instance later.</strong></li>
+</ul>
+<h3>Sent to your Villow instance, and nowhere else</h3>
+<ul>
+<li>Videos you chose to save, when you save them</li>
+<li><strong>Daily totals</strong>: how many seconds you spent on YouTube, how many recommendations you were shown, how many videos you saved, and whether you ran into any of your limits</li>
+<li><strong>Your current limits</strong>, so the Villow app can display them</li>
+</ul>
+<p>Your daily limit on videos watched, and the count against it, are <strong>not</strong> among these. They describe a browser that has no Villow, so there would be nothing for them to mean at the other end.</p>
+<p>These are counts and settings. They carry no video ids, no channel names, and nothing about what you looked at — a number of seconds and a number of videos, per calendar day. Sent at most once every ten minutes and only when something has changed, plus once after midnight to close off the day.</p>
+<p>Your limits travel one way. The extension is the only thing that can change a limit; there is no endpoint by which Villow could set one.</p>
+<hr>
+<h2>What the extension never does</h2>
+<ul>
+<li>It never contacts Google or YouTube's API. It holds no Google credentials and uses no YouTube API quota.</li>
+<li>It never contacts a server belonging to the developers.</li>
+<li>It never sends data to any third party, advertiser, or analytics provider.</li>
+<li>It never sells or shares your data. There is no mechanism by which it could.</li>
+<li>It never reads pages other than YouTube.</li>
+<li>It never modifies, replaces, or blocks advertising on YouTube. Advertisements behave exactly as they would without the extension installed.</li>
+<li>It never collects your name, email address, passwords, payment details, or any Google account credential.</li>
+</ul>
+<hr>
+<h2>Where your data goes and who can see it</h2>
+<p>To your Villow instance, over HTTPS, and nowhere else. If you self-host Villow, you are the operator of that server and the only person with access to it. The extension does not choose that destination — you do, by pasting in your own connect link.</p>
+<hr>
+<h2>Retention and deletion</h2>
+<p><strong>In your browser:</strong> removing the extension deletes everything it stored. You can also clear it at any time without uninstalling:</p>
+<ul>
+<li><strong>Disconnect</strong> — deletes the pairing token and the cached subscription list</li>
+<li><strong>Clear all marks</strong> — deletes the record of which videos you have marked</li>
+<li><strong>Reset today's count</strong> — clears the local recommendation counter, and the figure reported for today with it</li>
+<li><strong>Reset today's time</strong>, <strong>Reset today's saves</strong> and <strong>Reset today's watched videos</strong> — the same, for those</li>
+</ul>
+<p><strong>On your Villow instance:</strong> deletion is handled there, under Villow's own privacy policy. Deleting data on your instance, or revoking access, also causes the extension to discard its local copy of anything derived from it.</p>
+<hr>
+<h2>Children</h2>
+<p>The extension is not directed at children under 13 and does not knowingly collect their data.</p>
+<hr>
+<h2>Limited Use</h2>
+<p>Villow's use of information received from Google APIs adheres to the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>, including the Limited Use requirements.</p>
+<hr>
+<h2>Changes</h2>
+<p>If the extension's data handling changes, this policy will be updated and the change described in the extension's release notes before the new version collects anything new.</p>
+<hr>
+<h2>Contact</h2>
+<p><strong>Contact:</strong> nuciforan+villow@hotmail.com</p>
+<hr>
+<p><em>Villow is not affiliated with, endorsed by, or sponsored by YouTube or Google. YouTube is a trademark of Google LLC.</em></p>
+</main>
+</body>
+</html>
