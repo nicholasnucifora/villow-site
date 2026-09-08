@@ -35,7 +35,7 @@
 <body>
 <main>
 <h1>Villow browser extension — Privacy Policy</h1>
-<p><strong>Last updated:</strong> 28 August 2026</p>
+<p><strong>Last updated:</strong> 8 September 2026</p>
 <p>This policy covers the <strong>Villow browser extension</strong>. Villow the web application has its own policy, which covers the Google account authorization and everything stored on your instance.</p>
 <hr>
 <h2>The short version</h2>
@@ -53,17 +53,19 @@
 <li>the thumbnail image URL</li>
 </ul>
 <p>This is the extension's core function. Nothing is sent for videos you do not click, and nothing is sent when the extension is disconnected.</p>
-<p><strong>How long you spend on YouTube.</strong> A daily total in seconds, sent roughly once a minute while you are actively using YouTube, so your Villow dashboard can display it. Time accrues only while a YouTube tab is focused and visible.</p>
-<p>Alongside it we send a <strong>random identifier for this browser profile</strong>, generated locally on install. Its only purpose is to keep totals from two browsers apart so they can be added rather than overwriting each other. It is a random value; it is not derived from your device, and it is not a fingerprint. We also send a plain-text browser name — "Chrome", "Firefox" — for display.</p>
+<p><strong>Legacy screen-time fallback.</strong> The extension sends a daily screen-time total to <code>/api/screen-time</code> only when a Villow instance does not support the current usage endpoint and answers <code>404</code> or <code>501</code> to <code>/api/extension-usage</code>. The fallback remains in use for 24 hours after that response. Current Villow instances do not receive these fallback requests. Time accrues only while a YouTube tab is focused and visible.</p>
 <p><strong>Your pairing token,</strong> on every request, as proof the request is yours.</p>
 <h3>Received from your Villow instance</h3>
 <p><strong>Your subscribed channel list</strong>, if the "hide subscribed channels" option is on. The extension cannot ask YouTube for this and holds no Google credentials — it asks your Villow instance, which already has it. The list is cached in your browser and refreshed every few hours.</p>
-<p><strong>This cache is deleted as soon as it stops being authorized.</strong> If your Villow instance rejects the pairing token — because you revoked the extension's access, revoked Villow's access to your Google account, or deleted your Villow data — the extension deletes its local copy of the list. Pressing <strong>Disconnect</strong> deletes it too.</p>
-<h3>Stored only in your browser, never sent anywhere</h3>
+<p><strong>This cache is deleted on the next rejected request.</strong> If your Villow instance answers a request with <code>401</code> or <code>403</code>, the extension deletes its local copy of the list. An offline browser keeps the cache until it next attempts a request and receives one of those responses. Pressing <strong>Disconnect</strong> deletes it immediately.</p>
+<h3>Stored locally in your browser</h3>
 <ul>
 <li>Your instance address and pairing token</li>
 <li>Which videos you have marked, so tiles stay greyed out when you scroll back</li>
 <li>Videos waiting to be delivered when your instance is unreachable</li>
+</ul>
+<h3>Kept only in your browser and never transmitted</h3>
+<ul>
 <li><strong>Which</strong> recommendations you were shown — the video ids behind the daily count. Only the count itself is reported; the list never leaves your browser.</li>
 <li><strong>Which videos you watched today</strong>, when running without an instance: the video ids and their titles, so the day can be listed back to you and so the daily cap knows what it has already counted. This is deleted at the end of the day it belongs to, and <strong>it is never sent anywhere — including if you connect an instance later.</strong></li>
 </ul>
@@ -74,7 +76,10 @@
 <li><strong>Your current limits</strong>, so the Villow app can display them</li>
 </ul>
 <p>Your daily limit on videos watched, and the count against it, are <strong>not</strong> among these. They describe a browser that has no Villow, so there would be nothing for them to mean at the other end.</p>
-<p>These are counts and settings. They carry no video ids, no channel names, and nothing about what you looked at — a number of seconds and a number of videos, per calendar day. Sent at most once every ten minutes and only when something has changed, plus once after midnight to close off the day.</p>
+<p>The daily statistics and limits sent to <code>/api/extension-usage</code> are counts and settings. They carry no video ids, no channel names, and nothing about what you looked at — a number of seconds and a number of videos, per calendar day. They are sent at most once every ten minutes and only when something has changed, plus once after midnight to close off the day. Saved videos are different: they include the identifying details needed to save the video.</p>
+<p><strong>Cross-browser daily limits.</strong> While a YouTube tab is focused, the extension sends a request to <code>/api/extension-day</code> at most once a minute. It contains today's date, a random install identifier, three contributed counts — recommendations seen, active seconds, and external saves — and your current limit settings. This lets your instance add up one account's day across multiple browsers, so, for example, a limit of five saves stays five rather than becoming ten across two browsers.</p>
+<p>The random install identifier is generated locally for this browser profile. It keeps contributions from two browsers apart so they can be added rather than overwriting each other. It is a random value; it is not derived from your device, and it is not a fingerprint.</p>
+<p>With both <code>/api/extension-usage</code> and <code>/api/extension-day</code>, the extension also sends your browser's configured time zone (for example, <code>Australia/Brisbane</code>), extension version, and browser name. The time zone assigns totals to the correct calendar day. It is a browser setting, not GPS or precise location.</p>
 <p>Your limits travel one way. The extension is the only thing that can change a limit; there is no endpoint by which Villow could set one.</p>
 <hr>
 <h2>What the extension never does</h2>
@@ -89,7 +94,7 @@
 </ul>
 <hr>
 <h2>Where your data goes and who can see it</h2>
-<p>To your Villow instance, over HTTPS, and nowhere else. If you self-host Villow, you are the operator of that server and the only person with access to it. The extension does not choose that destination — you do, by pasting in your own connect link.</p>
+<p>To your Villow instance, over HTTPS, and nowhere else. If you self-host Villow, you are responsible for who can access that server; access depends on your hosting provider and server configuration. The extension does not choose that destination — you do, by pasting in your own connect link.</p>
 <hr>
 <h2>Retention and deletion</h2>
 <p><strong>In your browser:</strong> removing the extension deletes everything it stored. You can also clear it at any time without uninstalling:</p>
@@ -105,7 +110,7 @@
 <p>The extension is not directed at children under 13 and does not knowingly collect their data.</p>
 <hr>
 <h2>Limited Use</h2>
-<p>Villow's use of information received from Google APIs adheres to the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>, including the Limited Use requirements.</p>
+<p>Villow's handling of user data adheres to the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>, including the Limited Use requirements.</p>
 <hr>
 <h2>Changes</h2>
 <p>If the extension's data handling changes, this policy will be updated and the change described in the extension's release notes before the new version collects anything new.</p>
