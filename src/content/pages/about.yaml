@@ -1,0 +1,57 @@
+# About: Fix the Web, Nicholas, the name, community, contact.
+title: About
+description: Villow is made by Fix the Web, and designed and built by its founder, Nicholas Nucifora.
+
+blocks:
+  - type: hero
+    eyebrow: About
+    title: Made by Fix the Web.
+    lead: Fix the Web campaigns for an internet built around people's control and wellbeing, not engagement. Villow is our proof, a real app showing what those policies look like in practice.
+    actions:
+      - label: Visit fixtheweb.org →
+        href: link:fixTheWeb
+        style: text
+
+  - type: section
+    id: who-built-it
+    heading: Who built it
+    body: |
+      Villow was designed and built by Nicholas Nucifora, founder of Fix the Web.
+
+      {tbd:nicholasBio}
+    image: aboutPhoto
+
+  - type: section
+    id: the-name
+    heading: Why "Villow"?
+    body: Video, plus pillow, somewhere comfortable to watch. And like willow and meadow, it's meant to feel a little outdoors, which is where Villow hopes you'll end up.
+
+  - type: section
+    id: get-involved
+    background: soft
+    heading: Get involved
+    body: |
+      Villow is one part of Fix the Web. Join the movement:
+
+      - [Discord](link:discord)
+      - [Reddit](link:reddit)
+      - [Newsletter](link:newsletter)
+      - [How to help](link:howToHelp)
+      - [fixtheweb.org](link:fixTheWeb)
+
+  - type: section
+    id: contact
+    heading: Contact
+    body: |
+      - **Contact:** [get in touch](link:contact)
+      - **Feedback on Villow:** inside the app, on the Feedback page
+      - **Code:** [Villow](link:appSource) and [the extension](link:extensionSource)
+
+  - type: cta
+    variant: fixtheweb
+    heading: The web isn't broken by accident.
+    body: Villow shows one fix. Fix the Web is working on the rest.
+    actions:
+      - label: Read the campaign at fixtheweb.org →
+        href: link:fixTheWeb
+        style: primary

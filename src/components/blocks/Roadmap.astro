@@ -1,0 +1,92 @@
+---
+/* Built from features: in site.config.yaml, so it stays in step with the badges. */
+import type { BlockOf } from "../../lib/schema";
+import { allFeatures } from "../../lib/config";
+import { escapeHtml, inline, md, slugify, statusBadgeHtml } from "../../lib/markdown";
+import BlockShell from "../ui/BlockShell.astro";
+
+interface Props {
+  block: BlockOf<"roadmap">;
+}
+
+const { block } = Astro.props;
+const groups = block.groups.map((group) => ({
+  ...group,
+  headingId: `roadmap-${group.status}-${slugify(group.heading)}`,
+  features: allFeatures.filter((f) => f.status === group.status),
+}));
+---
+
+<BlockShell type="roadmap" id={block.id} background={block.background} width="narrow">
+  <div class="roadmap">
+    {
+      groups.map((group) => (
+        <section class="roadmap__group" aria-labelledby={group.headingId}>
+          <header class="roadmap__header">
+            <h2 id={group.headingId} set:html={inline(group.heading)} />
+            {group.intro && <div class="prose" set:html={md(group.intro)} />}
+          </header>
+          <ul class="roadmap__list">
+            {group.features.map((feature) => (
+              <li class="card roadmap__item">
+                <p class="roadmap__area">
+                  <span>{feature.area}</span>
+                  <Fragment set:html={statusBadgeHtml(feature.status)} />
+                </p>
+                <h3 set:html={escapeHtml(feature.name)} />
+                {feature.summary && <p class="roadmap__summary" set:html={inline(feature.summary)} />}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+  </div>
+</BlockShell>
+
+<style>
+  .roadmap {
+    display: grid;
+    gap: var(--space-2xl);
+  }
+  .roadmap__header {
+    display: grid;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-lg);
+  }
+  .roadmap__header h2 {
+    font-size: var(--text-2xl);
+  }
+  .roadmap__header .prose {
+    color: var(--color-text-muted);
+  }
+  .roadmap__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: var(--space-md);
+  }
+  .roadmap__item {
+    display: grid;
+    gap: var(--space-xs);
+    padding: var(--space-lg);
+  }
+  .roadmap__item h3 {
+    font-size: var(--text-lg);
+  }
+  .roadmap__area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-strong);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--color-highlight);
+  }
+  .roadmap__summary {
+    color: var(--color-text-muted);
+  }
+</style>

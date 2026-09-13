@@ -1,0 +1,51 @@
+---
+/* Renders a page's blocks in order. To add a block type: add its schema in src/lib/schema.ts and map it here. */
+import type { Block } from "../lib/schema";
+import Cards from "./blocks/Cards.astro";
+import Cta from "./blocks/Cta.astro";
+import ExtensionTable from "./blocks/ExtensionTable.astro";
+import Faq from "./blocks/Faq.astro";
+import Feature from "./blocks/Feature.astro";
+import Hero from "./blocks/Hero.astro";
+import Notice from "./blocks/Notice.astro";
+import Prose from "./blocks/Prose.astro";
+import Roadmap from "./blocks/Roadmap.astro";
+import Section from "./blocks/Section.astro";
+import Spotlight from "./blocks/Spotlight.astro";
+import Steps from "./blocks/Steps.astro";
+import Table from "./blocks/Table.astro";
+import Toc from "./blocks/Toc.astro";
+
+interface Props {
+  blocks: Block[];
+}
+
+const { blocks } = Astro.props;
+
+const components = {
+  hero: Hero,
+  section: Section,
+  steps: Steps,
+  cards: Cards,
+  spotlight: Spotlight,
+  feature: Feature,
+  table: Table,
+  faq: Faq,
+  cta: Cta,
+  roadmap: Roadmap,
+  extensionTable: ExtensionTable,
+  prose: Prose,
+  notice: Notice,
+  toc: Toc,
+} satisfies Record<Block["type"], unknown>;
+
+// Features alternate image sides, counting only features.
+let featureCount = 0;
+const rendered = blocks.map((block) => ({
+  block,
+  Component: components[block.type] as any,
+  index: block.type === "feature" ? featureCount++ : 0,
+}));
+---
+
+{rendered.map(({ block, Component, index }) => <Component block={block} index={index} blocks={blocks} />)}

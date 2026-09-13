@@ -1,0 +1,61 @@
+# Developers: both repositories, how Villow is built, Setup, manual setup, contributing.
+title: Developers
+description: Villow and its extension are open source. How Villow is built, how Villow Setup works, and where to find the code.
+
+blocks:
+  - type: hero
+    eyebrow: Developers
+    title: Open source, all of it.
+    lead: Villow is MIT-licensed, and the Villow extension is open source too. Read the code, run your own Villow by hand, or check exactly what the extension does.
+
+  - type: cards
+    id: repositories
+    heading: The code
+    items:
+      - title: Villow
+        href: link:appSource
+        body: The web app. MIT-licensed.
+      - title: Villow extension
+        href: link:extensionSource
+        body: The browser extension for Chrome, Edge and Firefox, including Firefox for Android.
+
+  - type: section
+    id: how-its-built
+    heading: How Villow is built
+    body: |
+      - **React** web app, installable from the browser on any device
+      - Hosted on **Vercel**
+      - **Supabase** for the database
+      - **YouTube Data API** and YouTube's official embedded player
+      - **Google sign-in**
+    tagline: Built on YouTube's public API, with no special access.
+
+  - type: section
+    id: setup
+    heading: How Villow Setup works
+    body: |
+      Each person runs their own Villow. There's no central Villow everyone signs into.
+
+      Villow Setup is a computer app (Windows today; macOS and Linux: {tbd:setupOtherPlatforms}) that walks you through creating the accounts Villow runs on, Vercel, Supabase and Google Cloud, then builds and connects everything. No GitHub, Git or terminal needed.
+
+      YouTube access uses a daily API quota from the owner's Google Cloud project, shared by everyone on that Villow. That's part of why each Villow is run by its owner for a small group.
+    actions:
+      - label: Download Villow Setup
+        href: /download
+        style: primary
+
+  - type: section
+    id: by-hand
+    heading: Setting it up by hand
+    body: Prefer not to use Setup? The code is open source, so you can set up Villow yourself. Start with [the Villow repository](link:appSource).
+
+  - type: section
+    id: contributing
+    heading: Contributing
+    body: "{tbd:contributing}"
+
+  - type: section
+    id: responsibility
+    background: soft
+    heading: Running a Villow responsibly
+    body: Whoever runs a Villow is responsible for using it in line with [YouTube's API terms](link:youtubeApiTerms) and [Google's policies](link:googleApiUserDataPolicy).

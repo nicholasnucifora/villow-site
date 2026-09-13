@@ -1,0 +1,67 @@
+---
+import type { BlockOf } from "../../lib/schema";
+import { inline, md, slugify } from "../../lib/markdown";
+import BlockShell from "../ui/BlockShell.astro";
+import BlockHeader from "../ui/BlockHeader.astro";
+
+interface Props {
+  block: BlockOf<"faq">;
+}
+
+const { block } = Astro.props;
+const headingId = block.heading ? `${block.id ?? slugify(block.heading)}-title` : undefined;
+---
+
+<BlockShell type="faq" id={block.id} background={block.background} width="prose" labelledBy={headingId}>
+  <BlockHeader eyebrow={block.eyebrow} heading={block.heading} intro={block.intro} headingId={headingId} />
+  <div class="faq">
+    {
+      block.items.map((item) => (
+        <details class="faq__item" id={slugify(item.q)}>
+          <summary set:html={inline(item.q)} />
+          <div class="faq__answer prose" set:html={md(item.a)} />
+        </details>
+      ))
+    }
+  </div>
+</BlockShell>
+
+<style>
+  .faq {
+    border-top: var(--border);
+  }
+  .faq__item {
+    border-bottom: var(--border);
+  }
+  .faq__item summary {
+    position: relative;
+    padding: var(--space-md) var(--space-2xl) var(--space-md) 0;
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-heading);
+    letter-spacing: var(--tracking-heading);
+    cursor: pointer;
+    list-style: none;
+  }
+  .faq__item summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq__item summary::after {
+    content: "+";
+    position: absolute;
+    right: var(--space-2xs);
+    top: 50%;
+    translate: 0 -50%;
+    font-size: var(--text-xl);
+    font-weight: 400;
+    color: var(--color-accent-text);
+    transition: rotate var(--motion) var(--ease);
+  }
+  .faq__item[open] summary::after {
+    rotate: 45deg;
+  }
+  .faq__answer {
+    padding-bottom: var(--space-lg);
+    color: var(--color-text-muted);
+  }
+</style>

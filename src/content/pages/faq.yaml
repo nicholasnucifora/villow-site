@@ -1,0 +1,86 @@
+# FAQ. Each entry is a question (q) and a short answer (a). Add, remove or reorder freely.
+title: FAQ
+description: Short answers about Villow, the extension, costs, phones, friends, privacy and how Villow is connected to Fix the Web.
+
+blocks:
+  - type: hero
+    eyebrow: FAQ
+    title: Short answers.
+    lead: Can't find what you're looking for? [Get in touch](link:contact).
+
+  - type: faq
+    items:
+      - q: Is Villow made by YouTube?
+        a: No. Villow is a Fix the Web project, an app for YouTube that isn't affiliated with, endorsed by or sponsored by YouTube or Google.
+
+      - q: Is Villow a replacement for YouTube?
+        a: Villow is built *on* YouTube, with your subscriptions, YouTube's official player and YouTube's videos. It shows the controls YouTube could offer everyone, and it's a healthier way to watch in the meantime.
+
+      - q: Does Villow get rid of recommendations?
+        a: No. Switch on sources like Popular in Your Country Today and friends' picks, and browse YouTube itself with the extension's caps. You decide how much.
+
+      - q: Is it free?
+        a: Villow is free and open source, and you can run it for yourself on the free plans of Vercel, Supabase and Google Cloud. Adding friends may need a paid plan, depending on how much everyone uses it. {tbd:groupSizeGuide} [More on costs](/download#costs).
+
+      - q: Do I need a computer?
+        a: "Only to set it up. Villow Setup runs on a computer (Windows today; macOS and Linux: {tbd:setupOtherPlatforms}). After that, use Villow on your phone, tablet or any browser."
+
+      - q: How long does setup take?
+        a: About {tbd:setupMinutes} minutes.
+
+      - q: Does it work on my phone?
+        a: Yes. Villow installs like an app on iPhone, iPad and Android, straight from the browser.
+
+      - q: How do I invite friends?
+        a: Add their Google email to your Google Cloud project, then send them your Villow address. You can remove access any time. [Step by step](/download#inviting-friends).
+
+      - q: Why do I have to sign in again every week?
+        a: While your Google Cloud project is in Google's Testing status, Google usually expires sign-ins after about seven days. {tbd:productionMove}
+
+      - q: Can I use the extension without Villow?
+        a: Yes. On its own it shows your time on YouTube, caps your time, recommendations and videos watched, and can calm YouTube down (greyscale, hide Shorts, hide side recommendations and comments, bedtime, or block it entirely). Linked to Villow, clicked videos go to your Villow feed instead, and your YouTube time counts toward your Villow limits.
+
+      - q: Which browsers does the extension support?
+        a: Chrome, Edge and Firefox on computers, and Firefox on Android (plus some other Android browsers that support extensions). Safari, including iPhone and iPad, is coming. {status:ext-safari}
+
+      - q: Why do some videos look greyed out in Villow?
+        a: "One of your own limits is holding them: a schedule, a daily limit, an open limit or a channel limit. Villow shows them rather than hiding them, so you can see what a limit is doing."
+
+      - q: Why does the video pause when I switch apps?
+        a: YouTube's official embedded player doesn't allow background playback. Villow keeps your place.
+
+      - q: Why aren't videos made for kids tracked?
+        a: YouTube requires tracking to be off for them. Saving and recommending still work.
+
+      - q: Does Villow use AI?
+        a: Not currently. Villow's suggestions come from a transparent algorithm based on your own ratings and usage. A few AI ideas appear in the app as labelled placeholders, and they'll only ship if they genuinely support a healthy experience. {status:ai-ideas}
+
+      - q: Is it ad-free?
+        a: Villow adds no ads of its own. Videos play through YouTube's official player, which may show YouTube's ads.
+
+      - q: Can my friends see how much I watch?
+        a: Only if you switch that on, item by item. Nothing is shared by default.
+
+      - q: Will Villow add watch together?
+        a: It's coming, and it's the kind of feature YouTube could offer tomorrow. {status:watch-together}
+
+      - q: Is Villow open source?
+        a: Yes. Villow is MIT-licensed ([source code](link:appSource)), and the extension is open source too ([source code](link:extensionSource)).
+
+      - q: How do I give feedback?
+        a: Inside Villow, on the Feedback page. For anything else, [get in touch](link:contact).
+
+      - q: How is Villow connected to Fix the Web?
+        a: Fix the Web built Villow to show what its policies look like in a real product. [Read the campaign](link:fixTheWeb).
+
+  - type: cta
+    variant: fixtheweb
+    heading: Want the bigger picture?
+    body: Villow is Fix the Web's proof that these controls are easy to build. Here's what we're asking platforms to change.
+    actions:
+      - label: See what we're asking for →
+        href: link:fixTheWeb
+        style: primary
+      - label: YouTube could do this →
+        href: /youtube-could-do-this
+        style: text

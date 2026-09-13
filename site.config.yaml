@@ -1,0 +1,547 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# villow.app site config
+#
+# This file is the to-do list. Anything left empty shows on the site as a
+# visible placeholder, so the site always builds and nothing is hidden.
+#
+#   links:   empty → the link or button shows, marked TBD, and does nothing
+#   tbd:     empty value → a pink "TBD" chip showing the note
+#   images:  empty src → a labelled frame at the right size and shape
+#
+# Run `npm run placeholders` to list everything still empty.
+# Page copy lives in src/content/, not here.
+# ─────────────────────────────────────────────────────────────────────────────
+
+site:
+  name: Villow
+  url: https://villow.app
+  lang: en-AU
+
+# Which look to use. Options: fern, forest, sunset, beach, dusk
+# (defined in src/styles/themes.css). In `npm run dev` there's also a picker
+# in the corner of every page.
+theme: fern
+
+brand:
+  logo: # e.g. /brand/villow-logo.svg (put the file in public/brand/)
+  favicon: # e.g. /favicon.svg. Until then a placeholder icon is used.
+  appIcon: # e.g. /apple-touch-icon.png (180×180)
+
+# ── Links ────────────────────────────────────────────────────────────────────
+# Use these in copy as [label](link:key), and in buttons as href: link:key.
+links:
+  # Fix the Web
+  fixTheWeb: https://fixtheweb.org
+  discord:
+  reddit:
+  newsletter:
+  howToHelp:
+
+  # Getting Villow
+  setupWindows: # Villow Setup download for Windows
+  chromeStore:
+  edgeAddons:
+  firefoxAddons: # the same listing covers Firefox for Android
+
+  # Code
+  appSource: # Villow app repository (MIT)
+  extensionSource: https://github.com/nicholasnucifora/Villow-Extension
+
+  # Policies and help
+  extensionPrivacy: /privacy # the existing extension policy. Don't change.
+  appPrivacy: /app-privacy
+  terms:
+  contact: # The extension policy lists nuciforan+villow@hotmail.com. Use mailto:… if you want that here.
+
+  # Official third-party pages the copy refers to (see LAUNCH_CHECKLIST.md)
+  youtubeApiTerms: https://developers.google.com/youtube/terms/api-services-terms-of-service
+  youtubeDeveloperPolicies: https://developers.google.com/youtube/terms/developer-policies
+  youtubeTerms: https://www.youtube.com/t/terms
+  googlePrivacyPolicy: https://policies.google.com/privacy
+  googleApiUserDataPolicy: https://developers.google.com/terms/api-services-user-data-policy
+  googleSecuritySettings: https://security.google.com/settings/security/permissions # the page YouTube's policies (III.A.2) name for revoking access
+
+# ── Not decided yet ──────────────────────────────────────────────────────────
+# Use these in copy as {tbd:key}. Fill in `value` and the chip becomes that text.
+tbd:
+  setupMinutes:
+    note: setup time in minutes
+    value:
+  setupOtherPlatforms:
+    note: macOS and Linux availability
+    value:
+  paidPlanProviders:
+    note: which provider(s) need a paid plan
+    value:
+  groupSizeGuide:
+    note: rough guide to group sizes
+    value:
+  freeLimitReached:
+    note: what happens when a free limit is reached
+    value:
+  productionMove:
+    note: whether Setup covers moving to Production, and what's involved
+    value:
+  inviteSteps:
+    note: exact steps to add a friend in Google Cloud
+    value:
+  extensionPointsConfirmed:
+    note: Nicholas to confirm each point
+    value:
+  comparisonCheckedDate:
+    note: date the comparisons were last checked
+    value:
+  nicholasBio:
+    note: short bio
+    value:
+  contributing:
+    note: how to contribute
+    value:
+  appPolicyStatus:
+    note: draft, not yet reviewed # once it's final, delete {tbd:appPolicyStatus} from privacy-overview.yaml and the notice from app-privacy.yaml
+    value:
+  appPolicyEffectiveDate:
+    note: date this policy takes effect
+    value:
+  appPolicyGoogleScopes:
+    note: which Google account details and YouTube permissions Villow requests, and what each is for
+    value:
+  appPolicyDeviceStorage:
+    note: cookies and browser storage the app uses
+    value:
+  appPolicyRetention:
+    note: how long other data is kept
+    value:
+  appPolicyDeletion:
+    note: how to delete your data or leave a Villow
+    value:
+  appPolicyMinimumAge:
+    note: minimum age
+    value:
+
+# ── Images ───────────────────────────────────────────────────────────────────
+# Put files in public/images/ and set src to /images/filename.png.
+# .mp4 and .webm files play as short recordings.
+# ratio is width/height. The placeholder frame uses it too.
+# Use demo data only: no real creators' thumbnails, names or faces, and no real people's usage.
+images:
+  homeHero:
+    label: Phone and desktop home feed, demo data
+    ratio: 16/10
+    src:
+    alt:
+  loopChoose:
+    label: Channel filters and check-in cadence
+    ratio: 4/5
+    src:
+    alt:
+  loopSort:
+    label: Mobile swipe (short recording)
+    ratio: 4/5
+    src:
+    alt:
+  loopWatch:
+    label: The calm player
+    ratio: 4/5
+    src:
+    alt:
+  loopRate:
+    label: '"Was this video worth your time?" on mobile'
+    ratio: 4/5
+    src:
+    alt:
+  loopReflect:
+    label: Where the time went, with a suggestion
+    ratio: 4/5
+    src:
+    alt:
+  spotlightTime:
+    label: Where the time went, plus a suggestion card
+    ratio: 4/3
+    src:
+    alt:
+  spotlightLimits:
+    label: Schedule editor, or the limit-reached screen with a to-do list
+    ratio: 4/3
+    src:
+    alt:
+  featureFeed:
+    label: Home feed on desktop, and on a phone in no-thumbnail mode
+    ratio: 16/10
+    src:
+    alt:
+  featureSorting:
+    label: Mobile swipe (short recording)
+    ratio: 16/10
+    src:
+    alt:
+  featureRating:
+    label: '"Was this video worth your time?" on mobile and desktop'
+    ratio: 16/10
+    src:
+    alt:
+  featureTime:
+    label: Where the time went with the worth-it split, and the Viewing Review timeline
+    ratio: 16/10
+    src:
+    alt:
+  featureSuggestions:
+    label: A suggestion card with its reasons
+    ratio: 16/10
+    src:
+    alt:
+  featureLimits:
+    label: Schedule editor, and the limit-reached screen with a to-do list
+    ratio: 16/10
+    src:
+    alt:
+  featureFriends:
+    label: Recommend to a friend showing "% watched / liked it", and the sharing toggles
+    ratio: 16/10
+    src:
+    alt:
+  featureRealLife:
+    label: Things to do with an imported list, and the creator call-to-action panel
+    ratio: 16/10
+    src:
+    alt:
+  featureExtension:
+    label: The extension on YouTube, and the rings on the Villow home page
+    ratio: 16/10
+    src:
+    alt:
+  featureFeedback:
+    label: The "Feedback ready" notice
+    ratio: 16/10
+    src:
+    alt:
+  featureAppearance:
+    label: Appearance palettes
+    ratio: 16/10
+    src:
+    alt:
+  setupScreens:
+    label: Villow Setup screens
+    ratio: 16/10
+    src:
+    alt:
+  inviteGoogleCloud:
+    label: The Google Cloud "add a friend" step
+    ratio: 16/10
+    src:
+    alt:
+  extensionOnYouTube:
+    label: The extension on YouTube
+    ratio: 16/10
+    src:
+    alt:
+  extensionSettings:
+    label: Extension settings
+    ratio: 4/3
+    src:
+    alt:
+  extensionRings:
+    label: Progress rings on the Villow home page
+    ratio: 4/3
+    src:
+    alt:
+  creatorCta:
+    label: Villow's example call-to-action panel
+    ratio: 4/3
+    src:
+    alt:
+  aboutPhoto:
+    label: Photo of Nicholas (optional)
+    ratio: 1/1
+    src:
+    alt:
+  ogDefault:
+    label: Social sharing image, 1200×630
+    ratio: 1200/630
+    src:
+    alt:
+
+# ── Feature status ───────────────────────────────────────────────────────────
+# Status badges and the Roadmap page are generated from these lists.
+#   live       available now (no badge)
+#   coming     planned or partly built → "Coming soon"
+#   showcase   only the platform can fully deliver it → "Showcase"
+#   exploring  early idea → FAQ and Roadmap only
+#   tbd        not decided
+# In copy, {status:id} shows the badge for a feature (and nothing once it's live).
+# `summary` is shown on the Roadmap. `notes` are for you and aren't shown.
+statusLabels:
+  live: Available now
+  coming: Coming soon
+  showcase: Showcase
+  exploring: Exploring
+  tbd: To be decided
+
+features:
+  app:
+    - id: feed-subscriptions
+      area: Feed
+      name: Subscription feed, newest first
+      status: live
+    - id: feed-filters
+      area: Feed
+      name: Per-channel filters (include and exclude words, length ranges) and global filters
+      status: live
+      notes: Channels inherit global filters or override them
+    - id: feed-cadence
+      area: Feed
+      name: "Per-channel check-in cadence: daily, batched (every 1–30 days or monthly), or off"
+      status: live
+      notes: '"Batch Sync" in the app'
+    - id: feed-max-size
+      area: Feed
+      name: Maximum feed size
+      status: live
+      notes: The feed has an end
+    - id: feed-popular-country
+      area: Feed
+      name: Popular in Your Country Today (chosen topics)
+      status: live
+      notes: Opt-in section, from YouTube country charts
+    - id: feed-friend-picks
+      area: Feed
+      name: Videos friends recommend to you
+      status: live
+    - id: feed-saved-from-youtube
+      area: Feed
+      name: Saved from YouTube (extension inbox)
+      status: live
+      notes: Requires the extension linked to Villow
+    - id: feed-low-stimulation
+      area: Feed
+      name: No-thumbnail mode and greyscale mode
+      status: live
+      notes: Low-stimulation options
+    - id: feed-held-videos
+      area: Feed
+      name: Videos held by a limit shown greyed out, not hidden
+      status: live
+    - id: triage-swipe
+      area: Sorting
+      name: "Mobile swipe: left to skip, right to Watch Later"
+      status: live
+      notes: A reduced-motion option exists
+    - id: reflect-rating
+      area: Reflection
+      name: '"Was this video worth your time?" after every video'
+      status: live
+      notes: "Mobile: swipe card. Desktop: in the navigation bar"
+    - id: reflect-time-usage
+      area: Reflection
+      name: "Time Usage: daily and monthly graphs, per channel and source, hourly and weekday patterns, opens per day"
+      status: live
+      notes: The hourly pattern excludes YouTube time and says so
+    - id: reflect-where-time-went
+      area: Reflection
+      name: "Where the time went: watching vs browsing Villow vs YouTube itself, split by verdict"
+      status: live
+    - id: reflect-viewing-review
+      area: Reflection
+      name: "Viewing Review: 30-day timeline coloured by verdict"
+      status: live
+    - id: reflect-suggestions
+      area: Reflection
+      name: Suggestions from your ratings and usage
+      status: live
+      notes: Transparent algorithm; explained, dismissible; never suggests raising a limit. Not AI
+    - id: limits-daily
+      area: Limits
+      name: Daily watch limit, daily open limit, per-channel daily limits
+      status: live
+      notes: "Enforced: playback actually stops"
+    - id: limits-schedules
+      area: Limits
+      name: "Schedules: allowed and blocked hours per weekday, per-day allowances, date bans"
+      status: live
+      notes: Drag to edit on a 24-hour track
+    - id: limits-bedtime
+      area: Limits
+      name: Bedtime window with snooze
+      status: live
+    - id: limits-breaks
+      area: Limits
+      name: Break warnings and enforced breaks
+      status: live
+    - id: limits-watch-later
+      area: Limits
+      name: Watch Later size limit and expiry
+      status: live
+    - id: limits-streaks
+      area: Limits
+      name: Streaks count days you didn't extend a limit
+      status: live
+    - id: limits-youtube-time
+      area: Limits
+      name: Time on YouTube counts toward your Villow limit
+      status: live
+      notes: Requires the linked extension
+    - id: social-recommend
+      area: Social
+      name: Recommend a video to a friend, and see how much they watched and whether they liked it
+      status: live
+    - id: social-sharing
+      area: Social
+      name: "Opt-in sharing per item: online status, fortnight total, average use, streak, watch habits, subscriptions, settings"
+      status: live
+      notes: Nothing shared by default
+    - id: social-groups
+      area: Social
+      name: Grouped streaks, group limits, group blocked hours
+      status: live
+      notes: "A minor extra: features page only, not home"
+    - id: watch-together
+      area: Social
+      name: Watch together
+      status: coming
+      summary: Watch videos together with friends. The app already has a spot waiting for it.
+      notes: The app has a placeholder button
+    - id: things-to-do
+      area: Real life
+      name: "Things to do: Google Tasks or Todoist import, completion synced both ways"
+      status: live
+    - id: things-to-do-moments
+      area: Real life
+      name: To-do items shown beside videos, at limits, on breaks, at bedtime and when the feed is clear
+      status: live
+    - id: creator-cta
+      area: Real life
+      name: Creator calls to action
+      status: showcase
+      summary: A creator attaches one focused, real-world next step to a video, shown right beside it. The real thing needs YouTube Studio, so Villow shows an example of how it could work.
+      notes: Needs YouTube Studio. Villow shows an example panel beside videos
+    - id: feedback-checkins
+      area: Design
+      name: Optional check-ins (first impressions, 2 weeks, 3 months) and feedback any time
+      status: live
+      notes: Responses go to Fix the Web
+    - id: ai-ideas
+      area: AI
+      name: 'Topic guidance, chapter generation, comment AI and "Talk with AI"'
+      status: exploring
+      summary: Early ideas that appear in the app as labelled placeholders. They may change, or be removed if they don't support a healthy experience.
+    - id: platform-devices
+      area: Platform
+      name: Works on Android, iPhone and iPad, Windows, macOS and Linux
+      status: live
+      notes: A web app that installs from the browser; no app store needed
+    - id: platform-appearance
+      area: Platform
+      name: 11 nature palettes, custom colours, app logos, light and dark
+      status: live
+      notes: Fern, Sunset, Beach, Forest, Meadow, Rain, Lavender, Blossom, Alpine, Dusk, Citrus
+    - id: platform-player-extras
+      area: Platform
+      name: Comments with per-channel limits, chapters, per-channel playback speed, group playlists
+      status: live
+
+  extension:
+    - id: ext-time
+      name: See your time on YouTube today and your daily average
+      alone: true
+      linked: true
+      linkedNote: also shown in Villow
+      status: live
+    - id: ext-time-cap
+      name: Daily time cap on YouTube
+      alone: true
+      linked: true
+      linkedNote: and YouTube time counts toward your Villow limit
+      status: live
+    - id: ext-recommendations-cap
+      name: Daily cap on recommendations seen
+      alone: true
+      linked: true
+      status: live
+    - id: ext-watch-cap
+      name: Daily cap on videos watched on YouTube
+      alone: true
+      linked: false
+      linkedNote: videos are saved to Villow instead
+      status: live
+    - id: ext-save-to-villow
+      name: Click a video and it's saved to your Villow feed instead of playing, with a daily save cap
+      alone: false
+      linked: true
+      status: live
+    - id: ext-greyscale
+      name: Greyscale thumbnails and greyscale videos
+      alone: true
+      linked: true
+      status: live
+    - id: ext-hide-shorts
+      name: Hide Shorts
+      alone: true
+      linked: true
+      status: live
+    - id: ext-hide-side-recommendations
+      name: Hide recommendations beside the video you're watching
+      alone: true
+      linked: true
+      status: live
+    - id: ext-hide-comments
+      name: Hide comments
+      alone: true
+      linked: true
+      status: live
+    - id: ext-bedtime
+      name: Bedtime that closes YouTube for the night
+      alone: true
+      linked: true
+      status: live
+    - id: ext-block
+      name: Block YouTube entirely
+      alone: true
+      linked: true
+      status: live
+    - id: ext-hide-subscribed
+      name: Hide channels you're already subscribed to (they're in your Villow feed)
+      alone: false
+      linked: true
+      status: live
+    - id: ext-limits-in-villow
+      name: Edit limits in Villow, and see progress rings on your Villow home page
+      alone: false
+      linked: true
+      status: live
+    - id: ext-browsers
+      name: Chrome, Edge and Firefox on computers; Firefox for Android, plus some other Android browsers with extension support
+      alone: true
+      linked: true
+      status: live
+    - id: ext-safari
+      name: Safari, iPhone and iPad
+      alone: false
+      linked: false
+      status: coming
+      summary: The extension on Safari, including iPhone and iPad. This is future work.
+    - id: ext-open-source
+      name: Open source
+      alone: true
+      linked: true
+      status: live
+
+  getting:
+    - id: setup-windows
+      name: Villow Setup for Windows
+      status: live
+      notes: Download button is a placeholder for now
+    - id: setup-mac-linux
+      name: Villow Setup for macOS and Linux
+      status: tbd
+      summary: Villow itself runs everywhere. Only the Setup installer is Windows today.
+    - id: app-source
+      name: Villow source code (MIT)
+      status: live
+    - id: creator-portal
+      name: Creator submission portal
+      status: exploring
+      summary: A place where creators could submit a real-world next step for their videos, for Villows to show.
+    - id: global-recommendations
+      name: Global recommendations
+      status: exploring
+      summary: A shared recommendation service that independent Villows could draw on.

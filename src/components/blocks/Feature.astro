@@ -1,0 +1,104 @@
+---
+import type { BlockOf } from "../../lib/schema";
+import { ui } from "../../lib/content";
+import { inline, md } from "../../lib/markdown";
+import Action from "../ui/Action.astro";
+import BlockShell from "../ui/BlockShell.astro";
+import Media from "../ui/Media.astro";
+
+interface Props {
+  block: BlockOf<"feature">;
+  /** Position on the page, so images can alternate sides. */
+  index: number;
+}
+
+const { block, index } = Astro.props;
+const headingId = `${block.id}-title`;
+---
+
+<BlockShell type="feature" id={block.id} background={block.background} labelledBy={headingId}>
+  <div class:list={["feature", block.image && "feature--with-image", index % 2 === 1 && "feature--flip"]}>
+    <div class="feature__text">
+      {block.eyebrow && <p class="eyebrow" set:html={inline(block.eyebrow)} />}
+      <h2 id={headingId} set:html={inline(block.heading)} />
+      <div class="feature__what">
+        <h3 class="feature__label">{ui.featureWhat}</h3>
+        <div class="prose" set:html={md(block.what)} />
+      </div>
+      {
+        block.why && (
+          <div class="feature__why">
+            <h3 class="feature__label">{ui.featureWhy}</h3>
+            <div class="prose" set:html={md(block.why)} />
+          </div>
+        )
+      }
+      {block.tagline && <p class="tagline" set:html={inline(block.tagline)} />}
+      {
+        block.actions && (
+          <div class="actions">
+            {block.actions.map((action) => (
+              <Action action={action} />
+            ))}
+          </div>
+        )
+      }
+    </div>
+    {
+      block.image && (
+        <div class="feature__media">
+          <Media image={block.image} />
+        </div>
+      )
+    }
+  </div>
+</BlockShell>
+
+<style>
+  .feature {
+    display: grid;
+    gap: var(--space-xl);
+    padding-top: var(--space-xl);
+    border-top: var(--border);
+  }
+  .feature__text {
+    display: grid;
+    gap: var(--space-lg);
+    align-content: start;
+  }
+  .feature h2 {
+    font-size: var(--text-2xl);
+  }
+  .feature__label {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-strong);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xs);
+  }
+  .feature__why {
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    background: var(--color-accent-soft);
+  }
+  .feature__why .feature__label {
+    color: var(--color-accent-text);
+  }
+
+  @media (min-width: 60rem) {
+    .feature--with-image {
+      grid-template-columns: 1.1fr 1fr;
+      gap: var(--space-2xl);
+    }
+    .feature__media {
+      position: sticky;
+      top: var(--space-xl);
+      align-self: start;
+    }
+    .feature--flip .feature__media {
+      order: -1;
+    }
+  }
+</style>

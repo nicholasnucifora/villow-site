@@ -1,0 +1,95 @@
+# The policy page. Tone: "look how easy this is", not "YouTube is bad".
+title: YouTube could do this
+description: Villow was built from the outside, on YouTube's public API and official player. Here's what that made possible, where it stopped, and why YouTube could offer it to everyone.
+
+blocks:
+  - type: hero
+    eyebrow: YouTube could do this
+    title: We built this from the outside. YouTube could build it from the inside.
+    lead: Every feed control, limit and moment of reflection in Villow sits on top of YouTube's public API and official player. No special access, no big team. Villow was built by Fix the Web's founder, Nicholas Nucifora. If that's possible from the outside, YouTube could offer it to everyone, and that's exactly what Fix the Web is asking for.
+
+  - type: table
+    id: what-the-api-made-possible
+    heading: What the API made possible
+    columns: [Access, What Villow built with it]
+    rows:
+      - ["Your subscriptions and channels' uploads", "A feed you shape channel by channel"]
+      - ["The official embedded player", "Watching inside a calmer interface with limits, breaks and reflection"]
+      - ["Playlists", "Watch Later and a library that stays in sync"]
+      - ["Country charts", "Popular in Your Country Today, filtered by your topics"]
+      - ["Search and channel details", "Finding and subscribing without the recommendation loop"]
+
+  # Every row here must be true, specific and current. Each one is on LAUNCH_CHECKLIST.md.
+  # If a row can't be confirmed, delete it rather than softening it.
+  - type: table
+    id: next-step
+    variant: comparison
+    heading: YouTube has started. Here's the next step.
+    intro: YouTube already offers some of this, which shows it can. Here's what Villow adds on top.
+    columns: [YouTube today, What Villow adds]
+    rows:
+      - ['Optional "take a break" reminders', "Breaks that can actually pause playback, with your to-do list on screen"]
+      - ["Optional bedtime reminders", "A bedtime window that can stop playback, with snooze"]
+      - ["No daily watch limit for adult accounts; device tools only limit one device at a time", "Daily limits that stop playback across all your devices, and count your YouTube time too"]
+      - ["A Subscriptions tab in upload order", "Per-channel filters and length ranges, how often each channel checks in, and a feed that ends"]
+      - ['"Not interested", "Don''t recommend channel", and pausing watch history', "A daily cap on how many recommendations you see, and recommendation sources you switch on yourself"]
+      - ["No per-channel time limits", "Daily time limits for individual channels"]
+      - ["No record of how you felt about what you watched", "A quick rating after every video, shown back to you over time"]
+      - ["Limited insight into your own viewing time", "Time by channel, source, hour, weekday and how worth it it was, plus a 30-day timeline"]
+      - ["Sharing a video sends a link to another app", "See whether a friend watched and liked the video you sent; share usage with friends if you want to"]
+      - ["Links, end screens and cards in videos", "Your own to-do list at natural stopping points, plus a showcase of a focused real-world next step beside the video"]
+      - ["Suggestions designed around what you'll watch next", "Suggestions designed around what you *rated*, which never suggest raising a limit"]
+    note: "Comparisons reflect YouTube as of {tbd:comparisonCheckedDate}."
+
+  - type: section
+    id: where-the-api-stopped
+    heading: Where the API stopped
+    body: |
+      - **Your recommendations aren't available through the API.** So Villow needs a browser extension to add limits where recommendations live, and extensions can't reach every device yet (such as iPhone Safari).
+      - **Your watch history isn't available through the API**, so Villow can only measure what happens in Villow and, with the extension, on YouTube in the browser.
+      - **Creators have nowhere to add a focused real-world call to action** that other apps can show. Villow's creator panel is a showcase, because the real thing belongs in YouTube Studio.
+      - **The embedded player can't play in the background,** and nothing may cover it. That's why Villow pauses when you switch away.
+      - **Each app gets a limited daily API allowance.** That's part of why every Villow is run by its owner for a small group.
+    callouts:
+      - heading: Rules Villow follows
+        body: |
+          Good design works within the rules. Villow:
+
+          - refreshes or removes stored video details within 30 days
+          - turns tracking off for videos made for kids
+
+  - type: spotlight
+    id: creator-showcase
+    eyebrow: "Showcase {status:creator-cta}"
+    heading: What YouTube Studio could offer creators.
+    body: |
+      A creator attaches one focused next step to a video, such as a local group, an event or a letter to a representative, with links they trust. Viewers see it beside the video instead of buried in the description. Creators could see how many people took action without identifying anyone.
+
+      Villow can show how it would work. Only YouTube can make it real.
+    image: creatorCta
+    actions:
+      - label: More for creators →
+        href: /creators
+        style: text
+
+  - type: section
+    id: bigger-picture
+    variant: statement
+    eyebrow: A vision
+    heading: The bigger picture
+    body: Today Villow can only see YouTube. In a better web, you could see your time across every platform in one place that belongs to you. Not to watch you, but so you can decide how you want to spend your time.
+
+  - type: cta
+    id: the-ask
+    variant: fixtheweb
+    heading: Imagine if you didn't need a separate app for any of this.
+    body: |
+      Fix the Web is pushing for:
+
+      - **Algorithmic autonomy:** native control over your feed, with wellbeing-first defaults. Villow's feed controls, limits and reflection are this, made real.
+      - **Sandboxes for independent safety labs:** API access so researchers can test safeguards like these with real evidence. To try them, Fix the Web had to rebuild a whole front end on the public API.
+      - **Real proofs:** tools like Villow that show it can be done.
+    actions:
+      - label: Read the campaign at fixtheweb.org →
+        href: link:fixTheWeb
+        style: primary

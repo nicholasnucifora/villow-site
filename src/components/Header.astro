@@ -1,0 +1,111 @@
+---
+import Action from "./ui/Action.astro";
+import Logo from "./Logo.astro";
+import { siteContent, ui } from "../lib/content";
+import { resolveHref } from "../lib/markdown";
+
+interface Props {
+  path: string;
+}
+
+const { path } = Astro.props;
+const { action } = siteContent.header;
+const links = siteContent.header.links.map((link) => ({ ...link, href: resolveHref(link.href).href ?? undefined }));
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__home" href="/" aria-label="Villow home"><Logo /></a>
+    <nav class="site-header__nav" aria-label={ui.mainNav}>
+      <ul>
+        {
+          links.map((link) => (
+            <li>
+              <a href={link.href} aria-current={path === link.href ? "page" : undefined}>
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <div class="site-header__action">
+      <Action action={action} size="small" />
+    </div>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: var(--border);
+    background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+  }
+  .site-header__inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "home action"
+      "nav nav";
+    align-items: center;
+    gap: var(--space-xs) var(--space-lg);
+    padding-block: var(--space-sm);
+  }
+  .site-header__home {
+    grid-area: home;
+    color: var(--color-text);
+    text-decoration: none;
+    justify-self: start;
+  }
+  .site-header__action {
+    grid-area: action;
+    justify-self: end;
+  }
+  .site-header__nav {
+    grid-area: nav;
+    /* On phones the links sit in a row you can scroll sideways. */
+    overflow-x: auto;
+    margin-inline: calc(-1 * var(--gutter));
+    padding-inline: var(--gutter);
+    scrollbar-width: none;
+  }
+  .site-header__nav ul {
+    display: flex;
+    gap: var(--space-2xs);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap;
+  }
+  .site-header__nav a {
+    display: block;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-pill);
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .site-header__nav a:hover,
+  .site-header__nav a[aria-current="page"] {
+    color: var(--color-text);
+    background: var(--color-bg-soft);
+  }
+  .site-header__nav li:first-child a {
+    margin-left: calc(-1 * var(--space-sm));
+  }
+
+  @media (min-width: 56rem) {
+    .site-header__inner {
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas: "home nav action";
+    }
+    .site-header__nav {
+      margin: 0;
+      padding: 0;
+      justify-self: center;
+    }
+    .site-header__nav li:first-child a {
+      margin-left: 0;
+    }
+  }
+</style>

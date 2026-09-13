@@ -1,0 +1,43 @@
+# For creators: the call-to-action showcase. The submission portal is only an idea (Exploring); don't promise it.
+title: For creators
+description: A showcase of what YouTube Studio could offer creators. One focused, real-world next step, right beside the video.
+
+blocks:
+  - type: hero
+    eyebrow: "For creators {status:creator-cta}"
+    title: What if your video could come with a next step?
+    lead: When a video is about a cause, the most useful thing a viewer can do is often something off-screen. Villow shows how a creator could attach one focused, real-world next step right beside the video. The real thing belongs in YouTube Studio.
+    image: creatorCta
+
+  - type: section
+    id: how-it-could-work
+    heading: How it could work
+    body: |
+      - A creator attaches **one focused next step** to a video, such as a local group, an event, volunteering or a letter to a representative, with links they trust.
+      - Viewers see it **beside the video**, instead of buried in the description.
+      - Creators could see **how many people took action**, without identifying anyone.
+
+  - type: section
+    id: why-a-showcase
+    background: soft
+    heading: Why Villow can only show it
+    body: Creators have nowhere to add a focused real-world call to action that other apps can show. The creator side has to live in YouTube Studio, so Villow's panel is an example of how it could work, not the real thing. Villow can show how it would work. Only YouTube can make it real.
+    tagline: Sometimes the best thing a video can do is get you off the couch.
+
+  - type: section
+    id: later
+    eyebrow: "Exploring {status:creator-portal}"
+    heading: Maybe, later
+    body: One idea is a place where creators could submit a next step for their own videos, for Villows to show. It's an early idea, not a plan, and it would need a way to confirm that a person really owns the channel.
+
+  - type: cta
+    variant: fixtheweb
+    heading: Want YouTube to build this?
+    body: Fix the Web is asking platforms to build controls and features like these in, for everyone.
+    actions:
+      - label: Read the campaign at fixtheweb.org →
+        href: link:fixTheWeb
+        style: primary
+      - label: YouTube could do this →
+        href: /youtube-could-do-this
+        style: text

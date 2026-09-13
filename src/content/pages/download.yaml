@@ -1,0 +1,115 @@
+# Download: Villow Setup, what you'll need, costs, phone and extension steps, inviting friends.
+title: Download
+description: Villow Setup builds your own private Villow on accounts you control. Set it up once on a computer, then use it on any device.
+
+blocks:
+  - type: hero
+    eyebrow: Download
+    title: Your own Villow.
+    lead: There's no central Villow holding everyone's data. Villow Setup builds *your own* private Villow on accounts you control. Set it up once on a computer, then use it on any device and invite a few friends if you like.
+    actions:
+      - label: Download for Windows
+        href: link:setupWindows
+        style: primary
+      - label: What you'll need →
+        href: "#what-youll-need"
+        style: text
+    smallPrint:
+      - Free and open source
+      - "macOS and Linux: {tbd:setupOtherPlatforms}"
+    image: setupScreens
+
+  - type: steps
+    id: steps
+    heading: Getting set up
+    layout: column
+    items:
+      - title: Download Villow Setup
+        body: "Windows today. macOS and Linux: {tbd:setupOtherPlatforms}"
+        actions:
+          - label: Download for Windows
+            href: link:setupWindows
+            style: primary
+      - title: Follow the steps
+        body: Setup walks you through creating the accounts Villow runs on (Vercel for the app, Supabase for the database, Google Cloud for YouTube access), then builds and connects everything. No GitHub, Git or terminal needed.
+      - title: Sign in with Google
+        body: Then choose your name, time zone, country and a daily limit.
+      - title: Put it on your phone
+        body: Open your Villow address on your phone and add it to your home screen. It installs like an app on iPhone, iPad and Android.
+      - title: Add the extension
+        body: Install it in Chrome, Edge or Firefox, then link it using a connect link from inside Villow.
+        actions:
+          - label: Chrome Web Store
+            href: link:chromeStore
+          - label: Edge Add-ons
+            href: link:edgeAddons
+          - label: Firefox Add-ons
+            href: link:firefoxAddons
+      - title: Invite friends (optional)
+        body: Share your Villow with a few friends. [Here's how](#inviting-friends).
+
+  - type: section
+    id: what-youll-need
+    heading: What you'll need
+    body: |
+      - A computer to run Setup: Windows today, macOS and Linux {tbd:setupOtherPlatforms}. You only need it for setup.
+      - The Google account that will own your Villow.
+      - Vercel and Supabase accounts (email sign-up).
+      - A Google Cloud project. Setup guides you through it.
+      - About {tbd:setupMinutes} minutes.
+
+  - type: section
+    id: costs
+    background: soft
+    heading: What it costs
+    body: |
+      **Villow is free.**
+
+      Villow and Villow Setup are free and open source. Your Villow runs on your own Vercel, Supabase and Google Cloud accounts, and you can run it for yourself on their free plans. Setup never picks a paid plan or upgrade for you.
+    callouts:
+      - heading: Adding friends?
+        body: How many people fit on free plans depends on how much everyone uses Villow. For more than a few people you may need a paid plan with {tbd:paidPlanProviders}. {tbd:groupSizeGuide}
+      - heading: Worth knowing
+        tone: caution
+        body: |
+          - If your Vercel or Supabase account is already on a paid plan, a new Villow project can add to your bill. Setup asks you to confirm you've reviewed your plans before it creates anything.
+          - Free plans have usage limits. {tbd:freeLimitReached}
+          - YouTube access uses a daily quota from your Google Cloud project, shared by everyone on your Villow.
+          - Uninstalling Setup doesn't stop your Villow or its accounts. To shut it down completely, delete its projects in each provider's dashboard.
+          - Your Villow gets a free `.vercel.app` address. A custom domain is optional and costs extra.
+
+  - type: section
+    id: inviting-friends
+    heading: Share your Villow with a few friends
+    body: |
+      1. Add your friend's Google email to your Google Cloud project's list of allowed users. {tbd:inviteSteps}
+      2. Send them your Villow address.
+      3. They sign in with Google, set their own limits, and add Villow to their phone.
+
+      You can remove someone's access from inside Villow any time.
+    image: inviteGoogleCloud
+    callouts:
+      - heading: About signing in
+        body: While your Google Cloud project is in Google's **Testing** status, only people you've added can sign in, and everyone (you included) may need to sign in again about once a week. Moving the project to **Production** can avoid the weekly sign-in, but Google may require extra review for the permissions Villow uses. {tbd:productionMove}
+      - heading: Only join a Villow run by someone you trust.
+        tone: caution
+        body: The owner's accounts hold the database.
+
+  - type: section
+    id: good-to-know
+    heading: Good to know
+    body: |
+      - **You own it.** Your Villow's data lives in your own Supabase account.
+      - **Your responsibility.** Whoever runs a Villow is responsible for using it in line with [YouTube's API terms](link:youtubeApiTerms) and [Google's policies](link:googleApiUserDataPolicy).
+      - **Developers:** prefer to set it up by hand? The code is open source. [See the Villow repository](link:appSource), or read [how Villow is built](/developers).
+
+  - type: cta
+    heading: Questions before you start?
+    body: Most answers are in the FAQ, including costs, phones, and why you might need to sign in again each week.
+    actions:
+      - label: Read the FAQ
+        href: /faq
+        style: primary
+      - label: How it works →
+        href: /features
+        style: text

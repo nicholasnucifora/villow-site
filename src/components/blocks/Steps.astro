@@ -1,0 +1,123 @@
+---
+import type { BlockOf } from "../../lib/schema";
+import { inline, md, slugify } from "../../lib/markdown";
+import Action from "../ui/Action.astro";
+import BlockShell from "../ui/BlockShell.astro";
+import BlockHeader from "../ui/BlockHeader.astro";
+import Media from "../ui/Media.astro";
+
+interface Props {
+  block: BlockOf<"steps">;
+}
+
+const { block } = Astro.props;
+const headingId = block.heading ? `${block.id ?? slugify(block.heading)}-title` : undefined;
+const row = block.layout === "row";
+---
+
+<BlockShell type="steps" id={block.id} background={block.background} width={row ? "page" : "narrow"} labelledBy={headingId}>
+  <BlockHeader eyebrow={block.eyebrow} heading={block.heading} intro={block.intro} headingId={headingId} align={row ? "center" : "start"} />
+  <ol class:list={["steps", `steps--${block.layout}`]}>
+    {
+      block.items.map((item, index) => (
+        <li class="step">
+          <span class="step__number" aria-hidden="true">
+            {index + 1}
+          </span>
+          <div class="step__text">
+            <h3 set:html={inline(item.title)} />
+            {item.body && <div class="prose" set:html={md(item.body)} />}
+            {item.actions && (
+              <div class="actions">
+                {item.actions.map((action) => (
+                  <Action action={action} size="small" />
+                ))}
+              </div>
+            )}
+          </div>
+          {item.image && (
+            <div class="step__media">
+              <Media image={item.image} />
+            </div>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</BlockShell>
+
+<style>
+  .steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: var(--space-xl);
+  }
+  .step {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-sm) var(--space-md);
+    align-items: start;
+  }
+  .step__number {
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background: var(--color-accent-soft);
+    color: var(--color-accent-text);
+    font-family: var(--font-heading);
+    font-weight: var(--weight-heading);
+  }
+  .step__text {
+    display: grid;
+    gap: var(--space-xs);
+  }
+  .step__text h3 {
+    font-size: var(--text-lg);
+    padding-top: 0.2rem;
+  }
+  .step__text .prose {
+    color: var(--color-text-muted);
+  }
+  .step__text .actions {
+    margin-top: var(--space-xs);
+  }
+  .step__media {
+    grid-column: 2;
+    margin-top: var(--space-xs);
+  }
+
+  /* Row: side by side on wide screens, numbers and images on top. */
+  @media (min-width: 60rem) {
+    .steps--row {
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+      gap: var(--space-lg);
+    }
+    .steps--row .step {
+      grid-template-columns: 1fr;
+      align-content: start;
+    }
+    .steps--row .step__media {
+      grid-column: 1;
+      grid-row: 1;
+      margin: 0 0 var(--space-xs);
+    }
+  }
+
+  /* Column: a line joins the numbers down the page. */
+  .steps--column .step {
+    position: relative;
+  }
+  .steps--column .step:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: calc(1.125rem - 1px);
+    top: 2.75rem;
+    bottom: calc(-1 * var(--space-xl) + 0.5rem);
+    width: 2px;
+    background: var(--color-border);
+  }
+</style>

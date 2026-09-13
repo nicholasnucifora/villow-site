@@ -1,0 +1,128 @@
+# Home: choose → sort → watch → rate → reflect, then "YouTube could do this", then get it.
+title: A healthier way to watch YouTube
+description: Villow is a healthier way to watch YouTube, on any device. Shape your subscriptions, set limits that actually hold, and find out whether the time you spent was worth it. A Fix the Web project.
+
+blocks:
+  - type: hero
+    eyebrow: A Fix the Web project
+    title: Watch on purpose.
+    # Alternative headline: Make your YouTube time worth it.
+    lead: Villow is a healthier way to watch YouTube, on any device. Shape your subscriptions, set limits that actually hold, and find out whether the time you spent was worth it.
+    actions:
+      - label: Download Villow
+        href: link:setupWindows
+        style: primary
+      - label: See how it works →
+        href: /features
+        style: text
+    smallPrint:
+      - Free and open source
+      - Works on any device
+      - Not affiliated with YouTube or Google
+    image: homeHero
+
+  - type: section
+    variant: statement
+    body: Most feeds are built to keep you watching, not to leave you glad you did. The controls that could change that are easy to build, and mostly nowhere to be found.
+
+  - type: section
+    heading: We don't take the algorithm away.
+    body: Villow isn't a blocker. You can still get recommendations, see what's popular and browse YouTube. The difference is that you decide how much, when and what kind, and you can see what it's doing for you.
+    tagline: We're not taking anything away. We're handing you the controls.
+
+  - type: steps
+    id: the-loop
+    eyebrow: How it feels
+    heading: Choose, sort, watch, rate, reflect.
+    layout: row
+    items:
+      - title: Choose
+        body: Build a feed from your subscriptions, tuned channel by channel.
+        image: loopChoose
+      - title: Sort
+        body: Swipe left to skip, right to save for later.
+        image: loopSort
+      - title: Watch
+        body: In a calm player, with limits and breaks that hold.
+        image: loopWatch
+      - title: Rate
+        body: "One question when it ends: *was this worth your time?*"
+        image: loopRate
+      - title: Reflect & refine
+        body: See where your time went, with suggestions from an algorithm that works for you.
+        image: loopReflect
+
+  - type: cards
+    id: highlights
+    eyebrow: What's inside
+    heading: Built to make your time worth it.
+    items:
+      - title: A subscription feed worth using
+        href: /features#feed
+        body: Choose how often each channel shows up, what kinds of videos you want from it and how long they can be. The feed you picked should beat the one picked for you.
+      - title: Recommendations, with a ceiling
+        href: /extension
+        body: The Villow extension for Chrome, Edge and Firefox caps your time on YouTube, the recommendations you see, and how many videos you watch or save each day. Linked to Villow, that time counts toward your Villow limit.
+      - title: Swipe, then reflect
+        href: /features#sorting
+        body: Sort what's waiting with a swipe, and rate every video once it ends.
+      - title: See where your time really goes
+        href: /features#time
+        body: What you watched, when, from where, and how much of it was worth it, across all your devices. Then suggestions from your own ratings, like dropping a channel you keep regretting.
+      - title: Built for friends, not followers
+        href: /features#friends
+        body: "Send a friend a video and see if they watched it. Share your usage if you want to. Catch what's popular in your country today. Watch together {status:watch-together}"
+      - title: Back to real life
+        href: /features#real-life
+        body: "Your to-do list, from Google Tasks or Todoist, shows up when you hit a limit, take a break, reach bedtime or clear your feed. Plus a showcase of how creators could add real-world calls to action. {status:creator-cta}"
+    actions:
+      - label: See every feature →
+        href: /features
+        style: text
+
+  - type: spotlight
+    id: suggestions
+    eyebrow: An algorithm that works for you
+    heading: Not just how long. Whether it was worth it.
+    body: Villow's time page splits your day into watching, browsing and time on YouTube itself, by channel and source, coloured by how you rated what you watched. When a pattern shows up, like a channel you keep rating as not worth it, Villow suggests a change and shows you why. It's an algorithm on your side, and it never suggests raising a limit.
+    image: spotlightTime
+    actions:
+      - label: How suggestions work →
+        href: /features#suggestions
+        style: text
+
+  - type: spotlight
+    id: limits
+    eyebrow: Limits
+    heading: Limits that actually hold.
+    body: Daily limits, per-channel limits, blocked hours by day of the week, bedtime and breaks. When a limit is reached, playback stops, and time on YouTube counts too, so it can't be dodged by switching tabs. Streaks count the days you *didn't* extend a limit.
+    image: spotlightLimits
+    imageSide: left
+    actions:
+      - label: All the limits →
+        href: /features#limits
+        style: text
+
+  - type: cta
+    variant: fixtheweb
+    heading: Everything here, YouTube could switch on tomorrow.
+    body: Villow is built on YouTube's public API and official player, with no special access. If we could build this from the outside, YouTube could build it from the inside, for everyone. That's what Fix the Web is asking for.
+    actions:
+      - label: Why this matters →
+        href: /youtube-could-do-this
+        style: primary
+      - label: Join Fix the Web →
+        href: link:fixTheWeb
+        style: text
+
+  - type: cta
+    id: get-villow
+    heading: Your own Villow, in a few steps.
+    body: Download Villow Setup on your computer. It builds your own private Villow, and then you can use it on any device, add the extension, and invite a few friends.
+    actions:
+      - label: Download Villow
+        href: link:setupWindows
+        style: primary
+      - label: What you'll need →
+        href: /download#what-youll-need
+        style: text

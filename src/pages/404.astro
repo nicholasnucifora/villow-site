@@ -1,0 +1,12 @@
+---
+import Base from "../layouts/Base.astro";
+import Blocks from "../components/Blocks.astro";
+import { pages } from "../lib/content";
+
+const page = pages.find((p) => p.slug === "404");
+if (!page) throw new Error("Missing src/content/pages/404.yaml");
+---
+
+<Base title={page.title} description={page.description} path="/404">
+  <Blocks blocks={page.blocks} />
+</Base>

@@ -1,0 +1,29 @@
+---
+/* A long piece of writing from src/content/prose/. */
+import type { BlockOf } from "../../lib/schema";
+import { getProse } from "../../lib/content";
+import { md } from "../../lib/markdown";
+import BlockShell from "../ui/BlockShell.astro";
+
+interface Props {
+  block: BlockOf<"prose">;
+}
+
+const { block } = Astro.props;
+---
+
+<BlockShell type="prose" id={block.id} background={block.background} width="prose">
+  <article class="prose prose--long" set:html={md(getProse(block.file))} />
+</BlockShell>
+
+<style>
+  .prose--long {
+    font-size: var(--text-lg);
+  }
+  .prose--long :global(h2:first-child) {
+    margin-top: 0;
+  }
+  .prose--long :global(blockquote) {
+    margin-block: var(--space-lg);
+  }
+</style>

@@ -1,0 +1,92 @@
+# Copy that appears on every page: the header, the footer, and small interface words.
+
+header:
+  links:
+    - label: How it works
+      href: /features
+    - label: Extension
+      href: /extension
+    - label: YouTube could do this
+      href: /youtube-could-do-this
+    - label: FAQ
+      href: /faq
+    - label: About
+      href: /about
+  action:
+    label: Download
+    href: /download
+    style: primary
+
+footer:
+  project:
+    label: A Fix the Web project
+    href: link:fixTheWeb
+    blurb: Villow is an app for YouTube, made by Fix the Web to show what better looks like.
+  groups:
+    - heading: Villow
+      links:
+        - label: Download
+          href: /download
+        - label: How it works
+          href: /features
+        - label: The extension
+          href: /extension
+        - label: YouTube could do this
+          href: /youtube-could-do-this
+        - label: Principles
+          href: /principles
+        - label: Roadmap
+          href: /roadmap
+    - heading: Help
+      links:
+        - label: FAQ
+          href: /faq
+        - label: About
+          href: /about
+        - label: Privacy
+          href: /privacy-overview
+        - label: Terms
+          href: link:terms
+        - label: Contact
+          href: link:contact
+    - heading: Code
+      links:
+        - label: Villow on GitHub
+          href: link:appSource
+        - label: Extension on GitHub
+          href: link:extensionSource
+        - label: Developers
+          href: /developers
+        - label: For creators
+          href: /creators
+    - heading: Community
+      links:
+        - label: Discord
+          href: link:discord
+        - label: Reddit
+          href: link:reddit
+        - label: Newsletter
+          href: link:newsletter
+        - label: How to help
+          href: link:howToHelp
+        - label: fixtheweb.org
+          href: link:fixTheWeb
+  notes:
+    - This site uses no analytics.
+    - Villow is not affiliated with, endorsed by, or sponsored by YouTube or Google. YouTube is a trademark of Google LLC.
+
+ui:
+  skipToContent: Skip to content
+  mainNav: Main
+  footerNav: Footer
+  logoPlaceholder: Logo to come
+  tbd: TBD
+  tbdTitle: Not decided yet
+  inertLinkTitle: Link not added yet
+  imagePlaceholder: Image to come
+  featureWhat: What it does
+  featureWhy: Why it's there
+  "yes": "Yes"
+  "no": "No"
+  fixTheWebMark: Fix the Web
+  themePicker: Theme (only shown in dev)

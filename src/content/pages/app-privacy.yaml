@@ -1,0 +1,18 @@
+# The formal Villow app privacy policy. The policy itself is in src/content/prose/app-privacy.md.
+# Remove the draft notice once the policy has been reviewed.
+title: Villow app privacy policy
+description: The privacy policy for the Villow web app, covering Google sign-in, YouTube API Services, and what's stored in a Villow.
+
+blocks:
+  - type: hero
+    eyebrow: Privacy policy
+    title: Villow app privacy policy
+    lead: For the Villow web app. The browser extension has [its own policy](link:extensionPrivacy), and there's a [plain-language summary](/privacy-overview) too.
+
+  - type: notice
+    tone: draft
+    heading: This policy is a draft.
+    body: It hasn't been reviewed yet, and anything marked TBD is still to be decided. Don't rely on it as final.
+
+  - type: prose
+    file: app-privacy

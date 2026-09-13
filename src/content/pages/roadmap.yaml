@@ -1,0 +1,30 @@
+# Roadmap. The lists come from features: in site.config.yaml. Change a status there and it moves here automatically.
+title: Roadmap
+description: What's coming to Villow, what it showcases that only platforms can build, and the ideas being explored. Easy to build, and YouTube could too.
+
+blocks:
+  - type: hero
+    eyebrow: Roadmap
+    title: Easy to build, and YouTube could too.
+    lead: Some of Villow isn't finished yet, and some of it can only fully exist inside YouTube. It's all here anyway, with honest labels, because it shows how simple these improvements would be.
+
+  - type: roadmap
+    groups:
+      - status: coming
+        heading: Coming soon
+        intro: Planned or partly built. Not available yet.
+      - status: showcase
+        heading: Showcases
+        intro: Things only a platform can fully deliver. Villow shows how they could work, and YouTube could build them.
+      - status: exploring
+        heading: Exploring
+        intro: Early ideas. They may change, or never ship.
+
+  - type: cta
+    variant: fixtheweb
+    heading: Imagine if YouTube built these in.
+    body: Every item on this page is something a platform could offer everyone. That's what Fix the Web is asking for.
+    actions:
+      - label: See what we're asking platforms to change →
+        href: link:fixTheWeb
+        style: primary

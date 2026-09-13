@@ -1,0 +1,177 @@
+# How it works. Organised by the loop, not by app menus. Each area: what it does, and why it's there.
+title: How it works
+description: Every part of Villow, from your feed and limits to ratings, suggestions and friends, and the thinking behind each one.
+
+blocks:
+  - type: hero
+    eyebrow: How it works
+    title: Every part of Villow, and why it's there.
+    lead: Villow follows a simple loop. Choose what you want to watch, sort it, watch it, rate it, then look back and refine. Here's what each part does, and the thinking behind it.
+
+  - type: toc
+    heading: On this page
+
+  - type: feature
+    id: feed
+    heading: Your feed
+    image: featureFeed
+    what: |
+      - Your subscriptions, newest first, with no engagement ranking.
+      - For each channel: include or exclude words, set a video length range, a daily time limit and a default playback speed, and choose how often it checks in (daily, batched every so many days, or not at all).
+      - Global filters every channel inherits, which a channel can override.
+      - A maximum feed size, so the feed ends. When it's clear, Villow says: *"No more videos are waiting in your home feed. This is a good place to stop for now."*
+      - Optional sections: **Popular in Your Country Today** (topics you choose), videos friends recommend, and videos saved from YouTube with the extension.
+    why: A subscription feed only beats an algorithmic one if it's genuinely better to use. Some channels you want every day, some once a fortnight, and from some you only want the long videos. When the feed is exactly what you want, you choose it over the endless loop without having to force yourself.
+
+  - type: feature
+    id: sorting
+    heading: Sorting and watching
+    image: featureSorting
+    what: |
+      - On mobile, swipe left to skip or right to save to Watch Later.
+      - A calm player around YouTube's official embedded player, with chapters, comments (with per-channel limits on how many load) and per-channel playback speed.
+      - Watch Later with a maximum size and optional expiry, so "later" doesn't become "never, but forever".
+      - Low-stimulation options: no-thumbnail mode (with a calm image panel instead), greyscale, thumbnail brightness and reduced-motion swipes.
+      - Make it yours: 11 nature-inspired palettes in light and dark, custom colours and app logos.
+    why: Deciding what's worth watching should be quick and a little satisfying, like ticking off a list. Watch Later has limits because an infinite queue is just another infinite feed.
+
+  - type: feature
+    id: rating
+    heading: Rating what you watched
+    image: featureRating
+    what: |
+      - When a video ends, Villow asks **"Was this video worth your time?"** On mobile it's a swipe card; on desktop it sits in the navigation bar.
+      - Skips and removals are recorded too, so Villow learns what you pass on as well as what you finish.
+      - Missed one? Rate it later in the review timeline.
+    why: It's easy to watch for an hour and never ask whether you enjoyed it. One quick question after each video builds that habit, and turns a vague feeling into something you can see over time.
+
+  - type: feature
+    id: time
+    heading: Seeing where your time went
+    image: featureTime
+    what: |
+      - **Usage & limits:** today, against your limit.
+      - **Daily and monthly graphs** by channel, with your limit drawn alongside.
+      - **Where the time went:** watching vs browsing Villow vs YouTube itself. Tap "watching" to split it into worth it, not worth it and unrated.
+      - **When you watch:** your typical hours and weekdays.
+      - **Viewing Review:** a 30-day timeline with every video coloured green (worth it), red (not worth it) or grey (unrated), plus what you removed.
+      - **Opens per day**, against an optional open limit.
+      - **Streaks:** days you didn't extend a limit.
+    why: Most screen-time tools tell you *how long*. Villow also tells you *how it felt*, *where it came from* and *when it happens*, across every device you use Villow on, plus YouTube itself.
+
+  - type: feature
+    id: suggestions
+    heading: An algorithm that works for you
+    image: featureSuggestions
+    what: |
+      Villow scores each channel, recommendation source and topic on what you skip, finish, rate and spend time on, then suggests changes like:
+
+      - unsubscribe from a channel you keep rating as not worth it
+      - filter what you see from it, or which lengths
+      - check in on it less often
+      - give it a daily time limit
+      - see fewer country or friend recommendations
+      - limit your time, saves or recommendations on YouTube itself
+
+      Every suggestion shows its reasons, waits for enough evidence, can be dismissed on its own, and **never suggests raising a limit**.
+    why: Lots of controls only help if you know which one to reach for. Villow does the busywork of spotting patterns, but it only suggests; you decide. Engagement algorithms optimise for more watching. This one optimises for time you'll be glad you spent. And it isn't AI, just open rules you can see.
+    tagline: An algorithm that's on your side, and shows its working.
+
+  - type: feature
+    id: limits
+    heading: Limits that hold
+    image: featureLimits
+    what: |
+      - A daily watch limit, set during setup (nobody gets in without one).
+      - A daily limit on app opens.
+      - Per-channel daily limits.
+      - **Schedules:** allowed and blocked hours for each day of the week, different allowances on different days, and date bans. Drag to edit on a 24-hour track.
+      - **Bedtime** window with snooze.
+      - **Breaks:** a warning after a stretch of watching, and optional enforced breaks.
+      - **Time on YouTube counts** toward your limit, with the linked extension.
+      - If a limit lands mid-video, you can finish that video.
+      - Raising a limit resets your streak, and Villow tells you before you confirm.
+    why: A limit you can wave away isn't a limit, but one that feels like punishment gets turned off. Villow aims for the middle. It's firm when it matters, humane at the edges, and rewarding when you *don't* extend it.
+
+  - type: feature
+    id: friends
+    heading: Friends
+    image: featureFriends
+    what: |
+      - **Recommend a video to a friend** and see whether they watched it, how much, and whether they liked it.
+      - **Share only what you choose,** each item switched on separately: online status, your past fortnight, your daily average, your streak, when you tend to watch, your subscriptions and your settings (so friends can compare or borrow a setup). Nothing is shared by default.
+      - **Extras:** grouped streaks, and group limits or blocked hours your friends agree to share.
+      - **Watch together** {status:watch-together}
+    why: The best social features give you something to talk about and someone to be accountable to. Knowing a friend actually watched the video you sent means a real conversation. Seeing your usage next to your friends' (if everyone opts in) is a nudge no notification can match.
+    tagline: Built for friends, not followers.
+
+  - type: feature
+    id: real-life
+    heading: Back to real life
+    image: featureRealLife
+    what: |
+      - **Things to do:** a simple checklist, or import from **Google Tasks** or **Todoist**, with completion synced both ways.
+      - Mark items to show on breaks or at bedtime.
+      - Your list appears beside the video, when you reach a limit, when your feed is clear, on breaks and at bedtime.
+      - **Creator calls to action** {status:creator-cta} An example panel beside videos shows how a creator could attach one real next step, such as finding a local group, contacting a representative or volunteering. *This needs to live in YouTube Studio; Villow shows how it could work.*
+    why: Villow's job isn't to keep you in Villow. At natural stopping points it reminds you of the things you wanted to do today. And when a video inspires you, the next step should be one tap away, not buried in a description.
+    tagline: Sometimes the best thing a video can do is get you off the couch.
+    actions:
+      - label: More on creator calls to action →
+        href: /creators
+        style: text
+
+  - type: feature
+    id: extension
+    heading: The extension
+    image: featureExtension
+    what: |
+      The Villow extension brings limits to YouTube itself, in Chrome, Edge and Firefox, and on Firefox for Android.
+
+      - **On its own:** see your time on YouTube, cap your time, the recommendations you see and the videos you watch, and calm YouTube down with greyscale, hidden Shorts, hidden side recommendations and comments, bedtime, or blocking it entirely.
+      - **Linked to Villow:** click a video on YouTube and it's saved to your Villow feed instead of playing. Your YouTube time counts toward your Villow limit, and you can edit your limits in either place.
+    why: Villow can't show YouTube's own recommendations inside the app, so the extension goes where they are. You keep the freedom to browse YouTube, with a ceiling you set.
+    actions:
+      - label: All about the extension →
+        href: /extension
+        style: text
+
+  - type: feature
+    id: listening
+    heading: Built by listening
+    image: featureFeedback
+    what: |
+      - Check-ins inside the app at first impressions, after two weeks and after three months, shown as a gentle "Feedback ready" notice.
+      - A feedback form any time.
+    why: Villow is meant to make people's time better, and the only way to know whether it does is to ask. Their answers go to Fix the Web and shape what gets built next.
+    tagline: Built for people, by listening to people.
+
+  - type: section
+    id: settings
+    heading: Settings at a glance
+    body: |
+      **Profile · Social · Appearance · Global · Recommendations · Batch Sync · Bedtime & Breaks · Watch Later · Your Channels · Things to do · Extension**
+    image: featureAppearance
+    tagline: A lot of settings, and every one is there to make your time more enjoyable, more intentional, or both.
+
+  - type: cta
+    variant: fixtheweb
+    heading: Every one of these is something YouTube could offer.
+    body: Villow was built on YouTube's public API, from the outside. Fix the Web is asking platforms to build controls like these in, for everyone.
+    actions:
+      - label: See what we're asking platforms to change →
+        href: link:fixTheWeb
+        style: primary
+      - label: YouTube could do this →
+        href: /youtube-could-do-this
+        style: text
+
+  - type: cta
+    heading: Ready for your own Villow?
+    actions:
+      - label: Download Villow
+        href: /download
+        style: primary
+      - label: Read the FAQ →
+        href: /faq
+        style: text

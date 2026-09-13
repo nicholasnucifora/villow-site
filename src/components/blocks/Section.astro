@@ -1,0 +1,102 @@
+---
+import type { BlockOf } from "../../lib/schema";
+import { inline, md, slugify } from "../../lib/markdown";
+import Action from "../ui/Action.astro";
+import BlockShell from "../ui/BlockShell.astro";
+import BlockHeader from "../ui/BlockHeader.astro";
+import Media from "../ui/Media.astro";
+
+interface Props {
+  block: BlockOf<"section">;
+}
+
+const { block } = Astro.props;
+const headingId = block.heading ? `${block.id ?? slugify(block.heading)}-title` : undefined;
+const statement = block.variant === "statement";
+const width = block.image ? "page" : statement ? "narrow" : "prose";
+---
+
+<BlockShell type="section" id={block.id} background={block.background} width={width} labelledBy={headingId}>
+  <div
+    class:list={[
+      "section",
+      statement && "section--statement",
+      block.image && "section--split",
+      block.image && `section--image-${block.imageSide}`,
+    ]}
+  >
+    <div class="section__text">
+      <BlockHeader eyebrow={block.eyebrow} heading={block.heading} headingId={headingId} align={statement ? "center" : "start"} />
+      {block.body && <div class="section__body prose" set:html={md(block.body)} />}
+      {
+        block.callouts?.map((callout) => (
+          <aside class:list={["callout", `callout--${callout.tone}`]}>
+            {callout.heading && <h3 set:html={inline(callout.heading)} />}
+            <div class="prose" set:html={md(callout.body)} />
+          </aside>
+        ))
+      }
+      {block.tagline && <p class="tagline" set:html={inline(block.tagline)} />}
+      {
+        block.actions && (
+          <div class="actions">
+            {block.actions.map((action) => (
+              <Action action={action} />
+            ))}
+          </div>
+        )
+      }
+    </div>
+    {
+      block.image && (
+        <div class="section__media">
+          <Media image={block.image} />
+        </div>
+      )
+    }
+  </div>
+</BlockShell>
+
+<style>
+  .section {
+    display: grid;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+  .section__text {
+    display: grid;
+    gap: var(--space-lg);
+    align-content: start;
+  }
+  .section__text :global(.block-header) {
+    margin-bottom: 0;
+  }
+  .section:not(.section--statement) .section__text :global(.block-header h2) {
+    font-size: var(--text-2xl);
+  }
+  .section--statement {
+    text-align: center;
+  }
+  .section--statement .section__body {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    font-weight: var(--weight-heading);
+    letter-spacing: var(--tracking-heading);
+    line-height: var(--leading-snug);
+    text-wrap: balance;
+  }
+  .section--statement .tagline,
+  .section--statement .actions {
+    justify-content: center;
+  }
+
+  @media (min-width: 56rem) {
+    .section--split {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xl);
+    }
+    .section--image-left .section__media {
+      order: -1;
+    }
+  }
+</style>

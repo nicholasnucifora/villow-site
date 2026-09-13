@@ -1,0 +1,38 @@
+---
+import { config } from "../lib/config";
+import { ui } from "../lib/content";
+---
+
+<span class="logo">
+  {
+    config.brand.logo ? (
+      <img class="logo__image" src={config.brand.logo} alt="" width="32" height="32" />
+    ) : (
+      <span class="logo__placeholder" title={ui.logoPlaceholder} aria-hidden="true" />
+    )
+  }
+  <span class="logo__name">{config.site.name}</span>
+</span>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-family: var(--font-heading);
+    font-weight: var(--weight-heading);
+    font-size: var(--text-xl);
+    letter-spacing: var(--tracking-heading);
+  }
+  .logo__image {
+    width: 2rem;
+    height: 2rem;
+  }
+  .logo__placeholder {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    border: 2px dashed var(--tbd-border);
+    background: var(--tbd-bg);
+  }
+</style>

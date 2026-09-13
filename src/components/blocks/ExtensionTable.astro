@@ -1,0 +1,124 @@
+---
+/* What the extension does on its own and linked to Villow, built from features.extension in site.config.yaml. */
+import type { BlockOf } from "../../lib/schema";
+import { config } from "../../lib/config";
+import { ui } from "../../lib/content";
+import { escapeHtml, slugify, statusBadgeHtml } from "../../lib/markdown";
+import BlockShell from "../ui/BlockShell.astro";
+import BlockHeader from "../ui/BlockHeader.astro";
+
+interface Props {
+  block: BlockOf<"extensionTable">;
+}
+
+const { block } = Astro.props;
+const headingId = block.heading ? `${block.id ?? slugify(block.heading)}-title` : undefined;
+const [featureColumn, aloneColumn, linkedColumn] = block.columns;
+
+const cell = (yes: boolean, note?: string) =>
+  (yes
+    ? `<span class="ext__yes" aria-hidden="true">✓</span><span class="visually-hidden">${escapeHtml(ui.yes)}</span>`
+    : `<span class="ext__no" aria-hidden="true">–</span><span class="visually-hidden">${escapeHtml(ui.no)}</span>`) +
+  (note ? ` <span class="ext__note">(${escapeHtml(note)})</span>` : "");
+---
+
+<BlockShell type="extensionTable" id={block.id} background={block.background} width="narrow" labelledBy={headingId}>
+  <BlockHeader eyebrow={block.eyebrow} heading={block.heading} intro={block.intro} headingId={headingId} />
+  <div class="ext">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">{featureColumn}</th>
+          <th scope="col">{aloneColumn}</th>
+          <th scope="col">{linkedColumn}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          config.features.extension.map((feature) => (
+            <tr>
+              <th scope="row" set:html={`${escapeHtml(feature.name)} ${statusBadgeHtml(feature.status)}`} />
+              <td data-label={aloneColumn} set:html={cell(feature.alone, feature.aloneNote)} />
+              <td data-label={linkedColumn} set:html={cell(feature.linked, feature.linkedNote)} />
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</BlockShell>
+
+<style>
+  .ext table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-sm);
+  }
+  .ext th,
+  .ext td {
+    text-align: left;
+    vertical-align: top;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: var(--border);
+  }
+  .ext thead th {
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    border-bottom-width: 2px;
+  }
+  .ext tbody th {
+    font-weight: 500;
+    width: 50%;
+  }
+  .ext :global(.ext__yes) {
+    color: var(--color-accent-text);
+    font-weight: var(--weight-heading);
+  }
+  .ext :global(.ext__no) {
+    color: var(--color-text-muted);
+  }
+  .ext :global(.ext__note) {
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 40rem) {
+    .ext thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+    .ext table,
+    .ext tbody,
+    .ext tr,
+    .ext th,
+    .ext td {
+      display: block;
+      width: auto;
+    }
+    .ext tr {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2xs) var(--space-md);
+      padding-block: var(--space-sm);
+      border-bottom: var(--border);
+    }
+    .ext tbody th {
+      grid-column: 1 / -1;
+      width: auto;
+    }
+    .ext th,
+    .ext td {
+      padding: 0;
+      border: 0;
+    }
+    .ext td::before {
+      content: attr(data-label) ": ";
+      color: var(--color-text-muted);
+      font-size: var(--text-xs);
+    }
+  }
+</style>

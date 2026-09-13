@@ -1,0 +1,18 @@
+---
+/* Every page in src/content/pages/ becomes a page: index.yaml is /, faq.yaml is /faq. */
+import Base from "../layouts/Base.astro";
+import Blocks from "../components/Blocks.astro";
+import { pages } from "../lib/content";
+
+export function getStaticPaths() {
+  return pages
+    .filter((page) => page.slug !== "404")
+    .map((page) => ({ params: { slug: page.slug === "index" ? undefined : page.slug }, props: { page } }));
+}
+
+const { page } = Astro.props;
+---
+
+<Base title={page.title} description={page.description} path={page.path}>
+  <Blocks blocks={page.blocks} />
+</Base>

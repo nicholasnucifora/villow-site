@@ -1,0 +1,92 @@
+# The extension: what it does alone and linked, where it works, what it can see.
+title: The extension
+description: The Villow extension brings limits to YouTube itself, in Chrome, Edge and Firefox, and on Firefox for Android. Use it on its own, or link it to Villow.
+
+blocks:
+  - type: hero
+    eyebrow: The Villow extension
+    title: Bring your limits to YouTube itself.
+    lead: The Villow extension works on YouTube in Chrome, Edge and Firefox, and on Firefox for Android. Use it on its own, or link it to Villow to bring everything together.
+    actions:
+      - label: Chrome Web Store
+        href: link:chromeStore
+        style: primary
+      - label: Edge Add-ons
+        href: link:edgeAddons
+        style: primary
+      - label: Firefox Add-ons
+        href: link:firefoxAddons
+        style: primary
+    smallPrint:
+      - Free and open source
+      - "[View the source code](link:extensionSource)"
+    image: extensionOnYouTube
+
+  - type: section
+    id: on-its-own
+    heading: On its own
+    body: |
+      - **See your time on YouTube** today, and your daily average.
+      - **Daily caps you choose:** time on YouTube, recommendations you see, and videos you watch.
+      - **Calmer YouTube:** greyscale thumbnails or videos, hide Shorts, hide the recommendations beside the video you're watching, and hide comments.
+      - **Bedtime:** YouTube closes for the night when you've said it should.
+      - **Or block YouTube entirely.**
+    image: extensionSettings
+
+  - type: section
+    id: with-villow
+    eyebrow: Recommended
+    heading: Better with Villow
+    body: |
+      - **Click a video on YouTube, and it's saved to your Villow feed instead of playing.** Browsing stays browsing; one video doesn't snowball into ten. Your daily cap becomes a cap on **saves**.
+      - **Your time counts.** Time on YouTube adds to your Villow daily limit, and shows up on your Villow time page and in your suggestions.
+      - **Hide channels you already subscribe to**, since they're waiting in your Villow feed.
+      - **One set of limits.** Edit them in the extension or inside Villow, and see your progress as small rings on your Villow home page.
+    image: extensionRings
+    imageSide: left
+
+  - type: section
+    variant: statement
+    eyebrow: Why an extension?
+    body: Villow can't show YouTube's own recommendations inside the app, so the extension goes where they are. You keep the freedom to browse YouTube, with a ceiling you set.
+
+  - type: extensionTable
+    id: everything-it-does
+    heading: Everything it does
+    columns: [Feature, On its own, Linked to Villow]
+
+  - type: table
+    id: where-it-works
+    heading: Where it works
+    columns: [Device, Support]
+    rows:
+      - ["Windows, macOS, Linux", "Chrome, Edge, Firefox"]
+      - ["Android", "Firefox (recommended), plus some other Android browsers that support extensions"]
+      - ["iPhone, iPad, Safari", "{status:ext-safari}"]
+
+  - type: section
+    id: what-it-can-see
+    background: soft
+    heading: What it can see
+    body: |
+      - It only works on YouTube pages, in the browser where you install it.
+      - Linked to Villow, it sends videos you click and your daily totals (like time on YouTube and recommendations seen) to **your own Villow**, not to Fix the Web or anyone else.
+      - It doesn't send your browsing history.
+      - It never changes anything in your YouTube account.
+      - **It's open source,** so anyone can check exactly what it does.
+
+      {tbd:extensionPointsConfirmed}
+    actions:
+      - label: Extension privacy policy
+        href: link:extensionPrivacy
+      - label: Source code on GitHub
+        href: link:extensionSource
+
+  - type: section
+    id: linking
+    heading: Linking it to Villow
+    body: Inside Villow, create a connect link and open it in the browser where the extension is installed. You can make a separate link for each browser, and turn any one of them off on its own.
+    actions:
+      - label: Don't have a Villow yet? Get one →
+        href: /download
+        style: text

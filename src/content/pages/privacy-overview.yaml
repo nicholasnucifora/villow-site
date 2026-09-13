@@ -1,0 +1,63 @@
+# Privacy overview: plain-language summary, this website, and links to both formal policies.
+# /privacy is the extension's own policy (public/privacy.html) and isn't built from here.
+# Rule: never write "no tracking" about the app. Write "measured for you, kept in your own Villow".
+title: Privacy
+description: What Villow measures, why, where it's kept and what it never does, in plain language, with links to the app and extension privacy policies.
+
+blocks:
+  - type: hero
+    eyebrow: Privacy
+    title: Measured for you, kept in your own Villow.
+    lead: Villow measures a lot about how you watch, because that's how it helps. Here's what it measures, where it's kept, and what it never does. This is a plain-language summary. The formal policies are [linked below](#policies).
+
+  - type: section
+    id: where-your-data-lives
+    heading: Where your data lives
+    body: In your own Villow, a database in the owner's Supabase account. There's no central Villow server collecting everyone's viewing data.
+
+  - type: section
+    id: what-villow-measures
+    heading: What Villow measures, and why
+    body: |
+      - Watch time by day, hour, channel and source, *to show you where your time goes*
+      - Browsing time inside Villow, by page type only (never URLs or visit lists), *to separate browsing from watching*
+      - Opens per day, *for the optional open limit*
+      - What you skip, finish and rate, *for reflection and suggestions*
+      - A 30-day viewing timeline, deleted after 30 days
+      - With the linked extension: daily time on YouTube, recommendations seen and videos saved
+
+  - type: section
+    id: feedback
+    heading: Feedback check-ins
+    body: Optional surveys inside the app, hosted on Tally. Responses from every Villow go to Fix the Web to improve the design. The survey link carries a separate participant code, not your name or email address.
+
+  - type: section
+    id: never
+    background: soft
+    heading: What Villow never does
+    body: |
+      - No ads, no advertising or analytics SDKs, and nothing sold
+      - No tracking of videos made for kids
+      - Nothing shared with friends unless you switch that item on
+      - Saving a video from YouTube never changes your YouTube account
+
+  - type: section
+    id: signing-in
+    heading: Signing in
+    body: Villow uses Google sign-in and never sees your password. Google access tokens are encrypted before they're stored. Task integrations are only requested when you choose to connect one, and Todoist isn't given permission to delete tasks.
+
+  - type: section
+    id: this-website
+    heading: This website
+    body: villow.app uses no analytics, no cookies and no third-party embeds. Nothing loads from YouTube or anyone else when you visit.
+
+  - type: cards
+    id: policies
+    heading: The formal policies
+    items:
+      - title: Villow app privacy policy
+        href: link:appPrivacy
+        body: "The Villow web app: Google sign-in, YouTube API Services, and everything stored in a Villow. {tbd:appPolicyStatus}"
+      - title: Villow extension privacy policy
+        href: link:extensionPrivacy
+        body: The browser extension for Chrome, Edge and Firefox. What it sends to your Villow, and what never leaves your browser.

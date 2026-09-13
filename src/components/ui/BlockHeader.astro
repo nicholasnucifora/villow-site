@@ -1,0 +1,24 @@
+---
+/* Eyebrow, heading and intro at the top of a block. */
+import { inline, md } from "../../lib/markdown";
+
+interface Props {
+  eyebrow?: string;
+  heading?: string;
+  intro?: string;
+  headingId?: string;
+  align?: "start" | "center";
+}
+
+const { eyebrow, heading, intro, headingId, align = "start" } = Astro.props;
+---
+
+{
+  (eyebrow || heading || intro) && (
+    <header class:list={["block-header", align === "center" && "block-header--center"]}>
+      {eyebrow && <p class="eyebrow" set:html={inline(eyebrow)} />}
+      {heading && <h2 id={headingId} set:html={inline(heading)} />}
+      {intro && <div class="prose" set:html={md(intro)} />}
+    </header>
+  )
+}
