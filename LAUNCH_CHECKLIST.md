@@ -58,6 +58,11 @@ Notes under an item are research to help you check it. They were written on 14 S
   III.E.4.c and III.E.4.d: most stored data kept "for no longer than 30 calendar days", then deleted or refreshed. ✔ consistent. Check that Villow does this.
 - [ ] **(New)** "Popular in Your Country Today" is drawn from YouTube's country charts (`mostPopular` chart by region) and filtered by the topics you choose
 - [ ] **(New)** The official URLs in `site.config.yaml` under "Official third-party pages" are the ones you want to link
+- [ ] **(New)** "Fighting disinformation" on `/features` describes community notes accurately
+  Added 15 Sept 2026. It's a showcase (not in Villow), so it's labelled and on `/roadmap`.
+  - **YouTube has tested its own notes.** In June 2024 it announced a pilot where invited contributors add notes under videos, rated "Helpful", "Somewhat helpful" or "Unhelpful", on mobile in the US in English ([YouTube Blog](https://blog.youtube/news-and-events/new-ways-to-offer-viewers-more-context/)). Check where that's at now. The copy doesn't say YouTube lacks notes, but if notes are widely available, consider leaning the section on notifying people who already watched.
+  - **"Like Community Notes on X, a note only shows once people with different viewpoints rate it helpful."** Check against [About Community Notes on X](https://help.x.com/en/using-x/community-notes).
+  - **X already notifies people who engaged with a post that later gets a note** (since 2023), and in July 2026 announced it would send DMs too ([TechCrunch](https://techcrunch.com/2026/07/08/elon-musk-says-x-will-send-dms-when-posts-youve-engaged-with-are-corrected/)). The copy doesn't call the idea new, and shouldn't. What it adds is a notification that stays until you've read the note.
 
 ## Hosting providers
 

@@ -51,7 +51,7 @@ links:
   extensionPrivacy: /privacy # the existing extension policy. Don't change.
   appPrivacy: /app-privacy
   terms:
-  contact: # The extension policy lists nuciforan+villow@hotmail.com. Use mailto:… if you want that here.
+  contact: mailto:support@villow.app
 
   # Official third-party pages the copy refers to (see LAUNCH_CHECKLIST.md)
   youtubeApiTerms: https://developers.google.com/youtube/terms/api-services-terms-of-service
@@ -202,6 +202,11 @@ images:
     alt:
   featureRealLife:
     label: Things to do with an imported list, and the creator call-to-action panel
+    ratio: 16/10
+    src:
+    alt:
+  featureCommunityNotes:
+    label: "Concept mockup, clearly not Villow: a community note beside a video, and the notification about a video you already watched"
     ratio: 16/10
     src:
     alt:
@@ -414,6 +419,12 @@ features:
       status: showcase
       summary: A creator attaches one focused, real-world next step to a video, shown right beside it. The real thing needs YouTube Studio, so Villow shows an example of how it could work.
       notes: Needs YouTube Studio. Villow shows an example panel beside videos
+    - id: community-notes
+      area: Information
+      name: Community notes beside videos, and a notification when a video you watched gets one
+      status: showcase
+      summary: Notes beside misleading videos, shown once people with different viewpoints agree they help. Anyone who already watched is notified, and the notification stays until they've read the note. Not built into Villow, because it needs a platform's community.
+      notes: Idea only, not implemented in the app. Shown on How it works as a pitch for YouTube
     - id: feedback-checkins
       area: Design
       name: Optional check-ins (first impressions, 2 weeks, 3 months) and feedback any time

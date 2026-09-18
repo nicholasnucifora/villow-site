@@ -122,6 +122,20 @@ blocks:
         style: text
 
   - type: feature
+    id: disinformation
+    eyebrow: "An idea for YouTube {status:community-notes}"
+    heading: Fighting disinformation
+    image: featureCommunityNotes
+    what: |
+      *This isn't in Villow. Community notes need a large, varied community of viewers, so this is a showcase of how they could work on YouTube.*
+
+      - **Notes beside the video.** When a video is misleading or leaves out important context, a community note appears beside it, explaining what's wrong and where to find better information.
+      - **Notes people agree on.** Like Community Notes on X, a note only shows once people with different viewpoints rate it helpful. On YouTube, that could mean viewers who usually watch very different channels.
+      - **Notes that find you later.** If a video you've already watched gets a note, you're notified. The notification stays until you've opened the note and marked it as read.
+    why: A note often arrives after a video has already spread. By then, most viewers have taken in its claims and moved on, and the note only reaches whoever watches next. Telling the people who already watched brings the correction to the people who saw the claim, and a notification that stays until it's read makes sure it isn't missed.
+    tagline: A correction should reach everyone who saw the claim, not just whoever comes next.
+
+  - type: feature
     id: extension
     heading: The extension
     image: featureExtension
