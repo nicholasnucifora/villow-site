@@ -40,9 +40,9 @@ links:
 
   # Getting Villow
   setupWindows: # Villow Setup download for Windows
-  chromeStore:
-  edgeAddons:
-  firefoxAddons: # the same listing covers Firefox for Android
+  chromeStore: https://chromewebstore.google.com/detail/villow/cfgmdkobjfkacdamdfmbnifadbancelc
+  edgeAddons: # still to come; the Edge buttons show marked TBD until this is filled in
+  firefoxAddons: https://addons.mozilla.org/firefox/addon/villow/ # the same listing covers Firefox for Android
 
   # Code
   appSource: # Villow app repository (MIT)
