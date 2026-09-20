@@ -1,14 +1,43 @@
 ---
+/*
+ * The Villow mark and name, from the Villow icon kit (version 3; master copy in the design repo).
+ * The site's light and dark follow the visitor's system setting, so the mark does too.
+ * Pass `tone` where the mark sits on a background that isn't the page's own.
+ */
 import { config } from "../lib/config";
-import { ui } from "../lib/content";
+
+type Tone = "on-light" | "on-dark";
+
+interface Props {
+  /** Height in px. The width follows the mark's 712×798 shape. */
+  size?: number;
+  /** Pin the palette: on-light for light backgrounds, on-dark for dark ones. */
+  tone?: Tone;
+}
+
+const { size = 32, tone } = Astro.props;
+/*
+ * The gap between the two halves narrows to a point at the tip. Below about 32px that point
+ * fuses shut on screen, so the smaller sizes are drawn with an even lane instead. These are
+ * three different drawings, not one scaled: never use one outside its band.
+ *   33px and up     villow-mark-*        the drawing, untouched
+ *   21–32px         villow-mark-small-*  lane, 40 units
+ *   20px and under  villow-mark-micro-*  lane, 56 units
+ */
+const cut = size <= 20 ? "villow-mark-micro" : size <= 32 ? "villow-mark-small" : "villow-mark";
+const mark = (t: Tone) => `/brand/${cut}-${t}.svg`;
+const width = Math.round((size * 712) / 798);
 ---
 
-<span class="logo">
+<span class="logo" style={`--mark-height: ${size / 16}rem`}>
   {
-    config.brand.logo ? (
-      <img class="logo__image" src={config.brand.logo} alt="" width="32" height="32" />
+    tone ? (
+      <img class="logo__mark" src={mark(tone)} alt="" width={width} height={size} />
     ) : (
-      <span class="logo__placeholder" title={ui.logoPlaceholder} aria-hidden="true" />
+      <picture>
+        <source srcset={mark("on-dark")} media="(prefers-color-scheme: dark)" />
+        <img class="logo__mark" src={mark("on-light")} alt="" width={width} height={size} />
+      </picture>
     )
   }
   <span class="logo__name">{config.site.name}</span>
@@ -24,15 +53,12 @@ import { ui } from "../lib/content";
     font-size: var(--text-xl);
     letter-spacing: var(--tracking-heading);
   }
-  .logo__image {
-    width: 2rem;
-    height: 2rem;
-  }
-  .logo__placeholder {
-    width: 1.75rem;
-    height: 1.75rem;
-    border-radius: 50%;
-    border: 2px dashed var(--tbd-border);
-    background: var(--tbd-bg);
+  /* Sized by height; the width follows, so the mark is never stretched.
+     max-width has to go: the 100% in base.css has nothing to measure inside <picture>
+     and collapses the mark to nothing. */
+  .logo__mark {
+    height: var(--mark-height);
+    width: auto;
+    max-width: none;
   }
 </style>

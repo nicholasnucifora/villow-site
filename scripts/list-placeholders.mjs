@@ -5,7 +5,6 @@ import { parse } from "yaml";
 const config = parse(await readFile(new URL("../site.config.yaml", import.meta.url), "utf8"));
 
 const sections = [
-  ["Brand", Object.entries(config.brand).filter(([, v]) => !v).map(([k]) => k)],
   ["Links", Object.entries(config.links).filter(([, v]) => !v).map(([k]) => k)],
   ["Not decided yet", Object.entries(config.tbd).filter(([, v]) => !v.value).map(([k, v]) => `${k}: ${v.note}`)],
   ["Images", Object.entries(config.images).filter(([, v]) => !v.src).map(([k, v]) => `${k}: ${v.label} (${v.ratio})`)],

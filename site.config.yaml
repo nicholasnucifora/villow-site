@@ -22,10 +22,11 @@ site:
 # in the corner of every page.
 theme: fern
 
-brand:
-  logo: # e.g. /brand/villow-logo.svg (put the file in public/brand/)
-  favicon: # e.g. /favicon.svg. Until then a placeholder icon is used.
-  appIcon: # e.g. /apple-touch-icon.png (180×180)
+# The Villow mark is installed, not configured. The tab and app icons are the files
+# in public/ (favicon.svg, favicon.ico, apple-touch-icon.png, icon-*.png,
+# safari-pinned-tab.svg, site.webmanifest); the logo in the header is
+# public/brand/villow-mark-*.svg, drawn by src/components/Logo.astro.
+# Keep those filenames exactly as they are; the kit's master copy lives in the design repo.
 
 # ── Links ────────────────────────────────────────────────────────────────────
 # Use these in copy as [label](link:key), and in buttons as href: link:key.

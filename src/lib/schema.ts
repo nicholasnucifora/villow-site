@@ -28,7 +28,6 @@ export const configSchema = z
   .strictObject({
     site: z.strictObject({ name: z.string(), url: z.url(), lang: z.string() }),
     theme: z.enum(themes),
-    brand: z.strictObject({ logo: optionalText, favicon: optionalText, appIcon: optionalText }),
     links: z.record(z.string(), optionalText),
     tbd: z.record(z.string(), z.strictObject({ note: z.string(), value: optionalText })),
     images: z.record(
@@ -288,7 +287,6 @@ export const siteContentSchema = z.strictObject({
     skipToContent: z.string(),
     mainNav: z.string(),
     footerNav: z.string(),
-    logoPlaceholder: z.string(),
     tbd: z.string(),
     tbdTitle: z.string(),
     inertLinkTitle: z.string(),

@@ -31,8 +31,26 @@ Node 22.12 or newer.
 | Type, spacing, radii, shadows | `src/styles/tokens.css` |
 | Buttons, text, placeholders, badges | `src/styles/base.css` |
 | How a kind of section looks | `src/components/blocks/<Block>.astro` |
+| The logo, the tab and app icons | `public/` and `public/brand/` — see Icons, below |
 
 Copy never lives in components, and styling never lives in content files.
+
+### Icons
+
+The mark comes from the Villow icon kit (version 3, 20 September 2026), whose master copy lives in
+the design repo — it is handed over and installed here, never kept as a folder in this repo.
+The tab and app icons are the files in `public/` (`favicon.svg`, `favicon.ico`, `apple-touch-icon.png`,
+`icon-*.png`, `safari-pinned-tab.svg`, `site.webmanifest`), wired up by the five `<link>` tags in
+`src/layouts/Base.astro`. The logo in the header is `public/brand/villow-mark-*.svg`, drawn by
+`src/components/Logo.astro`, which picks the light or dark palette from the visitor's system setting.
+
+The three brand SVGs are three different drawings, not one scaled: `villow-mark-*` above 32px,
+`villow-mark-small-*` at 21–32px, `villow-mark-micro-*` at 20px and under. `Logo.astro` picks by its
+`size` prop. Keep the filenames as they are, don't add other favicon tags, and don't recolour, resize
+or re-export any of the files. If a size is missing, ask for it rather than making it.
+
+`/privacy` is a hand-written file and has no icon tags of its own; browsers fall back to
+`/favicon.ico` there, which is correct and needs no change.
 
 ### Pages
 
