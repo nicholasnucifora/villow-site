@@ -3,6 +3,14 @@
  * Each block's own layout lives in its component (src/components/blocks/).
  */
 
+@font-face {
+  font-family: "Varela Round";
+  src: url("/fonts/VarelaRound-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {

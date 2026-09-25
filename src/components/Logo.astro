@@ -48,10 +48,13 @@ const width = Math.round((size * 712) / 798);
     display: inline-flex;
     align-items: center;
     gap: var(--space-xs);
-    font-family: var(--font-heading);
-    font-weight: var(--weight-heading);
     font-size: var(--text-xl);
     letter-spacing: var(--tracking-heading);
+  }
+  .logo__name {
+    font-family: "Varela Round", var(--font-heading);
+    font-weight: 400;
+    -webkit-text-stroke: 0.5px currentColor;
   }
   /* Sized by height; the width follows, so the mark is never stretched.
      max-width has to go: the 100% in base.css has nothing to measure inside <picture>
