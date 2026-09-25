@@ -13,21 +13,21 @@ blocks:
     heading: Your feed, your way
     image: featureFeed
     what: |
-      Your subscriptions, shaped channel by channel. Keep the videos you want to see and filter out the rest.
+      Your subscriptions, shaped channel by channel. Keep the videos you want and filter out the rest, so the feed feels worth choosing over the endless recommendation loop.
 
   - type: feature
     id: sorting
     heading: Give each video a moment
     image: featureSorting
     what: |
-      Treat your feed like a list: give each video a moment, then skip it, save it for later or add it to a playlist.
+      Treat your feed like a list: give each video a moment, then skip it, save it for later or add it to a playlist. That small decision makes watching feel deliberate and satisfying.
 
   - type: feature
     id: rating
     heading: Was it worth your time?
     image: featureRating
     what: |
-      After a video, Villow asks: **“Was this worth your time?”** A quick, optional answer helps you see what you actually enjoy.
+      After a video, Villow asks: **“Was this worth your time?”** Answering is quick and optional. Over time, your answers show what you value alongside how long you watched.
 
   - type: feature
     id: time
@@ -36,13 +36,14 @@ blocks:
     what: |
       - See your watching by day, channel and time of day. Viewing Review shows each video and whether you found it worth your time.
       - Follow your daily average and the share of videos you found worth it, so you can see how your habits change.
+    tagline: Seeing the pattern helps you decide what to change.
 
   - type: feature
     id: suggestions
     heading: An algorithm that works for you
     image: featureSuggestions
     what: |
-      Villow spots patterns in what you watch, skip and rate, then suggests changes to your feed or limits. Every suggestion explains why; you decide whether to use it.
+      Villow spots patterns in what you watch, skip and rate, then suggests changes to your feed or limits. Every suggestion explains why; you decide whether to use it. That helps you find the right control when you aren't sure what to change.
 
   - type: feature
     id: limits
@@ -51,6 +52,7 @@ blocks:
     what: |
       - Set watch limits, schedules, bedtime and breaks that fit your day.
       - If a limit arrives mid-video, you can finish it. Leave whenever you want, and your place is saved for later.
+    tagline: Saved progress makes leaving less frustrating, so limits are easier to keep.
 
   - type: section
     id: momentum
@@ -58,6 +60,7 @@ blocks:
     body: |
       - A streak marks the days you kept your own watch limit.
       - Opt in with friends to see group watch time and keep a shared streak.
+    tagline: A streak gives you a small reward for stopping when you planned to.
 
   - type: feature
     id: friends
@@ -66,6 +69,7 @@ blocks:
     what: |
       - **Popular in Your Country Today:** See what people across your country are watching beyond your usual feed.
       - **Videos from friends:** Recommend a video and see whether a friend watched and liked it, so you have something to discuss. Share your own activity only if you choose.
+    tagline: Shared videos give people something to talk about beyond their own feeds.
 
   - type: feature
     id: real-life
@@ -88,13 +92,14 @@ blocks:
     what: |
       - A Community Note would appear beside a video when people with different viewpoints agree it adds needed context.
       - If a note arrives later, everyone who already watched gets a notice that stays until they read it.
+    tagline: A correction needs to reach the people who saw the claim.
 
   - type: feature
     id: extension
     heading: Take your limits onto YouTube
     image: featureExtension
     what: |
-      Use the extension to bring limits and calmer viewing settings to YouTube's own recommendations, too.
+      Villow can't show YouTube's own recommendations inside the app. The extension puts limits and calmer settings where that feed lives, so you can explore it on your terms.
     actions:
       - label: All about the extension →
         href: /extension
@@ -105,7 +110,7 @@ blocks:
     heading: Make it yours
     image: featureAppearance
     what: |
-      Choose how Villow looks and feels, from thumbnails and motion to colours and icons. Make watching feel calmer and more like yours.
+      Choose how Villow looks and feels, from thumbnails and motion to colours and icons. When the app feels good to use, choosing your own feed takes less effort.
 
   - type: cta
     variant: fixtheweb
