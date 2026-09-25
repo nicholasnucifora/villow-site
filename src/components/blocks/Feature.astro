@@ -22,7 +22,7 @@ const headingId = `${block.id}-title`;
       {block.eyebrow && <p class="eyebrow" set:html={inline(block.eyebrow)} />}
       <h2 id={headingId} set:html={inline(block.heading)} />
       <div class="feature__what">
-        <h3 class="feature__label">{ui.featureWhat}</h3>
+        {block.why && <h3 class="feature__label">{ui.featureWhat}</h3>}
         <div class="prose" set:html={md(block.what)} />
       </div>
       {

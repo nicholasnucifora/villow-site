@@ -62,6 +62,8 @@ Sometimes the best outcome of a video is closing the app and *doing* something. 
 
 It goes further as a showcase. A creator whose video is about a cause could attach a real-world next step, like joining a local group or writing to a representative, right beside the video. The creator side of that has to live in YouTube Studio, so Villow can only show how it could work. {status:creator-cta}
 
+Sharing a video with a friend can turn a private reaction into a conversation. A to-do item or a creator's proposed next step can help that conversation become something concrete: tackling a problem close to home, joining others, or helping more people understand the issue. People decide what happens next; Villow makes room for that decision after the video.
+
 > Sometimes the best thing a video can do is get you off the couch.
 
 ## Your whole viewing picture, not surveillance
