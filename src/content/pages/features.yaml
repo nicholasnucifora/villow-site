@@ -8,77 +8,72 @@ blocks:
     title: You choose how YouTube fits into your day.
     lead: Shape what you see, decide what deserves your time, and leave with something better than another hour of scrolling.
 
-  - type: toc
-    heading: On this page
-
   - type: feature
     id: feed
     heading: Your feed, your way
     image: featureFeed
     what: |
-      Your subscriptions are still the heart of the feed. You decide what you see from each channel and how often it appears, and the feed has an end.
-
-      Optional sections bring in videos friends recommend, videos you save from YouTube, and what's popular across your country. They give you more to talk about beyond your usual corner of YouTube.
-    tagline: A familiar feed you can tend, and finish.
+      Your subscriptions, shaped channel by channel. Keep the videos you want to see and filter out the rest.
 
   - type: feature
     id: sorting
     heading: Give each video a moment
     image: featureSorting
     what: |
-      On mobile, swipe through videos one at a time: skip one, save it to Watch Later or add it to a playlist. Sorting feels like clearing a list, with room to decide what deserves your attention.
+      Treat your feed like a list: give each video a moment, then skip it, save it for later or add it to a playlist.
 
   - type: feature
     id: rating
     heading: Was it worth your time?
     image: featureRating
     what: |
-      After a video, Villow asks one quick question: **“Was this worth your time?”** Your answers, along with what you skip, help you see what you actually enjoy.
+      After a video, Villow asks: **“Was this worth your time?”** A quick, optional answer helps you see what you actually enjoy.
 
   - type: feature
     id: time
     heading: See where your time went
     image: featureTime
     what: |
-      See how much time you spend watching, which channels fill it, and the hours and days you tend to watch. Your Viewing Review lays out each day, video by video, including whether it felt worth it. Time on YouTube can count too when you link the extension.
+      - See your watching by day, channel and time of day. Viewing Review shows each video and whether you found it worth your time.
+      - Follow your daily average and the share of videos you found worth it, so you can see how your habits change.
 
   - type: feature
     id: suggestions
     heading: An algorithm that works for you
     image: featureSuggestions
     what: |
-      Villow spots patterns in what you watch, skip and rate, then suggests changes to your channels, filters or limits. Each suggestion shows its reasons. You choose whether to use it, and Villow never suggests raising a limit.
-    tagline: An algorithm on your side, with its working in plain sight.
+      Villow spots patterns in what you watch, skip and rate, then suggests changes to your feed or limits. Every suggestion explains why; you decide whether to use it.
 
   - type: feature
     id: limits
     heading: Limits that fit real life
     image: featureLimits
     what: |
-      Set a daily watch limit, a schedule and a bedtime, with breaks when you need them. Villow shows when a video would run past your time left. If your limit arrives mid-video, you can finish it or leave and pick up where you stopped.
+      - Set watch limits, schedules, bedtime and breaks that fit your day.
+      - If a limit arrives mid-video, you can finish it. Leave whenever you want, and your place is saved for later.
 
   - type: section
     id: momentum
     heading: A reason to stop
     body: |
-      Your streak marks the days you stuck to your limit. With friends who opt in, you can see your group's watch time and keep a shared streak or limit. Your settings are always yours to change.
+      - A streak marks the days you kept your own watch limit.
+      - Opt in with friends to see group watch time and keep a shared streak.
 
   - type: feature
     id: friends
-    heading: Share with friends
+    heading: Find common ground
     image: featureFriends
     what: |
-      Send a video to a friend and see whether they watched and liked it. Share parts of your own watching or settings only if you choose. Nothing is shared by default.
-    tagline: A video worth sharing can start a real conversation.
+      - **Popular in Your Country Today:** See what people across your country are watching beyond your usual feed.
+      - **Videos from friends:** Recommend a video and see whether a friend watched and liked it, so you have something to discuss. Share your own activity only if you choose.
 
   - type: feature
     id: real-life
     heading: Back to real life
     image: featureRealLife
     what: |
-      Keep a to-do list beside what you watch. It comes back at natural stopping points, when you're ready to do something else.
-
-      A **creator call to action** {status:creator-cta} showcase imagines one clear next step beside a video, where you could add it to your list. This would need to be built into YouTube Studio.
+      - Your to-do list returns at natural stopping points, ready when you want to do something else.
+      - **Creator calls to action** {status:creator-cta} could put a next step beside a video, ready for your list. This needs YouTube Studio.
     tagline: A clear next step can turn a conversation into action.
     actions:
       - label: More on creator calls to action →
@@ -91,15 +86,15 @@ blocks:
     heading: Corrections that reach everyone
     image: featureCommunityNotes
     what: |
-      Imagine Community Notes on YouTube, backed by people with different viewpoints. A note would appear beside the video. If it arrived later, everyone who had already watched would get a notice that stays until they read it.
-    tagline: A correction should reach the people who saw the claim.
+      - A Community Note would appear beside a video when people with different viewpoints agree it adds needed context.
+      - If a note arrives later, everyone who already watched gets a notice that stays until they read it.
 
   - type: feature
     id: extension
     heading: Take your limits onto YouTube
     image: featureExtension
     what: |
-      YouTube's recommendations can't appear inside Villow, so the browser extension brings your limits to YouTube itself. In Chrome, Edge and Firefox, you can cap your browsing or watching, calm the page, and save videos to Villow instead of playing them straight away.
+      Use the extension to bring limits and calmer viewing settings to YouTube's own recommendations, too.
     actions:
       - label: All about the extension →
         href: /extension
@@ -110,14 +105,7 @@ blocks:
     heading: Make it yours
     image: featureAppearance
     what: |
-      Hide thumbnails, use greyscale or gentler motion, and choose colours and an app icon that feel like yours. The space around the videos should feel good to use, too.
-
-  - type: feature
-    id: listening
-    heading: Built by listening
-    image: featureFeedback
-    what: |
-      Villow checks in as you use it, and you can send feedback whenever you want. What people say shapes what gets built next.
+      Choose how Villow looks and feels, from thumbnails and motion to colours and icons. Make watching feel calmer and more like yours.
 
   - type: cta
     variant: fixtheweb
