@@ -1,0 +1,85 @@
+title: Running your Villow
+description: A practical starting point for Villow owners, covering trusted invitations, provider usage, updates, backups, access and shutting an installation down.
+
+blocks:
+  - type: hero
+    eyebrow: Owner help
+    title: Running your Villow.
+    lead: Hosting a Villow means looking after the accounts it runs on and the people who trust you with their data. This guide gives the current starting points; unverified procedures stay marked.
+
+  - type: notice
+    tone: draft
+    heading: Operational guidance is still being completed.
+    body: Setup time, group capacity, costs and recovery procedures haven't been fully tested. This page doesn't promise a one-click update, backup, member-deletion or recovery workflow.
+
+  - type: toc
+    heading: Owner responsibilities
+
+  - type: section
+    id: accounts
+    heading: Know which accounts run it
+    body: |
+      Your Vercel account hosts the app, Supabase holds its database, and Google Cloud provides sign-in and YouTube API access. Keep access to those accounts secure and record which projects belong to this Villow.
+
+      You control the database and can access its stored data. Explain this to people before inviting them. Member sharing controls govern the normal app experience, rather than restricting your provider-level access.
+    actions:
+      - label: Privacy and permissions →
+        href: /privacy-overview
+        style: text
+
+  - type: section
+    id: invitations
+    heading: Invitations and removing access
+    body: |
+      Start with [the invitation guidance](/download#inviting-friends). People should know who runs their Villow and choose their sharing settings.
+
+      Admin controls let an owner revoke another member's access, then separately delete that revoked member's data. Deleting the owner through this member-removal action isn't supported.
+
+      Disabling sign-in, ending sessions, revoking extension connections and deleting stored data are separate actions. A tested end-to-end removal checklist, including provider backups, is still needed: {tbd:ownerRemoval}.
+
+  - type: section
+    id: usage
+    heading: Check usage and provider allowances
+    body: |
+      Review usage and billing in your provider dashboards. The Google Cloud YouTube quota is shared by your installation's users.
+
+      Group capacity and paid-plan requirements are untested: {tbd:groupSizeGuide}. Behaviour and recovery at provider allowances still need a verified guide: {tbd:freeLimitReached}. Don't assume the software being free makes its hosting unlimited.
+
+  - type: section
+    id: updates
+    heading: Updates
+    body: |
+      Keep track of Villow releases and review their instructions before changing the app or database. The supported owner update and rollback procedure is still being verified: {tbd:ownerUpdates}.
+
+  - type: section
+    id: backups
+    heading: Backups and recovery
+    body: |
+      Check which backups and restore options your Supabase plan provides. Keep a recovery plan appropriate to your installation. A tested Villow-specific backup and restore walkthrough is still needed: {tbd:ownerBackups}. Don't assume a successful app deployment proves the database can be recovered.
+
+  - type: section
+    id: leaving
+    heading: Helping someone leave
+    body: |
+      Someone can revoke Villow's Google access from [their Google account](link:googleSecuritySettings). This prevents further authorized access; it doesn't itself delete data already stored in your database.
+
+      Revoke the member in Admin before using the separate permanent-delete action. Full member self-service account deletion hasn't been verified. General retention and provider backup handling still need confirmation: {tbd:appPolicyRetention}.
+
+  - type: section
+    id: shutdown
+    heading: Closing your Villow
+    body: |
+      Let members know before closing a shared installation. Uninstalling Villow Setup doesn't shut down the hosted projects.
+
+      Review your app, database and Google Cloud projects and connections in their dashboards. Check retained backups and billing before considering the shutdown complete. The exact shutdown sequence is still being verified: {tbd:ownerShutdown}.
+
+  - type: cta
+    heading: Help make the guide reliable.
+    body: Tested setup, update and recovery experience is useful feedback. Share what worked, where you got stuck and which release you used.
+    actions:
+      - label: Contact the project
+        href: link:contact
+        style: primary
+      - label: Developer information →
+        href: /developers
+        style: text

@@ -13,7 +13,7 @@ header:
     - label: About
       href: /about
   action:
-    label: Download
+    label: Get started
     href: /download
     style: primary
 
@@ -25,8 +25,10 @@ footer:
   groups:
     - heading: Villow
       links:
-        - label: Download
+        - label: Get started
           href: /download
+        - label: Guided tour
+          href: /demo
         - label: How it works
           href: /features
         - label: The extension
@@ -37,10 +39,14 @@ footer:
           href: /principles
         - label: Roadmap
           href: /roadmap
+        - label: AI ideas and discussion
+          href: /ai
     - heading: Help
       links:
         - label: FAQ
           href: /faq
+        - label: Running your Villow
+          href: /running-villow
         - label: About
           href: /about
         - label: Privacy
@@ -68,7 +74,7 @@ footer:
         - label: Newsletter
           href: link:newsletter
         - label: How to help
-          href: link:howToHelp
+          href: /about#get-involved
         - label: fixtheweb.org
           href: link:fixTheWeb
   notes:

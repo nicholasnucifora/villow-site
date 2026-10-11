@@ -1,0 +1,126 @@
+title: AI ideas and discussion
+description: Where could generative AI help people in Villow, and where might it get in the way? Possible uses, tradeoffs and a considered position on each. No imminent release plans.
+
+blocks:
+  - type: hero
+    eyebrow: Ideas and discussion
+    title: Where could AI help?
+    lead: Villow works without generative AI. We'd like to keep asking where different technologies help people do what they came to do, and where they add more problems than they solve.
+
+  - type: notice
+    tone: info
+    heading: Ideas, not promised features
+    body: No generative AI features are planned for the imminent future. These are possibilities to discuss, and some may never belong in Villow. The app's current suggestions use transparent rules based on your ratings, skips and usage; they aren't generative AI.
+
+  - type: section
+    id: approach
+    heading: Consider the use, and the tradeoffs.
+    body: |
+      Generative AI is polarising. People weigh its usefulness, reliability, how models are trained and creators are treated, privacy, energy and resource use, and cost differently. Those concerns deserve room in the discussion.
+
+      Our starting question is whether a particular use helps someone make their own choices. Could a simpler control do the job better? Would generated output save effort, or add uncertainty and another reason to keep scrolling? A possible benefit needs to justify the tradeoffs.
+
+      The ideas below don't settle a provider, processing location or data-access approach. Each would need its own design and testing before becoming a feature.
+
+  - type: toc
+    heading: Explore the ideas
+
+  - type: table
+    id: chapters
+    eyebrow: Early idea · Not implemented
+    heading: AI-generated chapters
+    intro: Generate labelled timestamps to help navigate a video. The app currently shows sample chapter rows; it doesn't generate chapters.
+    columns: [Pros, Cons]
+    rows:
+      - ["Could help you find a relevant section or return to a useful moment.", "Incorrect timestamps or labels could send you to the wrong place or misrepresent the creator's point."]
+      - ["Could give a long video useful structure when creator-provided chapters are missing.", "A transcript can miss demonstrations, on-screen text and other visual context."]
+      - ["A bounded task whose output could be checked against the original video.", "Content access, creator permissions, processing cost and reliability still need resolving."]
+    note: |
+      **Overall take:** This seems one of the more promising, bounded uses. We'd prioritise creator-provided chapters and explore generated ones only if their labels and timestamps can be checked reliably. They should help people navigate the original video while respecting its context. Access to suitable source material is still unresolved.
+
+  - type: table
+    id: video-conversations
+    eyebrow: Early idea · Not implemented
+    heading: Talk with AI about a video
+    intro: A possible conversation grounded in a video transcript, for questions, useful context or exploring an idea. Villow doesn't currently provide this conversation or universal transcript access.
+    columns: [Pros, Cons]
+    rows:
+      - ["Could help you ask a specific question or revisit an argument without searching through the whole video.", "A fluent answer can still be unsupported or wrong; an incomplete transcript also leaves gaps."]
+      - ["Could explain unfamiliar terms or offer questions that help you consider an idea.", "Generated context can blur what the creator actually said with what the model added."]
+      - ["Could make a particular point easier to explore in a form that suits you.", "A conversation could become another endless loop, with additional data exposure and processing costs."]
+    note: |
+      **Overall take:** Worth exploring for focused questions, if answers can point to the relevant source, distinguish the video's claims from added context and make uncertainty clear. It should be easy to return to the video or finish the conversation. Transcript availability and the quality of source grounding would need to be established first.
+
+  - type: table
+    id: comments
+    eyebrow: Early idea · Not implemented
+    heading: Ask AI about a comment
+    intro: The app has a placeholder for asking AI about an individual comment. Its exact purpose is still open; there is no implemented analysis, moderation or credibility score.
+    columns: [Pros, Cons]
+    rows:
+      - ["Could offer another way to understand unfamiliar wording or a possible reading of a comment.", "A short comment may lack the surrounding conversation, tone or context needed to interpret it."]
+      - ["Could help frame a clarifying question before reacting.", "An interpretation could confidently invent intent or reinforce an unfair assumption about the author."]
+      - ["Could give someone space to examine a claim or disagreement.", "Generated explanations can introduce their own errors or bias and make a dispute worse."]
+    note: |
+      **Overall take:** Approach cautiously. Help considering wording and possible interpretations may be useful, but generated text shouldn't present an author's intent or a claim's truth as settled. Any experiment should keep the original comment visible and make interpretations tentative. We don't have a decided feature design here yet.
+
+  - type: table
+    id: topic-guidance
+    eyebrow: Early idea · Not implemented
+    heading: Describe your topic preferences
+    intro: Plain-language preferences or exclusions within a country-chart category. For example, more archaeology and fewer battle histories within History. The app's tuning text box is currently disabled.
+    columns: [Pros, Cons]
+    rows:
+      - ["Could express a nuanced preference more easily than a collection of keywords.", "Ambiguous wording or limited video information could produce unexpected inclusions and exclusions."]
+      - ["Could help turn a preference into controls you can inspect and adjust.", "A hidden interpretation could narrow discovery without making the tradeoff clear."]
+      - ["Could make topic controls approachable for people who find filter syntax awkward.", "Inferring sensitive interests or persisting more personal context than needed would add avoidable risk."]
+    note: |
+      **Overall take:** Explicit preferences are a better starting point than guessed interests. We'd consider an experiment only if you can see how your words were interpreted, preview the effect and change or undo it. It should work alongside ordinary controls and avoid silently inferring sensitive traits.
+
+  - type: table
+    id: recommendations
+    eyebrow: Early idea · Not implemented
+    heading: AI refinement of recommendations
+    intro: A broader idea for refining recommendations you receive, separate from topic guidance and today's transparent, rules-based suggestions. It wouldn't give Villow access to YouTube's personalized recommendation feed.
+    columns: [Pros, Cons]
+    rows:
+      - ["Could let someone describe what they want from discovery in their own words.", "An opaque ranking system could bring back the same loss of control Villow is trying to address."]
+      - ["Could potentially find relevant material that simple filters miss.", "It could misread preferences, over-personalize the feed or repeat biases without an obvious way to diagnose them."]
+      - ["Could be evaluated against the person's own purpose for watching.", "More complexity, data use and cost may offer little benefit over manual controls and explained rules."]
+    note: |
+      **Overall take:** This has the highest burden of justification. The existing controls and explained rules are our starting point. We'd defer generative ranking unless it shows a clear benefit over simpler options, gives people understandable reasons and effective control, and is evaluated for their chosen goals rather than just more watching.
+
+  - type: table
+    id: things-to-do
+    eyebrow: Early idea · Not implemented
+    heading: A conversation beside Things to do
+    intro: The app links here from an AI conversation idea beside your manual or imported list. No AI conversation is implemented. Whether a conversation would help, and what it should do, are questions to explore.
+    columns: [Pros, Cons]
+    rows:
+      - ["Could help someone talk through what they want to do next, including something enjoyable or restful.", "Advice could steer someone toward the model's assumptions about what matters."]
+      - ["Could help clarify an intention or consider a manageable next step.", "It could add guilt, pressure to be productive or another conversation to stay in."]
+      - ["Could provide an optional space to think alongside a list the person already chose.", "Personal plans can be sensitive, and automatic changes or actions would reduce the person's control."]
+    note: |
+      **Overall take:** An open question, rather than a decided planner or adviser. If explored, the conversation should follow the person's lead, leave room for rest or doing nothing, and leave decisions and task changes with them. A simple list or a natural stopping point may already provide all the help they want.
+
+  - type: section
+    id: before-building
+    heading: What would need to be settled first?
+    body: |
+      Before considering a release, we'd want evidence of a useful benefit over simpler tools, an explicit choice to use it, an effective off switch, and clear information about the provider, data sent, processing location and cost. Generated claims would need appropriate source references, uncertainty and evaluation. These are conditions for considering a future feature, not protections already implemented.
+
+      Video-based ideas also need a workable, permitted source of content. YouTube's official [caption-download API](https://developers.google.com/youtube/v3/docs/captions/download) requires permission to edit the video. We can't assume every public video's transcript is available to Villow.
+
+      For background on concerns such as fabricated answers, privacy and bias, see [NIST's Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1). The positions on this page are design judgments rather than tested outcomes.
+
+  - type: cta
+    id: suggestions
+    heading: What would you add, change or leave out?
+    body: Send an idea, concern or different perspective through the contact link. This page can develop as the discussion does. There isn't a public comments or contribution system here at present.
+    actions:
+      - label: Send a suggestion
+        href: link:contact
+        style: primary
+      - label: How current suggestions work →
+        href: /features#suggestions
+        style: text

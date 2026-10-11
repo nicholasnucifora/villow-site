@@ -2,128 +2,101 @@
 
 Nicholas signs off every item. Nobody else ticks a box.
 
-Notes under an item are research to help you check it. They were written on 14 September 2026 and aren't sign-off. Official pages change, so re-read the source before ticking.
+Implementation/review note: 12 October 2026. The messaging update was checked against local app and extension code and current official YouTube Help. Local implementation is not evidence that the same app or extension version is deployed. All boxes remain unticked.
 
----
+## Messaging and availability
 
-## Read first: things that need a decision
+- [ ] Review the homepage, feature tour and getting-started routes together.
+  The story now leads with worthwhile viewing, a finite chronological feed, saved progress, optional reflection and explained suggestions. Entertainment and rest count. The private-instance model appears early.
+- [ ] Confirm Watch together availability in the app release used for launch.
+  Local code implements invitations/explicit acceptance, synchronized playback, a shared queue and chat for up to 10 accounts. The site describes this as implemented.
+- [ ] Verify release of the separate group-limit decision flow.
+  The roadmap still marks it unfinished. Intended behaviour: room pauses at a person's limit; they can leave or the whole group agrees to dismiss and continue. Don't mark it live solely because another chat is implementing it.
+- [ ] Verify the sharing-choice onboarding release.
+  Local Setup now requires a choice between “People on this Villow” and “Only me,” with neither preselected. Connected YouTube-time sharing is a separate opt-in. The website currently uses “You choose what to share” and makes no claim that the new onboarding is already deployed.
+- [ ] Confirm exact coverage wording remains clear.
+  “Your limits follow you across Villow and connected browsers” covers Villow usage plus YouTube in connected extension browsers. Shared daily time/recommendation/save controls aren't a promise that every app channel/open/schedule control governs arbitrary browser playback. Native apps and unconnected browsers are excluded.
+- [ ] Review allowance and streak wording against the deployed player.
+  Local daily watch limit can offer current-video continuation once per day. App-open, per-channel daily and watch-free-date blockers don't offer the same option. Bedtime has a separate nightly dismiss and 30-minute snooze. Break warnings and active timeouts differ. Streaks track limit-extension events, not simply exceeding a time threshold.
+- [ ] Keep proposals separate from current features.
+  Community notes/correction notices live on the roadmap; creator action panels are showcases. Native YouTube integration needs platform support, while an independent verified submission service remains a possible approach.
+- [ ] Preserve common-ground rationale without promising results.
+  Country charts offer shared reference points. Popularity doesn't establish truth or quality; reduced polarization and wellbeing benefits haven't been demonstrated.
 
-- [ ] **The extension privacy policy contradicts the site copy about editing limits.**
-  The brief (checked against the source code on 14 Sept) says limits can be edited "in the extension or inside Villow". The site says so on `/extension` ("One set of limits. Edit them in the extension or inside Villow") and in the extension feature table ("Edit limits in Villow…").
-  `/privacy` (8 Sept) says: *"Your limits travel one way. The extension is the only thing that can change a limit; there is no endpoint by which Villow could set one."*
-  One of them is out of date. `/privacy` hasn't been touched. If the policy needs updating, that's your call, and the build check (`scripts/check-build.mjs`) will ask you to update its hash.
-- [ ] **Vercel's Hobby plan is for non-commercial, personal use only.** Villow for yourself and a few friends looks like personal use, but confirm that matches how people will run it. Source: [Vercel Hobby plan](https://vercel.com/docs/plans/hobby) ("the Hobby plan restricts users to non-commercial, personal use only").
-- [ ] **Supabase pauses free projects after a week of inactivity.** Someone who stops using their Villow for a week would find it paused. Consider saying so on `/download` under "Worth knowing". Source: [Supabase pricing](https://supabase.com/pricing) ("Free projects are paused after 1 week of inactivity").
-- [ ] **Terms of use.** YouTube's policies (III.A.1) require a link to YouTube's Terms of Service, and a statement *in the app's own terms of use* that users agree to be bound by them. The site's Terms link is still empty. (The draft app privacy policy includes the statement too, but the rule is about terms of use.)
+## Sources and comparison
 
----
+- [ ] Recheck each comparison row at release.
+  The table links directly to official YouTube Help and is dated 12 October 2026:
+  [break reminders](https://support.google.com/youtube/answer/9012523?hl=en),
+  [bedtime](https://support.google.com/youtube/answer/9884905?hl=en),
+  [Shorts limits](https://support.google.com/youtube/answer/16671528?hl=en),
+  [subscriptions](https://support.google.com/youtube/answer/4489286?hl=en),
+  [recommendation feedback](https://support.google.com/youtube/answer/6342839?hl=en),
+  [time watched](https://support.google.com/youtube/answer/9052667?hl=en).
+  Break reminders already pause until dismissed/resumed. Shorts limits include zero and can be ignored. The copy acknowledges both.
+- [ ] Check API/player constraints and data refresh behaviour against the release.
+  Local normal feed sync resumes from last success; first sync looks back 24 hours. Batch channels use 1–30 days with at most a 30-day lookback. No precise live-delivery promise is made.
+- [ ] Verify made-for-kids tracking and 30-day content refresh/removal in the deployed app.
+  Policy requirements alone don't demonstrate implementation.
+- [ ] Review YouTube API terms, naming and attribution.
+  Every generated page retains the affiliation disclaimer; build checks enforce it.
 
-## YouTube and Google
+## Extension policy and stores
 
-- [ ] Each row of the comparison table (section 6.5) matches YouTube's current features
-  Rows live in `src/content/pages/youtube-could-do-this.yaml`. Delete any row you can't confirm rather than softening it. Then fill in `tbd.comparisonCheckedDate` in `site.config.yaml`.
-- [ ] "Where the API stopped" points (section 14.4) match current YouTube Data API documentation
-  - Recommendations and watch history not available through the API: check against the [YouTube Data API reference](https://developers.google.com/youtube/v3/docs).
-  - Background playback: [Developer Policies III.I.9](https://developers.google.com/youtube/terms/developer-policies) prohibits playing content "from a background player, meaning a player that is not displayed". ✔ consistent with the copy.
-  - "Nothing may cover it": I couldn't find an explicit no-overlay clause in the Developer Policies. III.I.6 prohibits modifying or blocking "any portion or functionality of a YouTube player". Also check the [Required Minimum Functionality](https://developers.google.com/youtube/terms/required-minimum-functionality) page. If nothing says it plainly, reword this point on `/youtube-could-do-this`.
-  - Daily quota: the [getting started page](https://developers.google.com/youtube/v3/getting-started) currently says projects get "a default quota allocation of 100 `search.list` calls, 100 `videos.insert` calls, and 10,000 units per day combined for all other endpoints".
-- [ ] YouTube API Developer Policies III.I.1 (substitute clause) is quoted accurately and current
-  Policies page last updated 24 June 2026. III.I.1 prohibits using YouTube API Services to "create, offer, or act as a substitute for, or substantially similar service to, any YouTube Applications". Matches the brief. The site copy doesn't quote it; it follows it.
-- [ ] YouTube API Developer Policies III.A.2 privacy policy requirements are summarised accurately, and the Villow app privacy policy meets them
-  III.A.2 currently requires the policy to be prominently displayed and always accessible, and to:
-  - say the app uses YouTube API Services
-  - reference and link to the Google Privacy Policy
-  - explain what user information is accessed, collected and stored, and how it's used, processed and shared
-  - disclose whether third parties serve content, including ads
-  - disclose storing or accessing information on users' devices
-  - explain revoking access via `https://security.google.com/settings/security/permissions`
-  - explain how to contact the developer
+- [ ] Review the deliberate policy revision at the stable /privacy URL.
+  The 12 October update replaces the obsolete one-way-settings assertion, specifies supported shared config, report timing/triggers, received receipts, local 14-day history and revocation/deletion distinctions. The build pins its reviewed source hash and checks the copied output. Do not move or rename the file.
+- [ ] Align the policy, store disclosures and release notes with actual shipped packages.
+  Local extension manifest is 0.8.3. Compatible local code adopts settings.chosen and sends the supported config fields, but uploaded Chrome/Edge/Firefox package parity is unverified. A website policy edit alone doesn't complete store disclosure or consent requirements.
+  [Chrome privacy requirements](https://developer.chrome.com/docs/webstore/program-policies/privacy).
+- [ ] Confirm all store destinations and device guidance.
+  Chrome, Edge and Firefox URLs match the app's extension-browser-support.ts. Orion is the iPhone/iPad workaround; native Safari remains planned. The web app's availability is separate.
+- [ ] Confirm current reporting and retention before release.
+  Local usage history retains up to 14 days; this is not a server-wide deletion schedule. Shared-day ticks normally run at most once per minute while focused, with earlier action-triggered requests. Network/retry conditions can delay sync.
+- [ ] Keep local recommendation/watched-video lists distinct from saved-video metadata.
+  Daily reports are counts/settings. Saved videos transmit identifying metadata; receipt responses also contain video details. Don't describe all extension traffic as anonymous counts.
 
-  The draft at `/app-privacy` covers each of these, but device storage, Google scopes, retention, deletion, minimum age and contact are still TBD. **Does the Villow app link to this policy from inside the app, prominently and at all times?** That's part of III.A.2 too.
-- [ ] YouTube Branding Guidelines: naming ("for YouTube" / "works with YouTube") and logo rules followed across the site
-  No YouTube logos or red-and-white styling are used. The build check fails on "Villow for YouTube", "VillowTube", "YouTube replacement/alternative" and similar. Check against the current [YouTube Branding Guidelines](https://developers.google.com/youtube/terms/branding-guidelines).
-- [ ] "Not affiliated with, endorsed by, or sponsored by YouTube or Google" appears on every page
-  It's in the footer on every generated page, and the build fails if any page is missing it. `/privacy` has it too.
-- [ ] Google Cloud: no billing account needed for YouTube Data API access; the default daily quota
-  The copy doesn't currently claim either. `/download` says YouTube access "uses a daily quota from your Google Cloud project, shared by everyone on your Villow". The getting started page doesn't mention billing either way, so confirm in a fresh Google Cloud project before adding any claim.
-- [ ] Google OAuth Testing status: test-user limits and roughly seven-day sign-in expiry described accurately
-  [Google's OAuth 2.0 docs](https://developers.google.com/identity/protocols/oauth2#expiration): a Testing, external project "is issued a refresh token expiring in 7 days, unless the only OAuth scopes requested are a subset of name, email address, and user profile". Villow requests YouTube scopes, so the seven days applies. Also check the current test-user cap on the Audience page of the Google Auth Platform in Google Cloud.
-- [ ] Google OAuth Production status: what moving a project to Production involves for Villow's YouTube permissions (review/verification), and how the site describes it
-  Linked to `tbd.productionMove`. See [sensitive scope verification](https://developers.google.com/identity/protocols/oauth2/production-readiness/sensitive-scope-verification).
-- [ ] **(New)** The draft app policy's Limited Use statement is accurate
-  `/app-privacy` says Villow "adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements". Only keep it if it's true.
-- [ ] **(New)** "YouTube requires tracking to be off for videos made for kids" (FAQ, privacy pages)
-  [Developer Policies III.E.4.j](https://developers.google.com/youtube/terms/developer-policies): API clients "must look up the Made For Kids status of each YouTube video" and "must turn off tracking" for those videos. ✔ consistent.
-- [ ] **(New)** "Stored video details are refreshed or removed within 30 days" (`/youtube-could-do-this`, `/app-privacy`)
-  III.E.4.c and III.E.4.d: most stored data kept "for no longer than 30 calendar days", then deleted or refreshed. ✔ consistent. Check that Villow does this.
-- [ ] **(New)** "Popular in Your Country Today" is drawn from YouTube's country charts (`mostPopular` chart by region) and filtered by the topics you choose
-- [ ] **(New)** The official URLs in `site.config.yaml` under "Official third-party pages" are the ones you want to link
-- [ ] **(New)** "Fighting disinformation" on `/features` describes community notes accurately
-  Added 15 Sept 2026. It's a showcase (not in Villow), so it's labelled and on `/roadmap`.
-  - **YouTube has tested its own notes.** In June 2024 it announced a pilot where invited contributors add notes under videos, rated "Helpful", "Somewhat helpful" or "Unhelpful", on mobile in the US in English ([YouTube Blog](https://blog.youtube/news-and-events/new-ways-to-offer-viewers-more-context/)). Check where that's at now. The copy doesn't say YouTube lacks notes, but if notes are widely available, consider leaning the section on notifying people who already watched.
-  - **"Like Community Notes on X, a note only shows once people with different viewpoints rate it helpful."** Check against [About Community Notes on X](https://help.x.com/en/using-x/community-notes).
-  - **X already notifies people who engaged with a post that later gets a note** (since 2023), and in July 2026 announced it would send DMs too ([TechCrunch](https://techcrunch.com/2026/07/08/elon-musk-says-x-will-send-dms-when-posts-youve-engaged-with-are-corrected/)). The copy doesn't call the idea new, and shouldn't. What it adds is a notification that stays until you've read the note.
+## App privacy and permissions
 
-## Hosting providers
+- [ ] Complete the app policy's remaining draft fields.
+  Effective date, minimum age, general aggregate/social/room/chat retention and provider-backup handling remain unfinished. The page keeps its draft notice.
+- [ ] Verify Google scopes and actual account writes against the release.
+  Local main-oauth.ts requests youtube.force-ssl plus email/profile. It isn't read-only. Subscriptions and managed playlists can be written; worthwhile verdicts stay in Villow rather than writing YouTube likes.
+- [ ] Verify token transition and device storage wording.
+  New server writes are encrypted; historical plaintext rows remain readable and encrypt on next write. Browser storage also holds authentication data, profile and local state. Encryption doesn't hide data from the owner who controls secrets.
+- [ ] Verify task integration descriptions.
+  Google Tasks uses task-management access; Todoist uses data:read_write. Both can write/delete for supported task operations, including moves. The obsolete “Todoist has no delete permission” statement is removed. Disconnect removes local imported rows/credentials without deleting remote originals.
+- [ ] Verify owner/member access and deletion.
+  Operator database access is separate from app sharing. Admin can revoke another member and then separately delete that revoked member. Logout and Google revocation aren't data deletion. Full member self-service deletion hasn't been verified.
+- [ ] Verify optional survey flow and Tally disclosures.
+  Voluntary responses go to Fix the Web using a separate participant code. Private installation viewing records aren't automatically submitted. Review Tally's current data handling and form configuration.
+- [ ] Complete terms of use and ensure policy links are accessible inside the app.
+  The site's terms destination remains TBD. A draft policy and code review aren't a completed compliance sign-off.
 
-- [ ] Vercel free plan: what's included and what happens when a limit is reached
-  [Hobby plan](https://vercel.com/docs/plans/hobby) (updated 31 Aug 2026): free, personal non-commercial use only. "In most cases, if you exceed your usage limits on the Hobby plan, you will have to wait until 30 days have passed before you can use the feature again." Includes e.g. 1,000,000 function invocations, 4 active CPU-hours and 360 GB-hours of provisioned memory. Fill in `tbd.freeLimitReached`.
-- [ ] Supabase free plan: what's included, project limits, backups, inactivity pausing, and what happens when a limit is reached
-  [Pricing](https://supabase.com/pricing): 2 active projects, 500 MB database, 5 GB egress, 50,000 monthly active users, **no backups**, paused after 1 week of inactivity. The page doesn't clearly say what happens when a limit is exceeded, so check the [billing docs](https://supabase.com/docs/guides/platform/billing-on-supabase).
-  Worth noting on `/download`: the 2-project limit matters if someone already has Supabase projects.
-- [ ] "Setup never picks a paid plan" and "Setup asks you to confirm you've reviewed your plans" still match the current Villow Setup release
-- [ ] **(New)** "Your Villow gets a free `.vercel.app` address. A custom domain is optional and costs extra."
-- [ ] **(New)** "Uninstalling Setup doesn't stop your Villow or its accounts" matches Villow Setup
-- [ ] **(New)** "Put it on your phone… It installs like an app on iPhone, iPad and Android" (add to home screen works for your Villow on current iOS Safari and Android Chrome)
+## Ownership and practical setup
 
-## Extension
+- [ ] Add the public Windows Setup download and main app source destinations.
+  Both remain TBD; don't invent release URLs.
+- [ ] Test setup with new users before publishing a duration.
+- [ ] Measure group capacity, hosting costs and provider limits.
+  No free-hosting guarantee, paid-plan necessity or group-size estimate is asserted. Check current Vercel, Supabase and Google Cloud plans in a realistic installation.
+- [ ] Complete tested invitation and Google OAuth Production/verification guidance.
+- [ ] Complete the owner guide's update/rollback, backup/restore, member-removal and shutdown checklists.
+  Existing local System health diagnostics can help investigate failures. Don't infer a tested recovery lifecycle from their existence.
+- [ ] Keep donation destination TBD until Nicholas chooses one.
+  Contact is the usable interim support CTA. A tentative payment profile is not authorization to publish it.
+- [ ] Complete founder bio, contribution details and chosen community links.
 
-- [ ] Chrome Web Store, Edge Add-ons and Firefox Add-ons listings are live, including Firefox for Android
-  Then fill in `links.chromeStore`, `links.edgeAddons` and `links.firefoxAddons`.
-- [ ] Every feature in section 7.2 matches the released extension, on its own and linked
-  The table is generated from `features.extension` in `site.config.yaml`. See the limits contradiction at the top.
-- [ ] Every point in "What it can see" (section 13.6) matches the extension and its privacy policy
-  Compared with `/privacy`: "only works on YouTube pages" ✔ ("It never reads pages other than YouTube"). "Sends videos you click and daily totals to your own Villow" ✔. "Doesn't send your browsing history" ✔. The policy also mentions the time zone, extension version, browser name and a random install identifier, which the summary leaves out. That's fine for a summary, since it links to the policy. Remove `tbd.extensionPointsConfirmed` when done.
-- [ ] Which other Android browsers to mention, if any
+## Visuals, site checks and deployment
 
-## Privacy and data
-
-- [ ] Tally's data handling, for the feedback check-in note
-  [Tally privacy policy](https://tally.so/help/privacy-policy): data "stored on high-security servers within the European Union". The policy is written about Tally's account holders and doesn't separately describe form-respondent data. Check Tally's [DPA](https://tally.so/help/data-processing-agreement) for respondent data, and whether forms set cookies.
-- [ ] The feedback check-in description (optional, participant code, goes to Fix the Web) matches the current app
-- [ ] villow.app itself sets no cookies and loads no trackers (test in a clean browser)
-  On 14 Sept 2026 the live site (old placeholder page) set no cookies and injected no scripts. Cloudflare can add cookies or scripts later if features like Bot Fight Mode or Web Analytics are switched on, so re-test after deploying.
-  **Cloudflare sends `Report-To` / `NEL` headers**, which let browsers report *failed* requests to `a.nel.cloudflare.com`. `/privacy-overview` says "Nothing loads from YouTube or anyone else when you visit". Decide whether to turn NEL off in the Cloudflare dashboard, or reword.
-  The build check fails if a page loads scripts, styles, images or frames from another site.
-- [ ] Click-to-load YouTube embeds load nothing from YouTube before play
-  There are no YouTube embeds on the site yet. If you add a demo video, build it as click-to-load and re-check.
-- [ ] **(New)** Every claim in the draft `/app-privacy` matches the app: what's collected, token encryption, Todoist having no delete permission, the 30-day timeline, sharing defaults, and the "Who your data is shared with" list
-
-## Content and legal
-
-- [ ] No real creators' thumbnails, titles or faces in marketing images without written permission
-- [ ] No real people's names or usage in screenshots
-- [ ] Openly licensed media (if any) is attributed correctly
-- [ ] Every "Coming", "Showcase" and "Exploring" feature is labelled as such
-  Badges come from `features:` in `site.config.yaml`. Copy uses `{status:id}`, which shows the badge until the feature is live. Check the wording around each one too.
-- [ ] Nothing on the "Never claim" list (section 20) appears anywhere
-  The build check catches the obvious wording. It can't catch meaning (e.g. implying Safari support), so give the pages a read.
-- [ ] All placeholders (Appendix A) are either filled or deliberately left visible
-  Run `npm run placeholders`.
-- [ ] Legal review of the site copy, the privacy policies and the terms, as Nicholas decides
-  `/app-privacy` is a draft written from the brief. It has a visible DRAFT notice until you remove it.
-
-## Site and deployment
-
-- [ ] **(New)** Cloudflare build settings changed to build command `npm run build`, output directory `dist`
-  The old setup published the repository root, which also made `review/README.md` and the review SQL migrations public at `villow.app/review/…`. Building to `dist` stops that.
-- [ ] **(New)** The Worker name in `wrangler.jsonc` (`villow-site`) matches the one in the Cloudflare dashboard
-- [ ] **(New)** After deploying, `https://villow.app/privacy` still serves the extension policy unchanged, and `/privacy.html` still redirects to `/privacy`
-- [ ] **(New)** Contact link decided (the extension policy uses nuciforan+villow@hotmail.com)
-- [ ] **(New)** "YouTube is a trademark of Google LLC." in the footer is wanted (it matches the extension policy)
-
-## Future (only if pursued)
-
-- [ ] Creator channel-ownership verification approach for a creator submission portal
-- [ ] Privacy messaging updated for any central service (creator submissions, global recommendations)
-  `/privacy-overview` and `/app-privacy` both say there's no central Villow server collecting viewing data.
+- [ ] Replace image placeholders later with approved demo-data imagery.
+  Imagery and major visual redesign were explicitly deferred. The guided tour uses fictional channels, titles and activity, with no sign-in.
+- [ ] Run npm run build and inspect representative rendered pages.
+  The build checks the policy hash, route/fragment links, duplicate ids, prohibited wording, affiliation and third-party asset loads.
+- [ ] Review mobile readability, tables, navigation and FAQ disclosure behaviour.
+- [ ] Review npm run placeholders and decide which remaining TBDs may be public.
+- [ ] Check Cloudflare build command/output and Worker identity.
+  Existing workflow: npm run build, dist/, Worker villow-site. Do not introduce a different hosting service for this messaging update.
+- [ ] Verify the live host's analytics/cookies/network diagnostics configuration.
+  The source adds no analytics or third-party assets. Cloudflare configuration can affect live behaviour.
+- [ ] After deployment, verify /privacy still serves the reviewed policy and its redirects, plus new /demo and /running-villow routes.
+- [ ] Record the deployed commit/version and date separately from local build success.

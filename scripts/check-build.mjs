@@ -1,6 +1,6 @@
 /**
  * Runs after `astro build`. Fails the build if:
- *  - /privacy (the extension's privacy policy, linked from the extension store listings) changed at all
+ *  - /privacy differs from the deliberately approved source revision
  *  - a page is missing the "not affiliated with YouTube or Google" line
  *  - a page loads anything from another site (the site promises no third parties)
  *  - copy uses wording the brief rules out (see "Never claim" and "Talking about YouTube")
@@ -8,10 +8,10 @@
 import { createHash } from "node:crypto";
 import { readdir, readFile } from "node:fs/promises";
 
-// The SHA-256 of the committed file, which is also what villow.app/privacy served on 14 September 2026.
+// The SHA-256 of the deliberate 12 October 2026 extension policy update.
 // If you deliberately update public/privacy.html, replace this with the new file's SHA-256.
 // (.gitattributes stops Git changing its line endings, which would change this hash on Windows.)
-const PRIVACY_SHA256 = "d5ca44e0933fe492293121577b813bb3dd57bb877e989f2ff8c99d57e4e6c866";
+const PRIVACY_SHA256 = "27f731218c9c2e5425ded0b65bf1e07d69f6c02b2077b62878eb13597cb1eaa2";
 
 const AFFILIATION = "not affiliated with, endorsed by, or sponsored by YouTube or Google";
 
@@ -50,7 +50,7 @@ const visibleText = (html) =>
       .replace(/\s+/g, " "),
   );
 
-// 1. The extension's privacy policy ships untouched.
+// 1. The extension policy ships exactly as reviewed, at its stable store URL.
 for (const [label, url] of [
   ["public/privacy.html", new URL("../public/privacy.html", import.meta.url)],
   ["dist/privacy.html", new URL("privacy.html", dist)],
@@ -63,9 +63,16 @@ for (const [label, url] of [
 
 // 2–4. Every built page.
 const htmlFiles = (await readdir(dist, { recursive: true })).filter((f) => f.endsWith(".html") && f !== "privacy.html");
+const pages = new Map();
+for (const file of [...htmlFiles, "privacy.html"]) {
+  const html = await readFile(new URL(file, dist), "utf8");
+  pages.set(file, html);
+  const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => decode(match[1]));
+  if (new Set(ids).size !== ids.length) failures.push(`${file}: duplicate HTML anchor id.`);
+}
 
 for (const file of htmlFiles) {
-  const html = await readFile(new URL(file, dist), "utf8");
+  const html = pages.get(file);
   const text = visibleText(html);
 
   if (!text.includes(AFFILIATION)) failures.push(`${file}: missing "${AFFILIATION}".`);
@@ -85,8 +92,30 @@ for (const file of htmlFiles) {
   }
 }
 
+// Check navigation in the built result, including fragments within and between pages.
+// External store and provider links need their separate release/source verification.
+for (const [file, html] of pages) {
+  for (const match of html.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)) {
+    const href = decode(match[1]);
+    if (!href.startsWith("/") && !href.startsWith("#")) continue;
+    const target = new URL(href, `https://villow.app/${file === "index.html" ? "" : file.replace(/\.html$/, "")}`);
+    const pathname = decodeURIComponent(target.pathname).replace(/\/$/, "");
+    const targetFile = !pathname ? "index.html" : `${pathname.slice(1).replace(/\.html$/, "")}.html`;
+    const targetHtml = pages.get(targetFile);
+    if (!targetHtml) {
+      failures.push(`${file}: missing internal page for ${href}.`);
+      continue;
+    }
+    if (target.hash) {
+      const id = decodeURIComponent(target.hash.slice(1));
+      const targetIds = new Set([...targetHtml.matchAll(/\bid="([^"]+)"/g)].map((entry) => decode(entry[1])));
+      if (!targetIds.has(id)) failures.push(`${file}: missing anchor for ${href}.`);
+    }
+  }
+}
+
 if (failures.length) {
   console.error(`\n✗ Build checks failed:\n\n${failures.map((f) => `  • ${f}`).join("\n")}\n`);
   process.exit(1);
 }
-console.log(`✓ Build checks passed: /privacy unchanged, ${htmlFiles.length} pages checked.`);
+console.log(`✓ Build checks passed: policy hash verified; ${pages.size} pages and their internal links/anchors checked.`);

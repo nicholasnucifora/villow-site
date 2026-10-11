@@ -23,7 +23,7 @@ blocks:
     id: how-its-built
     heading: How Villow is built
     body: |
-      - **React** web app, installable from the browser on any device
+      - **React** web app for browsers on phones, tablets and computers
       - Hosted on **Vercel**
       - **Supabase** for the database
       - **YouTube Data API** and YouTube's official embedded player
@@ -34,7 +34,7 @@ blocks:
     id: setup
     heading: How Villow Setup works
     body: |
-      Each person runs their own Villow. There's no central Villow everyone signs into.
+      Run your own private Villow or join one run by someone you trust. One person operates the hosting and database, and friends sign in. There's no central Villow everyone signs into.
 
       Villow Setup is a computer app (Windows today; macOS and Linux: {tbd:setupOtherPlatforms}) that walks you through creating the accounts Villow runs on, Vercel, Supabase and Google Cloud, then builds and connects everything. No GitHub, Git or terminal needed.
 
@@ -52,7 +52,14 @@ blocks:
   - type: section
     id: contributing
     heading: Contributing
-    body: "{tbd:contributing}"
+    body: |
+      Code, bug reports, accessibility feedback and tested setup or recovery notes all help. Start with the repositories above, or [contact the project](link:contact) if you're unsure where a contribution fits.
+
+      Detailed contribution guidance: {tbd:contributing}.
+    actions:
+      - label: Owner guide →
+        href: /running-villow
+        style: text
 
   - type: section
     id: responsibility

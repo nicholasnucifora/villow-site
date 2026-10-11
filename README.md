@@ -4,7 +4,7 @@ The public website for Villow, a Fix the Web project. Built with [Astro](https:/
 
 ## ⚠️ `/privacy` is the extension's privacy policy
 
-`public/privacy.html` is served at `https://villow.app/privacy` and is linked from the extension store listings. **Don't edit, move or rename it.** Astro copies it into the build unchanged, and `npm run build` fails if its contents change at all. If you deliberately update the extension policy, update `PRIVACY_SHA256` in `scripts/check-build.mjs` to match.
+`public/privacy.html` is served at `https://villow.app/privacy` and is linked from the extension store listings. **Keep that URL and file location stable.** Deliberate policy updates must match the app/extension contract and store disclosures; update `PRIVACY_SHA256` in `scripts/check-build.mjs` after reviewing the change. The 12 October 2026 revision corrects bidirectional settings, report fields, local retention and revocation wording. Store-release parity and disclosure updates remain separate checks.
 
 The web app's privacy content lives at `/privacy-overview` (plain-language summary) and `/app-privacy` (formal policy).
 
@@ -103,7 +103,8 @@ Light and dark follow the visitor's system setting. Animations respect reduced m
 
 `npm run build` runs `scripts/check-build.mjs` after building, and fails if:
 
-- `/privacy` changed at all
+- `/privacy` differs from its deliberately reviewed hash
+- an internal link points to a missing page or fragment, or HTML anchor ids are duplicated
 - a page is missing the "not affiliated with YouTube or Google" line
 - a page loads anything (scripts, styles, images, frames) from another site
 - copy uses wording the brief rules out, like "YouTube alternative", "ad-free", "no tracking" about the app, "AI-powered" or "addictive"
@@ -112,7 +113,7 @@ Light and dark follow the visitor's system setting. Animations respect reduced m
 
 Cloudflare serves `dist/` as static files (see `wrangler.jsonc`). In the Cloudflare dashboard, set the build command to `npm run build` and the output directory to `dist`. Check that the Worker name matches `wrangler.jsonc`. Pages build to `name.html` and are served without the extension, the same way `/privacy` always has been.
 
-No analytics, no cookies, no third-party requests.
+The source adds no analytics, cookies or third-party asset loads. Verify Cloudflare's live configuration separately; hosting can add network diagnostics or other behaviour.
 
 ## Also in this repo
 

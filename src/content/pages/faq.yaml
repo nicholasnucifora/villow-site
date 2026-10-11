@@ -1,6 +1,5 @@
-# FAQ. Each entry is a question (q) and a short answer (a). Add, remove or reorder freely.
 title: FAQ
-description: Short answers about Villow, the extension, costs, phones, friends, privacy and how Villow is connected to Fix the Web.
+description: Practical answers about starting Villow, watching with friends, connected browsers, hosting costs, Google access, privacy and optional reflection.
 
 blocks:
   - type: hero
@@ -9,78 +8,99 @@ blocks:
     lead: Can't find what you're looking for? [Get in touch](link:contact).
 
   - type: faq
+    id: getting-started
+    heading: Getting started
     items:
       - q: Is Villow made by YouTube?
-        a: No. Villow is a Fix the Web project, an app for YouTube that isn't affiliated with, endorsed by or sponsored by YouTube or Google.
-
+        a: No. Villow is a Fix the Web project, built on YouTube's public API and official embedded player. It isn't affiliated with, endorsed by or sponsored by YouTube or Google.
       - q: Is Villow a replacement for YouTube?
-        a: Villow is built *on* YouTube, with your subscriptions, YouTube's official player and YouTube's videos. It shows the controls YouTube could offer everyone, and it's a healthier way to watch in the meantime.
-
-      - q: Does Villow get rid of recommendations?
-        a: No. Switch on sources like Popular in Your Country Today and friends' picks, and browse YouTube itself with the extension's caps. You decide how much.
-
+        a: Villow is built on YouTube's videos and services. It demonstrates the controls YouTube could offer directly to everyone, and lets you use them in the meantime.
+      - q: Do I need to host my own Villow?
+        a: You can create your own private Villow or join one run by someone you trust. One person manages the hosting and database; friends sign in and choose their viewing setup. [Choose a starting route](/download).
       - q: Is it free?
-        a: Villow is free and open source, and you can run it for yourself on the free plans of Vercel, Supabase and Google Cloud. Adding friends may need a paid plan, depending on how much everyone uses it. {tbd:groupSizeGuide} [More on costs](/download#costs).
-
-      - q: Do I need a computer?
-        a: "Only to set it up. Villow Setup runs on a computer (Windows today; macOS and Linux: {tbd:setupOtherPlatforms}). After that, use Villow on your phone, tablet or any browser."
-
-      - q: How long does setup take?
-        a: About {tbd:setupMinutes} minutes.
-
-      - q: Does it work on my phone?
-        a: Yes. Villow installs like an app on iPhone, iPad and Android, straight from the browser.
-
+        a: The software is free and open source. Hosting uses the owner's provider accounts. Practical capacity, group costs and paid-plan requirements are still being tested; free hosting isn't guaranteed. [More on costs](/download#costs).
+      - q: Do I need a computer, and how long does setup take?
+        a: Creating a Villow with Setup needs a Windows computer today. Joining a friend's doesn't. Setup duration with new users hasn't been measured yet. Mac and Linux Setup availability is {tbd:setupOtherPlatforms}.
+      - q: Does Villow work on my phone?
+        a: The web app works in a browser on iPhone, iPad and Android, and can be added to the home screen. Extension support is a separate question; [check your browser](/extension#where-it-works).
       - q: How do I invite friends?
-        a: Add their Google email to your Google Cloud project, then send them your Villow address. You can remove access any time. [Step by step](/download#inviting-friends).
+        a: Allow their Google account in your project's sign-in setup, then send your Villow address. Exact invitation steps are still being confirmed. [Guidance for owners](/download#inviting-friends).
+      - q: Why might Google ask me to authorize again each week?
+        a: External Google OAuth projects in Testing normally receive authorization that expires after seven days when YouTube permissions are requested. Production and verification guidance is still being confirmed. [Setup notes](/download#inviting-friends).
 
-      - q: Why do I have to sign in again every week?
-        a: While your Google Cloud project is in Google's Testing status, Google usually expires sign-ins after about seven days. {tbd:productionMove}
-
-      - q: Can I use the extension without Villow?
-        a: Yes. On its own it shows your time on YouTube, caps your time, recommendations and videos watched, and can calm YouTube down (greyscale, hide Shorts, hide side recommendations and comments, bedtime, or block it entirely). Linked to Villow, clicked videos go to your Villow feed instead, and your YouTube time counts toward your Villow limits.
-
-      - q: Which browsers does the extension support?
-        a: Chrome, Edge and Firefox on computers, and Firefox on Android (plus some other Android browsers that support extensions). Safari, including iPhone and iPad, is coming. {status:ext-safari}
-
-      - q: Why do some videos look greyed out in Villow?
-        a: "One of your own limits is holding them: a schedule, a daily limit, an open limit or a channel limit. Villow shows them rather than hiding them, so you can see what a limit is doing."
-
-      - q: Why does the video pause when I switch apps?
-        a: YouTube's official embedded player doesn't allow background playback. Villow keeps your place.
-
+  - type: faq
+    id: watching
+    heading: Watching and discovery
+    items:
+      - q: Can I still use YouTube's recommendations?
+        a: Yes, on YouTube itself with the extension's ceilings. Personalized YouTube recommendations aren't imported into Villow. Villow also offers optional country charts and friends' picks; its explained suggestions concern your settings and habits.
+      - q: Can I use Villow without rating videos, social features or the extension?
+        a: Yes. Reflections, social participation and the extension are optional. Without the connected extension, Villow can't include your YouTube browser time. You never have to rate, and entertainment or rest can be worthwhile.
+      - q: Can I always finish a video after a limit?
+        a: The daily watch limit can offer a once-per-day allowance for the current video. App-open limits, per-channel daily blockers and watch-free dates don't offer that choice. Bedtime can separately be stopped, snoozed or dismissed for tonight. [More on limits](/features#limits).
+      - q: Why do some videos look greyed out?
+        a: A limit or schedule is holding them. Keeping them visible helps you understand what the limit is doing.
+      - q: Why does playback pause when I switch apps?
+        a: Villow uses YouTube's official embedded player and doesn't offer background playback. Your place is saved so you can return later.
+      - q: What about TVs, casting and offline playback?
+        a: Don't assume the embedded web player has all the features of YouTube's native apps. A verified device and playback matrix is still being prepared. The extension doesn't cover TV or native YouTube apps.
       - q: Why aren't videos made for kids tracked?
-        a: YouTube requires tracking to be off for them. Saving and recommending still work.
+        a: YouTube's developer policies require tracking to be turned off for those videos. Saving and recommending them can still work.
+      - q: Are there ads?
+        a: Villow adds no ads and sells no viewing data. Videos use YouTube's official player, which may still show YouTube ads.
+      - q: What does a streak count?
+        a: Days without raising or extending limits. Going over a time threshold under an offered finish-current-video allowance and increasing a limit are different events. Social streaks are an optional experiment, not a wellbeing score.
+      - q: What accessibility options are available?
+        a: Villow includes reduced-motion and appearance controls such as greyscale and no thumbnails. A full accessibility audit and verified keyboard guide are still outstanding; [report an access problem](link:contact).
+      - q: Does Villow change my YouTube account?
+        a: Subscribing and unsubscribing through Villow changes your YouTube subscriptions. Supported managed-playlist actions can also write to YouTube. Saving a video into Villow's feed is separate from changing a YouTube playlist. Read the prompt for the action you're taking.
+      - q: Are worthwhile ratings the same as YouTube likes?
+        a: No. Villow's worth-it verdicts are stored in its own database and don't write YouTube likes.
+      - q: How often does my feed refresh, and how far back does it look?
+        a: Normal updates continue from the last successful sync, with a 24-hour lookback for the first sync. Delivery depends on the installation's scheduled updates, rather than arriving live. Batch channels can check in every 1–30 days and include uploads from up to the last 30 days.
 
-      - q: Does Villow use AI?
-        a: Not currently. Villow's suggestions come from a transparent algorithm based on your own ratings and usage. A few AI ideas appear in the app as labelled placeholders, and they'll only ship if they genuinely support a healthy experience. {status:ai-ideas}
+  - type: faq
+    id: extension
+    heading: Extension and coverage
+    items:
+      - q: Can I use the extension on its own?
+        a: Yes. It adds browser time, recommendation and watched-video ceilings plus calmer settings on YouTube. Linking it adds connected usage and saved videos in Villow. The finite feed, reflections, explained suggestions and friends experience lives in the full app.
+      - q: Which browsers are supported?
+        a: Chrome, Edge and Firefox on computers, and Firefox on Android. Orion is a current iPhone and iPad workaround through its Chrome extension support. Native Safari support remains planned. [Store links and coverage](/extension#where-it-works).
+      - q: Does it count native YouTube app time?
+        a: No. Your limits follow you across Villow and connected browsers. That includes Villow usage plus YouTube pages in linked extension browsers, and excludes native YouTube apps and unconnected browsers.
+      - q: Where can I edit connected limits?
+        a: Supported shared settings can be edited in Villow or the extension and synchronized between them. Standalone watched-video limits are separate. [Extension privacy policy](link:extensionPrivacy).
 
-      - q: Is it ad-free?
-        a: Villow adds no ads of its own. Videos play through YouTube's official player, which may show YouTube's ads.
-
-      - q: Can my friends see how much I watch?
-        a: Only if you switch that on, item by item. Nothing is shared by default.
-
-      - q: Will Villow add watch together?
-        a: It's coming, and it's the kind of feature YouTube could offer tomorrow. {status:watch-together}
-
+  - type: faq
+    id: friends-and-privacy
+    heading: Friends, privacy and support
+    items:
+      - q: Can we watch together now?
+        a: Yes. Private rooms support up to 10 accounts, with invitations and explicit acceptance, synchronized playback, a shared queue and chat. The group decision flow at a person's limit is still being developed. [Watching with friends](/features#friends).
+      - q: Can people on my Villow see my usage?
+        a: You choose what to share and can review the sharing controls in the app. The owner's database access is separate from ordinary member sharing. Don't join a Villow unless you trust its operator. [Privacy overview](/privacy-overview).
+      - q: What Google permissions does Villow request?
+        a: Google account email and profile, plus the broad youtube.force-ssl permission for YouTube features. That permission includes write access; it isn't read-only. Optional task integrations ask separately. [Permission details](/privacy-overview#signing-in).
+      - q: How do I leave or revoke access?
+        a: Revoke Villow in [Google's account permissions](link:googleSecuritySettings), and ask your host about stored data. Owners can revoke another member and separately delete that revoked member's data in Admin. Logout and Google revocation don't themselves erase the database. [Owner guide](/running-villow#leaving).
+      - q: Does Fix the Web receive my viewing data?
+        a: Private viewing measurements stay in the Villow you use. Feedback you voluntarily submit goes to Fix the Web through its survey service. These are different data flows. [More on feedback](/privacy-overview#feedback).
+      - q: Does Villow use AI for suggestions?
+        a: Current suggestions use transparent rules based on your ratings, skips and usage, rather than generative AI. No generative AI features are planned imminently. Six possible uses, their tradeoffs and our current thinking are on the [AI discussion page](/ai).
       - q: Is Villow open source?
-        a: Yes. Villow is MIT-licensed ([source code](link:appSource)), and the extension is open source too ([source code](link:extensionSource)).
-
-      - q: How do I give feedback?
-        a: Inside Villow, on the Feedback page. For anything else, [get in touch](link:contact).
-
-      - q: How is Villow connected to Fix the Web?
-        a: Fix the Web built Villow to show what its policies look like in a real product. [Read the campaign](link:fixTheWeb).
+        a: Yes. Villow is MIT-licensed ([source code](link:appSource)), and [the extension is open source](link:extensionSource).
+      - q: How can I help?
+        a: Use Villow, invite friends, share it with creators and people with reach, contribute code or feedback, or help fund maintenance. [Support Villow and Fix the Web](/about#get-involved).
 
   - type: cta
     variant: fixtheweb
-    heading: Want the bigger picture?
-    body: Villow is Fix the Web's proof that these controls are easy to build. Here's what we're asking platforms to change.
+    heading: These controls are possible.
+    body: Villow demonstrates working choices for viewers. Fix the Web is asking platforms to offer them directly to everyone.
     actions:
-      - label: See what we're asking for →
-        href: link:fixTheWeb
-        style: primary
-      - label: YouTube could do this →
+      - label: The case for change →
         href: /youtube-could-do-this
+        style: primary
+      - label: Get started →
+        href: /download
         style: text

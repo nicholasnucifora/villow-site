@@ -1,63 +1,82 @@
-# Privacy overview: plain-language summary, this website, and links to both formal policies.
-# /privacy is the extension's own policy (public/privacy.html) and isn't built from here.
-# Rule: never write "no tracking" about the app. Write "measured for you, kept in your own Villow".
 title: Privacy
-description: What Villow measures, why, where it's kept and what it never does, in plain language, with links to the app and extension privacy policies.
+description: Understand private Villow hosting, the owner's database access, member sharing, Google permissions and voluntary feedback, with links to both privacy policies.
 
 blocks:
   - type: hero
     eyebrow: Privacy
-    title: Measured for you, kept in your own Villow.
-    lead: Villow measures a lot about how you watch, because that's how it helps. Here's what it measures, where it's kept, and what it never does. This is a plain-language summary. The formal policies are [linked below](#policies).
+    title: Measured for you, stored with the host you choose.
+    lead: Villow uses viewing measurements to show patterns and support your choices. Run your own private Villow or join someone you trust. Hosting access, member sharing and voluntary feedback are different things.
 
   - type: section
     id: where-your-data-lives
-    heading: Where your data lives
-    body: In your own Villow, a database in the owner's Supabase account. There's no central Villow server collecting everyone's viewing data.
+    heading: Know who runs your Villow
+    body: |
+      The owner's Vercel, Supabase and Google Cloud accounts run the app, database and YouTube connection. The owner controls the database and server secrets and can access stored data. Only join a Villow run by someone you trust.
+
+      Sharing controls govern what other members see through the app. They don't make data private from the operator. There isn't a central collection of everyone's viewing data at Fix the Web.
 
   - type: section
     id: what-villow-measures
-    heading: What Villow measures, and why
+    heading: What gets measured
     body: |
-      - Watch time by day, hour, channel and source, *to show you where your time goes*
-      - Browsing time inside Villow, by page type only (never URLs or visit lists), *to separate browsing from watching*
-      - Opens per day, *for the optional open limit*
-      - What you skip, finish and rate, *for reflection and suggestions*
-      - A 30-day viewing timeline, deleted after 30 days
-      - With the linked extension: daily time on YouTube, recommendations seen and videos saved
+      - Watching and browsing time, opens, channels and sources, to show where time goes and apply chosen limits.
+      - Skips, saved progress and optional worthwhile ratings, for reflection and explained suggestions.
+      - A 30-day Viewing Review.
+      - Connected YouTube browser counts and supported shared settings, described in the [extension policy](link:extensionPrivacy).
+
+      Native YouTube apps, unconnected browsers and other apps are outside that coverage.
 
   - type: section
-    id: feedback
-    heading: Feedback check-ins
-    body: Optional surveys inside the app, hosted on Tally. Responses from every Villow go to Fix the Web to improve the design. The survey link carries a separate participant code, not your name or email address.
-
-  - type: section
-    id: never
-    background: soft
-    heading: What Villow never does
-    body: |
-      - No ads, no advertising or analytics SDKs, and nothing sold
-      - No tracking of videos made for kids
-      - Nothing shared with friends unless you switch that item on
-      - Saving a video from YouTube never changes your YouTube account
+    id: sharing
+    heading: You choose what to share
+    body: Review the sharing choices for people on your Villow. Recommendations, participating in a shared room and sharing activity have their own social context. You can use Villow without social participation or ratings. The operator's database access remains separate.
 
   - type: section
     id: signing-in
-    heading: Signing in
-    body: Villow uses Google sign-in and never sees your password. Google access tokens are encrypted before they're stored. Task integrations are only requested when you choose to connect one, and Todoist isn't given permission to delete tasks.
+    heading: Google and task permissions
+    body: |
+      Google sign-in requests email/profile and **youtube.force-ssl**, a broad permission with write access. Villow can change subscriptions and supported managed playlists when you use those features. Its worthwhile ratings stay in Villow rather than becoming YouTube likes.
+
+      Google Tasks and Todoist ask for access when you choose to connect them. Their task-management permissions allow writes and deletion; supported task moves can delete the original after recreating it elsewhere.
+
+      You can [revoke Villow's Google access](link:googleSecuritySettings). Revocation, logout and deleting stored data are separate actions. New server token writes are encrypted; historical rows transition on their next write. That encryption doesn't hide data from the host.
+    actions:
+      - label: Full permission and storage details →
+        href: link:appPrivacy
+        style: text
+
+  - type: section
+    id: feedback
+    heading: Feedback you choose to submit
+    body: Optional surveys are hosted on Tally and send your submitted answers to Fix the Web. Links use a separate participant code rather than your name or email. Your installation's private viewing measurements aren't automatically submitted. Feedback helps test the design; it isn't proof of a wellbeing outcome.
+
+  - type: section
+    id: ads
+    background: soft
+    heading: Villow adds no ads and sells no viewing data.
+    body: YouTube's embedded player may still show YouTube ads and uses Google's services. Viewing measurements help you use Villow; they aren't sold to advertisers.
+
+  - type: section
+    id: leaving
+    heading: Leaving or deleting data
+    body: Ask the owner about stored data. Admin controls can revoke another member and separately delete that revoked member's data. Logging out or revoking Google access doesn't itself erase the database. General retention, backups and minimum age still need completion in the draft app policy.
+    actions:
+      - label: Owner guide →
+        href: /running-villow#leaving
+        style: text
 
   - type: section
     id: this-website
     heading: This website
-    body: villow.app uses no analytics, no cookies and no third-party embeds. Nothing loads from YouTube or anyone else when you visit.
+    body: The site's source includes no analytics, cookie-setting code or third-party embeds. Assets are served with the site. Cloudflare hosts it and may process requests or provide network diagnostics under its own configuration; the app and extension have separate data flows.
 
   - type: cards
     id: policies
-    heading: The formal policies
+    heading: Read the policies
     items:
-      - title: Villow app privacy policy
+      - title: Villow app privacy policy · Draft
         href: link:appPrivacy
-        body: "The Villow web app: Google sign-in, YouTube API Services, and everything stored in a Villow. {tbd:appPolicyStatus}"
+        body: Google permissions, hosting, device storage, social and task data. Retention, minimum age and effective date still need completion.
       - title: Villow extension privacy policy
         href: link:extensionPrivacy
-        body: The browser extension for Chrome, Edge and Firefox. What it sends to your Villow, and what never leaves your browser.
+        body: Saved videos, local records, daily counts and settings synchronization with the instance you choose.

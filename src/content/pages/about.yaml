@@ -1,14 +1,13 @@
-# About: Fix the Web, Nicholas, the name, community, contact.
-title: About
-description: Villow is made by Fix the Web, and designed and built by its founder, Nicholas Nucifora.
+title: About and support
+description: Meet the person behind Villow, a Fix the Web prototype. Help by using it, inviting friends, sharing it, contributing feedback or funding maintenance.
 
 blocks:
   - type: hero
     eyebrow: About
-    title: Made by Fix the Web.
-    lead: Fix the Web campaigns for an internet built around people's control and wellbeing, not engagement. Villow is our proof, a real app showing what those policies look like in practice.
+    title: A working example of a web built for people.
+    lead: Fix the Web campaigns for people's control and wellbeing online. Villow turns that ambition into a product you can use, question and improve. It demonstrates possible controls; it doesn't yet prove their effects.
     actions:
-      - label: Visit fixtheweb.org →
+      - label: Visit Fix the Web →
         href: link:fixTheWeb
         style: text
 
@@ -18,40 +17,75 @@ blocks:
     body: |
       Villow was designed and built by Nicholas Nucifora, founder of Fix the Web.
 
-      {tbd:nicholasBio}
+      Nicholas intends to continue developing and maintaining Villow, and to use working tools like it to help change how the web works for people.
+
+      A fuller founder bio is still to come: {tbd:nicholasBio}.
     image: aboutPhoto
 
   - type: section
     id: the-name
-    heading: Why "Villow"?
-    body: Video, plus pillow, somewhere comfortable to watch. And like willow and meadow, it's meant to feel a little outdoors, which is where Villow hopes you'll end up.
+    heading: Why “Villow”?
+    body: Video plus pillow, somewhere comfortable to watch. Like willow and meadow, the name also leaves room for life outside the feed. Watching for entertainment, comfort or rest counts too.
 
   - type: section
     id: get-involved
     background: soft
-    heading: Get involved
+    heading: Help Villow reach people.
     body: |
-      Villow is one part of Fix the Web. Join the movement:
+      A useful prototype only has a chance to change things if people actually use it. You can help in several ways:
 
-      - [Discord](link:discord)
-      - [Reddit](link:reddit)
-      - [Newsletter](link:newsletter)
-      - [How to help](link:howToHelp)
-      - [fixtheweb.org](link:fixTheWeb)
+      - **Use Villow:** [create your own or join a friend's](/download), and see what fits your day.
+      - **Invite friends:** give people a trusted place to try it and something to watch together.
+      - **Spread the word:** share it with creators, communities and people with reach. Describe what you found useful rather than promising an outcome.
+      - **Give feedback:** optional check-ins and the app's Feedback page help improve the design.
+      - **Contribute:** [code, bug reports, accessibility feedback and tested owner guidance](/developers#contributing).
+      - **Support the wider movement:** [Fix the Web](link:fixTheWeb) campaigns for these kinds of choices across the internet.
+    actions:
+      - label: Get started
+        href: /download
+        style: primary
+      - label: Share the guided tour →
+        href: /demo
+        style: text
+
+  - type: section
+    id: donations
+    heading: Help fund ongoing maintenance.
+    body: |
+      Villow is free and open source. Villow adds no ads and sells no viewing data. Donations are highly needed to sustain development and maintenance.
+
+      Donation destination: {tbd:donationDestination}. [Contact Nicholas about supporting the work](link:contact), or [visit Fix the Web](link:fixTheWeb).
+    actions:
+      - label: Support the project
+        href: link:contact
+        style: primary
+
+  - type: section
+    id: learning
+    heading: What we're learning
+    body: |
+      Villow is a substantial working prototype. We want to learn whether finite feeds, optional reflection, explained suggestions and social support help people spend time in ways they value. These are design intentions, not established wellbeing or polarization results.
+
+      Private viewing measurements stay in the Villow you use. Only feedback you choose to submit goes to Fix the Web. Voluntary feedback can strengthen the evidence, but self-reported surveys have limits. Findings will need context about who participated and how they were measured.
+    actions:
+      - label: Understand the data flows →
+        href: /privacy-overview
+        style: text
 
   - type: section
     id: contact
     heading: Contact
     body: |
-      - **Contact:** [get in touch](link:contact)
-      - **Feedback on Villow:** inside the app, on the Feedback page
-      - **Code:** [Villow](link:appSource) and [the extension](link:extensionSource)
+      - **Questions, bugs or support:** [get in touch](link:contact).
+      - **Feedback about your experience:** the Feedback page inside Villow.
+      - **Code:** [Villow](link:appSource) and [the extension](link:extensionSource).
+      - **Your installation or stored data:** contact its owner as well as the project if needed.
 
   - type: cta
     variant: fixtheweb
-    heading: The web isn't broken by accident.
-    body: Villow shows one fix. Fix the Web is working on the rest.
+    heading: Working tools. A bigger ambition.
+    body: Villow demonstrates that these controls are possible. Fix the Web is asking platforms to offer them directly to everyone.
     actions:
-      - label: Read the campaign at fixtheweb.org →
+      - label: Read the campaign →
         href: link:fixTheWeb
         style: primary

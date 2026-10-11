@@ -36,20 +36,20 @@ links:
   discord:
   reddit:
   newsletter:
-  howToHelp:
 
   # Getting Villow
   setupWindows: # Villow Setup download for Windows
   chromeStore: https://chromewebstore.google.com/detail/villow/cfgmdkobjfkacdamdfmbnifadbancelc
-  edgeAddons: # still to come; the Edge buttons show marked TBD until this is filled in
-  firefoxAddons: https://addons.mozilla.org/firefox/addon/villow/ # the same listing covers Firefox for Android
+  edgeAddons: https://microsoftedge.microsoft.com/addons/detail/villow/knbdnoleancmiifdopoplpkmfgkfpmmm
+  firefoxAddons: https://addons.mozilla.org/en-US/firefox/addon/villow/ # the same listing covers Firefox for Android
+  orionApp: https://apps.apple.com/app/orion-browser-by-kagi/id1484498200
 
   # Code
   appSource: # Villow app repository (MIT)
   extensionSource: https://github.com/nicholasnucifora/Villow-Extension
 
   # Policies and help
-  extensionPrivacy: /privacy # the existing extension policy. Don't change.
+  extensionPrivacy: /privacy # stable extension-store policy URL; update deliberately with its build hash
   appPrivacy: /app-privacy
   terms:
   contact: mailto:support@villow.app
@@ -86,38 +86,38 @@ tbd:
   inviteSteps:
     note: exact steps to add a friend in Google Cloud
     value:
-  extensionPointsConfirmed:
-    note: Nicholas to confirm each point
-    value:
   comparisonCheckedDate:
     note: date the comparisons were last checked
-    value:
+    value: 12 October 2026
   nicholasBio:
     note: short bio
+    value:
+  donationDestination:
+    note: public donation destination still to be chosen
     value:
   contributing:
     note: how to contribute
     value:
-  appPolicyStatus:
-    note: draft, not yet reviewed # once it's final, delete {tbd:appPolicyStatus} from privacy-overview.yaml and the notice from app-privacy.yaml
-    value:
   appPolicyEffectiveDate:
     note: date this policy takes effect
-    value:
-  appPolicyGoogleScopes:
-    note: which Google account details and YouTube permissions Villow requests, and what each is for
-    value:
-  appPolicyDeviceStorage:
-    note: cookies and browser storage the app uses
     value:
   appPolicyRetention:
     note: how long other data is kept
     value:
-  appPolicyDeletion:
-    note: how to delete your data or leave a Villow
-    value:
   appPolicyMinimumAge:
     note: minimum age
+    value:
+  ownerUpdates:
+    note: verified update and rollback procedure
+    value:
+  ownerBackups:
+    note: tested database backup and recovery procedure
+    value:
+  ownerRemoval:
+    note: verified member removal, session revocation and deletion procedure
+    value:
+  ownerShutdown:
+    note: verified complete shutdown procedure
     value:
 
 # ── Images ───────────────────────────────────────────────────────────────────
@@ -167,7 +167,7 @@ images:
     src:
     alt:
   featureFeed:
-    label: Home feed on desktop, and on a phone in no-thumbnail mode
+    label: Finite chronological feed and its end, using demo data
     ratio: 16/10
     src:
     alt:
@@ -202,7 +202,7 @@ images:
     src:
     alt:
   featureRealLife:
-    label: Things to do with an imported list, and the creator call-to-action panel
+    label: Chosen activities at a stopping point, using demo data
     ratio: 16/10
     src:
     alt:
@@ -271,7 +271,7 @@ images:
 # Status badges and the Roadmap page are generated from these lists.
 #   live       available now (no badge)
 #   coming     planned or partly built → "Coming soon"
-#   showcase   only the platform can fully deliver it → "Showcase"
+#   showcase   a concept demonstration, not a shipped feature → "Showcase"
 #   exploring  early idea → FAQ and Roadmap only
 #   tbd        not decided
 # In copy, {status:id} shows the badge for a feature (and nothing once it's live).
@@ -334,7 +334,7 @@ features:
       notes: A reduced-motion option exists
     - id: reflect-rating
       area: Reflection
-      name: '"Was this video worth your time?" after every video'
+      name: 'Optional "Was this video worth your time?" reflection'
       status: live
       notes: "Mobile: swipe card. Desktop: in the navigation bar"
     - id: reflect-time-usage
@@ -379,11 +379,11 @@ features:
       status: live
     - id: limits-streaks
       area: Limits
-      name: Streaks count days you didn't extend a limit
+      name: Streaks count days without raising or extending limits
       status: live
     - id: limits-youtube-time
       area: Limits
-      name: Time on YouTube counts toward your Villow limit
+      name: YouTube time in connected extension browsers counts toward your Villow limit
       status: live
       notes: Requires the linked extension
     - id: social-recommend
@@ -392,9 +392,9 @@ features:
       status: live
     - id: social-sharing
       area: Social
-      name: "Opt-in sharing per item: online status, fortnight total, average use, streak, watch habits, subscriptions, settings"
+      name: "Sharing controls: online status, fortnight total, average use, streak, watch habits, subscriptions, settings"
       status: live
-      notes: Nothing shared by default
+      notes: Describe user choices; verify the onboarding release before claiming neither choice is preselected
     - id: social-groups
       area: Social
       name: Grouped streaks, group limits, group blocked hours
@@ -403,9 +403,14 @@ features:
     - id: watch-together
       area: Social
       name: Watch together
+      status: live
+      summary: Private rooms for up to 10 accounts, invitations and explicit acceptance, synchronized playback, shared queue and chat.
+      notes: Group decisions when someone reaches a limit are separate work; do not imply that flow is released
+    - id: watch-together-limits
+      area: Social
+      name: Group decisions at a viewing limit
       status: coming
-      summary: Watch videos together with friends. The app already has a spot waiting for it.
-      notes: The app has a placeholder button
+      summary: Planned room pause and alert when someone reaches a limit. They can leave, or the whole group agrees to dismiss it and continue. Release verification is pending.
     - id: things-to-do
       area: Real life
       name: "Things to do: Google Tasks or Todoist import, completion synced both ways"
@@ -418,14 +423,14 @@ features:
       area: Real life
       name: Creator calls to action
       status: showcase
-      summary: A creator attaches one focused, real-world next step to a video, shown right beside it. The real thing needs YouTube Studio, so Villow shows an example of how it could work.
-      notes: Needs YouTube Studio. Villow shows an example panel beside videos
+      summary: A concept panel for one focused, real-world next step beside a video. Native YouTube integration would need platform support; an independent verified creator-submission service is also being explored.
+      notes: Example panel, not a live creator-submission system
     - id: community-notes
       area: Information
       name: Community notes beside videos, and a notification when a video you watched gets one
       status: showcase
-      summary: Notes beside misleading videos, shown once people with different viewpoints agree they help. Anyone who already watched is notified, and the notification stays until they've read the note. Not built into Villow, because it needs a platform's community.
-      notes: Idea only, not implemented in the app. Shown on How it works as a pitch for YouTube
+      summary: A proposal for context beside a video and a persistent correction notice for people who already watched. This is not implemented in Villow.
+      notes: Proposal on the roadmap, separate from current app features
     - id: feedback-checkins
       area: Design
       name: Optional check-ins (first impressions, 2 weeks, 3 months) and feedback any time
@@ -433,12 +438,12 @@ features:
       notes: Responses go to Fix the Web
     - id: ai-ideas
       area: AI
-      name: 'Topic guidance, chapter generation, comment AI and "Talk with AI"'
+      name: AI ideas and discussion
       status: exploring
-      summary: Early ideas that appear in the app as labelled placeholders. They may change, or be removed if they don't support a healthy experience.
+      summary: 'Six unimplemented possibilities, with no imminent release plans: chapters, video conversations, comment questions, topic guidance, recommendation refinement and a conversation beside Things to do. [Read the tradeoffs](/ai).'
     - id: platform-devices
       area: Platform
-      name: Works on Android, iPhone and iPad, Windows, macOS and Linux
+      name: Web app for browsers on Android, iPhone, iPad, Windows, macOS and Linux
       status: live
       notes: A web app that installs from the browser; no app store needed
     - id: platform-appearance
@@ -521,16 +526,21 @@ features:
       linked: true
       status: live
     - id: ext-browsers
-      name: Chrome, Edge and Firefox on computers; Firefox for Android, plus some other Android browsers with extension support
+      name: Chrome, Edge and Firefox on computers; Firefox for Android
+      alone: true
+      linked: true
+      status: live
+    - id: ext-orion
+      name: iPhone and iPad via Orion's Chrome extension support (workaround)
       alone: true
       linked: true
       status: live
     - id: ext-safari
-      name: Safari, iPhone and iPad
+      name: Native Safari extension
       alone: false
       linked: false
       status: coming
-      summary: The extension on Safari, including iPhone and iPad. This is future work.
+      summary: Native Safari support is planned. Orion is the current workaround on iPhone and iPad.
     - id: ext-open-source
       name: Open source
       alone: true

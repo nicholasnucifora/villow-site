@@ -1,12 +1,11 @@
-# The extension: what it does alone and linked, where it works, what it can see.
 title: The extension
-description: The Villow extension brings limits to YouTube itself, in Chrome, Edge and Firefox, and on Firefox for Android. Use it on its own, or link it to Villow.
+description: Add chosen limits to YouTube in Chrome, Edge and Firefox, Firefox for Android, or Orion on iPhone and iPad. Link the extension to Villow for connected usage and settings.
 
 blocks:
   - type: hero
     eyebrow: The Villow extension
-    title: Bring your limits to YouTube itself.
-    lead: The Villow extension works on YouTube in Chrome, Edge and Firefox, and on Firefox for Android. Use it on its own, or link it to Villow to bring everything together.
+    title: Keep discovering. Choose how much.
+    lead: Browse YouTube's personalized recommendations where they live, with daily ceilings and calmer settings you choose. Start with the extension on its own, or connect it to your Villow.
     actions:
       - label: Chrome Web Store
         href: link:chromeStore
@@ -19,63 +18,78 @@ blocks:
         style: primary
     smallPrint:
       - Free and open source
-      - "[View the source code](link:extensionSource)"
+      - "[iPhone and iPad workaround: Orion](link:orionApp)"
     image: extensionOnYouTube
 
   - type: section
     id: on-its-own
-    heading: On its own
+    heading: A way to begin
     body: |
       - **See your time on YouTube** today, and your daily average.
-      - **Daily caps you choose:** time on YouTube, recommendations you see, and videos you watch.
-      - **Calmer YouTube:** greyscale thumbnails or videos, hide Shorts, hide the recommendations beside the video you're watching, and hide comments.
-      - **Bedtime:** YouTube closes for the night when you've said it should.
-      - **Or block YouTube entirely.**
+      - **Choose daily ceilings:** time on YouTube, recommendations you see and videos you watch.
+      - **Make it calmer:** greyscale thumbnails or videos, hide Shorts, side recommendations or comments.
+      - **Choose bedtime**, or block YouTube entirely.
+
+      These controls work in the browser where the extension is installed. The full finite feed, saved library, reflection, suggestions and social experience lives in Villow.
     image: extensionSettings
 
   - type: section
     id: with-villow
-    eyebrow: Recommended
-    heading: Better with Villow
+    eyebrow: The full experience
+    heading: Better with your Villow
     body: |
-      - **Click a video on YouTube, and it's saved to your Villow feed instead of playing.** Browsing stays browsing; one video doesn't snowball into ten. Your daily cap becomes a cap on **saves**.
-      - **Your time counts.** Time on YouTube adds to your Villow daily limit, and shows up on your Villow time page and in your suggestions.
-      - **Hide channels you already subscribe to**, since they're waiting in your Villow feed.
-      - **One set of limits.** Edit them in the extension or inside Villow, and see your progress as small rings on your Villow home page.
+      - **Save discovery for later.** When linked blocking is on, clicking a video tile sends it to your Villow feed instead of starting playback. Your daily video ceiling becomes a ceiling on saves.
+      - **Connect your usage.** YouTube browser time contributes to your Villow daily limit and appears on your time page.
+      - **Hide subscribed channels** on YouTube, since those channels already have a place in your Villow feed.
+      - **Edit shared settings in either place.** Supported limit settings synchronize between Villow and connected extensions. Progress rings show how your day is going.
     image: extensionRings
     imageSide: left
+    actions:
+      - label: Create a Villow or join a friend's →
+        href: /download
+        style: text
 
   - type: section
-    variant: statement
-    eyebrow: Why an extension?
-    body: Villow can't show YouTube's own recommendations inside the app, so the extension goes where they are. You keep the freedom to browse YouTube, with a ceiling you set.
+    id: coverage
+    background: soft
+    heading: Your limits follow you across Villow and connected browsers.
+    body: |
+      Coverage means **Villow usage**, plus **YouTube pages in browsers where you've connected the extension**. Connect each browser you want to include.
+
+      Shared browser controls include daily time, recommendation and save limits. App-specific channel limits, open limits and schedules aren't universally imposed on YouTube browser playback.
+
+      The native YouTube app, TV apps and unconnected browsers are outside that coverage. Offline or disconnected browsers can't instantly exchange totals. These are controls you choose to use, rather than universal or tamper-proof restrictions.
+
+      YouTube's personalized recommendations aren't imported into Villow. The extension lets you explore them on YouTube with a recommendation-exposure ceiling.
 
   - type: extensionTable
     id: everything-it-does
-    heading: Everything it does
+    heading: On its own and connected
     columns: [Feature, On its own, Linked to Villow]
 
   - type: table
     id: where-it-works
-    heading: Where it works
-    columns: [Device, Support]
+    heading: Where the extension works
+    columns: [Device or browser, Extension support]
     rows:
-      - ["Windows, macOS, Linux", "Chrome, Edge, Firefox"]
-      - ["Android", "Firefox (recommended), plus some other Android browsers that support extensions"]
-      - ["iPhone, iPad, Safari", "{status:ext-safari}"]
+      - ["Windows, macOS and Linux", "Chrome, Edge and Firefox"]
+      - ["Android", "Firefox; other extension-capable browsers may also work"]
+      - ["iPhone and iPad", "Orion is the current workaround, using its Chrome extension support"]
+      - ["Native Safari", "Planned; not available yet"]
+      - ["Native YouTube apps and TVs", "Outside the extension's coverage"]
+    note: "Villow itself is a web app you can use in a browser on phones, tablets and computers. That is separate from extension support. [Get Orion](link:orionApp)."
 
   - type: section
     id: what-it-can-see
-    background: soft
-    heading: What it can see
+    heading: What it sends
     body: |
-      - It only works on YouTube pages, in the browser where you install it.
-      - Linked to Villow, it sends videos you click and your daily totals (like time on YouTube and recommendations seen) to **your own Villow**, not to Fix the Web or anyone else.
-      - It doesn't send your browsing history.
-      - It never changes anything in your YouTube account.
-      - **It's open source,** so anyone can check exactly what it does.
+      - Saved videos include the identifying details needed to add them to your feed.
+      - Connected browsers send daily usage counts, shared settings and connection information to the Villow you selected.
+      - The list of recommendations you saw stays in your browser; the reported total is a count.
+      - The extension holds no Google credentials. Saving into Villow's feed is separate from saving to YouTube's own lists.
+      - The Villow owner controls the receiving database. Choose a host you trust.
 
-      {tbd:extensionPointsConfirmed}
+      Read the policy for the exact fields, local storage, connection behaviour and deletion options.
     actions:
       - label: Extension privacy policy
         href: link:extensionPrivacy
@@ -84,9 +98,9 @@ blocks:
 
   - type: section
     id: linking
-    heading: Linking it to Villow
-    body: Inside Villow, create a connect link and open it in the browser where the extension is installed. You can make a separate link for each browser, and turn any one of them off on its own.
+    heading: Connect each browser
+    body: Inside Villow, create a connect link and open it in the browser with the extension installed. Use a separate connection for each browser, and revoke a connection when you no longer use it. Review shared settings after connecting.
     actions:
-      - label: Don't have a Villow yet? Get one →
+      - label: Get started with Villow →
         href: /download
         style: text

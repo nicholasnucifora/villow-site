@@ -6,7 +6,7 @@ blocks:
   - type: hero
     eyebrow: "For creators {status:creator-cta}"
     title: What if your video could come with a next step?
-    lead: When a video is about a cause, the most useful thing a viewer can do is often something off-screen. Villow shows how a creator could attach one focused, real-world next step right beside the video. The real thing belongs in YouTube Studio.
+    lead: When a video is about a cause, a useful next step may happen off-screen. Villow's concept panel shows how a creator could attach one focused action beside a video. This is a showcase, not a live creator-submission feature.
     image: creatorCta
 
   - type: section
@@ -20,8 +20,8 @@ blocks:
   - type: section
     id: why-a-showcase
     background: soft
-    heading: Why Villow can only show it
-    body: Creators have nowhere to add a focused real-world call to action that other apps can show. The creator side has to live in YouTube Studio, so Villow's panel is an example of how it could work, not the real thing. Villow can show how it would work. Only YouTube can make it real.
+    heading: A showcase, with more than one possible path
+    body: Native YouTube integration would need platform support, such as a creator control in YouTube Studio. An independent service could also accept verified creator submissions for Villow to display. Neither is available through this concept panel today.
     tagline: Sometimes the best thing a video can do is get you off the couch.
 
   - type: section
@@ -29,6 +29,17 @@ blocks:
     eyebrow: "Exploring {status:creator-portal}"
     heading: Maybe, later
     body: One idea is a place where creators could submit a next step for their own videos, for Villows to show. It's an early idea, not a plan, and it would need a way to confirm that a person really owns the channel.
+
+  - type: cta
+    heading: Help people find a more intentional way to watch.
+    body: If you make videos or have an audience, try Villow and share the parts you find useful. People using it, inviting friends and contributing honest feedback help the broader movement.
+    actions:
+      - label: Try Villow →
+        href: /download
+        style: primary
+      - label: Ways to help →
+        href: /about#get-involved
+        style: text
 
   - type: cta
     variant: fixtheweb

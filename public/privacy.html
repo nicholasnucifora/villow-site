@@ -35,8 +35,8 @@
 <body>
 <main>
 <h1>Villow browser extension — Privacy Policy</h1>
-<p><strong>Last updated:</strong> 8 September 2026</p>
-<p>This policy covers the <strong>Villow browser extension</strong>. Villow the web application has its own policy, which covers the Google account authorization and everything stored on your instance.</p>
+<p><strong>Last updated:</strong> 12 October 2026</p>
+<p>This policy covers the <strong>Villow browser extension</strong>. Villow the web application has <a href="/app-privacy">its own policy</a>, which covers Google account authorization and data stored on your instance. Available features depend on the extension and instance versions you use.</p>
 <hr>
 <h2>The short version</h2>
 <p>The extension sends data to <strong>one place: the Villow instance whose address you typed in yourself.</strong> It has no server of its own, contacts no analytics service, and contacts no third party of any kind. Before you connect it to an instance, it sends nothing anywhere at all.</p>
@@ -58,59 +58,61 @@
 <h3>Received from your Villow instance</h3>
 <p><strong>Your subscribed channel list</strong>, if the "hide subscribed channels" option is on. The extension cannot ask YouTube for this and holds no Google credentials — it asks your Villow instance, which already has it. The list is cached in your browser and refreshed every few hours.</p>
 <p><strong>This cache is deleted on the next rejected request.</strong> If your Villow instance answers a request with <code>401</code> or <code>403</code>, the extension deletes its local copy of the list. An offline browser keeps the cache until it next attempts a request and receives one of those responses. Pressing <strong>Disconnect</strong> deletes it immediately.</p>
+<p><strong>Shared daily totals, saved-video status and chosen settings.</strong> Your instance returns the combined counts for your account, the status and receipts of videos saved to Villow, and supported settings you choose in the app. Saved-video status lets the extension distinguish videos still waiting from videos watched or removed.</p>
 <h3>Stored locally in your browser</h3>
 <ul>
 <li>Your instance address and pairing token</li>
 <li>Which videos you have marked, so tiles stay greyed out when you scroll back</li>
 <li>Videos waiting to be delivered when your instance is unreachable</li>
+<li>Your extension settings, daily usage records and the last shared totals and settings received from your instance</li>
 </ul>
 <h3>Kept only in your browser and never transmitted</h3>
 <ul>
 <li><strong>Which</strong> recommendations you were shown — the video ids behind the daily count. Only the count itself is reported; the list never leaves your browser.</li>
-<li><strong>Which videos you watched today</strong>, when running without an instance: the video ids and their titles, so the day can be listed back to you and so the daily cap knows what it has already counted. This is deleted at the end of the day it belongs to, and <strong>it is never sent anywhere — including if you connect an instance later.</strong></li>
+<li><strong>Which videos you watched</strong>, when running without an instance: the video ids and their titles, so recent days can be listed back to you and the daily cap knows what it has already counted. The local history retains up to 14 days. <strong>This watched-video list is never sent to an instance, including if you connect one later.</strong></li>
 </ul>
 <h3>Sent to your Villow instance, and nowhere else</h3>
 <ul>
 <li>Videos you chose to save, when you save them</li>
 <li><strong>Daily totals</strong>: how many seconds you spent on YouTube, how many recommendations you were shown, how many videos you saved, and whether you ran into any of your limits</li>
-<li><strong>Your current limits</strong>, so the Villow app can display them</li>
+<li><strong>Supported shared settings</strong>, so Villow can display them and synchronize choices: recommendation and save-count limits, save-limit mode and duration allowance, time allowance and whether YouTube is blocked</li>
 </ul>
 <p>Your daily limit on videos watched, and the count against it, are <strong>not</strong> among these. They describe a browser that has no Villow, so there would be nothing for them to mean at the other end.</p>
-<p>The daily statistics and limits sent to <code>/api/extension-usage</code> are counts and settings. They carry no video ids, no channel names, and nothing about what you looked at — a number of seconds and a number of videos, per calendar day. They are sent at most once every ten minutes and only when something has changed, plus once after midnight to close off the day. Saved videos are different: they include the identifying details needed to save the video.</p>
-<p><strong>Cross-browser daily limits.</strong> While a YouTube tab is focused, the extension sends a request to <code>/api/extension-day</code> at most once a minute. It contains today's date, a random install identifier, three contributed counts — recommendations seen, active seconds, and external saves — and your current limit settings. This lets your instance add up one account's day across multiple browsers, so, for example, a limit of five saves stays five rather than becoming ten across two browsers.</p>
+<p>The daily statistics and settings sent to <code>/api/extension-usage</code> contain counts and settings rather than video ids or channel names. Reports include measurement schema and definition versions and up to 14 retained daily records. Changed data is normally scheduled to flush after about ten minutes; startup, day changes and relevant actions can trigger earlier reporting, with retries when the instance is unavailable. Saved videos are different: they include the identifying details needed to save the video.</p>
+<p><strong>Cross-browser daily limits.</strong> The extension sends requests to <code>/api/extension-day</code> to exchange the current day's counts and settings. Activity-driven background checks are normally at most once a minute; opening the panel, saving or removing a save, changing settings, startup or reaching a cap can request an earlier update. The request includes today's date, a random install identifier, recommendations seen, active seconds, external-save counts, saved duration and unknown-duration counts, plus supported current settings. It does not send the list of recommendations seen or a list of external-save video ids. Your instance combines contributions for one account across connected browsers and returns shared totals and saved-video receipts.</p>
 <p>The random install identifier is generated locally for this browser profile. It keeps contributions from two browsers apart so they can be added rather than overwriting each other. It is a random value; it is not derived from your device, and it is not a fingerprint.</p>
-<p>With both <code>/api/extension-usage</code> and <code>/api/extension-day</code>, the extension also sends your browser's configured time zone (for example, <code>Australia/Brisbane</code>), extension version, and browser name. The time zone assigns totals to the correct calendar day. It is a browser setting, not GPS or precise location.</p>
-<p>Your limits travel one way. The extension is the only thing that can change a limit; there is no endpoint by which Villow could set one.</p>
+<p>The reports include the browser's configured time zone (for example, <code>Australia/Brisbane</code>) and browser label; usage reports also include the extension version. The time zone describes the browser's calendar-day context. It is a browser setting, not GPS or precise location.</p>
+<p><strong>Settings can travel in both directions.</strong> You can edit supported shared settings in the extension or in Villow. The instance stores a chosen settings record, and compatible connected extensions receive and adopt a newer choice on synchronization, then report the adopted values. This does not mean every appearance or hide option synchronizes. Disconnected or older clients may not adopt a choice until they reconnect or are updated.</p>
 <hr>
 <h2>What the extension never does</h2>
 <ul>
 <li>It never contacts Google or YouTube's API. It holds no Google credentials and uses no YouTube API quota.</li>
 <li>It never contacts a server you did not choose. There is no telemetry endpoint, no analytics host, and no phone-home of any kind.</li>
 <li>It never sends data to any third party, advertiser, or analytics provider.</li>
-<li>It never sells or shares your data. There is no mechanism by which it could.</li>
+<li>It does not sell your viewing data. It sends the disclosed data to the instance you connect; the instance owner's access and the app's sharing controls are described separately.</li>
 <li>It never reads pages other than YouTube.</li>
 <li>It never modifies, replaces, or blocks advertising on YouTube. Advertisements behave exactly as they would without the extension installed.</li>
 <li>It never collects your name, email address, passwords, payment details, or any Google account credential.</li>
 </ul>
 <hr>
 <h2>Where your data goes and who can see it</h2>
-<p>To your Villow instance, over HTTPS, and nowhere else. If you self-host Villow, you are responsible for who can access that server; access depends on your hosting provider and server configuration. The extension does not choose that destination — you do, by pasting in your own connect link.</p>
+<p>To the Villow instance you choose. Hosted connections use HTTPS; local development connections may use HTTP on localhost. If you self-host, you control its hosting accounts. If someone else hosts it, that owner controls the database and can access stored data. Ordinary member sharing controls are separate from operator access. The extension does not choose the destination — you do, using your connect link.</p>
 <hr>
 <h2>Retention and deletion</h2>
 <p><strong>In your browser:</strong> removing the extension deletes everything it stored. You can also clear it at any time without uninstalling:</p>
 <ul>
 <li><strong>Disconnect</strong> — deletes the pairing token and the cached subscription list</li>
 <li><strong>Clear all marks</strong> — deletes the record of which videos you have marked</li>
-<li><strong>Reset today's count</strong> — clears the local recommendation counter, and the figure reported for today with it</li>
+<li><strong>Reset today's count</strong> — clears the local recommendation counter; this is separate from deleting data already stored in your instance</li>
 <li><strong>Reset today's time</strong>, <strong>Reset today's saves</strong> and <strong>Reset today's watched videos</strong> — the same, for those</li>
 </ul>
-<p><strong>On your Villow instance:</strong> deletion is handled there, under Villow's own privacy policy. Deleting data on your instance, or revoking access, also causes the extension to discard its local copy of anything derived from it.</p>
+<p><strong>On your Villow instance:</strong> deletion is handled there, under <a href="/app-privacy">the app policy</a>. Disconnecting or uninstalling the extension does not itself delete data already stored in the instance. Ask its owner about deletion. Revoked credentials are detected on a subsequent rejected request; an offline browser cannot detect revocation immediately. The subscription-cache deletion behaviour is described above.</p>
 <hr>
 <h2>Children</h2>
 <p>The extension is not directed at children under 13 and does not knowingly collect their data.</p>
 <hr>
 <h2>Limited Use</h2>
-<p>Villow's handling of user data adheres to the <a href="https://developer.chrome.com/docs/webstore/program-policies/user-data-faq">Chrome Web Store User Data Policy</a>, including the Limited Use requirements.</p>
+<p>The extension's use of user data is subject to the <a href="https://developer.chrome.com/docs/webstore/program-policies/privacy">Chrome Web Store user-data policies</a>, including Limited Use requirements. The extension uses the disclosed data for its viewing controls, queue saving and connected-instance features, rather than selling it for advertising.</p>
 <hr>
 <h2>Changes</h2>
 <p>If the extension's data handling changes, this policy will be updated and the change described in the extension's release notes before the new version collects anything new.</p>

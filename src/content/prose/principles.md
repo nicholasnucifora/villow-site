@@ -1,95 +1,65 @@
-Villow has a lot of features. This is the thinking underneath them: what Fix the Web believes a healthier way to watch looks like, and why each part of Villow works the way it does. Nicholas Nucifora, Fix the Web's founder, designed and built Villow around these ideas.
+Villow is a working Fix the Web prototype: an attempt to give people more say over the YouTube they value. Nicholas Nucifora designed and built it around these ideas. They explain the design, rather than claiming its outcomes have been proved.
 
-## Control, not prohibition
+## Control over your experience
 
-Villow doesn't ban recommendations or pretend algorithms are evil. Some people want to see what's popular, or go down a rabbit hole on a topic they love, and that's fine. The problem isn't that recommendations exist. It's that people have no say in how much, when or what kind.
+Recommendations can be useful and enjoyable. Villow gives you a finite chronological feed you shape, plus optional country charts and friends' picks. YouTube's personalized recommendations remain on YouTube, where the extension lets you choose a ceiling on exposure.
 
-So Villow's answer is always **more options, clearly presented**, never fewer choices.
+Choose title filters, duration ranges, check-in cadence and per-channel limits. Catch up, then be done.
 
-> We're not taking anything away. We're handing you the controls.
+## Worthwhile is yours to define
 
-## Better time, not a guilt trip
+Entertainment, comfort and rest count. A video doesn't need to make you more productive to be worthwhile.
 
-Villow isn't built to make anyone watch less. It's built so the time you spend on YouTube is time you actually enjoy and find worth it. When it is, great. When it isn't, Villow helps you notice, through your own ratings, a clear picture of your time and your own to-do list, and makes it easy to go and do something you'd enjoy more.
+A quick “Was this worth your time?” reflection adds your perspective to the time you watched. It is always optional. Saved progress makes it easier to stop now and pick up where you left off.
 
-That might become less time. Or it might just mean better time. The goal is to help people focus on their lives instead of escaping them, and to leave the choice with them.
+## An algorithm that shows its working
 
-> Make every minute worth it. You might find you want fewer of them.
+Villow's suggestions concern habits and settings, rather than what video might keep you watching next. They use ratings, skips and usage, wait for sufficient evidence, explain their reasons and offer an adjustment you can accept or dismiss.
 
-## Make the healthy choice the fun one
+It is a transparent set of rules, not AI. It never suggests raising a limit. Your judgment stays in charge.
 
-Healthy features only work if people actually use them. A subscription feed only wins against an algorithmic one if it's *better to use*. So Villow lets you tailor it channel by channel: how often each channel appears, what kinds of videos you want from it, and which lengths. When your feed is exactly what you want, you choose it over the endless loop without having to force yourself.
+## Boundaries with room for real life
 
-Reflection works the same way. On a phone, sorting your feed is a satisfying swipe, left to skip and right to save for later, and rating a finished video is a swipe too.
+Daily and per-channel limits, schedules, bedtime and enforced breaks support boundaries you chose. Some prompts offer an allowance to finish the current video. That is separate from raising a limit and doesn't bypass every restriction.
 
-> Healthy features only work if people use them. So we made them fun.
+Streaks count days without raising or extending limits. They don't simply count days below a time threshold. Shared streaks and social comparisons remain optional experiments; a higher total isn't a judgment about someone's life.
 
-## An algorithm that works for you
+## A shared starting point
 
-Villow does have an algorithm, just not the kind you're used to. After every video it asks one question: **"Was this video worth your time?"** Villow's suggestion system looks at those answers alongside what you skip, finish and spend time on. Then it suggests changes: unsubscribe from a channel you keep regretting, only see certain kinds of videos from it, check in on it less often, or give it a time limit.
+Individualized feeds can make it harder to find common reference points. **Popular in Your Country Today** draws from YouTube's country charts, filtered by topics you choose.
 
-Unlike an engagement algorithm, it works for you and shows its working. Every suggestion explains its reasons, waits until there's enough evidence, can be dismissed, and **never suggests raising a limit**. It isn't AI. It's a transparent set of rules pointed at your wellbeing rather than your watch time.
+A consistent source of discovery can give people something to discuss, question and build on together beyond their personal feeds. That common-ground vision matters. Popularity doesn't guarantee quality or truth, and we haven't shown that Villow reduces polarization.
 
-> An algorithm that's on your side, and shows its working.
+## Built for friends, not followers
 
-## Reflection over restriction
+Recommend a video and see whether a friend watched and liked it. Choose what to share with people on your Villow.
 
-Limits help, but the deeper goal is noticing. Villow's time page shows how long you watched, and also how much of that time you felt was worth it: by channel, by source, by hour and by day.
+Watch together is implemented: private rooms for up to 10 accounts, invitations and explicit acceptance, synchronized playback, a shared queue and chat. Group decisions at a person's viewing limit remain separate unfinished work on the [roadmap](/roadmap).
 
-Seeing that most of your "not worth it" time happens late at night, from one source, is far more useful than a single screen-time number.
+Social features aim to support real relationships. Whether particular comparisons help is a question to test, not something to assume.
 
-## A shared picture of the world
+## An invitation to something else
 
-Algorithmic feeds put everyone in a bubble of one, and when everyone's picture of reality is different, it gets harder to agree on anything.
+Your chosen activities from Google Tasks or Todoist can appear at natural stopping points. They can be enjoyable, restful or practical. The list is an invitation, without pressure to make every moment productive.
 
-Villow's home page can include **Popular in Your Country Today**, drawn from YouTube's country charts and limited to topics you choose. People in the same country see some of the same things. It's a small counterweight to the bubble, not a replacement for your own interests.
+Creator action panels and correction notices are separate [proposals and showcases](/roadmap#ideas). Native YouTube integration would need platform support; some independent approaches are also conceivable.
 
-> Your feed shouldn't be a bubble of one.
+## Coverage you can understand
 
-## Social that brings people together
+**Your limits follow you across Villow and connected browsers.** That means Villow usage plus YouTube pages in browsers with a linked extension. It excludes native YouTube apps and unconnected browsers.
 
-Social features make an app more compelling, and Villow embraces that, as long as the pull is towards *people*.
+Measurements are stored in the Villow you use. The owner controls its database, so choose a host you trust. Member sharing controls and operator access are different. Villow adds no ads and sells no viewing data; embedded YouTube videos may still show YouTube ads.
 
-- **Send a video to a friend** and see whether they watched it, how much, and whether they liked it. Now you have something to talk about.
-- **Share your usage with friends, if you want to.** Seeing that you use it a lot more than your friends is a gentle, human prompt to go and do something else.
-- **Watch together** is coming. {status:watch-together}
+A broader, user-owned picture across platforms is a vision, rather than today's coverage.
 
-> Built for friends, not followers.
+## Honest measurement and learning
 
-## Back to real life
+The hourly chart excludes extension time because those reports have no hourly breakdown. Worth-it percentages use rated videos, without inventing verdicts for unrated ones.
 
-Sometimes the best outcome of a video is closing the app and *doing* something. Villow imports your to-do list from Google Tasks or Todoist and puts it in front of you at natural stopping points: beside the video, when you hit a limit, when your feed is clear, on a break and at bedtime.
+Optional feedback check-ins go to Fix the Web through its survey service. Private viewing measurements aren't automatically submitted. Feedback can help improve the design and test its intentions; self-reported responses need careful interpretation.
 
-It goes further as a showcase. A creator whose video is about a cause could attach a real-world next step, like joining a local group or writing to a representative, right beside the video. The creator side of that has to live in YouTube Studio, so Villow can only show how it could work. {status:creator-cta}
+## Demonstrate what is possible
 
-Sharing a video with a friend can turn a private reaction into a conversation. A to-do item or a creator's proposed next step can help that conversation become something concrete: tackling a problem close to home, joining others, or helping more people understand the issue. People decide what happens next; Villow makes room for that decision after the video.
+Villow demonstrates that these controls are possible. YouTube could offer them directly to everyone.
 
-> Sometimes the best thing a video can do is get you off the couch.
-
-## Your whole viewing picture, not surveillance
-
-Phone screen-time tools only see one device. Villow works wherever you use it, and the extension adds the time you spend on YouTube itself in your browsers.
-
-That isn't surveillance. It combines data that already exists, for *you*, in your own Villow, with no ads and nothing sold. To be precise about it: Villow sees Villow on any device, plus YouTube in browsers with the extension. It doesn't see other apps, and it isn't a device-wide screen-time tracker.
-
-**A vision:** one day, this kind of combined, user-owned picture could exist across every platform.
-
-## Honest measurement
-
-Villow refuses to invent data. The extension reports YouTube time as a daily total with no hourly breakdown, so the hourly chart leaves it out, *and says so*. Gaps in the timeline are labelled "break", never "sleep". Worth-it percentages only count videos you actually rated.
-
-## Built for people, by listening to people
-
-Villow asks the people using it how it's going. There are check-ins at first impressions, after two weeks and after three months, plus a feedback form any time, all inside the app. They arrive as a gentle "Feedback ready" notice, never a pop-up that gets in your way.
-
-These are optional, self-reported surveys, and they exist to improve the design. Responses from every Villow go to Fix the Web and shape what gets built next.
-
-> Built for people, by listening to people.
-
-## YouTube could do this too
-
-Everything above was built on YouTube's public API and official embedded player, with no special access and no big team. **That's the point.**
-
-Every control in Villow is something YouTube could build and switch on for everyone, far more easily than anyone outside could. Some Villow features aren't finished yet, and some, like creator calls to action, can only fully exist inside YouTube. They're included anyway, because they show how simple these improvements would be.
-
-> If we could build this from the outside, imagine what YouTube could do from the inside.
+Working examples, people using them and honest evidence can strengthen the case for a better web. You can help by using Villow, inviting friends, sharing it with creators, contributing or [supporting ongoing maintenance](/about#get-involved).

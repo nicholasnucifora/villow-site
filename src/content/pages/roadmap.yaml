@@ -1,30 +1,74 @@
-# Roadmap. The lists come from features: in site.config.yaml. Change a status there and it moves here automatically.
-title: Roadmap
-description: What's coming to Villow, what it showcases that only platforms can build, and the ideas being explored. Easy to build, and YouTube could too.
+title: Roadmap and ideas
+description: What Villow already offers, what is still being developed, and separate proposals for correction notices, creator actions and a broader web.
 
 blocks:
   - type: hero
-    eyebrow: Roadmap
-    title: Easy to build, and YouTube could too.
-    lead: Some of Villow isn't finished yet, and some of it can only fully exist inside YouTube. It's all here anyway, with honest labels, because it shows how simple these improvements would be.
+    eyebrow: Roadmap and ideas
+    title: Working controls. Room to go further.
+    lead: Villow demonstrates that these controls are possible. Current features and proposals deserve different labels. This page is where unfinished work, concept demonstrations and early ideas live.
+
+  - type: section
+    id: available
+    heading: Available now
+    body: Finite feeds, channel controls, saved progress, optional reflection, explained suggestions, viewing limits and connected extensions are implemented. Watch together is also available, with invitations, explicit acceptance, synchronized playback, a shared queue and chat for up to 10 accounts. [Explore current features](/features).
 
   - type: roadmap
+    id: development
     groups:
       - status: coming
-        heading: Coming soon
-        intro: Planned or partly built. Not available yet.
+        heading: Being developed
+        intro: Planned or partly built. Availability still needs release verification.
       - status: showcase
-        heading: Showcases
-        intro: Things only a platform can fully deliver. Villow shows how they could work, and YouTube could build them.
+        heading: Concept demonstrations
+        intro: Examples and proposals, separate from the features you can use today.
       - status: exploring
         heading: Exploring
-        intro: Early ideas. They may change, or never ship.
+        intro: Early ideas. They may change or never ship.
+      - status: tbd
+        heading: To be confirmed
+        intro: Availability or approach is still undecided.
+
+  - type: section
+    id: ideas
+    eyebrow: Proposal · Not implemented
+    heading: Corrections that reach the people who watched
+    body: |
+      A note could add context beside a video when people with different viewpoints agree it is helpful. If it arrives later, people who already watched could receive a persistent notice, so a correction has a chance to reach the original audience.
+
+      This is a design proposal, not a Villow feature or a claim that the idea is new. Platform participation would help it reach people at scale; moderation, eligibility and effectiveness would need testing.
+    image: featureCommunityNotes
+
+  - type: section
+    id: creator-actions
+    eyebrow: Concept demonstration
+    heading: A next step beside a video
+    body: A creator could attach one focused action, such as joining a local group, attending an event or helping a cause. Native integration would need YouTube's support. An independent verified submission service is another possible path, still an early idea.
+    actions:
+      - label: Explore the creator concept →
+        href: /creators
+        style: text
+
+  - type: section
+    id: ai
+    eyebrow: Early ideas · No imminent release plans
+    heading: Where could generative AI help?
+    body: Villow works without generative AI. Chapters, video conversations, comment questions, topic guidance, recommendation refinement and a conversation beside Things to do each deserve their own discussion. See the possible benefits, drawbacks and our overall take on each.
+    actions:
+      - label: AI ideas and discussion →
+        href: /ai
+        style: text
+
+  - type: section
+    id: broader-web
+    eyebrow: A vision
+    heading: Your choices across the web
+    body: A user-owned picture of time across platforms could help people choose where attention goes. Today's Villow covers its own usage and connected YouTube browsers. Broader coverage would need new integrations and clear consent.
 
   - type: cta
     variant: fixtheweb
-    heading: Imagine if YouTube built these in.
-    body: Every item on this page is something a platform could offer everyone. That's what Fix the Web is asking for.
+    heading: Help turn possibilities into better choices.
+    body: Use the working app, share feedback, contribute or help others discover it. Evidence about what works matters as much as the ambition.
     actions:
-      - label: See what we're asking platforms to change →
-        href: link:fixTheWeb
+      - label: Ways to help →
+        href: /about#get-involved
         style: primary
