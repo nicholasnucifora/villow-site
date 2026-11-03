@@ -54,10 +54,10 @@ blocks:
     body: |
       Villow is free and open source. Villow adds no ads and sells no viewing data. Donations are highly needed to sustain development and maintenance.
 
-      Donation destination: {tbd:donationDestination}. [Contact Nicholas about supporting the work](link:contact), or [visit Fix the Web](link:fixTheWeb).
+      [Support Villow](/support) with an optional monthly or one-time contribution, or [visit Fix the Web](link:fixTheWeb).
     actions:
       - label: Support the project
-        href: link:contact
+        href: /support
         style: primary
 
   - type: section

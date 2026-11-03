@@ -1,0 +1,21 @@
+{
+  "name": "fixtheweb-support",
+  "account_id": "4dd755707a29c1386e547d5368fef8e4",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-09-01",
+  "vars": {
+    "PAYMENTS_ENABLED": "false",
+    "STRIPE_MODE": "live",
+    "MAIL_FROM": "Villow <support@mail.villow.app>",
+    // Owner-supplied live IDs; verify Stripe settings before enabling checkout.
+    "PROJECTS_JSON": "{\"villow\":{\"origin\":\"https://villow.app\",\"currency\":\"aud\",\"portal\":\"https://billing.stripe.com/p/login/14AcN6c7ph2D9fMgkd5J600\",\"links\":{\"once\":\"plink_1UXPaMKrVuH4uUXYu052bdnG\",\"monthly5\":\"plink_1UXPDWKrVuH4uUXYGnL6gNLV\",\"monthly10\":\"plink_1UXPU5KrVuH4uUXYs6DJOXjM\",\"monthly20\":\"plink_1UXPV2KrVuH4uUXYVdsaF44O\"}}}"
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "fixtheweb-support",
+    "database_id": "71446adf-ba53-4cd2-9efb-b1c782e8c996",
+    "migrations_dir": "migrations"
+  }],
+  "triggers": { "crons": ["17 3 * * *"] },
+  "observability": { "enabled": false }
+}

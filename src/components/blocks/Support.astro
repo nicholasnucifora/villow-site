@@ -1,0 +1,133 @@
+---
+import type { BlockOf } from "../../lib/schema";
+import copy from "../../content/support.json";
+interface Props { block: BlockOf<"support"> }
+const { block } = Astro.props;
+const api = (import.meta.env.PUBLIC_SUPPORT_API_URL || "").replace(/\/$/, "");
+if (api && !/^https:\/\/[^/]+$/.test(api) && !(import.meta.env.DEV && /^http:\/\/(localhost|127\.0\.0\.1):\d+$/.test(api))) {
+  throw new Error("PUBLIC_SUPPORT_API_URL must be an HTTPS origin (localhost allowed during development)");
+}
+---
+<section class="support container" id={block.id} data-support data-api={api} data-copy={JSON.stringify(copy.client)}>
+  <div class="support-card contribution">
+    <div class="support-intro">
+      <h2>{copy.heading}</h2>
+      <p>{copy.intro}</p>
+    </div>
+    <form data-checkout>
+      <fieldset class="frequency">
+        <legend class="visually-hidden">{copy.frequency}</legend>
+        <label><input type="radio" name="kind" value="monthly" checked /><span>{copy.monthly}</span></label>
+        <label><input type="radio" name="kind" value="once" /><span>{copy.once}</span></label>
+      </fieldset>
+      <fieldset class="amounts">
+        <legend>{copy.amountLegend}</legend>
+        <div class="amount-grid">
+          {[5, 10, 20].map(amount => <label class="amount-option">
+            <input type="radio" name="amount" value={amount} checked={amount === 10} />
+            <span><strong>A${amount}</strong><small data-per-month>{copy.perMonth}</small></span>
+          </label>)}
+          <label class="amount-option custom-option" data-custom-option hidden>
+            <input type="radio" name="amount" value="custom" />
+            <span>{copy.custom}</span>
+          </label>
+        </div>
+      </fieldset>
+      <div class="custom-input" data-custom-input hidden>
+        <label for="support-amount">{copy.customLabel}</label>
+        <input id="support-amount" name="customAmount" type="number" inputmode="decimal" min="5" max="10000" step="0.01" value="10" disabled />
+      </div>
+      <p class="small">{copy.minimum}</p>
+      <button class="btn btn--primary" type="submit" data-pay disabled>{copy.continue} <span aria-hidden="true">↗</span></button>
+      <p class="small">{copy.checkoutNote}</p>
+      <p class="status" data-payment-status role="status">{copy.client.loading}</p>
+      <noscript><p>{copy.noScript}</p></noscript>
+    </form>
+  </div>
+
+  <section class="recent" aria-labelledby="recent-supporters">
+    <p class="eyebrow">{copy.recentLabel}</p>
+    <h2 id="recent-supporters">{copy.recentHeading}</h2>
+    <p>{copy.recentIntro}</p>
+    <p class="status" data-feed-status role="status">{copy.client.loading}</p>
+    <ul class="supporter-list" data-supporters aria-label={copy.recentLabel}></ul>
+  </section>
+
+  <section class="management" id="manage-support" aria-labelledby="manage-heading">
+    <h2 id="manage-heading">{copy.manageHeading}</h2>
+    <div class="manage-grid">
+      <div class="support-card">
+        <h3>{copy.portalHeading}</h3>
+        <p>{copy.portalBody}</p>
+        <a class="btn btn--secondary" data-portal hidden rel="noreferrer">{copy.portalLink} <span aria-hidden="true">↗</span></a>
+        <p class="small" data-portal-unavailable>{copy.portalUnavailable}</p>
+      </div>
+      <div class="support-card">
+        <h3>{copy.removalHeading}</h3>
+        <p>{copy.removalBody}</p>
+        <form data-removal>
+          <label for="support-email">{copy.email}</label>
+          <input id="support-email" type="email" name="email" autocomplete="email" required maxlength="254" />
+          <button class="btn btn--secondary" type="submit" disabled>{copy.sendLink}</button>
+          <p class="status" data-removal-status role="status"></p>
+        </form>
+      </div>
+    </div>
+    <div class="support-card confirm-removal" data-confirm-panel hidden>
+      <h3 tabindex="-1" data-confirm-title>{copy.confirmHeading}</h3>
+      <p>{copy.confirmBody}</p>
+      <div class="actions">
+        <button class="btn btn--primary" data-confirm>{copy.confirmButton}</button>
+        <button class="btn btn--secondary" data-keep>{copy.keepButton}</button>
+      </div>
+      <p class="status" data-confirm-status role="status"></p>
+    </div>
+  </section>
+</section>
+<script>
+  import "../../scripts/support";
+</script>
+<style>
+  [hidden] { display: none !important; }
+  .support { display: grid; gap: var(--space-2xl); padding-top: var(--space-xl); }
+  .support-card { padding: clamp(1.25rem, 3vw, 2.5rem); border: var(--border); border-radius: var(--radius-lg); background: var(--color-surface); display: grid; align-content: start; gap: var(--space-lg); }
+  .contribution { background: var(--color-bg-soft); }
+  h2 { font-size: var(--text-2xl); }
+  .support-intro, form { display: grid; gap: var(--space-md); }
+  .support-intro p, .recent > p, .small { color: var(--color-text-muted); }
+  form { min-width: 0; }
+  fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+  legend { margin-bottom: var(--space-xs); font-size: var(--text-sm); font-weight: 600; }
+  .frequency { display: grid; grid-template-columns: 1fr 1fr; border: var(--border); border-radius: var(--radius-pill); padding: .3rem; background: var(--color-surface); }
+  .frequency label, .amount-option { position: relative; cursor: pointer; }
+  .frequency input, .amount-option input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .frequency span { display: block; padding: .65rem; text-align: center; border-radius: var(--radius-pill); }
+  .frequency input:checked + span { background: var(--color-accent); color: var(--color-on-accent); font-weight: 600; }
+  input:focus-visible + span { outline: 3px solid var(--color-accent); outline-offset: 3px; }
+  .amount-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; }
+  .amount-option span { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 6rem; padding: .75rem .35rem; border: 2px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-surface); }
+  .amount-option strong { font-size: 1.7rem; }
+  .amount-option small { font-size: var(--text-xs); color: var(--color-text-muted); }
+  .amount-option input:checked + span { border-color: var(--color-accent); box-shadow: inset 0 0 0 1px var(--color-accent); }
+  .custom-option { grid-column: 1 / -1; }
+  .custom-option span { min-height: 3rem; font-size: var(--text-sm); }
+  .custom-input { display: grid; gap: .5rem; }
+  input[type="email"], input[type="number"] { width: 100%; min-width: 0; padding: .75rem; border: var(--border); border-radius: var(--radius-sm); background: var(--color-surface); color: var(--color-text); font: inherit; }
+  .small, .status { font-size: var(--text-sm); }
+  .status { min-height: 1.5em; }
+  button { cursor: pointer; font-family: inherit; }
+  .btn { justify-content: center; text-align: center; }
+  button:disabled { opacity: .55; cursor: not-allowed; }
+  .recent { display: grid; align-content: start; gap: var(--space-md); }
+  .supporter-list { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-md); }
+  .supporter-list :global(li) { border-top: var(--border); padding-top: var(--space-md); display: grid; gap: .4rem; overflow-wrap: anywhere; }
+  .supporter-list :global(blockquote) { margin: 0; white-space: pre-wrap; }
+  .supporter-list :global(.supporter-meta) { display: flex; flex-wrap: wrap; gap: .5rem; color: var(--color-text-muted); font-size: var(--text-xs); }
+  .management { display: grid; gap: var(--space-xl); grid-column: 1 / -1; padding-top: var(--space-lg); }
+  .manage-grid { display: grid; gap: var(--space-lg); }
+  .confirm-removal { border: 2px solid var(--color-accent); }
+  @media (min-width: 54rem) {
+    .support { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); align-items: start; gap: var(--space-2xl); }
+    .manage-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+</style>

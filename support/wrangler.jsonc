@@ -1,0 +1,20 @@
+{
+  "name": "fixtheweb-support-test",
+  "account_id": "4dd755707a29c1386e547d5368fef8e4",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-09-01",
+  "vars": {
+    "PAYMENTS_ENABLED": "true",
+    "STRIPE_MODE": "test",
+    "MAIL_FROM": "Villow <support@mail.villow.app>",
+    "PROJECTS_JSON": "{\"villow\":{\"origin\":\"http://localhost:4321\",\"currency\":\"aud\",\"portal\":\"https://billing.stripe.com/p/login/test_00wcMYfgc6YF8RW4rG3ks00\",\"links\":{\"once\":\"plink_1UXQuP3AH36bMHbIZ1bBK4eu\",\"monthly5\":\"plink_1UXQuM3AH36bMHbIQEM4lQrI\",\"monthly10\":\"plink_1UXQuR3AH36bMHbIA7ekVyds\",\"monthly20\":\"plink_1UXQuN3AH36bMHbIHSNgA9Se\"}}}"
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "fixtheweb-support-test",
+    "database_id": "771fc8a2-e821-4065-aca5-e2ba3b7c8c59",
+    "migrations_dir": "migrations"
+  }],
+  "triggers": { "crons": ["17 3 * * *"] },
+  "observability": { "enabled": false }
+}

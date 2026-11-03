@@ -119,4 +119,6 @@ The source adds no analytics, cookies or third-party asset loads. Verify Cloudfl
 
 `review/` holds the database migrations for the separate `review.villow.app` environment. The website doesn't use it.
 
+`support/` is the separate Cloudflare Worker + D1 supporter service for `/support`, designed for future Fix the Web projects too. It is disabled until configured and tested. See [support/README.md](support/README.md) for Stripe test/live setup, email verification, moderation, deployment and the end-to-end checklist. The static site uses only the public `PUBLIC_SUPPORT_API_URL` build variable; all Stripe and email secrets belong to that Worker.
+
 See `LAUNCH_CHECKLIST.md` for everything to verify before launch.

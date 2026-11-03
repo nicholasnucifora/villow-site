@@ -245,6 +245,8 @@ const toc = z.strictObject({
   heading: text.optional(),
 });
 
+const support = z.strictObject({ type: z.literal("support"), ...blockBase });
+
 export const blockSchema = z.discriminatedUnion("type", [
   hero,
   section,
@@ -260,6 +262,7 @@ export const blockSchema = z.discriminatedUnion("type", [
   prose,
   notice,
   toc,
+  support,
 ]);
 export type Block = z.output<typeof blockSchema>;
 export type BlockOf<T extends Block["type"]> = Extract<Block, { type: T }>;

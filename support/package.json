@@ -1,0 +1,13 @@
+{
+  "name": "fixtheweb-support",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "test": "node --test test/*.test.mjs",
+    "check": "wrangler deploy --dry-run --outdir .wrangler/check",
+    "discover": "node scripts/discover.mjs"
+  },
+  "dependencies": { "stripe": "23.1.0" },
+  "devDependencies": { "wrangler": "4.156.2" }
+}

@@ -1,0 +1,36 @@
+title: Support Villow
+description: Help Nicholas keep building Villow. Choose optional monthly support or a one-time contribution, and leave a message if you like.
+blocks:
+  - type: hero
+    eyebrow: Made by a person. Supported by people.
+    title: Help me keep building Villow.
+    lead: I'm Nicholas, the person behind Villow and Fix the Web. If Villow is useful to you and you'd like to help me keep working on it, you can support its development here. Thank you for being part of it.
+    smallPrint:
+      - Entirely optional
+      - All amounts in Australian dollars
+      - Monthly support can be cancelled anytime
+  - type: support
+    id: contribute
+  - type: section
+    id: supporter-privacy
+    background: soft
+    heading: Your support. Your choice to share.
+    body: |
+      Stripe asks for an optional display name, an optional message, and permission to display them. **Only an explicit “Yes” allows publication.** Leaving permission blank means no. Use a display name you're comfortable making public, and leave personal or payment details out of your message.
+
+      Approved names and messages may appear on Villow and other Fix the Web projects. We show the contribution date and whether the support is one-time or monthly. Messages are reviewed before appearing. We don't publish payment amounts, email addresses or payment details.
+
+      Stripe processes your payment. Our support service uses Cloudflare to store contribution references, subscription status and your sharing preference. We keep public text only when you consent, and use a protected fingerprint of your checkout email to match removal requests. Resend delivers verification emails when you request removal. These records are separate from your Villow app and extension data.
+
+      [Remove your public details](#manage-support) at any time using your checkout email. This clears your name and message from the support database and prevents them from reappearing on later payments. It doesn't cancel monthly support or erase Stripe's payment records. We retain payment references for reconciliation; verification links expire after 30 minutes and are cleared daily. Cloudflare backups may retain older data temporarily. [Contact Nicholas](link:contact) for other data requests.
+  - type: faq
+    heading: A few useful things to know
+    items:
+      - q: Do I have to pay to use Villow?
+        a: No. Supporting the project is optional. There are no supporter-only features or extra access.
+      - q: How do I change or cancel monthly support?
+        a: Use “Manage monthly support” above to open Stripe's Customer Portal. Sign in with the email you used at checkout. Removing a public message is separate from cancelling a subscription.
+      - q: Why isn't my message visible yet?
+        a: We wait for successful payment and review messages before publishing. We also need an explicit “Yes” to the public display question. A message can stay private even when you've contributed.
+      - q: Can I contribute a different one-time amount?
+        a: Yes. Choose “One time”, then a preset or “Custom amount”. The minimum is A$5. You'll see the amount again on Stripe before paying.

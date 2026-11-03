@@ -15,6 +15,7 @@ import Spotlight from "./blocks/Spotlight.astro";
 import Steps from "./blocks/Steps.astro";
 import Table from "./blocks/Table.astro";
 import Toc from "./blocks/Toc.astro";
+import Support from "./blocks/Support.astro";
 
 interface Props {
   blocks: Block[];
@@ -37,6 +38,7 @@ const components = {
   prose: Prose,
   notice: Notice,
   toc: Toc,
+  support: Support,
 } satisfies Record<Block["type"], unknown>;
 
 // Features alternate image sides, counting only features.

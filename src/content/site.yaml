@@ -12,6 +12,8 @@ header:
       href: /faq
     - label: About
       href: /about
+    - label: Support
+      href: /support
   action:
     label: Get started
     href: /download
@@ -67,6 +69,8 @@ footer:
           href: /creators
     - heading: Community
       links:
+        - label: Support Villow
+          href: /support
         - label: Discord
           href: link:discord
         - label: Reddit
