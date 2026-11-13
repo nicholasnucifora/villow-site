@@ -1,0 +1,12 @@
+# The privacy policy for villow.app itself. The policy text is in src/content/prose/site-privacy.md.
+title: Website privacy policy
+description: The privacy policy for the villow.app website, covering hosting, the support page and email.
+
+blocks:
+  - type: hero
+    eyebrow: Privacy policy
+    title: Website privacy policy
+    lead: For the villow.app website. The [browser extension](link:extensionPrivacy) and the [web app](link:appPrivacy) have their own policies. [All policies](/privacy).
+
+  - type: prose
+    file: site-privacy

@@ -34,9 +34,10 @@
 </head>
 <body>
 <main>
+<p><a href="/privacy">← All Villow privacy policies</a></p>
 <h1>Villow browser extension — Privacy Policy</h1>
-<p><strong>Last updated:</strong> 12 October 2026</p>
-<p>This policy covers the <strong>Villow browser extension</strong>. Villow the web application has <a href="/app-privacy">its own policy</a>, which covers Google account authorization and data stored on your instance. Available features depend on the extension and instance versions you use.</p>
+<p><strong>Last updated:</strong> 14 November 2026</p>
+<p>This policy covers the <strong>Villow browser extension</strong>. Villow the web application has <a href="/app-privacy">its own policy</a>, which covers Google account authorization and data stored on your instance, and this website has <a href="/site-privacy">another</a>. Available features depend on the extension and instance versions you use.</p>
 <hr>
 <h2>The short version</h2>
 <p>The extension sends data to <strong>one place: the Villow instance whose address you typed in yourself.</strong> It has no server of its own, contacts no analytics service, and contacts no third party of any kind. Before you connect it to an instance, it sends nothing anywhere at all.</p>
@@ -53,6 +54,8 @@
 <li>the thumbnail image URL</li>
 </ul>
 <p>This is the extension's core function. Nothing is sent for videos you do not click, and nothing is sent when the extension is disconnected.</p>
+<p><strong>Where you got to in a video you started with Watch now.</strong> When you press <strong>Watch now</strong> on a video already in your Villow queue, the extension reports your progress in that video to your instance, so Villow can show where you left off and that you have started it. Each report contains the video's YouTube ID, the position you reached and the video's length in seconds, whether it finished, when you started it and when the position was taken, plus the random install identifier and browser label described below. Reports are made while the video plays, about every 15 seconds, and when you pause, skip or finish. Nothing is reported for videos you open any other way.</p>
+<p><strong>Your Shorts scrolling choice and allowance.</strong> When you are connected, your choice about Shorts scrolling is kept by your instance so it applies in every browser you connect. The extension sends whether you allow scrolling, the number of minutes you allow yourself for the day, how many seconds of that you have used, and — once the allowance is used up — your yes-or-no answer to whether it was worth it. Each request carries the date it belongs to and random request identifiers, so nothing is counted twice; time reports also carry the random install identifier. While you scroll, the extension checks in with your instance every few seconds so the allowance holds across browsers. It does not send which Shorts you watched, their titles or their channels.</p>
 <p><strong>Legacy screen-time fallback.</strong> The extension sends a daily screen-time total to <code>/api/screen-time</code> only when a Villow instance does not support the current usage endpoint and answers <code>404</code> or <code>501</code> to <code>/api/extension-usage</code>. The fallback remains in use for 24 hours after that response. Current Villow instances do not receive these fallback requests. Time accrues only while a YouTube tab is focused and visible.</p>
 <p><strong>Your pairing token,</strong> on every request, as proof the request is yours.</p>
 <h3>Received from your Villow instance</h3>
@@ -65,15 +68,20 @@
 <li>Which videos you have marked, so tiles stay greyed out when you scroll back</li>
 <li>Videos waiting to be delivered when your instance is unreachable</li>
 <li>Your extension settings, daily usage records and the last shared totals and settings received from your instance</li>
+<li>For videos started with Watch now, where you got to — up to 300 videos, each kept for 90 days after you last opened it</li>
+<li>Your Shorts choices and daily Shorts time for the last 35 days, and your yes-or-no answers at the end of an allowance</li>
+<li>A record of the last 20 requests to your instance that failed, so a connection problem can be diagnosed. It stays in your browser unless you copy it out yourself.</li>
 </ul>
 <h3>Kept only in your browser and never transmitted</h3>
 <ul>
 <li><strong>Which</strong> recommendations you were shown — the video ids behind the daily count. Only the count itself is reported; the list never leaves your browser.</li>
-<li><strong>Which videos you watched</strong>, when running without an instance: the video ids and their titles, so recent days can be listed back to you and the daily cap knows what it has already counted. The local history retains up to 14 days. <strong>This watched-video list is never sent to an instance, including if you connect one later.</strong></li>
+<li><strong>Which videos you watched today</strong>, when running without an instance: the video ids and their titles, so today can be listed back to you and the daily cap knows what it has already counted. Only today's list is kept: it is replaced the first time a video is counted on a new day. <strong>This watched-video list is never sent to an instance, including if you connect one later.</strong></li>
 </ul>
 <h3>Sent to your Villow instance, and nowhere else</h3>
 <ul>
 <li>Videos you chose to save, when you save them</li>
+<li>Where you got to in videos you started with <strong>Watch now</strong></li>
+<li>Your <strong>Shorts</strong> scrolling choice, daily allowance, time used and end-of-allowance answer</li>
 <li><strong>Daily totals</strong>: how many seconds you spent on YouTube, how many recommendations you were shown, how many videos you saved, and whether you ran into any of your limits</li>
 <li><strong>Supported shared settings</strong>, so Villow can display them and synchronize choices: recommendation and save-count limits, save-limit mode and duration allowance, time allowance and whether YouTube is blocked</li>
 </ul>
@@ -101,8 +109,7 @@
 <h2>Retention and deletion</h2>
 <p><strong>In your browser:</strong> removing the extension deletes everything it stored. You can also clear it at any time without uninstalling:</p>
 <ul>
-<li><strong>Disconnect</strong> — deletes the pairing token and the cached subscription list</li>
-<li><strong>Clear all marks</strong> — deletes the record of which videos you have marked</li>
+<li><strong>Disconnect</strong> — deletes the pairing token, the cached subscription list, the shared totals received from your instance and your Watch now positions</li>
 <li><strong>Reset today's count</strong> — clears the local recommendation counter; this is separate from deleting data already stored in your instance</li>
 <li><strong>Reset today's time</strong>, <strong>Reset today's saves</strong> and <strong>Reset today's watched videos</strong> — the same, for those</li>
 </ul>

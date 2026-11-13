@@ -2,7 +2,7 @@
 
 ## Who this policy covers
 
-This policy describes the standard Villow web app, made by Fix the Web. It doesn't cover the [browser extension](link:extensionPrivacy) or [this marketing website](/privacy-overview#this-website). A privately operated installation may differ; ask its owner which version and services it runs.
+This policy describes the standard Villow web app, made by Fix the Web. It doesn't cover the [browser extension](link:extensionPrivacy) or [this marketing website](link:sitePrivacy). A privately operated installation may differ; ask its owner which version and services it runs.
 
 Retention details, minimum age and the effective date remain unfinished below.
 

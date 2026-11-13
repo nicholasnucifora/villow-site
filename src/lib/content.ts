@@ -10,14 +10,14 @@ const pageFiles = import.meta.glob<string>("/src/content/pages/*.yaml", { query:
 
 export const pages = Object.entries(pageFiles).map(([file, text]) => {
   const slug = file.slice(file.lastIndexOf("/") + 1, -".yaml".length);
-  if (slug === "privacy") {
-    throw new Error("src/content/pages/privacy.yaml would replace /privacy, the extension's privacy policy. Use another name.");
+  if (slug === "extension-privacy") {
+    throw new Error("src/content/pages/extension-privacy.yaml would replace /extension-privacy, the extension's privacy policy. Use another name.");
   }
   return { slug, path: slug === "index" ? "/" : `/${slug}`, ...loadYaml(file.slice(1), text, pageSchema) };
 });
 
 /** Pages served straight from public/ rather than built from content. */
-export const publicPaths = ["/privacy"];
+export const publicPaths = ["/extension-privacy"];
 
 export const knownPaths = new Set([...pages.map((p) => p.path), ...publicPaths]);
 

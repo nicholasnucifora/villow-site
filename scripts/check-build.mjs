@@ -1,6 +1,7 @@
 /**
  * Runs after `astro build`. Fails the build if:
- *  - /privacy differs from the deliberately approved source revision
+ *  - /extension-privacy differs from the deliberately approved source revision
+ *  - /privacy stops linking to any of the three policies
  *  - a page is missing the "not affiliated with YouTube or Google" line
  *  - a page loads anything from another site (the site promises no third parties)
  *  - copy uses wording the brief rules out (see "Never claim" and "Talking about YouTube")
@@ -8,10 +9,10 @@
 import { createHash } from "node:crypto";
 import { readdir, readFile } from "node:fs/promises";
 
-// The SHA-256 of the deliberate 12 October 2026 extension policy update.
-// If you deliberately update public/privacy.html, replace this with the new file's SHA-256.
+// The SHA-256 of the deliberate 14 November 2026 extension policy update (extension 0.8.4).
+// If you deliberately update public/extension-privacy.html, replace this with the new file's SHA-256.
 // (.gitattributes stops Git changing its line endings, which would change this hash on Windows.)
-const PRIVACY_SHA256 = "27f731218c9c2e5425ded0b65bf1e07d69f6c02b2077b62878eb13597cb1eaa2";
+const PRIVACY_SHA256 = "50a6ca9040a5cbf95f42e372afd397022f1597f9bc40d579556dcff6daa63485";
 
 const AFFILIATION = "not affiliated with, endorsed by, or sponsored by YouTube or Google";
 
@@ -50,10 +51,10 @@ const visibleText = (html) =>
       .replace(/\s+/g, " "),
   );
 
-// 1. The extension policy ships exactly as reviewed, at its stable store URL.
+// 1. The extension policy ships exactly as reviewed, at the URL the extension stores link to.
 for (const [label, url] of [
-  ["public/privacy.html", new URL("../public/privacy.html", import.meta.url)],
-  ["dist/privacy.html", new URL("privacy.html", dist)],
+  ["public/extension-privacy.html", new URL("../public/extension-privacy.html", import.meta.url)],
+  ["dist/extension-privacy.html", new URL("extension-privacy.html", dist)],
 ]) {
   const hash = sha256(await readFile(url));
   if (hash !== PRIVACY_SHA256) {
@@ -62,9 +63,9 @@ for (const [label, url] of [
 }
 
 // 2–4. Every built page.
-const htmlFiles = (await readdir(dist, { recursive: true })).filter((f) => f.endsWith(".html") && f !== "privacy.html");
+const htmlFiles = (await readdir(dist, { recursive: true })).filter((f) => f.endsWith(".html") && f !== "extension-privacy.html");
 const pages = new Map();
-for (const file of [...htmlFiles, "privacy.html"]) {
+for (const file of [...htmlFiles, "extension-privacy.html"]) {
   const html = await readFile(new URL(file, dist), "utf8");
   pages.set(file, html);
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => decode(match[1]));
@@ -90,6 +91,13 @@ for (const file of htmlFiles) {
       failures.push(`${file}: "…${text.slice(Math.max(0, at - 40), at + match[0].length + 40).trim()}…"\n    ${advice}`);
     }
   }
+}
+
+// /privacy is where old links and the footer land: it must reach every policy.
+const hub = pages.get("privacy.html");
+if (!hub) failures.push("privacy.html: missing. /privacy must list the extension, app and site policies.");
+else for (const path of ["/extension-privacy", "/app-privacy", "/site-privacy"]) {
+  if (!hub.includes(`href="${path}"`)) failures.push(`privacy.html: no link to ${path}.`);
 }
 
 // Check navigation in the built result, including fragments within and between pages.

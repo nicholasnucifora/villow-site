@@ -1,0 +1,24 @@
+# /privacy: where every privacy link lands, including the browser-store listings
+# and older links to the extension policy. It must link to all three policies;
+# scripts/check-build.mjs fails the build if one goes missing.
+title: Privacy policies
+description: Villow's privacy policies for the browser extension, the web app and this website.
+
+blocks:
+  - type: hero
+    eyebrow: Privacy
+    title: Privacy policies
+    lead: Villow comes in three parts, and each one handles different information, so each has its own policy. Pick the one for what you're using. For a plain-language picture of how they fit together, read the [privacy overview](/privacy-overview).
+
+  - type: cards
+    id: policies
+    items:
+      - title: Browser extension
+        href: link:extensionPrivacy
+        body: What the extension reads on YouTube, what it keeps in your browser, and what it sends to the Villow you connect. This is the policy the Chrome, Edge and Firefox stores link to.
+      - title: Web app · Draft
+        href: link:appPrivacy
+        body: Google sign-in and YouTube permissions, what a Villow stores, who can see it, and how to delete it.
+      - title: This website
+        href: link:sitePrivacy
+        body: What villow.app itself collects, which is very little, and what happens when you support Villow.

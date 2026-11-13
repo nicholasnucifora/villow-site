@@ -49,8 +49,9 @@ links:
   extensionSource: https://github.com/nicholasnucifora/Villow-Extension
 
   # Policies and help
-  extensionPrivacy: /privacy # stable extension-store policy URL; update deliberately with its build hash
+  extensionPrivacy: /extension-privacy # the extension stores' policy URL; update deliberately with its build hash
   appPrivacy: /app-privacy
+  sitePrivacy: /site-privacy
   terms:
   contact: mailto:support@villow.app
 

@@ -4,7 +4,9 @@ The public website for Villow, a Fix the Web project. Built with [Astro](https:/
 
 ## ⚠️ `/privacy` is the extension's privacy policy
 
-`public/privacy.html` is served at `https://villow.app/privacy` and is linked from the extension store listings. **Keep that URL and file location stable.** Deliberate policy updates must match the app/extension contract and store disclosures; update `PRIVACY_SHA256` in `scripts/check-build.mjs` after reviewing the change. The 12 October 2026 revision corrects bidirectional settings, report fields, local retention and revocation wording. Store-release parity and disclosure updates remain separate checks.
+**Privacy pages.** `/privacy` is a short page (`src/content/pages/privacy.yaml`) linking to the three policies: the extension's, the app's (`/app-privacy`) and the website's (`/site-privacy`, text in `src/content/prose/site-privacy.md`). The build fails if it stops linking to any of them.
+
+`public/extension-privacy.html` is the extension policy, served at `https://villow.app/extension-privacy`. Until 14 November 2026 it was `public/privacy.html` at `/privacy`, and the store listings pointed there; point them at `/extension-privacy`. **Keep that URL and file location stable** once the stores use it. Deliberate policy updates must match the app/extension contract and store disclosures; update `PRIVACY_SHA256` in `scripts/check-build.mjs` after reviewing the change. The 12 October 2026 revision corrects bidirectional settings, report fields, local retention and revocation wording. The 14 November 2026 revision (extension 0.8.4) adds Watch now progress and Shorts allowance data, and drops the 14-day watched history and the removed Clear all marks button. Store-release parity and disclosure updates remain separate checks. Firefox Add-ons also keeps a pasted copy of the policy text, which has to be updated there by hand.
 
 The web app's privacy content lives at `/privacy-overview` (plain-language summary) and `/app-privacy` (formal policy).
 

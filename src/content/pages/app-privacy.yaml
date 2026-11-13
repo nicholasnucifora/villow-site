@@ -7,7 +7,7 @@ blocks:
   - type: hero
     eyebrow: Privacy policy
     title: Villow app privacy policy
-    lead: For the Villow web app. The browser extension has [its own policy](link:extensionPrivacy), and there's a [plain-language summary](/privacy-overview) too.
+    lead: For the Villow web app. The browser extension and this website have their own policies ([extension](link:extensionPrivacy), [website](link:sitePrivacy)), and there's a [plain-language summary](/privacy-overview) too.
 
   - type: notice
     tone: draft
