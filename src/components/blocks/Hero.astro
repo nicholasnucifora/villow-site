@@ -1,7 +1,7 @@
 ---
 import type { BlockOf } from "../../lib/schema";
 import { inline, md } from "../../lib/markdown";
-import Action from "../ui/Action.astro";
+import Actions from "../ui/Actions.astro";
 import Media from "../ui/Media.astro";
 
 interface Props {
@@ -20,9 +20,7 @@ const { block } = Astro.props;
       {
         block.actions && (
           <div class="actions">
-            {block.actions.map((action) => (
-              <Action action={action} />
-            ))}
+            <Actions actions={block.actions} />
           </div>
         )
       }

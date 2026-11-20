@@ -1,0 +1,75 @@
+@import url('./extension-store-links.css');
+.setup-b-preview .sg-standalone{max-width:1090px;padding-block:36px 70px}
+.setup-b-preview .setup-extension-band{padding-block:0;background:transparent}
+.setup-b-preview .sg-connected-layout{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:56px;align-items:start;margin-top:36px}
+.setup-extension-guide{min-width:0;color:#315b46}
+.setup-extension-guide [hidden]{display:none!important}
+.setup-b-preview .sg-controls h3{margin:0 0 17px;font:400 clamp(21px,2.2vw,27px)/1.3 'Varela Round',sans-serif}
+.sg-devices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:4px;background:#e7efdf;border-radius:12px}
+.sg-devices button{--sg-icon-eye:#e7efdf;display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:9px 8px;border:0;border-radius:9px;background:transparent;color:#547561;font:600 13px/1.4 system-ui,sans-serif;cursor:pointer}
+.sg-devices button svg{width:18px;height:18px;flex:none}
+.sg-devices button[aria-pressed=true]{--sg-icon-eye:#fffdf7;background:#fffdf7;color:#315b46;box-shadow:0 1px 4px #173d330d}
+.sg-devices button:hover:not([aria-pressed=true]){background:#d3e3cd}
+.sg-devices button:focus-visible{outline:2px solid #315b46;outline-offset:3px}
+.setup-b-preview .sg-panel{padding-top:27px}
+.setup-b-preview .sg-panel h4,.setup-b-preview .sg-connect h4{font:600 16px/1.4 system-ui,sans-serif;color:#315b46;margin:0 0 17px}
+.sg-steps{list-style:none;padding:0;margin:0;counter-reset:install-step;display:grid;gap:24px}
+.sg-steps>li{display:grid;grid-template-columns:25px minmax(0,1fr);gap:12px;align-items:start;counter-increment:install-step;font:400 14px/1.7 system-ui,sans-serif;color:#54745e}
+.sg-steps>li::before{content:counter(install-step);display:grid;place-items:center;width:25px;height:25px;margin-top:1px;border-radius:50%;background:#dce8d5;color:#42634c;font:600 11px/1 system-ui,sans-serif}
+.sg-step-title{font:inherit;letter-spacing:normal;margin:0}
+.sg-step-copy{margin:10px 0 0}
+.sg-store{display:inline-flex;align-items:center;max-width:100%;margin-top:13px;text-decoration:none;flex-shrink:0}
+.sg-store>img{display:block;max-width:100%;height:auto}
+.sg-steps .sg-store{display:flex;width:fit-content}
+.sg-store:focus-visible{outline:2px solid #315b46;outline-offset:4px}
+.setup-b-preview .sg-desktop-next{margin:24px 0 0;color:#587563;font-size:13px;line-height:1.7}
+.setup-b-preview .sg-standalone .sg-desktop-next{text-align:center}
+.setup-b-preview .sg-standalone .extension-store-options{justify-items:center}
+.setup-b-preview .sg-standalone .extension-store-alternatives{justify-content:center}
+.sg-text-link{display:block;width:fit-content;margin-top:8px;color:#315b46;font-weight:600;text-underline-offset:4px}
+.setup-b-preview .sg-small{margin:17px 0 0;color:#748675;font-size:12px;line-height:1.7}
+.sg-connect{margin-top:30px;padding:19px 20px;border-radius:12px;background:#e7efdf}
+.setup-b-preview .sg-connect h4{margin-bottom:9px;font-size:14px}
+.setup-b-preview .sg-connect p{margin:0;font-size:13px;line-height:1.8}
+/* A small, hands-on feed: choose above, find the same videos below. */
+.sg-story{container:sg-story / inline-size;width:100%;min-width:0;margin:0;color:#315b46}
+.sg-story figcaption{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;margin:0 0 12px;text-align:center;font:700 22px/1.25 system-ui,sans-serif;letter-spacing:-.025em;text-wrap:balance}
+.sg-story-product-icons{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex:none}
+.sg-story-product-icons svg{display:block;flex:none;width:24px;height:24px}
+.sg-story-product-icons .setup-compare-plus{width:10px;height:10px}
+.sg-story-sequence{display:grid;grid-template-columns:minmax(0,1fr);isolation:isolate}
+.sg-story-youtube{min-width:0;position:relative;z-index:4}
+.sg-story-demo{min-width:0;position:relative;z-index:4}
+/* The extension replica owns its typography and controls inside a shadow root. */
+.sg-story-handoff{display:flex;align-items:center;justify-content:center;padding:6px 10px;color:#547b67}
+.sg-story-handoff svg{display:block;width:24px;height:30px;flex:none}
+.sg-story-handoff path{stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.sg-story-home{position:relative;z-index:1;min-width:0;width:100%;padding:12px;border-radius:16px;background:#fffdf8;box-sizing:border-box}
+.sg-real-home{position:relative;width:100%;min-width:0;aspect-ratio:1190/620;overflow:hidden;border-radius:9px;background:#f5faf7;isolation:isolate}
+.sg-real-home iframe{position:absolute;inset:0 auto auto 0;display:block;width:1190px;height:620px;border:0;transform-origin:top left;pointer-events:none}
+.sg-story[data-story-device=mobile]{max-width:414px;margin-inline:auto}
+@media(max-width:850px){.setup-b-preview .sg-connected-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px}.sg-devices button{flex-direction:column;gap:6px;min-height:64px;font-size:11px}}
+@media(max-width:650px){.setup-b-preview .sg-connected-layout{grid-template-columns:1fr;gap:35px}.sg-story{max-width:440px;margin-inline:auto}.setup-b-preview .sg-standalone{padding-top:27px}.sg-firefox{gap:7px;padding-right:10px}}
+
+/* The extension-only path has room for a full, readable installation guide. */
+.setup-b-preview .sg-standalone .sg-controls h3{text-align:center;font-size:clamp(24px,2.4vw,30px);margin-bottom:22px}
+.sg-standalone .sg-devices{max-width:850px;margin-inline:auto}
+.sg-standalone .sg-devices button{min-height:60px;font-size:14px}
+.setup-b-preview .sg-standalone .sg-panel{padding-top:34px}
+.setup-b-preview .sg-standalone .sg-panel h4{font-size:24px;text-align:center;margin-bottom:25px}
+.sg-standalone .sg-steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.sg-standalone [data-install-panel="android"] .sg-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+.sg-standalone .sg-steps>li{display:flex;flex-direction:column;gap:17px;padding:27px;border-radius:18px;background:#f0f3e9;font-size:16px;line-height:1.75}
+.sg-standalone .sg-steps>li::before{width:35px;height:35px;margin:0;font-size:13px;background:#dce8d4}
+.sg-standalone .sg-step-title{font:600 19px/1.4 system-ui,sans-serif;color:#315b46}
+.setup-b-preview .sg-standalone .sg-step-copy{font-size:16px;line-height:1.75;margin:11px 0 0}
+.sg-standalone .sg-store{margin-top:22px}
+.sg-standalone .sg-store-option .sg-store{margin-top:0}
+.sg-standalone .sg-text-link{display:inline-flex;margin-top:21px;padding:10px 17px;border-radius:99px;background:#dce8d4;font-size:14px;text-decoration:none}
+.sg-standalone .sg-text-link:hover{background:#ccdec4}
+.sg-standalone .sg-firefox-attribution{font-size:11px}
+.setup-b-preview .sg-standalone .sg-small{max-width:750px;margin:20px auto 0;text-align:center;font-size:14px}
+@media(max-width:800px){.sg-standalone [data-install-panel="android"] .sg-steps{grid-template-columns:1fr}.sg-standalone .sg-devices button{font-size:13px}.sg-standalone .sg-steps>li{padding:24px}}
+@media(max-width:650px){.sg-standalone .sg-steps{grid-template-columns:1fr;gap:15px}.setup-b-preview .sg-standalone .sg-panel h4{font-size:22px}.sg-standalone .sg-step-title{font-size:18px}.sg-standalone .sg-devices button{font-size:12px}}
+
+

@@ -1,0 +1,62 @@
+[
+  {
+    "buttonHeight": 24,
+    "buttonWidth": 28,
+    "buttonsClearOfScrubber": true,
+    "font": "8px / 9.2px \"Varela Round\", sans-serif",
+    "noOverflow": true,
+    "questionInside": true,
+    "screenWidth": 91.34375,
+    "viewport": 320
+  },
+  {
+    "buttonHeight": 24,
+    "buttonWidth": 28,
+    "buttonsClearOfScrubber": true,
+    "font": "9.45194px / 10.8697px \"Varela Round\", sans-serif",
+    "noOverflow": true,
+    "questionInside": true,
+    "screenWidth": 109.90625,
+    "viewport": 390
+  },
+  {
+    "buttonHeight": 24,
+    "buttonWidth": 28,
+    "buttonsClearOfScrubber": true,
+    "font": "9.18991px / 10.5684px \"Varela Round\", sans-serif",
+    "noOverflow": true,
+    "questionInside": true,
+    "screenWidth": 106.859375,
+    "viewport": 768
+  },
+  {
+    "buttonHeight": 26,
+    "buttonWidth": 28,
+    "buttonsClearOfScrubber": true,
+    "font": "10.0969px / 12.6211px \"Varela Round\", sans-serif",
+    "noOverflow": true,
+    "questionInside": true,
+    "screenWidth": 140.234375,
+    "viewport": 1024
+  },
+  {
+    "buttonHeight": 33.328125,
+    "buttonWidth": 38.234375,
+    "buttonsClearOfScrubber": true,
+    "font": "14px / 17.5px \"Varela Round\", sans-serif",
+    "noOverflow": true,
+    "questionInside": true,
+    "screenWidth": 196.109375,
+    "viewport": 1280
+  },
+  {
+    "buttonHeight": 34,
+    "buttonWidth": 39.703125,
+    "buttonsClearOfScrubber": true,
+    "font": "14px / 17.5px \"Varela Round\", sans-serif",
+    "noOverflow": true,
+    "questionInside": true,
+    "screenWidth": 203.65625,
+    "viewport": 1440
+  }
+]

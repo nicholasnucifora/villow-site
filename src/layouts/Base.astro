@@ -2,9 +2,10 @@
 import "../styles/tokens.css";
 import "../styles/themes.css";
 import "../styles/base.css";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import ThemePicker from "../components/ThemePicker.astro";
+import "../styles/content-design.css";
+import { previewHeader } from "../../previews/homepage/preview-header.mjs";
+import { applyPreviewFooter } from "../../previews/homepage/preview-footer.mjs";
+import { designMarkup, designRail } from "../lib/site-design.mjs";
 import { config } from "../lib/config";
 import { ui } from "../lib/content";
 
@@ -18,14 +19,20 @@ const { title, description, path } = Astro.props;
 const fullTitle = path === "/" ? `${config.site.name} · ${title}` : `${title} · ${config.site.name}`;
 const canonical = new URL(path, config.site.url).href;
 const ogImage = config.images.ogDefault?.src ? new URL(config.images.ogDefault.src, config.site.url).href : undefined;
+const footer = applyPreviewFooter(`<footer class="sp-footer"><div class="sp-footer-bottom"><span>This site uses no analytics.</span><span>Villow · Local preview</span></div><p class="sp-footer-disclaimer">Villow is not affiliated with, endorsed by, or sponsored by YouTube or Google. YouTube is a trademark of Google LLC.</p></footer>`);
+const sharedStyles = ["secondary-preview.css", "study-navigation.css", "preview-header.css", "site-directory.css", "preview-footer.css", "navigation-studies.css", "footer-spidey.css"];
+const content = designMarkup(await Astro.slots.render('default'));
 ---
 
-<html lang={config.site.lang} data-theme={config.theme}>
+<html lang={config.site.lang} data-theme={config.theme} class="content-document" data-villow-site>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#fbfaf3" />
     <link rel="canonical" href={canonical} />
     <!-- Villow icons, from the icon kit (master copy in the design repo). Keep this order, and
          keep sizes="32x32" on the .ico, or Chrome picks it over the .svg that adapts to light and dark. -->
@@ -44,15 +51,18 @@ const ogImage = config.images.ogDefault?.src ? new URL(config.images.ogDefault.s
     <meta property="og:url" content={canonical} />
     {ogImage && <meta property="og:image" content={ogImage} />}
     <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
+    {sharedStyles.map((file) => <link rel="stylesheet" href={`/_design/${file}`} />)}
   </head>
-  <body>
+  <body class:list={["secondary-preview", "content-design", ["/faq", "/app-privacy", "/site-privacy", "/terms"].includes(path) && "reading-content"]}>
     <a class="skip-link" href="#main">{ui.skipToContent}</a>
-    <Header path={path} />
-    <main id="main" tabindex="-1">
-      <slot />
+    <Fragment set:html={designMarkup(designRail(path))} />
+    <Fragment set:html={designMarkup(previewHeader())} />
+    <main id="main" class="content-main" tabindex="-1">
+      <Fragment set:html={content} />
     </main>
-    <Footer />
-    {import.meta.env.DEV && <ThemePicker />}
+    <Fragment set:html={designMarkup(footer)} />
+    <script is:inline type="module" src="/_design/site-directory.js"></script>
+    <script is:inline type="module" src="/_design/footer-spidey.js"></script>
   </body>
 </html>
 

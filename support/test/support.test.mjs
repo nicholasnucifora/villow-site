@@ -15,7 +15,7 @@ test('only the explicit configured Yes dropdown value permits text; blank and un
   const mapping = fieldMapping(fields);
   for (const value of [undefined, null, '', 'yes', 'true', 'no']) {
     const values = structuredClone(fields); values[2].dropdown.value = value;
-    assert.deepEqual(publicFields(values, mapping), { consent: false, name: null, message: null });
+    assert.deepEqual(publicFields(values, mapping), { consent: false, shareAmount: false, name: null, message: null });
   }
   assert.equal(publicFields(fields, mapping).consent, true);
   const unsafe = structuredClone(fields); unsafe[2].dropdown.default_value = 'explicit_yes_123';

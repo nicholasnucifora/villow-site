@@ -1,0 +1,104 @@
+[
+  {
+    "dates": false,
+    "docWidth": 305,
+    "historyAxes": [
+      "60 min\n30 min\n0",
+      "100%\n50%\n0%"
+    ],
+    "historyColumns": "273px",
+    "mainHeight": 207,
+    "overflow": [],
+    "width": 320,
+    "hourHeight": 207,
+    "hourLabels": "10%\n5%\n0%",
+    "visible": [
+      "time-of-day"
+    ]
+  },
+  {
+    "dates": false,
+    "docWidth": 375,
+    "historyAxes": [
+      "60 min\n30 min\n0",
+      "100%\n50%\n0%"
+    ],
+    "historyColumns": "335px",
+    "mainHeight": 207,
+    "overflow": [],
+    "width": 390,
+    "hourHeight": 207,
+    "hourLabels": "10%\n5%\n0%",
+    "visible": [
+      "time-of-day"
+    ]
+  },
+  {
+    "dates": false,
+    "docWidth": 753,
+    "historyAxes": [
+      "60 min\n30 min\n0",
+      "100%\n50%\n0%"
+    ],
+    "historyColumns": "322.5px 322.5px",
+    "mainHeight": 226,
+    "overflow": [],
+    "width": 768,
+    "hourHeight": 226,
+    "hourLabels": "10%\n5%\n0%",
+    "visible": [
+      "time-of-day"
+    ]
+  },
+  {
+    "dates": false,
+    "docWidth": 1009,
+    "historyAxes": [
+      "60 min\n30 min\n0",
+      "100%\n50%\n0%"
+    ],
+    "historyColumns": "450.5px 450.5px",
+    "mainHeight": 226,
+    "overflow": [],
+    "width": 1024,
+    "hourHeight": 226,
+    "hourLabels": "10%\n5%\n0%",
+    "visible": [
+      "time-of-day"
+    ]
+  },
+  {
+    "dates": false,
+    "docWidth": 1265,
+    "historyAxes": [
+      "60 min\n30 min\n0",
+      "100%\n50%\n0%"
+    ],
+    "historyColumns": "540.5px 540.5px",
+    "mainHeight": 226,
+    "overflow": [],
+    "width": 1280,
+    "hourHeight": 226,
+    "hourLabels": "10%\n5%\n0%",
+    "visible": [
+      "time-of-day"
+    ]
+  },
+  {
+    "dates": false,
+    "docWidth": 1425,
+    "historyAxes": [
+      "60 min\n30 min\n0",
+      "100%\n50%\n0%"
+    ],
+    "historyColumns": "584px 584px",
+    "mainHeight": 226,
+    "overflow": [],
+    "width": 1440,
+    "hourHeight": 226,
+    "hourLabels": "10%\n5%\n0%",
+    "visible": [
+      "time-of-day"
+    ]
+  }
+]

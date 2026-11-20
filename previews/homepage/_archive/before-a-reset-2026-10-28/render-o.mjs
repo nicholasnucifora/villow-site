@@ -1,0 +1,32 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {studyNavigation} from './study-navigation.mjs';
+import {renderNOverview} from './n-overview.mjs';
+import {renderOOverview} from './o-overview.mjs';
+import {renderOTogether} from './o-together.mjs';
+
+const baselinePath=new URL('./n.html',import.meta.url);
+const baseline=await readFile(baselinePath,'utf8'),overview=renderNOverview();
+if(baseline.split(overview).length!==2)throw new Error('Expected exactly one N overview.');
+let next=baseline.replace(overview,renderOOverview());
+next=next.replace(/<!-- study-navigation:start -->[\s\S]*?<!-- study-navigation:end -->/,studyNavigation('o'));
+next=next.replaceAll('Villow · N · Stack and viewing','Villow · O · A little clearer');
+next=next.replace('class="version-i version-n"','class="version-i version-o"');
+next=next.replace('href="n.html" aria-label="Villow home"','href="o.html" aria-label="Villow home"');
+next=next.replace('<link rel="stylesheet" href="n-overview.css">','<link rel="stylesheet" href="n-overview.css"><link rel="stylesheet" href="o-overview.css"><link rel="stylesheet" href="o-insights.css"><link rel="stylesheet" href="o-together.css">');
+next=next.replace('<script type="module" src="n-insights.js"></script>','<script type="module" src="o-insights.js"></script><script type="module" src="o-overview.js"></script>');
+// Locate the existing social section's closing boundary without rewriting it.
+const socialStart=next.indexOf('<section class="ics-company"');
+const socialEnd=next.indexOf('</section>',socialStart)+10;
+if(socialStart<0||socialEnd<10)throw new Error('Expected existing social section.');
+next=next.slice(0,socialEnd)+renderOTogether()+next.slice(socialEnd);
+const hero=html=>html.slice(html.indexOf('<main id="main">'),html.indexOf('<section class="i-following"'));
+const social=html=>{const start=html.indexOf('<section class="ics-company"');return html.slice(start,html.indexOf('</section>',start)+10);};
+const feed=html=>{const start=html.indexOf('<section class="ifs-section');return html.slice(start,html.indexOf('</section>',start)+10);};
+if(hero(next)!==hero(baseline))throw new Error('Cloud cinema changed unexpectedly.');
+if(social(next)!==social(baseline))throw new Error('Existing social changed unexpectedly.');
+if(feed(next)!==feed(baseline))throw new Error('Card stack changed unexpectedly.');
+if((next.match(/data-ifs-demo/g)||[]).length!==1)throw new Error('Expected one unchanged card stack.');
+await writeFile(new URL('./o.html',import.meta.url),next);
+if(await readFile(baselinePath,'utf8')!==baseline)throw new Error('N baseline changed.');
+console.log(`Rendered O: http://127.0.0.1:4399/o.html#your-choices\nN preserved: ${createHash('sha256').update(baseline).digest('hex')}`);

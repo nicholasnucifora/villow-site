@@ -56,7 +56,7 @@ A broader, user-owned picture across platforms is a vision, rather than today's 
 
 The hourly chart excludes extension time because those reports have no hourly breakdown. Worth-it percentages use rated videos, without inventing verdicts for unrated ones.
 
-Optional feedback check-ins go to Fix the Web through its survey service. Private viewing measurements aren't automatically submitted. Feedback can help improve the design and test its intentions; self-reported responses need careful interpretation.
+Required first-use and milestone check-ins, and optional ad hoc feedback, go to the project operator through Tally. The [app privacy policy](link:appPrivacy) explains the timing, account-linked participant code and handling of responses. Private viewing measurements aren't automatically submitted. Feedback can help improve the design and test its intentions; self-reported responses need careful interpretation.
 
 ## Demonstrate what is possible
 

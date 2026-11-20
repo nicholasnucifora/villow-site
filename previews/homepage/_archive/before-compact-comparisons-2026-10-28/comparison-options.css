@@ -1,0 +1,39 @@
+/* B: retain the shared topics, let the illustrations and captions do the work. */
+.comparison-b .xl-pair{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none}
+.comparison-b .xl-compare-art{margin-bottom:20px}
+.comparison-b .xl-compare-cell{padding-top:24px}
+
+/* C: one message per side, followed by its explanation and visual evidence. */
+.comparison-c .xl-compare-row+.xl-compare-row{border-top:1px solid #d7dfcd}
+.comparison-c .xl-pair{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto auto}
+.comparison-c .xl-compare-cell{display:grid;grid-template-rows:subgrid;align-content:start}
+.comparison-c .xl-cell-pattern{grid-column:1;grid-row:1 / span 3}
+.comparison-c .xl-cell-villow{grid-column:2;grid-row:1 / span 3}
+.comparison-c .xl-compare-cell>p{margin-bottom:24px;max-width:445px}
+.comparison-c .xl-compare-art{margin-bottom:0;align-self:end}
+
+/* D: move the topic out of the heading stack; keep only a quiet directional cue. */
+.comparison-d .xl-column-headings{grid-template-columns:130px repeat(2,minmax(0,1fr))}
+.comparison-d .xl-column-headings>.cv-rail-spacer{background:#fbfaf2;padding:0}
+.comparison-d .xl-compare-row{display:grid;grid-template-columns:130px minmax(0,1fr);gap:0;border-top:1px solid #d7dfcd}
+.comparison-d .xl-pair-topic{justify-content:flex-start;padding:24px 18px 24px 0;background:#fbfaf2;border:0;font-size:20px;text-align:left}
+.comparison-d .xl-pair-topic:before,.comparison-d .xl-pair-topic:after{display:none}
+.comparison-d .xl-comparison-shift{width:24px;height:24px;border-radius:0;box-shadow:none;background:transparent;color:#54735a}
+.comparison-d .xl-compare-art{margin-bottom:20px}
+.comparison-d .xl-compare-cell{padding:25px 28px 30px}
+
+@media(max-width:1100px){
+ .comparison-d .xl-column-headings{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .comparison-d .xl-column-headings>.cv-rail-spacer{display:none}
+ .comparison-d .xl-compare-row{display:block;border-top:0}
+ .comparison-d .xl-pair-topic{justify-content:center;padding:16px 28px;background:#f1f2e7;border-block:1px solid #dce2d1;font-size:22px;text-align:center}
+}
+@media(max-width:600px){
+ .comparison-b .xl-pair{grid-template-columns:minmax(0,1fr);grid-template-rows:none}
+ .comparison-c .xl-pair,.comparison-c .xl-compare-cell{display:block}
+ .comparison-c .xl-compare-cell{grid-column:auto;grid-row:auto}
+ .comparison-c .xl-compare-cell>p{margin-bottom:20px}
+ .comparison-d .xl-pair-topic{font-size:21px;padding:15px 16px}
+ .comparison-d .xl-compare-cell{padding:25px 16px 30px}
+ .comparison-d .xl-comparison-shift{width:22px;height:22px}
+}

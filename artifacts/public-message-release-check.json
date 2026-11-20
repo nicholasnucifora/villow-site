@@ -1,0 +1,110 @@
+[
+  {
+    "page": "about.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "c055496806761be05b10eff433060063a84b33fb37b63d2c94a27b42df4386b1"
+  },
+  {
+    "page": "ai.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "d2a87e62d0cec750aca8d71c9b5a8da3370edeaecf2fd9b32d3365b6698f4800"
+  },
+  {
+    "page": "app-privacy.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "e3488921699668ebba36a3eb28a3760c33e0caca1a5b2c6b9774b9915500173e"
+  },
+  {
+    "page": "creators.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "6f389846a96deef75457fb52ce5ad93cfca766084fddbf099452fce0d98e2304"
+  },
+  {
+    "page": "demo.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "152c4711d3ab407facdfc077f8451e71c1702f43900837f630348d3df5eb0e27"
+  },
+  {
+    "page": "developers.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "8643dcd631bd4cbf7a078608a1e58884eaf1b5197b97d8160aea4bc79f229da1"
+  },
+  {
+    "page": "download.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "196c3dc569e1e7094c1796a8f43a663f6ef8404f6250858a22c53be2731493ab"
+  },
+  {
+    "page": "extension-privacy.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "50a6ca9040a5cbf95f42e372afd397022f1597f9bc40d579556dcff6daa63485"
+  },
+  {
+    "page": "extension.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "c93f946724c966834cff158adf510780d0efd0d8b4decbb065b1bc2f0081581b"
+  },
+  {
+    "page": "faq.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "70be914838c7da1efa6f44bf12f35f19c70339e71354a60a6bcbfad558e5f63b"
+  },
+  {
+    "page": "features.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "8d858efb14304aafaef55dd09c875584e22920018b34363f3dc75259be5ba12f"
+  },
+  {
+    "page": "index.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "bb02be5a604e349b6c50d549a91ee7829dd432f956714338828d08f54ea51a4b"
+  },
+  {
+    "page": "principles.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "904056d93dbaea03b7a44bdc590cf5edd08cc47fb55d99b939174c4f797a5608"
+  },
+  {
+    "page": "privacy-overview.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "297d4c36d1a54070d9acbc3b8260490fe1965b37bf19576d058161f3b2c8f976"
+  },
+  {
+    "page": "privacy.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "742fafc27018f58d22c8e27c19e39da86fa9f75ea7d216bbdb623dfd1a4eea0d"
+  },
+  {
+    "page": "roadmap.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "fd27daa95557687d3b85ccb992f6a9663a4309c65c07f431c9dd36144514a8f3"
+  },
+  {
+    "page": "running-villow.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "e03a8c6bcb74b9378f0333b8e187194f5d46006414c2974b2d3c90d871d5b8fb"
+  },
+  {
+    "page": "youtube-could-do-this.html",
+    "status": 200,
+    "unchangedFromLive": true,
+    "sha256": "7e738da0c928625e68961eae4203cde8af92000d53a5d8a4b6f6d82c8e7fdf9a"
+  }
+]

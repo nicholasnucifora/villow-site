@@ -1,0 +1,41 @@
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Generated 1ms","label":"types","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Re-optimizing dependencies because vite config has changed","label":"vite","level":"info"}
+{"message":" astro  v7.3.8 ready in 1218 ms\n┃ Local    http://127.0.0.1:4411/","label":"SKIP_FORMAT","level":"info"}
+{"message":"watching for file changes...","label":null,"level":"info"}
+{"message":"[200] /terms 143ms","label":null,"level":"info"}
+{"message":"[200] /terms 6ms","label":null,"level":"info"}
+{"message":"[200] /terms 48ms","label":null,"level":"info"}
+{"message":"[200] / 7ms","label":null,"level":"info"}
+{"message":"artifacts/abn-public-record.html","label":"watch","level":"info"}
+{"message":"[200] /privacy 49ms","label":null,"level":"info"}
+{"message":"[200] /privacy 6ms","label":null,"level":"info"}
+{"message":"[200] /privacy 41ms","label":null,"level":"info"}
+{"message":"[200] /privacy 42ms","label":null,"level":"info"}
+{"message":"previews/homepage/help-a.html","label":"watch","level":"info"}
+{"message":"previews/homepage/contact-a.html","label":"watch","level":"info"}
+{"message":"previews/homepage/index.html","label":"watch","level":"info"}
+{"message":"[200] /privacy 7ms","label":null,"level":"info"}
+{"message":"[200] /privacy 45ms","label":null,"level":"info"}
+{"message":"[200] /site-privacy 9ms","label":null,"level":"info"}
+{"message":"[200] /contact 5ms","label":null,"level":"info"}
+{"message":"[200] /site-privacy 7ms","label":null,"level":"info"}
+{"message":"[200] /get-involved 7ms","label":null,"level":"info"}
+{"message":"[200] /privacy 56ms","label":null,"level":"info"}
+{"message":"[200] /privacy 46ms","label":null,"level":"info"}
+{"message":"[200] /privacy 46ms","label":null,"level":"info"}
+{"message":"[200] /privacy 38ms","label":null,"level":"info"}
+{"message":"[200] /privacy 46ms","label":null,"level":"info"}
+{"message":"[200] /privacy 240ms","label":null,"level":"info"}
+{"message":"[200] /privacy 120ms","label":null,"level":"info"}
+{"message":"[200] /privacy 45ms","label":null,"level":"info"}
+{"message":"[200] /privacy 32ms","label":null,"level":"info"}
+{"message":"[200] /extension-privacy 33ms","label":null,"level":"info"}
+{"message":"[200] /app-privacy 7ms","label":null,"level":"info"}
+{"message":"[200] /privacy 74ms","label":null,"level":"info"}
+{"message":"[200] /privacy 74ms","label":null,"level":"info"}
+{"message":"[200] /privacy 37ms","label":null,"level":"info"}
+{"message":"[200] /privacy 48ms","label":null,"level":"info"}
+{"message":"[200] /privacy 53ms","label":null,"level":"info"}
+{"message":"src/content/policies/extension-privacy.html","label":"watch","level":"info"}

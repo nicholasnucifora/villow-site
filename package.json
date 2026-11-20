@@ -3,8 +3,9 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build && node scripts/check-build.mjs",
+    "dev": "astro dev --host 127.0.0.1 --port 4411",
+    "build": "node scripts/release-guard.mjs && npm run build:local",
+    "build:local": "astro build && node scripts/check-build.mjs",
     "preview": "astro preview",
     "placeholders": "node scripts/list-placeholders.mjs"
   },

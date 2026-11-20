@@ -1,0 +1,91 @@
+VILLOW — PRESET X / ARTWORK HANDOFF
+9 November 2026
+
+SUPERSEDED: The user rejected X's illustration and excessively flat hills.
+Use W-ILLUSTRATOR-BRIEF.txt and preset W as the current art direction.
+The SVG-first direction below is historical, not a requirement.
+
+Review X: http://127.0.0.1:4411/x.html
+Compare W: http://127.0.0.1:4411/w.html
+
+WHAT THIS COMPARISON CHANGES
+
+X keeps W's copy, feed, watching stories, comparisons and interactions.
+It replaces the patched raster hero with a simpler editable SVG scene and
+cat, and replaces the landscape dividers with shallow vector curves.
+The hero stacks below 1000px instead of squeezing both columns together.
+The footer curve has its own 40–96px band; text cannot stretch it vertically.
+
+X is an AI-assisted code/vector concept, not human-illustrated final artwork.
+The generated artwork elsewhere in W is still present in X. Changing the
+file format to SVG alone does not resolve a concern about AI provenance.
+
+A PRACTICAL ROUTE TO FINISHED ART
+
+1. Approve the direction with one scene.
+   Decide whether this simpler cinema composition is the right direction.
+   Keep Villow's warm, calm palette, rounded shapes and playful cat.
+   A small style sample plus one finished hero is enough to approve a look
+   before commissioning the remaining illustrations.
+
+2. Ask an illustrator for an original redraw.
+   If human-made final art is the requirement, state that explicitly in the
+   brief: no generated assets, original drawing, editable source files,
+   agreed website usage rights and agreed credit. Treat X and W as visual
+   direction, not artwork that only needs tracing or surface cleanup.
+   If doing it yourself, draw the same simple shapes in a vector editor and
+   follow the layer/size requirements below.
+
+3. Deliver assets that are easy to integrate.
+   Supply an editable source and optimized SVG exports. Keep person/chair,
+   projector, screen frame, cat and ground as separate named groups.
+   Keep screen geometry and the person's position identical between the
+   watching and thinking poses. Avoid small hand/finger details that become
+   ambiguous on phones. The play button, progress slider and rating prompt
+   stay real HTML controls, not text painted into the illustration.
+
+4. Approve desktop and phone together.
+   Check the complete composition and individual silhouettes at actual
+   display size. Use a compact composition or stack below the text when the
+   art would otherwise become too small. Preserve proportions of people,
+   faces and screens; crop scenery only. Test at 320, 390, 768, 861, 1024,
+   1280 and 1920px, plus 200% zoom and a real phone before publication.
+   Check play/pause, seeking, optional rating and reduced motion.
+
+5. Expand the approved style into a small asset set.
+   Suggested order: hero, the five watching-story characters, then any
+   remaining generated thumbnails or streak artwork that should be replaced.
+   Review every displayed image if the final site must contain no generated
+   artwork. Keep an asset register with source, creator and usage permission.
+   Product diagrams and simple section curves can remain editable code.
+
+ART DIRECTION
+
+- Palette: dark teal #214e4c, sage #91b9a5, light sage #c3ddc5,
+  warm cream #fff6df, peach skin tones, muted orange cat.
+- Flat rounded shapes, restrained shading, clear distinct limbs.
+- One readable action per illustration; no tiny decorative clutter.
+- Calm expressions and varied people without caricature.
+- Prefer open compositions over boxed illustration cards.
+
+TECHNICAL HANDOFF
+
+Hero coordinate space: 620 x 360.
+Current HTML player rectangle: x=282, y=94, width=310, height=182.
+The cat fills that player at the same aspect ratio (620 x 364 export).
+An illustrator may propose different proportions; update the HTML overlay
+coordinates once, rather than compensating with independent image patches.
+
+Source files:
+  x-cinema-scene.mjs       editable scene and hero transition
+  assets/x-sleeping-cat.svg
+  assets/x-footer-wave.svg
+  x-clear-horizons.css    scoped layout and footer-wave sizing
+  render-x.mjs            generates X from saved W
+
+SVG proportion reference:
+https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/preserveAspectRatio
+If separate desktop/phone raster compositions are eventually supplied:
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/picture
+
+This comparison is local only. Keep W available for review.

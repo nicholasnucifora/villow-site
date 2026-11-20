@@ -1,0 +1,17 @@
+[
+  {
+    "checked": true,
+    "page": "/c.html",
+    "stickyTop": 40
+  },
+  {
+    "checked": true,
+    "page": "/b.html",
+    "stickyTop": 40
+  },
+  {
+    "checked": true,
+    "page": "/d.html",
+    "stickyTop": 40
+  }
+]

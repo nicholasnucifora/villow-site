@@ -4,6 +4,10 @@ import { LABELS } from '../lib/config.mjs';
 export function database() {
   const sqlite = new DatabaseSync(':memory:');
   sqlite.exec(readFileSync(new URL('../migrations/0001_support.sql', import.meta.url), 'utf8'));
+  sqlite.exec(readFileSync(new URL('../migrations/0002_discord.sql', import.meta.url), 'utf8'));
+  sqlite.exec(readFileSync(new URL('../migrations/0003_discord_return_origin.sql', import.meta.url), 'utf8'));
+  sqlite.exec(readFileSync(new URL('../migrations/0004_message_review.sql', import.meta.url), 'utf8'));
+  sqlite.exec(readFileSync(new URL('../migrations/0005_censored_messages.sql', import.meta.url), 'utf8'));
   const db = {
     prepare(sql) {
       let params = [];
@@ -43,13 +47,14 @@ export function fakeStripe(checkout = session()) {
       async retrieve(id) { return { id, livemode: false, active: true, url: `https://buy.stripe.com/test_${id}`, custom_fields: structuredClone(fields) }; },
       async listLineItems(id) {
         const amounts = { plink_five: 500, plink_ten: 1000, plink_twenty: 2000 };
-        return { has_more: false, data: [{ quantity: 1, price: { product: 'prod_support', currency: 'aud',
+        return { has_more: false, data: [{ quantity: 1, price: { id: `price_${id}`, product: 'prod_support', currency: 'aud',
           ...(id === 'plink_once' ? { custom_unit_amount: { minimum: 500 } } : { unit_amount: amounts[id], recurring: { interval: 'month', interval_count: 1 } }) } }] };
       },
     },
     checkout: { sessions: {
       async list() { return { data: [checkout] }; },
-      async create(params) { this.lastParams = params; return { url: 'https://checkout.stripe.com/c/pay/cs_test_fixture' }; },
+      async create(params) { this.lastParams = params; return { id: checkout.id, url: 'https://checkout.stripe.com/c/pay/cs_test_fixture' }; },
+      async retrieve() { return checkout; },
     } },
     subscriptions: { async retrieve(id) { return { id, status: 'active', cancel_at_period_end: false }; } },
   };

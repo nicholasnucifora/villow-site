@@ -1,0 +1,954 @@
+{
+  "date": "2026-11-11",
+  "page": "27.html",
+  "sizes": [
+    {
+      "backdrop": {
+        "bottom": 688.25,
+        "height": 266.65625,
+        "left": -495,
+        "right": 305,
+        "top": 421.59375,
+        "width": 800,
+        "x": -495,
+        "y": 421.59375
+      },
+      "cinema": {
+        "bottom": 570.25,
+        "height": 142.5,
+        "left": 10,
+        "right": 295,
+        "top": 427.75,
+        "width": 285,
+        "x": 10,
+        "y": 427.75
+      },
+      "cta": {
+        "bottom": 419.75,
+        "height": 52,
+        "left": 22,
+        "right": 170.8125,
+        "top": 367.75,
+        "width": 148.8125,
+        "x": 22,
+        "y": 367.75
+      },
+      "foreground": {
+        "bottom": 688.25,
+        "height": 300,
+        "left": -297.5,
+        "right": 602.5,
+        "top": 388.25,
+        "width": 900,
+        "x": -297.5,
+        "y": 388.25
+      },
+      "hero": {
+        "bottom": 688.25,
+        "height": 537.25,
+        "left": 0,
+        "right": 305,
+        "top": 151,
+        "width": 305,
+        "x": 0,
+        "y": 151
+      },
+      "images": [
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/backdrop.webp"
+        },
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/foreground.webp"
+        }
+      ],
+      "scrollWidth": 305,
+      "sky": [
+        "rgb(253, 253, 253)",
+        "rgb(253, 253, 253)"
+      ],
+      "treeImage": [
+        "assets/supplied-landscape/trees.webp",
+        "assets/supplied-landscape/trees.webp"
+      ],
+      "trees": [
+        {
+          "bottom": 664.25,
+          "height": 70.53125,
+          "left": 0,
+          "right": 145,
+          "top": 593.71875,
+          "width": 145,
+          "x": 0,
+          "y": 593.71875
+        },
+        {
+          "bottom": 653.25,
+          "height": 67.5625,
+          "left": 205,
+          "right": 305,
+          "top": 585.6875,
+          "width": 100,
+          "x": 205,
+          "y": 585.6875
+        }
+      ],
+      "width": 320
+    },
+    {
+      "backdrop": {
+        "bottom": 725.59375,
+        "height": 266.65625,
+        "left": -425,
+        "right": 375,
+        "top": 458.9375,
+        "width": 800,
+        "x": -425,
+        "y": 458.9375
+      },
+      "cinema": {
+        "bottom": 607.59375,
+        "height": 167.5,
+        "left": 20,
+        "right": 355,
+        "top": 440.09375,
+        "width": 335,
+        "x": 20,
+        "y": 440.09375
+      },
+      "cta": {
+        "bottom": 432.09375,
+        "height": 52,
+        "left": 22,
+        "right": 170.8125,
+        "top": 380.09375,
+        "width": 148.8125,
+        "x": 22,
+        "y": 380.09375
+      },
+      "foreground": {
+        "bottom": 725.59375,
+        "height": 300,
+        "left": -262.5,
+        "right": 637.5,
+        "top": 425.59375,
+        "width": 900,
+        "x": -262.5,
+        "y": 425.59375
+      },
+      "hero": {
+        "bottom": 725.59375,
+        "height": 574.59375,
+        "left": 0,
+        "right": 375,
+        "top": 151,
+        "width": 375,
+        "x": 0,
+        "y": 151
+      },
+      "images": [
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/backdrop.webp"
+        },
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/foreground.webp"
+        }
+      ],
+      "scrollWidth": 375,
+      "sky": [
+        "rgb(253, 253, 253)",
+        "rgb(253, 253, 253)"
+      ],
+      "treeImage": [
+        "assets/supplied-landscape/trees.webp",
+        "assets/supplied-landscape/trees.webp"
+      ],
+      "trees": [
+        {
+          "bottom": 701.59375,
+          "height": 70.53125,
+          "left": 0,
+          "right": 145,
+          "top": 631.0625,
+          "width": 145,
+          "x": 0,
+          "y": 631.0625
+        },
+        {
+          "bottom": 690.59375,
+          "height": 67.5625,
+          "left": 275,
+          "right": 375,
+          "top": 623.03125,
+          "width": 100,
+          "x": 275,
+          "y": 623.03125
+        }
+      ],
+      "width": 390
+    },
+    {
+      "backdrop": {
+        "bottom": 773.625,
+        "height": 266.65625,
+        "left": -215,
+        "right": 585,
+        "top": 506.96875,
+        "width": 800,
+        "x": -215,
+        "y": 506.96875
+      },
+      "cinema": {
+        "bottom": 655.625,
+        "height": 220,
+        "left": 72.5,
+        "right": 512.5,
+        "top": 435.625,
+        "width": 440,
+        "x": 72.5,
+        "y": 435.625
+      },
+      "cta": {
+        "bottom": 427.625,
+        "height": 52,
+        "left": 22,
+        "right": 170.8125,
+        "top": 375.625,
+        "width": 148.8125,
+        "x": 22,
+        "y": 375.625
+      },
+      "foreground": {
+        "bottom": 773.625,
+        "height": 300,
+        "left": -157.5,
+        "right": 742.5,
+        "top": 473.625,
+        "width": 900,
+        "x": -157.5,
+        "y": 473.625
+      },
+      "hero": {
+        "bottom": 773.625,
+        "height": 622.625,
+        "left": 0,
+        "right": 585,
+        "top": 151,
+        "width": 585,
+        "x": 0,
+        "y": 151
+      },
+      "images": [
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/backdrop.webp"
+        },
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/foreground.webp"
+        }
+      ],
+      "scrollWidth": 585,
+      "sky": [
+        "rgb(253, 253, 253)",
+        "rgb(253, 253, 253)"
+      ],
+      "treeImage": [
+        "assets/supplied-landscape/trees.webp",
+        "assets/supplied-landscape/trees.webp"
+      ],
+      "trees": [
+        {
+          "bottom": 749.625,
+          "height": 78.796875,
+          "left": 0,
+          "right": 162,
+          "top": 670.828125,
+          "width": 162,
+          "x": 0,
+          "y": 670.828125
+        },
+        {
+          "bottom": 738.625,
+          "height": 72.96875,
+          "left": 477,
+          "right": 585,
+          "top": 665.65625,
+          "width": 108,
+          "x": 477,
+          "y": 665.65625
+        }
+      ],
+      "width": 600
+    },
+    {
+      "backdrop": {
+        "bottom": 802.1875,
+        "height": 266.65625,
+        "left": -115,
+        "right": 685,
+        "top": 535.53125,
+        "width": 800,
+        "x": -115,
+        "y": 535.53125
+      },
+      "cinema": {
+        "bottom": 684.1875,
+        "height": 220,
+        "left": 122.5,
+        "right": 562.5,
+        "top": 464.1875,
+        "width": 440,
+        "x": 122.5,
+        "y": 464.1875
+      },
+      "cta": {
+        "bottom": 456.1875,
+        "height": 52,
+        "left": 44.5,
+        "right": 193.3125,
+        "top": 404.1875,
+        "width": 148.8125,
+        "x": 44.5,
+        "y": 404.1875
+      },
+      "foreground": {
+        "bottom": 802.1875,
+        "height": 300,
+        "left": -107.5,
+        "right": 792.5,
+        "top": 502.1875,
+        "width": 900,
+        "x": -107.5,
+        "y": 502.1875
+      },
+      "hero": {
+        "bottom": 802.1875,
+        "height": 639.1875,
+        "left": 0,
+        "right": 685,
+        "top": 163,
+        "width": 685,
+        "x": 0,
+        "y": 163
+      },
+      "images": [
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/backdrop.webp"
+        },
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/foreground.webp"
+        }
+      ],
+      "scrollWidth": 685,
+      "sky": [
+        "rgb(253, 253, 253)",
+        "rgb(253, 253, 253)"
+      ],
+      "treeImage": [
+        "assets/supplied-landscape/trees.webp",
+        "assets/supplied-landscape/trees.webp"
+      ],
+      "trees": [
+        {
+          "bottom": 778.1875,
+          "height": 87.5625,
+          "left": 0,
+          "right": 180,
+          "top": 690.625,
+          "width": 180,
+          "x": 0,
+          "y": 690.625
+        },
+        {
+          "bottom": 767.1875,
+          "height": 84.453125,
+          "left": 560,
+          "right": 685,
+          "top": 682.734375,
+          "width": 125,
+          "x": 560,
+          "y": 682.734375
+        }
+      ],
+      "width": 700
+    },
+    {
+      "backdrop": {
+        "bottom": 604.3125,
+        "height": 228.65625,
+        "left": 0,
+        "right": 686,
+        "top": 375.65625,
+        "width": 686,
+        "x": 0,
+        "y": 375.65625
+      },
+      "cinema": {
+        "bottom": 424.84375,
+        "height": 142.375,
+        "left": 369.234375,
+        "right": 654,
+        "top": 282.46875,
+        "width": 284.765625,
+        "x": 369.234375,
+        "y": 282.46875
+      },
+      "cta": {
+        "bottom": 498.3125,
+        "height": 55,
+        "left": 32,
+        "right": 188.8125,
+        "top": 443.3125,
+        "width": 156.8125,
+        "x": 32,
+        "y": 443.3125
+      },
+      "foreground": {
+        "bottom": 604.3125,
+        "height": 228.65625,
+        "left": 0,
+        "right": 686,
+        "top": 375.65625,
+        "width": 686,
+        "x": 0,
+        "y": 375.65625
+      },
+      "hero": {
+        "bottom": 604.3125,
+        "height": 441.3125,
+        "left": 0,
+        "right": 686,
+        "top": 163,
+        "width": 686,
+        "x": 0,
+        "y": 163
+      },
+      "images": [
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/backdrop.webp"
+        },
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/foreground.webp"
+        }
+      ],
+      "scrollWidth": 686,
+      "sky": [
+        "rgb(253, 253, 253)",
+        "rgb(253, 253, 253)"
+      ],
+      "treeImage": [
+        "assets/supplied-landscape/trees.webp",
+        "assets/supplied-landscape/trees.webp"
+      ],
+      "trees": [
+        {
+          "bottom": 581.890625,
+          "height": 72,
+          "left": 0,
+          "right": 148,
+          "top": 509.890625,
+          "width": 148,
+          "x": 0,
+          "y": 509.890625
+        },
+        {
+          "bottom": 579.78125,
+          "height": 67.5625,
+          "left": 586,
+          "right": 686,
+          "top": 512.21875,
+          "width": 100,
+          "x": 586,
+          "y": 512.21875
+        }
+      ],
+      "width": 701
+    },
+    {
+      "backdrop": {
+        "bottom": 586.71875,
+        "height": 282,
+        "left": 0,
+        "right": 846,
+        "top": 304.71875,
+        "width": 846,
+        "x": 0,
+        "y": 304.71875
+      },
+      "cinema": {
+        "bottom": 433.53125,
+        "height": 177.859375,
+        "left": 458.28125,
+        "right": 814,
+        "top": 255.671875,
+        "width": 355.71875,
+        "x": 458.28125,
+        "y": 255.671875
+      },
+      "cta": {
+        "bottom": 480.21875,
+        "height": 58,
+        "left": 32,
+        "right": 210.953125,
+        "top": 422.21875,
+        "width": 178.953125,
+        "x": 32,
+        "y": 422.21875
+      },
+      "foreground": {
+        "bottom": 586.71875,
+        "height": 282,
+        "left": 0,
+        "right": 846,
+        "top": 304.71875,
+        "width": 846,
+        "x": 0,
+        "y": 304.71875
+      },
+      "hero": {
+        "bottom": 586.71875,
+        "height": 423.71875,
+        "left": 0,
+        "right": 846,
+        "top": 163,
+        "width": 846,
+        "x": 0,
+        "y": 163
+      },
+      "images": [
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/backdrop.webp"
+        },
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/foreground.webp"
+        }
+      ],
+      "scrollWidth": 846,
+      "sky": [
+        "rgb(253, 253, 253)",
+        "rgb(253, 253, 253)"
+      ],
+      "treeImage": [
+        "assets/supplied-landscape/trees.webp",
+        "assets/supplied-landscape/trees.webp"
+      ],
+      "trees": [
+        {
+          "bottom": 559.171875,
+          "height": 72,
+          "left": 0,
+          "right": 148,
+          "top": 487.171875,
+          "width": 148,
+          "x": 0,
+          "y": 487.171875
+        },
+        {
+          "bottom": 556.59375,
+          "height": 67.5625,
+          "left": 746,
+          "right": 846,
+          "top": 489.03125,
+          "width": 100,
+          "x": 746,
+          "y": 489.03125
+        }
+      ],
+      "width": 861
+    },
+    {
+      "backdrop": {
+        "bottom": 587.34375,
+        "height": 336.328125,
+        "left": 0,
+        "right": 1009,
+        "top": 251.015625,
+        "width": 1009,
+        "x": 0,
+        "y": 251.015625
+      },
+      "cinema": {
+        "bottom": 420.90625,
+        "height": 216.671875,
+        "left": 543.65625,
+        "right": 977,
+        "top": 204.234375,
+        "width": 433.34375,
+        "x": 543.65625,
+        "y": 204.234375
+      },
+      "cta": {
+        "bottom": 459.15625,
+        "height": 58,
+        "left": 32,
+        "right": 210.953125,
+        "top": 401.15625,
+        "width": 178.953125,
+        "x": 32,
+        "y": 401.15625
+      },
+      "foreground": {
+        "bottom": 587.34375,
+        "height": 336.328125,
+        "left": 0,
+        "right": 1009,
+        "top": 251.015625,
+        "width": 1009,
+        "x": 0,
+        "y": 251.015625
+      },
+      "hero": {
+        "bottom": 587.34375,
+        "height": 467.34375,
+        "left": 0,
+        "right": 1009,
+        "top": 120,
+        "width": 1009,
+        "x": 0,
+        "y": 120
+      },
+      "images": [
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/backdrop.webp"
+        },
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/foreground.webp"
+        }
+      ],
+      "scrollWidth": 1009,
+      "sky": [
+        "rgb(253, 253, 253)",
+        "rgb(253, 253, 253)"
+      ],
+      "treeImage": [
+        "assets/supplied-landscape/trees.webp",
+        "assets/supplied-landscape/trees.webp"
+      ],
+      "trees": [
+        {
+          "bottom": 554.578125,
+          "height": 72,
+          "left": 0,
+          "right": 148,
+          "top": 482.578125,
+          "width": 148,
+          "x": 0,
+          "y": 482.578125
+        },
+        {
+          "bottom": 551.515625,
+          "height": 67.5625,
+          "left": 909,
+          "right": 1009,
+          "top": 483.953125,
+          "width": 100,
+          "x": 909,
+          "y": 483.953125
+        }
+      ],
+      "width": 1024
+    },
+    {
+      "backdrop": {
+        "bottom": 653.53125,
+        "height": 384.328125,
+        "left": 0,
+        "right": 1153,
+        "top": 269.203125,
+        "width": 1153,
+        "x": 0,
+        "y": 269.203125
+      },
+      "cinema": {
+        "bottom": 483.5625,
+        "height": 294.9375,
+        "left": 507.125,
+        "right": 1097,
+        "top": 188.625,
+        "width": 589.875,
+        "x": 507.125,
+        "y": 188.625
+      },
+      "cta": {
+        "bottom": 506.1875,
+        "height": 58,
+        "left": 56,
+        "right": 234.953125,
+        "top": 448.1875,
+        "width": 178.953125,
+        "x": 56,
+        "y": 448.1875
+      },
+      "foreground": {
+        "bottom": 653.53125,
+        "height": 384.328125,
+        "left": 0,
+        "right": 1153,
+        "top": 269.203125,
+        "width": 1153,
+        "x": 0,
+        "y": 269.203125
+      },
+      "hero": {
+        "bottom": 653.53125,
+        "height": 533.53125,
+        "left": 0,
+        "right": 1153,
+        "top": 120,
+        "width": 1153,
+        "x": 0,
+        "y": 120
+      },
+      "images": [
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/backdrop.webp"
+        },
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/foreground.webp"
+        }
+      ],
+      "scrollWidth": 1153,
+      "sky": [
+        "rgb(253, 253, 253)",
+        "rgb(253, 253, 253)"
+      ],
+      "treeImage": [
+        "assets/supplied-landscape/trees.webp",
+        "assets/supplied-landscape/trees.webp"
+      ],
+      "trees": [
+        {
+          "bottom": 616.15625,
+          "height": 72,
+          "left": 0,
+          "right": 148,
+          "top": 544.15625,
+          "width": 148,
+          "x": 0,
+          "y": 544.15625
+        },
+        {
+          "bottom": 612.65625,
+          "height": 67.5625,
+          "left": 1053,
+          "right": 1153,
+          "top": 545.09375,
+          "width": 100,
+          "x": 1053,
+          "y": 545.09375
+        }
+      ],
+      "width": 1168
+    },
+    {
+      "backdrop": {
+        "bottom": 713.015625,
+        "height": 540.328125,
+        "left": 0,
+        "right": 1621,
+        "top": 172.6875,
+        "width": 1621,
+        "x": 0,
+        "y": 172.6875
+      },
+      "cinema": {
+        "bottom": 504.71875,
+        "height": 340,
+        "left": 737.859375,
+        "right": 1417.859375,
+        "top": 164.71875,
+        "width": 680,
+        "x": 737.859375,
+        "y": 164.71875
+      },
+      "cta": {
+        "bottom": 503.4375,
+        "height": 58,
+        "left": 190.5,
+        "right": 369.453125,
+        "top": 445.4375,
+        "width": 178.953125,
+        "x": 190.5,
+        "y": 445.4375
+      },
+      "foreground": {
+        "bottom": 713.015625,
+        "height": 540.328125,
+        "left": 0,
+        "right": 1621,
+        "top": 172.6875,
+        "width": 1621,
+        "x": 0,
+        "y": 172.6875
+      },
+      "hero": {
+        "bottom": 713.015625,
+        "height": 593.015625,
+        "left": 0,
+        "right": 1621,
+        "top": 120,
+        "width": 1621,
+        "x": 0,
+        "y": 120
+      },
+      "images": [
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/backdrop.webp"
+        },
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/foreground.webp"
+        }
+      ],
+      "scrollWidth": 1621,
+      "sky": [
+        "rgb(253, 253, 253)",
+        "rgb(253, 253, 253)"
+      ],
+      "treeImage": [
+        "assets/supplied-landscape/trees.webp",
+        "assets/supplied-landscape/trees.webp"
+      ],
+      "trees": [
+        {
+          "bottom": 660.671875,
+          "height": 156.484375,
+          "left": 0,
+          "right": 321.671875,
+          "top": 504.1875,
+          "width": 321.671875,
+          "x": 0,
+          "y": 504.1875
+        },
+        {
+          "bottom": 655.765625,
+          "height": 90.625,
+          "left": 1486.859375,
+          "right": 1621,
+          "top": 565.140625,
+          "width": 134.140625,
+          "x": 1486.859375,
+          "y": 565.140625
+        }
+      ],
+      "width": 1636
+    },
+    {
+      "backdrop": {
+        "bottom": 835.90625,
+        "height": 848.328125,
+        "left": 0,
+        "right": 2545,
+        "top": -12.421875,
+        "width": 2545,
+        "x": 0,
+        "y": -12.421875
+      },
+      "cinema": {
+        "bottom": 504.71875,
+        "height": 340,
+        "left": 1199.859375,
+        "right": 1879.859375,
+        "top": 164.71875,
+        "width": 680,
+        "x": 1199.859375,
+        "y": 164.71875
+      },
+      "cta": {
+        "bottom": 503.4375,
+        "height": 58,
+        "left": 652.5,
+        "right": 831.453125,
+        "top": 445.4375,
+        "width": 178.953125,
+        "x": 652.5,
+        "y": 445.4375
+      },
+      "foreground": {
+        "bottom": 835.90625,
+        "height": 848.328125,
+        "left": 0,
+        "right": 2545,
+        "top": -12.421875,
+        "width": 2545,
+        "x": 0,
+        "y": -12.421875
+      },
+      "hero": {
+        "bottom": 835.90625,
+        "height": 715.90625,
+        "left": 0,
+        "right": 2545,
+        "top": 120,
+        "width": 2545,
+        "x": 0,
+        "y": 120
+      },
+      "images": [
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/backdrop.webp"
+        },
+        {
+          "loaded": true,
+          "src": "http://127.0.0.1:4411/assets/supplied-landscape/foreground.webp"
+        }
+      ],
+      "scrollWidth": 2545,
+      "sky": [
+        "rgb(253, 253, 253)",
+        "rgb(253, 253, 253)"
+      ],
+      "treeImage": [
+        "assets/supplied-landscape/trees.webp",
+        "assets/supplied-landscape/trees.webp"
+      ],
+      "trees": [
+        {
+          "bottom": 754,
+          "height": 214.046875,
+          "left": 0,
+          "right": 440,
+          "top": 539.953125,
+          "width": 440,
+          "x": 0,
+          "y": 539.953125
+        },
+        {
+          "bottom": 746.3125,
+          "height": 135.125,
+          "left": 2345,
+          "right": 2545,
+          "top": 611.1875,
+          "width": 200,
+          "x": 2345,
+          "y": 611.1875
+        }
+      ],
+      "width": 2560
+    }
+  ],
+  "interaction320": {
+    "seekEndShowsRating": true,
+    "worthItPressed": true
+  },
+  "updatedExistingPresets": {
+    "W": "sage-sunrise.webp loaded; no overflow at 1168px",
+    "Y": "phone.webp loaded; no overflow at 390px"
+  }
+}

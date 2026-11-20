@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-11",
+  "mode": "Built-in image_gen edits of supplied cutouts, only used in preset 30",
+  "foreground": {
+    "prompt": "Use case: precise-object-edit. Edit target: attached transparent foreground-hill layer for a website. Make a minimal edge cleanup ONLY. Keep this exact 3:1 canvas and the hill's exact position, height, smooth low rolling contour, sage-green colours, subtle shading and texture. Remove the stray isolated pixels floating above the hill and clean the rough/blurred/light-coloured fringe along the top silhouette. The continuous hill should be opaque right up to a clean, smoothly anti-aliased edge, with no pale or yellow stripe/rim/halo. Preserve the existing green gradient below that edge; do not add a highlight or outline. Everything above the hill remains truly transparent, not black or white. Do not move, raise, lower, redesign, enlarge or reshape the hill. No trees or new objects. Output the full exact same 3:1 landscape composition with transparency.",
+    "source": "exec-a118f686-7ee2-415b-a9f0-5fd3af9cbb52.png",
+    "delivery": "foreground.webp"
+  },
+  "trees": {
+    "prompt": "Use case: precise-object-edit. Edit target: attached transparent tree-and-shrub layer for a website. Preserve the exact 3:1 canvas and the placement, shape, size, colour, shading and number of ALL the trees and bushes at the left and right edges, especially the little rounded trailing shrubs at the inner ends. Make only a small practical cutout repair: extend the existing dark-green tree/shrub colours downward by about 180 pixels relative to the 3017px-tall original canvas, beneath their currently curved cut-off bases, as a simple continuous dark-green foundation. This small lower extension will be completely hidden behind a separate foreground hill; it prevents gaps when the tree group is raised slightly. Do not introduce a light rim, visible ground mound, trunk, new tree or bush. Clean the outer silhouette of any pale fringe without changing its shapes. Keep the huge central area and all space above the groups genuinely transparent. Do not reposition the groups or change any visible tree or shrub artwork. Output full 3:1 canvas, true transparency.",
+    "firstSource": "exec-7f367066-23d6-4d5e-8521-3c040d37ef1c.png",
+    "source": "exec-b0c7dd6c-31de-4f08-943f-9e3ad91afd15.png",
+    "refinementPrompt": "Use case: precise-object-edit. Edit this transparent tree cutout with the newly extended lower bases. Keep the entire composition, all tree tops, shrubs, colours, shape, placement and transparency unchanged. Fix ONLY the lower extension: there is a curved dark horizontal seam/band near the bottom of the left tree group (the former cutout edge) and a similar join on the right. Remove that artificial curved boundary. Continue the exact colours and soft texture from each tree or shrub immediately ABOVE the seam smoothly down through the added lower portion. The extension should look like uninterrupted tree/shrub colour, NOT a new foreground hill or a common dark ground strip. Do not add a line, shadow, lip, rim or mound at the old cutoff. Do not change the top and side silhouettes, any tree or bush shape, or the transparent empty canvas. Keep full 3:1 canvas and genuine transparency.",
+    "delivery": "trees.webp"
+  },
+  "processing": "Copy original generated PNGs, alpha-preserving WebP encoding only. Previous assets unchanged."
+}

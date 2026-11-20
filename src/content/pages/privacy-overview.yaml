@@ -1,11 +1,11 @@
 title: Privacy
-description: Understand private Villow hosting, the owner's database access, member sharing, Google permissions and voluntary feedback, with links to all three privacy policies.
+description: Understand private Villow hosting, the owner's database access, member sharing, Google permissions and check-ins, with links to all three privacy policies.
 
 blocks:
   - type: hero
     eyebrow: Privacy
     title: Measured for you, stored with the host you choose.
-    lead: Villow uses viewing measurements to show patterns and support your choices. Run your own private Villow or join someone you trust. Hosting access, member sharing and voluntary feedback are different things.
+    lead: Villow uses viewing measurements to show patterns and support your choices. Run your own private Villow or join someone you trust. Hosting access, member sharing and responses to check-ins are different things.
 
   - type: section
     id: where-your-data-lives
@@ -47,8 +47,8 @@ blocks:
 
   - type: section
     id: feedback
-    heading: Feedback you choose to submit
-    body: Optional surveys are hosted on Tally and send your submitted answers to Fix the Web. Links use a separate participant code rather than your name or email. Your installation's private viewing measurements aren't automatically submitted. Feedback helps test the design; it isn't proof of a wellbeing outcome.
+    heading: Required check-ins and optional feedback
+    body: First-use, two-week and three-month check-ins are required; the separate Feedback page and supporter messages are optional. Tally hosts the forms and receives a participant code when an embedded form loads. Your operator can link that code to your account, and completion dates are saved. Submitted answers go to the project operator. Your installation's private viewing measurements aren't automatically uploaded with the survey. See the [app policy](link:appPrivacy) for details.
 
   - type: section
     id: ads
@@ -59,7 +59,7 @@ blocks:
   - type: section
     id: leaving
     heading: Leaving or deleting data
-    body: Ask the owner about stored data. Admin controls can revoke another member and separately delete that revoked member's data. Logging out or revoking Google access doesn't itself erase the database. General retention, backups and minimum age still need completion in the draft app policy.
+    body: Logging out, disconnecting an extension, revoking Google access and deleting an account have different effects. The [app policy](link:appPrivacy) explains the current controls and cleanup requirements. Your operator is responsible for the installation's stored records, scheduled cleanup and provider backups. The connected app is for people aged 16 or older.
     actions:
       - label: Owner guide →
         href: /running-villow#leaving
@@ -68,7 +68,7 @@ blocks:
   - type: section
     id: this-website
     heading: This website
-    body: The site's source includes no analytics, cookie-setting code or third-party embeds. Assets are served with the site. Cloudflare hosts it and may process requests or provide network diagnostics under its own configuration; the app and extension have separate data flows. The [website privacy policy](link:sitePrivacy) covers this, and what the support page stores if you contribute.
+    body: The site adds no analytics or advertising trackers. Cloudflare handles page and support-service requests. Contact messages are delivered through Resend, Stripe processes support payments, and optional Discord linking uses an identity/role connection and a temporary security cookie. The [website privacy policy](link:sitePrivacy) explains these records, public-sharing choices and removal options.
 
   - type: cards
     id: policies
@@ -76,10 +76,10 @@ blocks:
     items:
       - title: Villow app privacy policy · Draft
         href: link:appPrivacy
-        body: Google permissions, hosting, device storage, social and task data. Retention, minimum age and effective date still need completion.
+        body: Google permissions, hosting, device storage, social and task data, retention and deletion. Includes the connected app's 16+ rule. This local revision is not yet effective.
       - title: Villow extension privacy policy
         href: link:extensionPrivacy
         body: Saved videos, local records, daily counts and settings synchronization with the instance you choose.
       - title: Website privacy policy
         href: link:sitePrivacy
-        body: Hosting, the support page's payment and supporter records, and email.
+        body: Hosting, contact messages, payment and public supporter records, and optional Discord linking.

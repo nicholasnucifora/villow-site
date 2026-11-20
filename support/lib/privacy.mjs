@@ -48,7 +48,7 @@ export async function confirmRemoval(db, project, token, now = nowSeconds()) {
     db.prepare(`INSERT INTO suppressions(project, email_hash, removed_at) SELECT project, email_hash, ? FROM removal_tokens
       WHERE token_hash = ? AND project = ? AND used_at IS NULL AND expires_at > ?
       ON CONFLICT(project, email_hash) DO NOTHING`).bind(now, hash, project, now),
-    db.prepare(`UPDATE contributions SET consent = 0, display_name = NULL, message = NULL, removed_at = ?
+    db.prepare(`UPDATE contributions SET consent = 0, display_name = NULL, message = NULL, censored_name = NULL, censored_message = NULL, removed_at = ?
       WHERE project = ? AND email_hash IN (${valid})`).bind(now, project, hash, project, now),
     db.prepare(`UPDATE removal_tokens SET used_at = ? WHERE project = ? AND email_hash IN (${valid})`).bind(now, project, hash, project, now),
   ]);

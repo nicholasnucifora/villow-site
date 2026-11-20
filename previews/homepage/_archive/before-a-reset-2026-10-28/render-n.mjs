@@ -1,0 +1,25 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {studyNavigation} from './study-navigation.mjs';
+import {renderMOverview} from './m-overview.mjs';
+import {renderNOverview} from './n-overview.mjs';
+
+const baselinePath=new URL('./m.html',import.meta.url);
+const baseline=await readFile(baselinePath,'utf8'),previous=renderMOverview();
+if(baseline.split(previous).length!==2)throw new Error('Expected exactly one M overview. Baseline was not changed.');
+let next=baseline.replace(previous,renderNOverview());
+next=next.replace(/<!-- study-navigation:start -->[\s\S]*?<!-- study-navigation:end -->/,studyNavigation('n'));
+next=next.replace('<title>Villow · M · Spacious overview</title>','<title>Villow · N · Stack and viewing</title>');
+next=next.replace('class="version-i version-m"','class="version-i version-n"');
+next=next.replace('href="m.html" aria-label="Villow home"','href="n.html" aria-label="Villow home"');
+next=next.replace('<link rel="stylesheet" href="m-overview.css">','<link rel="stylesheet" href="i-feed-save.css"><link rel="stylesheet" href="n-overview.css">');
+next=next.replace('<script type="module" src="m-overview.js"></script><script type="module" src="m-feed.js"></script><script type="module" src="m-insights.js"></script>','<script type="module" src="n-overview.js"></script><script type="module" src="n-feed.js"></script><script type="module" src="n-insights.js"></script>');
+next=next.replace('Villow · M · Spacious overview','Villow · N · Stack and viewing');
+const hero=html=>html.slice(html.indexOf('<main id="main">'),html.indexOf('<section class="i-following"'));
+const social=html=>html.slice(html.indexOf('<section class="ics-company"'),html.indexOf('<footer class="i-preview-note'));
+if(hero(next)!==hero(baseline))throw new Error('Cloud cinema changed unexpectedly.');
+if(social(next)!==social(baseline))throw new Error('Social changed unexpectedly.');
+if((next.match(/data-ifs-demo/g)||[]).length!==1)throw new Error('Expected one combined feed demonstration.');
+await writeFile(new URL('./n.html',import.meta.url),next);
+if(await readFile(baselinePath,'utf8')!==baseline)throw new Error('M baseline changed unexpectedly.');
+console.log(`Rendered N: http://127.0.0.1:4399/n.html#your-choices\nM baseline preserved: ${createHash('sha256').update(baseline).digest('hex')}`);

@@ -1,0 +1,341 @@
+/* N: a quieter editorial introduction with two compact product examples. */
+.version-n-story .it-l{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(40px,7vw,90px);align-items:center;max-width:1090px;margin:52px auto 0;padding:42px 48px;border:0;border-radius:20px;background:#e9f1e8}
+.version-n-story .it-l-header{text-align:left}
+.version-n-story .it-l-header h2{max-width:360px;font-size:clamp(33px,3.4vw,42px)}
+.version-n-story .it-l-header p{max-width:370px;margin:16px 0 0;font-size:14px;line-height:1.8}
+.version-n-story .it-l-columns{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin:0;max-width:none}
+.version-n-story .it-l-ratings,.version-n-story .it-l-suggest{padding:20px 24px;background:#fffefb;border-radius:13px;box-shadow:0 8px 24px #3557440a}
+.version-n-story .it-l-ratings .it-chart{margin-top:10px}
+.version-n-story .it-l-ratings .it-plot{height:120px}
+.version-n-story .it-l-suggest .it-suggestion{margin-top:12px}
+.version-n-story .it-l-suggest .it-avatar{width:42px;height:42px}
+.version-n-story .it-suggestion h3{font-size:16px;line-height:1.35;margin-top:9px}
+.version-n-story .it-suggestion p{font-size:12px;margin-top:5px}
+.version-n-story .it-actions{margin-top:10px}
+.version-n-story .m-suggestion-complete{min-height:145px;margin-top:9px}
+.version-n-story .m-complete-art{width:106px;height:67px}
+.version-n-story .m-plot-detail{z-index:4}
+/* A shared social chapter, with each feature getting its own small example. */
+.version-n-story .n-social{padding:48px 0 46px;background:#f5eae4;color:#254e43}
+.version-n-story .n-social-inner{max-width:1090px}
+.version-n-story .n-social-header h2{margin:0;font:400 clamp(32px,3.6vw,41px)/1.2 'Varela Round',sans-serif;letter-spacing:-.04em}
+.version-n-story .n-social-header p{margin:11px 0 0;max-width:560px;color:#5b7467;font:14px/1.75 system-ui,sans-serif}
+.version-n-story .n-social-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.version-n-story .n-social-card{min-width:0;padding:20px;border-radius:15px;background:#f0ddd3;scroll-margin-top:90px}
+.version-n-story .n-social-card h3{margin:16px 0 7px;font:400 19px/1.3 'Varela Round',sans-serif;letter-spacing:-.02em;color:#254e43}
+.version-n-story .n-social-card>p{margin:0;max-width:430px;color:#5b7467;font:13px/1.7 system-ui,sans-serif}
+.version-n-story .n-social-visual{min-height:96px;display:flex;align-items:center;gap:12px;padding:12px;background:#fffefa;border-radius:11px;box-sizing:border-box}
+.version-n-story .n-share-visual>img{width:95px;height:66px;object-fit:cover;border-radius:7px;flex:none}
+.version-n-story .n-share-detail{min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:3px;color:#577063;font:10px/1.35 system-ui,sans-serif}
+.version-n-story .n-share-detail strong{color:#284b40;font-size:11px;line-height:1.3;font-weight:600}
+.version-n-story .n-share-detail .n-note{margin-top:2px;padding:5px 8px;transform:rotate(-2deg);border-radius:3px;background:#f7edc9;color:#6c7452;font:11px/1.25 'Varela Round',sans-serif}
+.version-n-story .n-together-people{display:flex;align-items:center;flex:none;padding-left:5px}
+.version-n-story .n-person{display:block;width:32px;height:32px;border:2px solid #fffefa;border-radius:50%;background-image:url('assets/e-shared-friends-looking-at-video.webp');background-size:680% auto;box-sizing:border-box}
+.version-n-story .n-person-you{background-position:7% 28%}.version-n-story .n-person-alex{margin-left:-6px;background-position:92% 28%}
+.version-n-story .n-together-copy{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px;color:#648071;font:10px/1.35 system-ui,sans-serif}
+.version-n-story .n-together-copy strong{color:#2e5745;font-size:12px}
+.version-n-story .n-together-visual>img{width:84px;height:56px;flex:none;object-fit:cover;border-radius:7px;background:#dcebdd}
+.version-n-story .n-devices{display:flex;align-items:center;gap:22px;margin-top:16px;padding:13px 24px;background:#fffefa;border-radius:14px;scroll-margin-top:90px}
+.version-n-story .n-devices img{display:block;flex:none;width:135px;height:68px;object-fit:contain}
+.version-n-story .n-devices h3{margin:0;color:#2d5747;font:400 17px/1.35 'Varela Round',sans-serif}
+.version-n-story .n-devices p{margin:4px 0 0;color:#5d786b;font:12px/1.6 system-ui,sans-serif}
+.version-n-story .fs-closing h2{font-size:clamp(39px,4.8vw,58px)}
+@media(max-width:800px){.version-n-story .it-l{gap:30px;padding:35px 30px}.version-n-story .n-social-card{padding:16px}.version-n-story .n-social-visual{gap:8px;padding:10px}.version-n-story .n-share-visual>img{width:76px}.version-n-story .n-together-visual>img{width:64px}}
+@media(max-width:650px){.version-n-story .it-l{grid-template-columns:1fr;gap:23px;margin-top:32px;padding:27px 22px}.version-n-story .it-l-header h2{font-size:32px}.version-n-story .it-l-header p{font-size:14px;margin-top:10px}.version-n-story .it-l-columns{gap:12px}.version-n-story .it-l-ratings,.version-n-story .it-l-suggest{padding:18px}.version-n-story .it-l-ratings .it-plot{height:125px}.version-n-story .n-social{padding:38px 0}.version-n-story .n-social-header h2{font-size:31px}.version-n-story .n-social-cards{grid-template-columns:1fr;gap:12px;margin-top:20px}.version-n-story .n-social-card{padding:16px}.version-n-story .n-social-card h3{font-size:18px;margin-top:14px}.version-n-story .n-share-visual>img{width:86px}.version-n-story .n-together-visual>img{width:78px}.version-n-story .n-devices{gap:12px;margin-top:12px;padding:12px 15px}.version-n-story .n-devices img{width:92px;height:62px}.version-n-story .n-devices h3{font-size:15px}.version-n-story .n-devices p{font-size:11px;line-height:1.5}.version-n-story .fs-closing h2{font-size:37px}}
+@media(max-width:360px){.version-n-story .n-together-visual>img{width:56px}.version-n-story .n-share-visual>img{width:68px}.version-n-story .n-devices img{width:76px}.version-n-story .fs-closing h2{font-size:33px}}
+/* The insight chapter is a continuous, full-width section. */
+.version-n-story .it-l{position:relative;isolation:isolate;background:transparent;border-radius:0;padding-block:50px;margin-top:52px}
+.version-n-story .it-l::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:#e9f1e8}
+/* Navigation stays useful without covering the page while scrolling down. */
+.version-n-story .i-header{position:sticky;top:0;z-index:20;width:100%;max-width:none;height:78px;padding:0 max(20px,calc((100vw - 1090px)/2));box-sizing:border-box;background:#f9faf4;transition:transform .24s ease,box-shadow .24s ease}
+.version-n-story .i-header.n-header-hidden{transform:translateY(-110%);pointer-events:none}
+.version-n-story .i-header:focus-within{transform:none;pointer-events:auto}
+.version-n-story .n-header-nav{display:flex;align-items:center;gap:28px}
+.version-n-story .n-header-nav>a{font:500 13px/1.3 system-ui,sans-serif;color:#315b4d;text-decoration:none}
+.version-n-story .n-header-nav>a:not(.n-header-cta):hover{text-decoration:underline;text-underline-offset:4px}
+.version-n-story .n-header-nav .n-header-cta{padding:12px 20px;border-radius:100px;background:#244f3d;color:#fff;font-weight:600}
+.version-n-story .n-header-nav .n-header-cta:hover{background:#346749}
+.version-n-story .n-header-nav a:focus-visible{outline:2px solid #5d8b6d;outline-offset:4px}
+/* One warm social surface: no colored cards inside other colored cards. */
+.version-n-story .n-social-card{padding:0;background:transparent;border-radius:0}
+.version-n-story .n-social-cards{gap:clamp(32px,5vw,70px);margin-top:28px}
+.version-n-story .n-social-visual{height:122px;min-height:0;padding:0;background:transparent;border-radius:0}
+.version-n-story .n-share-visual{align-items:flex-start;padding:0 0 14px}
+.version-n-story .n-video-card{position:relative;display:flex;align-items:center;gap:12px;width:100%;max-width:390px;min-height:94px;padding:12px;border-radius:11px;background:#fffefa;box-shadow:0 8px 20px #704f3810;box-sizing:border-box}
+.version-n-story .n-video-card>img{width:105px;height:66px;object-fit:cover;border-radius:6px;flex:none}
+.version-n-story .n-video-card .n-share-detail{padding-bottom:15px}
+.version-n-story .n-video-card .n-note{position:absolute;right:12px;bottom:-13px;margin:0;padding:8px 13px;transform:rotate(2deg);border-radius:2px;background:#f5edce;color:#617052;box-shadow:0 3px 7px #826e3717;font-size:12px}
+.version-n-story .n-video-card .n-note::before{content:"";position:absolute;top:-5px;left:42%;width:31px;height:9px;background:#d9e3c9ad;transform:rotate(-7deg)}
+.version-n-story .n-together-visual{display:flex;flex-direction:column;align-items:stretch;justify-content:center;gap:9px;width:100%;max-width:390px;height:108px;padding:12px 15px;background:#fffefa;border-radius:11px;box-shadow:0 8px 20px #704f3810;box-sizing:border-box}
+.version-n-story .n-together-top{display:flex;align-items:center;gap:10px}
+.version-n-story .n-together-copy{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:8px}
+.version-n-story .n-together-copy span{color:#4f8061;font-weight:600}
+.version-n-story .n-shared-queue{display:flex;align-items:center;gap:10px;color:#648071;font:11px/1.35 system-ui,sans-serif}
+.version-n-story .n-shared-queue img{width:55px;height:34px;object-fit:cover;border-radius:5px;background:#dcebdd}
+.version-n-story .n-shared-queue div{display:flex;flex-direction:column;gap:2px}
+.version-n-story .n-shared-queue strong{font-weight:600;color:#315f4a}
+.version-n-story .n-social-card h3{margin-top:17px}
+.version-n-story .n-devices{justify-content:center;gap:22px;max-width:730px;margin:35px auto 0;padding:0;background:transparent;border-radius:0}
+.version-n-story .n-devices img{width:135px;height:73px}
+/* Make the comparison choices easier to read. */
+.version-n-story .l-topic-tab{font-size:14px;min-width:92px}
+.version-n-story .l-topic-icon{width:62px;height:62px}
+.version-n-story .l-topic-icon svg{width:27px;height:27px}
+/* A simple settings trail communicates depth without ambiguous chevrons. */
+.version-n-story .n-settings-path{display:flex;align-items:center;justify-content:center;gap:22px;width:100%;color:#90745b}
+.version-n-story .n-settings-phone{width:68px;height:113px;flex:none;padding:7px;border:4px solid #d7c7b5;border-radius:11px;background:#fbf5ea;box-sizing:border-box}
+.version-n-story .n-phone-screen{height:100%;padding:9px 4px;background:#f2e8da;border-radius:4px;box-sizing:border-box}
+.version-n-story .n-phone-screen span{display:block;height:4px;margin-bottom:8px;border-radius:2px;background:#dfd2c1}
+.version-n-story .n-phone-screen span:first-child{height:30px;background:#e7d9c8}
+.version-n-story .n-settings-trail{display:flex;flex-direction:column;align-items:flex-start;gap:6px;font:11px/1.25 system-ui,sans-serif}
+.version-n-story .n-settings-trail strong{font:400 15px/1.25 'Varela Round',sans-serif;color:#8a6044}
+.version-n-story .n-settings-trail span:nth-child(2){padding-left:9px}
+.version-n-story .n-settings-trail span:nth-child(3){padding-left:18px}
+.version-n-story .n-settings-trail b{margin-left:27px;padding:5px 8px;border-radius:5px;background:#e9d9c6;color:#7e5d43;font-weight:600}
+.version-n-story .n-popularity{display:flex;flex-direction:column;gap:13px;width:min(100%,220px);margin:auto;color:#896a53}
+.version-n-story .n-popularity-profile{display:flex;align-items:center;gap:10px;text-align:left}
+.version-n-story .n-popularity-avatar{width:43px;height:43px;flex:none;border-radius:50%;background:#eadbcb url('assets/e-shared-friends-looking-at-video.webp') 7% 28% / 680% auto no-repeat}
+.version-n-story .n-popularity-profile strong,.version-n-story .n-popularity-profile small{display:block}
+.version-n-story .n-popularity-profile strong{font:600 12px/1.3 system-ui,sans-serif}
+.version-n-story .n-popularity-profile small{margin-top:3px;color:#a58b75;font:11px/1.3 system-ui,sans-serif}
+.version-n-story .n-popularity-counts{display:flex;gap:16px;color:#967860;font:11px/1.3 system-ui,sans-serif}
+.version-n-story .n-popularity-counts span{display:flex;align-items:center;gap:5px;white-space:nowrap}
+.version-n-story .n-popularity-counts svg{width:16px;height:16px;color:#b28060}
+.version-n-story .n-popularity-counts b{font-weight:650;color:#805e47}
+@media(max-width:650px){.version-n-story .it-l{padding-block:33px;margin-top:32px}.version-n-story .i-header{height:66px}.version-n-story .n-header-nav{gap:14px}.version-n-story .n-header-nav>a:not(.n-header-cta){font-size:12px}.version-n-story .n-header-nav .n-header-cta{padding:10px 14px}.version-n-story .n-social-cards{gap:28px}.version-n-story .n-social-card{padding:0}.version-n-story .n-video-card>img{width:85px}.version-n-story .n-devices{margin-top:34px;padding:0}.version-n-story .n-devices img{width:92px}.version-n-story .l-topic-tab{min-width:0;font-size:12px}.version-n-story .l-topic-icon{width:52px;height:52px}.version-n-story .l-topic-icon svg{width:23px;height:23px}}
+@media(max-width:420px){.version-n-story .n-header-nav>a:not(.n-header-cta){display:none}.version-n-story .n-header-nav .n-header-cta{font-size:12px}.version-n-story .n-together-copy{font-size:10px}.version-n-story .n-video-card>img{width:72px}.version-n-story .n-devices img{width:80px}.version-n-story .l-topic-tab{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.version-n-story .i-header{transition:none}}
+@media(max-width:420px){.version-n-story .l-topic-tab{font-size:12px}}
+/* Keep the insight and social sections touching, with no intervening page strip. */
+.version-n-story .i-following{padding-bottom:0}
+/* Let the hero color show through until the floating header is needed. */
+.version-n-story .i-header{background:transparent}
+.version-n-story .i-header.n-header-scrolled{background:#f9faf4;box-shadow:0 3px 16px #2c4b3210}
+/* The tooltip stays concise; the chart's accessible description retains its definition. */
+.version-n-story .m-plot-detail span,.version-n-story .m-plot-detail small{display:none}
+.version-n-story .m-plot-detail{padding:7px 10px;min-width:0}
+/* Three clear steps: profile, settings, then the nested destination. */
+.version-n-story .n-settings-path{gap:9px}
+.version-n-story .n-path-profile,.version-n-story .n-path-settings{display:flex;flex-direction:column;align-items:center;gap:6px;flex:none;color:#92745b;font:11px/1.2 system-ui,sans-serif}
+.version-n-story .n-path-profile-icon,.version-n-story .n-path-cog{display:grid;place-items:center;width:39px;height:39px;border-radius:50%;background:#e5d8c8;color:#8d6c51}
+.version-n-story .n-path-profile-icon svg,.version-n-story .n-path-cog svg{width:21px;height:21px}
+.version-n-story .n-path-next{color:#b69c85;font:17px/1 system-ui,sans-serif}
+.version-n-story .n-settings-trail{gap:6px}
+.version-n-story .n-settings-trail strong{font-size:13px}
+.version-n-story .n-settings-trail span:nth-child(2){padding-left:8px}
+.version-n-story .n-settings-trail b{margin-left:16px}
+/* A recommendation is a compact card with its note in the same layout. */
+.version-n-story .n-video-card{display:grid;grid-template-columns:84px minmax(0,1fr) minmax(78px,.8fr);gap:10px;align-items:center;min-height:96px}
+.version-n-story .n-video-card>img{width:84px;height:60px}
+.version-n-story .n-video-card .n-share-detail{padding:0;gap:5px}
+.version-n-story .n-video-card .n-note{position:static;transform:none;box-shadow:none;background:#f6eed9;padding:8px;font-size:11px;line-height:1.35}
+.version-n-story .n-video-card .n-note::before{display:none}
+/* Neutral portraits face forwards; the shared queue remains alongside them. */
+.version-n-story .n-together-visual{flex-direction:row;align-items:center;justify-content:space-between;gap:14px}
+.version-n-story .n-together-top{flex:1;min-width:0;gap:8px}
+.version-n-story .n-together-copy{flex-direction:column;align-items:flex-start;justify-content:center;gap:4px}
+.version-n-story .n-together-copy span{font-weight:500}
+.version-n-story .n-together-people{padding-left:0}
+.version-n-story .n-person{position:relative;background-image:none;overflow:hidden}
+.version-n-story .n-person::before{content:"";position:absolute;width:9px;height:9px;top:6px;left:50%;transform:translateX(-50%);border-radius:50%;background:#f3d1ad}
+.version-n-story .n-person::after{content:"";position:absolute;width:20px;height:13px;bottom:1px;left:50%;transform:translateX(-50%);border-radius:12px 12px 6px 6px;background:#628d71}
+.version-n-story .n-person-you{background-color:#d8e6d4}
+.version-n-story .n-person-alex{background-color:#efddca}
+.version-n-story .n-person-alex::after{background:#bf8b71}
+.version-n-story .n-shared-queue{flex:none}
+@media(max-width:420px){.version-n-story .n-settings-path{gap:5px}.version-n-story .n-path-profile-icon,.version-n-story .n-path-cog{width:34px;height:34px}.version-n-story .n-path-profile,.version-n-story .n-path-settings{font-size:10px}.version-n-story .n-path-next{font-size:14px}.version-n-story .n-settings-trail{font-size:10px}.version-n-story .n-video-card{grid-template-columns:58px minmax(0,1fr) minmax(67px,.8fr);gap:7px}.version-n-story .n-video-card>img{width:58px;height:52px}.version-n-story .n-video-card .n-note{padding:6px;font-size:10px}.version-n-story .n-together-visual{gap:6px;padding-inline:10px}.version-n-story .n-together-copy strong{font-size:11px}.version-n-story .n-together-copy span{font-size:10px}.version-n-story .n-shared-queue img{width:45px}}
+@media(min-width:651px){.version-n-story .n-video-card{max-width:430px;grid-template-columns:84px minmax(0,1fr) minmax(110px,.8fr)}}
+/* Extend the time axis beneath the full chart, with a lighter stroke. */
+.version-n-story .it-l-ratings .it-time{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:9px;width:calc(100% - 37px);margin-left:37px}
+.version-n-story .it-l-ratings .it-time svg{width:100%;height:12px;stroke-width:1.05}
+.version-n-story .it-l-ratings .it-time svg path{vector-effect:non-scaling-stroke}
+/* A small, neutral device group stays legible against the warm section. */
+.version-n-story .n-device-icons{display:block;flex:none;width:135px;height:68px}
+@media(max-width:650px){.version-n-story .n-device-icons{width:92px;height:62px}}
+@media(max-width:420px){.version-n-story .n-device-icons{width:80px;height:58px}}
+/* A quiet, static ratings chart: the line is the example, not a control. */
+.version-n-story .n-static-plot .it-y-bottom{grid-column:1;grid-row:3;align-self:end}
+.version-n-story .it-l-ratings .it-time svg path{stroke-width:1;vector-effect:non-scaling-stroke}
+.version-n-story .it-l-ratings .it-time .n-axis-head{opacity:.8}
+/* Title, sender and message form one compact recommendation. */
+.version-n-story .n-video-card{grid-template-columns:84px minmax(0,1fr);max-width:430px}
+.version-n-story .n-video-card .n-share-detail{gap:3px}
+.version-n-story .n-video-card .n-note{padding:3px 0 0;background:transparent;color:#6d806e;font-size:11px}
+/* Keep the people together and make the queue a small vertical preview. */
+.version-n-story .n-together-visual{height:122px}
+.version-n-story .n-shared-queue{flex-direction:column;align-items:flex-start;gap:4px;min-width:85px}
+.version-n-story .n-shared-queue img{width:73px;height:40px}
+.version-n-story .n-shared-queue div{flex-direction:row;gap:5px;align-items:baseline;white-space:nowrap}
+.version-n-story .n-shared-queue strong,.version-n-story .n-shared-queue span{font-size:10px}
+.version-n-story .n-person-you{background-color:#d8e6d4}
+.version-n-story .n-person-alex{background-color:#e2e9e1}
+.version-n-story .n-person-alex::after{background:#8c9b8b}
+/* Three small screens make continuity visible without a full device illustration. */
+.version-n-story .n-device-visual{position:relative;display:block;flex:none;width:145px;height:76px}
+.version-n-story .n-devices .device-landscape-art{display:block;flex:none;width:164px;height:82px;object-fit:contain}
+.device-feed-art{position:relative;flex:none;width:162px;height:76px;color:#4e6e63}
+.device-feed-laptop,.device-feed-tablet,.device-feed-phone{position:absolute;bottom:7px;display:block;box-sizing:border-box;border:2px solid currentColor;background:#fffdf6;box-shadow:0 3px 7px #36583c13}
+.device-feed-laptop{left:3px;width:89px;height:52px;padding:3px;border-radius:5px 5px 2px 2px}
+.device-feed-laptop::after{content:'';position:absolute;left:-5px;right:-5px;bottom:-5px;height:3px;border-radius:0 0 6px 6px;background:currentColor}
+.device-feed-tablet{left:96px;width:39px;height:54px;padding:3px;border-radius:5px}
+.device-feed-phone{right:0;width:23px;height:39px;padding:2px;border-radius:5px}
+.device-feed-screen{position:relative;display:block;height:100%;border-radius:2px;background:#e7efe3}
+.device-feed-screen::before{content:'';position:absolute;left:14%;top:11%;width:33%;height:2px;border-radius:99px;background:#799486}
+.device-feed-screen::after{content:'';position:absolute;inset:24% 12% 15%;border-radius:2px;background:#c2bdab url('assets/shared-video-stair-cat.webp') center 70%/cover no-repeat}
+.device-feed-laptop .device-feed-screen::after{left:29%;right:9%}
+.version-n-story .n-mini-laptop,.version-n-story .n-mini-tablet,.version-n-story .n-mini-phone{position:absolute;box-sizing:border-box;background:#769180;box-shadow:0 3px 8px #36583c18}
+.version-n-story .n-mini-laptop{left:0;bottom:10px;width:94px;height:57px;padding:4px;border-radius:5px}
+.version-n-story .n-mini-base{position:absolute;left:-5px;right:-5px;bottom:-6px;height:5px;background:#9db3a0;border-radius:1px 1px 6px 6px}
+.version-n-story .n-mini-tablet{left:88px;bottom:8px;width:40px;height:47px;padding:3px;border-radius:5px}
+.version-n-story .n-mini-phone{left:120px;bottom:7px;width:23px;height:37px;padding:3px;border-radius:5px}
+.version-n-story .n-mini-screen{display:block;width:100%;height:100%;border-radius:2px;background:#edf3eb}
+@media(max-width:650px){.version-n-story .n-device-visual{width:112px;height:66px;transform:scale(.78);transform-origin:left center;margin-right:-25px}.version-n-story .n-together-visual{height:122px}.version-n-story .n-shared-queue img{width:65px;height:37px}}
+@media(max-width:420px){.version-n-story .n-video-card{grid-template-columns:58px minmax(0,1fr);gap:9px}.version-n-story .n-video-card .n-note{font-size:10px;padding:2px 0 0}.version-n-story .n-shared-queue{min-width:75px}.version-n-story .n-shared-queue img{width:60px;height:34px}.version-n-story .n-shared-queue strong,.version-n-story .n-shared-queue span{font-size:9px}}
+@media(max-width:650px){.version-n-story .n-device-visual{width:145px;margin-right:-32px}}
+/* Use the same ringed people in the room and the shared-usage chart. */
+.version-n-story .n-together-people{gap:4px}
+.version-n-story .n-person{background-image:url('assets/e-shared-friends-looking-at-video.webp');background-size:680% auto;background-repeat:no-repeat}
+.version-n-story .n-person::before,.version-n-story .n-person::after{display:none}
+.version-n-story .n-person-you{background-position:7% 28%;border-color:#679775}
+.version-n-story .n-person-alex{background-position:92% 28%;border-color:#bb846d;margin-left:0}
+/* Match the ratings chart's full-width time axis. */
+.version-n-story .m-shared-axis{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:6px;margin-top:5px;padding-left:36px;color:#758d79}
+.version-n-story .m-shared-axis svg{display:block;width:100%;height:10px;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
+.version-n-story .m-shared-axis svg path{vector-effect:non-scaling-stroke}
+.version-n-story .m-shared-axis .n-axis-head{opacity:.8}
+/* A tiny app, its opened profile menu, then the separate settings page. */
+.version-n-story .n-detour{display:grid;grid-template-columns:minmax(38px,60px) 10px minmax(57px,90px) 10px minmax(90px,130px);gap:4px;align-items:center;justify-content:center;width:100%;max-width:318px;margin:auto;color:#8b6c52}
+.version-n-story .n-detour-app{position:relative;height:112px;min-width:0;padding:6px;border:3px solid #d7c7b5;border-radius:8px;background:#fff9f0;box-sizing:border-box}
+.version-n-story .n-detour-appbar{display:flex;align-items:center;justify-content:space-between;gap:2px;font:600 8px/1 system-ui,sans-serif}
+.version-n-story .n-detour-profile{display:grid;place-items:center;width:18px;height:18px;flex:none;border-radius:50%;background:#e4d4c2;color:#8a664a}
+.version-n-story .n-detour-profile svg{width:13px;height:13px}
+.version-n-story .n-detour-cursor{position:absolute;right:0;top:14px;width:16px;height:16px;fill:#8a664a;stroke:#fff9f0;stroke-width:1.3;stroke-linejoin:round}
+.version-n-story .n-detour-video{height:40px;margin-top:7px;border-radius:4px;background:#e8dac9}
+.version-n-story .n-detour-app>i{display:block;width:90%;height:3px;margin-top:6px;border-radius:2px;background:#e7dacc}
+.version-n-story .n-detour-app>i:last-child{width:55%}
+.version-n-story .n-detour-arrow{font:14px/1 system-ui,sans-serif;color:#b19a83;text-align:center}
+.version-n-story .n-detour-menu,.version-n-story .n-detour-settings{display:flex;flex-direction:column;gap:6px;min-width:0;min-height:100px;padding:9px 7px;border-radius:8px;background:#fff9f0;box-sizing:border-box;font:10px/1.2 system-ui,sans-serif}
+.version-n-story .n-detour-menu>strong,.version-n-story .n-detour-settings>strong{font:600 10px/1.25 system-ui,sans-serif;color:#805e45}
+.version-n-story .n-detour-menu>span{color:#a18b77}
+.version-n-story .n-detour-menu>b,.version-n-story .n-settings-trail>b{padding:5px 6px;border-radius:5px;background:#ead9c5;color:#805d43;font:600 10px/1.2 system-ui,sans-serif}
+.version-n-story .n-detour-settings .n-settings-trail{display:flex;flex-direction:column;align-items:flex-start;gap:6px;font:10px/1.2 system-ui,sans-serif}
+.version-n-story .n-detour-settings .n-settings-trail span{padding:0!important}
+.version-n-story .n-detour-settings .n-settings-trail b{margin:0}
+@media(max-width:420px){.version-n-story .n-detour{gap:3px;grid-template-columns:minmax(38px,60px) 9px minmax(57px,90px) 9px minmax(88px,130px)}.version-n-story .n-detour-menu,.version-n-story .n-detour-settings{padding:8px 5px;font-size:9px}.version-n-story .n-detour-menu>strong,.version-n-story .n-detour-settings>strong,.version-n-story .n-detour-settings .n-settings-trail,.version-n-story .n-detour-menu>b,.version-n-story .n-settings-trail>b{font-size:9px}}
+/* At the top the header belongs to the normal page flow; it floats only on return. */
+.version-n-story .n-header-slot{height:78px}
+.version-n-story .n-header-slot .i-header{position:relative;top:auto}
+.version-n-story .n-header-slot .i-header.n-header-floating{position:fixed;top:0;left:0}
+@media(max-width:650px){.version-n-story .n-header-slot{height:66px}}
+/* Alex faces right in both the room and the viewing examples. */
+.version-n-story .n-person-alex,.version-n-story .m-shared-legend .m-avatar-alex,.version-n-story .it-avatar.m-alex-photo{transform:scaleX(-1)}
+/* Match the two compact social examples and align their second rows. */
+.version-n-story .n-share-visual{padding:0}
+.version-n-story .n-video-card,.version-n-story .n-together-visual{width:100%;max-width:430px;height:122px;min-height:122px;box-sizing:border-box}
+.version-n-story .n-together-visual{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.version-n-story .n-together-left{display:grid;grid-template-rows:55px 18px;gap:5px;min-width:0}
+.version-n-story .n-together-top{display:flex;align-items:center;gap:8px;font:600 12px/1.3 system-ui,sans-serif;color:#2e5745}
+.version-n-story .n-together-status{font:600 12px/18px system-ui,sans-serif;color:#4f8061;white-space:nowrap}
+.version-n-story .n-shared-queue{display:grid;grid-template-rows:55px 18px;gap:5px;align-items:center;min-width:94px}
+.version-n-story .n-shared-queue img{width:94px;height:55px;object-fit:cover}
+.version-n-story .n-shared-queue div{height:18px;align-items:center}
+.version-n-story .n-video-card .n-note{display:inline-block;padding:4px 7px;border-radius:4px;background:#f8edcc;color:#705f3d;font-size:11px;line-height:1.35}
+/* Give the illustration and shared-usage chart more room within their cells. */
+.version-n-story .m-streak-picture img{height:145px;max-width:300px}
+.version-n-story .m-streak-picture-villow img{height:150px;max-width:350px}
+.version-n-story .m-shared-chart{max-width:350px}
+.version-n-story .m-shared-plot svg{height:90px}
+.version-n-story .n-axis-head{opacity:1!important}
+@media(max-width:600px){.version-n-story .m-streak-picture img{height:130px}.version-n-story .m-streak-picture-villow img{height:140px}.version-n-story .m-shared-plot svg{height:77px}.version-n-story .n-video-card,.version-n-story .n-together-visual{height:122px;min-height:122px}}
+@media(max-width:420px){.version-n-story .n-together-visual{gap:6px}.version-n-story .n-together-top{gap:5px;font-size:11px}.version-n-story .n-together-status{font-size:11px}.version-n-story .n-shared-queue{min-width:80px}.version-n-story .n-shared-queue img{width:80px;height:55px}.version-n-story .n-video-card .n-note{padding:4px 6px;font-size:10px}}
+/* A compact, readable suggestion with the channel beside its details. */
+.version-n-story .it-l-suggest{align-items:stretch;justify-content:center;text-align:left;min-height:190px}
+.version-n-story .it-l-suggest .it-l-label{text-align:left}
+.version-n-story .it-l-suggest .it-suggestion{display:grid;grid-template-columns:42px minmax(0,1fr);grid-template-rows:auto auto auto auto;column-gap:12px;row-gap:5px;align-items:start;margin-top:12px;text-align:left}
+.version-n-story .it-l-suggest .it-source{display:contents}
+.version-n-story .it-l-suggest .it-avatar{grid-column:1;grid-row:1 / span 4;width:42px;height:42px}
+.version-n-story .it-l-suggest .it-source strong{grid-column:2;grid-row:1;color:#668070;font:600 11px/1.3 system-ui,sans-serif}
+.version-n-story .it-l-suggest .it-suggestion h3{grid-column:2;grid-row:2;max-width:none;margin:0;color:#315b45;font:400 16px/1.4 'Varela Round',sans-serif;letter-spacing:-.015em}
+.version-n-story .it-l-suggest .it-suggestion p{grid-column:2;grid-row:3;margin:0;color:#718776;font:12px/1.45 system-ui,sans-serif}
+.version-n-story .it-l-suggest .it-actions{grid-column:2;grid-row:4;justify-content:flex-start;gap:14px;margin-top:3px}
+.version-n-story .it-l-suggest .m-suggestion-complete{flex:1;min-height:0;max-width:none;margin-top:8px}
+.version-n-story .it-l-suggest .m-complete-art{width:82px;height:52px}
+.version-n-story .it-l-suggest .m-suggestion-complete h3{margin-top:3px;font-size:16px}
+.version-n-story .it-l-suggest .m-suggestion-complete p{margin-top:4px;font-size:11px}
+@media(max-width:420px){.version-n-story .it-l-suggest .it-suggestion{grid-template-columns:36px minmax(0,1fr);column-gap:10px}.version-n-story .it-l-suggest .it-avatar{width:36px;height:36px}.version-n-story .it-l-suggest .it-suggestion h3{font-size:15px}}
+@media(max-width:420px){.version-n-story .it-l-suggest .it-actions{gap:8px}.version-n-story .it-l-suggest .it-actions button{font-size:11px;white-space:nowrap}.version-n-story .it-l-suggest .it-actions button:first-child{padding:10px 8px}.version-n-story .it-l-suggest .it-actions button:last-child{padding:10px 0}}
+/* The channel line carries the suggestion label without a separate heading. */
+.version-n-story .it-l-suggest .it-suggestion{margin-top:0}
+.version-n-story .it-l-suggest .it-source strong{font-size:11px;color:#5f7867}
+.version-n-story .it-l-suggest .m-suggestion-complete{margin-top:0}
+/* Two lightly colored social cards on a calm, neutral section. */
+.version-n-story .n-social{background:#fbfaf3;padding:48px 0 46px}
+.version-n-story .n-social-header{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:34px;align-items:center}
+.version-n-story .n-social-header p{max-width:410px;margin:0;justify-self:end}
+.version-n-story .n-social-cards{gap:16px;margin-top:28px}
+.version-n-story .n-social-card{padding:20px;border-radius:15px;background:#f5e9e1}
+.version-n-story .n-social-card#watch-together{background:#e6f0f2}
+.version-n-story .n-social-card h3{margin-top:16px}
+.version-n-story .n-video-card,.version-n-story .n-together-visual{max-width:none}
+.version-n-story .n-devices{margin-top:26px}
+@media(max-width:650px){.version-n-story .n-social{padding:38px 0}.version-n-story .n-social-header{grid-template-columns:1fr;gap:10px}.version-n-story .n-social-header p{justify-self:start}.version-n-story .n-social-cards{gap:12px;margin-top:20px}.version-n-story .n-social-card{padding:16px}.version-n-story .n-devices{margin-top:28px}}
+@media(max-width:420px){.version-n-story .n-together-people{gap:2px}.version-n-story .n-together-people .n-person{width:28px;height:28px}.version-n-story .n-together-top strong{font-size:10px;white-space:nowrap}}
+/* A slightly larger graph takes the space of the removed overline. */
+.version-n-story .it-l-ratings .it-chart{margin-top:0}
+.version-n-story .it-l-ratings .it-plot{height:150px}
+/* A distinct, soft backdrop keeps the social chapter together. */
+.version-n-story .n-social{background:#f2eee6}
+.version-n-story .n-social-card{background:#f8e8df}
+.version-n-story .n-social-card#watch-together{background:#e4eff2}
+/* Compact previews, sharing a common height on larger screens. */
+.version-n-story .n-social-visual{height:76px;min-height:76px}
+.version-n-story .n-video-card,.version-n-story .n-together-visual{height:76px;min-height:76px;padding:9px 10px}
+.version-n-story .n-video-card{grid-template-columns:64px minmax(0,1fr);gap:10px}
+.version-n-story .n-video-card>img{width:64px;height:46px}
+.version-n-story .n-share-detail{gap:4px}
+.version-n-story .n-share-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.version-n-story .n-video-card .n-note{padding:3px 6px}
+.version-n-story .n-together-left{display:flex;align-items:center;gap:9px;min-width:0}
+.version-n-story .n-together-copy{display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+.version-n-story .n-together-copy strong{font:600 12px/1.25 system-ui,sans-serif;color:#2e5745}
+.version-n-story .n-together-copy span{font:11px/1.25 system-ui,sans-serif;color:#4f8061}
+.version-n-story .n-shared-queue{display:block;min-width:0;flex:none;color:#648071;font:10px/1.3 system-ui,sans-serif;white-space:nowrap}
+@media(max-width:650px){.version-n-story .it-l-ratings .it-plot{height:150px}}
+@media(max-width:420px){.version-n-story .n-social-visual{height:88px;min-height:88px}.version-n-story .n-video-card,.version-n-story .n-together-visual{height:88px;min-height:88px}.version-n-story .n-video-card{grid-template-columns:58px minmax(0,1fr);gap:8px}.version-n-story .n-video-card>img{width:58px;height:46px}.version-n-story .n-share-meta{gap:4px}.version-n-story .n-together-left{gap:6px}.version-n-story .n-together-copy strong{font-size:10px;white-space:nowrap}.version-n-story .n-together-copy span{font-size:10px}.version-n-story .n-shared-queue{font-size:9px}}
+/* The final invitation sits above a warm, illustrated sunset landscape. */
+.version-n-story .fs-closing{position:relative;isolation:isolate;overflow:hidden;background:#f6ebda;padding-top:70px;padding-bottom:clamp(210px,23vw,300px)}
+.version-n-story .fs-closing::before{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:0;height:clamp(190px,25vw,310px);background:url('assets/n-closing-sunset.webp') 70% bottom / cover no-repeat;pointer-events:none}
+.version-n-story .fs-closing .hc-inner{position:relative;z-index:1}
+.version-n-story .fs-closing .fs-mission{border-color:#d9d9c3}
+@media(max-width:650px){.version-n-story .fs-closing{padding-top:58px;padding-bottom:210px}.version-n-story .fs-closing::before{height:205px;background-position:70% bottom}}
+@media(max-width:650px){.version-n-story .fs-closing{padding-bottom:180px}.version-n-story .fs-closing::before{height:205px;background-size:auto 285px}}
+/* A quiet after-sunset wash continues behind the preview footer. */
+.version-n-story .n-closing-stack{background:linear-gradient(180deg,#f8efe2 0%,#f5e5d5 48%,#f0d4bf 100%)}
+.version-n-story .fs-closing{background:transparent;padding:70px 0 62px}
+.version-n-story .fs-closing::before{inset:0;height:auto;background:radial-gradient(ellipse 48% 42% at 50% 100%,rgba(239,181,125,.22),transparent 75%)}
+.version-n-story .n-closing-stack .rd-attribution{padding-top:20px;color:#6c7668}
+.version-n-story .n-closing-stack .i-preview-note{color:#6c7668}
+@media(max-width:650px){.version-n-story .fs-closing{padding:58px 0 48px}.version-n-story .fs-closing::before{height:auto;background-size:auto}}
+.version-n-story .n-closing-stack{background:radial-gradient(ellipse 48% 42% at 50% 74%,rgba(239,181,125,.18),transparent 75%),linear-gradient(180deg,#f8efe2 0%,#f5e5d5 48%,#f0d4bf 100%)}
+.version-n-story .fs-closing::before{content:none}
+/* A simple sunset sits above a matching, uninterrupted footer color. */
+.version-n-story .n-closing-stack{background:#fbd8b2}
+.version-n-story .fs-closing{background:linear-gradient(180deg,#f8efe2 0%,#f7e9d8 60%,#f6dfc9 100%);padding:70px 0 clamp(190px,20vw,330px)}
+.version-n-story .fs-closing::before{content:"";position:absolute;z-index:-1;inset:auto 0 0;height:clamp(210px,20vw,450px);background-image:linear-gradient(to bottom,rgba(251,216,178,0) 58%,#fbd8b2 100%),url('assets/n-closing-sunset-simple.webp');background-repeat:no-repeat;background-position:center bottom,70% bottom;background-size:100% 100%,cover;-webkit-mask-image:linear-gradient(to bottom,transparent,black 20%);mask-image:linear-gradient(to bottom,transparent,black 20%);pointer-events:none}
+@media(max-width:650px){.version-n-story .fs-closing{padding:58px 0 190px}.version-n-story .fs-closing::before{height:210px;background-position:center bottom,70% bottom;background-size:100% 100%,cover}}
+
+/* The sunset's foreground continues into the footer. */
+.version-n-story .n-footer{padding:38px 0 30px;color:#294c45}
+.version-n-story .n-footer-inner{display:grid;grid-template-columns:minmax(230px, .9fr) minmax(0, 2.1fr);gap:48px 60px}
+.version-n-story .n-footer-project{max-width:320px}
+.version-n-story .n-footer-brand{display:inline-flex;align-items:center;gap:12px;color:#173e37;text-decoration:none;font-size:17px;font-weight:700}
+.version-n-story .n-footer-brand img{width:40px;height:40px;object-fit:contain}
+.version-n-story .n-footer-project p{margin:14px 0 0;font-size:14px;line-height:1.7}
+.version-n-story .n-footer-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.version-n-story .n-footer-nav h2{margin:0 0 14px;color:#173e37;font-size:15px;font-weight:700}
+.version-n-story .n-footer-nav ul{display:grid;gap:10px;margin:0;padding:0;list-style:none;font-size:14px;line-height:1.4}
+.version-n-story .n-footer-nav a{color:inherit;text-decoration:none}
+.version-n-story .n-footer-nav a:hover,.version-n-story .n-footer-brand:hover{text-decoration:underline}
+.version-n-story .n-footer-bottom{grid-column:1/-1;display:flex;justify-content:space-between;gap:16px;padding-top:22px;border-top:1px solid rgba(41,76,69,.18);font-size:12px;color:#496459}
+@media(max-width:850px){.version-n-story .n-footer-inner{grid-template-columns:1fr;gap:30px}.version-n-story .n-footer-nav{grid-template-columns:repeat(4,minmax(0,1fr))}.version-n-story .n-footer-bottom{grid-column:auto}}
+@media(max-width:650px){.version-n-story .n-footer{padding:32px 0 25px}.version-n-story .n-footer-nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px}.version-n-story .n-footer-bottom{flex-wrap:wrap;gap:8px;padding-top:18px}}

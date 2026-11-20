@@ -1,0 +1,3 @@
+# The extension's privacy policy must stay byte-for-byte what's committed (it is served at villow.app/extension-privacy).
+# Never convert its line endings on checkout.
+public/extension-privacy.html -text

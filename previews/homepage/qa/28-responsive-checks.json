@@ -1,0 +1,672 @@
+{
+  "date": "2026-11-11",
+  "measurements": [
+    {
+      "cinemaState": "ready",
+      "cinemaVisible": false,
+      "contentWidth": 305,
+      "devicesDirection": "column",
+      "feedAlign": "center",
+      "hero": {
+        "bottom": 603.75,
+        "height": 452.75,
+        "left": 0,
+        "right": 305,
+        "top": 151,
+        "width": 305,
+        "x": 0,
+        "y": 151
+      },
+      "heroCTAVisible": true,
+      "images": [
+        true,
+        true
+      ],
+      "insightsAlign": "center",
+      "mainHeadings": [
+        {
+          "align": "center",
+          "text": "A feed youcan finish."
+        },
+        {
+          "align": "center",
+          "text": "Learn from what you watch."
+        },
+        {
+          "align": "center",
+          "text": "Good videos, better company."
+        },
+        {
+          "align": "center",
+          "text": "Designed for lifebeyond the screen."
+        },
+        {
+          "align": "center",
+          "text": "Ideas beyond Villow."
+        },
+        {
+          "align": "center",
+          "text": "Watch what you meant to.Then get back to your day."
+        }
+      ],
+      "socialAlign": "center",
+      "width": 320
+    },
+    {
+      "cinemaState": "ready",
+      "cinemaVisible": false,
+      "contentWidth": 375,
+      "devicesDirection": "column",
+      "feedAlign": "center",
+      "hero": {
+        "bottom": 616.09375,
+        "height": 465.09375,
+        "left": 0,
+        "right": 375,
+        "top": 151,
+        "width": 375,
+        "x": 0,
+        "y": 151
+      },
+      "heroCTAVisible": true,
+      "images": [
+        true,
+        true
+      ],
+      "insightsAlign": "center",
+      "mainHeadings": [
+        {
+          "align": "center",
+          "text": "A feed youcan finish."
+        },
+        {
+          "align": "center",
+          "text": "Learn from what you watch."
+        },
+        {
+          "align": "center",
+          "text": "Good videos, better company."
+        },
+        {
+          "align": "center",
+          "text": "Designed for lifebeyond the screen."
+        },
+        {
+          "align": "center",
+          "text": "Ideas beyond Villow."
+        },
+        {
+          "align": "center",
+          "text": "Watch what you meant to.Then get back to your day."
+        }
+      ],
+      "socialAlign": "center",
+      "width": 390
+    },
+    {
+      "cinemaState": "ready",
+      "cinemaVisible": false,
+      "contentWidth": 585,
+      "devicesDirection": "column",
+      "feedAlign": "center",
+      "hero": {
+        "bottom": 611.625,
+        "height": 460.625,
+        "left": 0,
+        "right": 585,
+        "top": 151,
+        "width": 585,
+        "x": 0,
+        "y": 151
+      },
+      "heroCTAVisible": true,
+      "images": [
+        true,
+        true
+      ],
+      "insightsAlign": "center",
+      "mainHeadings": [
+        {
+          "align": "center",
+          "text": "A feed youcan finish."
+        },
+        {
+          "align": "center",
+          "text": "Learn from what you watch."
+        },
+        {
+          "align": "center",
+          "text": "Good videos, better company."
+        },
+        {
+          "align": "center",
+          "text": "Designed for lifebeyond the screen."
+        },
+        {
+          "align": "center",
+          "text": "Ideas beyond Villow."
+        },
+        {
+          "align": "center",
+          "text": "Watch what you meant to.Then get back to your day."
+        }
+      ],
+      "socialAlign": "center",
+      "width": 600
+    },
+    {
+      "cinemaState": "ready",
+      "cinemaVisible": false,
+      "contentWidth": 635,
+      "devicesDirection": "column",
+      "feedAlign": "center",
+      "hero": {
+        "bottom": 620.59375,
+        "height": 469.59375,
+        "left": 0,
+        "right": 635,
+        "top": 151,
+        "width": 635,
+        "x": 0,
+        "y": 151
+      },
+      "heroCTAVisible": true,
+      "images": [
+        true,
+        true
+      ],
+      "insightsAlign": "center",
+      "mainHeadings": [
+        {
+          "align": "center",
+          "text": "A feed youcan finish."
+        },
+        {
+          "align": "center",
+          "text": "Learn from what you watch."
+        },
+        {
+          "align": "center",
+          "text": "Good videos, better company."
+        },
+        {
+          "align": "center",
+          "text": "Designed for lifebeyond the screen."
+        },
+        {
+          "align": "start",
+          "text": "Ideas beyond Villow."
+        },
+        {
+          "align": "center",
+          "text": "Watch what you meant to.Then get back to your day."
+        }
+      ],
+      "socialAlign": "center",
+      "width": 650
+    },
+    {
+      "cinemaState": "ready",
+      "cinemaVisible": false,
+      "contentWidth": 636,
+      "devicesDirection": "row",
+      "feedAlign": "center",
+      "hero": {
+        "bottom": 632.78125,
+        "height": 469.78125,
+        "left": 0,
+        "right": 636,
+        "top": 163,
+        "width": 636,
+        "x": 0,
+        "y": 163
+      },
+      "heroCTAVisible": true,
+      "images": [
+        true,
+        true
+      ],
+      "insightsAlign": "center",
+      "mainHeadings": [
+        {
+          "align": "center",
+          "text": "A feed youcan finish."
+        },
+        {
+          "align": "center",
+          "text": "Learn from what you watch."
+        },
+        {
+          "align": "start",
+          "text": "Good videos, better company."
+        },
+        {
+          "align": "center",
+          "text": "Designed for lifebeyond the screen."
+        },
+        {
+          "align": "start",
+          "text": "Ideas beyond Villow."
+        },
+        {
+          "align": "center",
+          "text": "Watch what you meant to.Then get back to your day."
+        }
+      ],
+      "socialAlign": "start",
+      "width": 651
+    },
+    {
+      "cinemaState": "ready",
+      "cinemaVisible": false,
+      "contentWidth": 685,
+      "devicesDirection": "row",
+      "feedAlign": "center",
+      "hero": {
+        "bottom": 640.1875,
+        "height": 477.1875,
+        "left": 0,
+        "right": 685,
+        "top": 163,
+        "width": 685,
+        "x": 0,
+        "y": 163
+      },
+      "heroCTAVisible": true,
+      "images": [
+        true,
+        true
+      ],
+      "insightsAlign": "center",
+      "mainHeadings": [
+        {
+          "align": "center",
+          "text": "A feed youcan finish."
+        },
+        {
+          "align": "center",
+          "text": "Learn from what you watch."
+        },
+        {
+          "align": "start",
+          "text": "Good videos, better company."
+        },
+        {
+          "align": "center",
+          "text": "Designed for lifebeyond the screen."
+        },
+        {
+          "align": "start",
+          "text": "Ideas beyond Villow."
+        },
+        {
+          "align": "center",
+          "text": "Watch what you meant to.Then get back to your day."
+        }
+      ],
+      "socialAlign": "start",
+      "width": 700
+    },
+    {
+      "cinemaState": "ready",
+      "cinemaVisible": true,
+      "contentWidth": 686,
+      "devicesDirection": "row",
+      "feedAlign": "center",
+      "hero": {
+        "bottom": 604.3125,
+        "height": 441.3125,
+        "left": 0,
+        "right": 686,
+        "top": 163,
+        "width": 686,
+        "x": 0,
+        "y": 163
+      },
+      "heroCTAVisible": true,
+      "images": [
+        true,
+        true
+      ],
+      "insightsAlign": "center",
+      "mainHeadings": [
+        {
+          "align": "center",
+          "text": "A feed youcan finish."
+        },
+        {
+          "align": "center",
+          "text": "Learn from what you watch."
+        },
+        {
+          "align": "start",
+          "text": "Good videos, better company."
+        },
+        {
+          "align": "center",
+          "text": "Designed for lifebeyond the screen."
+        },
+        {
+          "align": "start",
+          "text": "Ideas beyond Villow."
+        },
+        {
+          "align": "center",
+          "text": "Watch what you meant to.Then get back to your day."
+        }
+      ],
+      "socialAlign": "start",
+      "width": 701
+    },
+    {
+      "cinemaState": "ready",
+      "cinemaVisible": true,
+      "contentWidth": 745,
+      "devicesDirection": "row",
+      "feedAlign": "center",
+      "hero": {
+        "bottom": 604.3125,
+        "height": 441.3125,
+        "left": 0,
+        "right": 745,
+        "top": 163,
+        "width": 745,
+        "x": 0,
+        "y": 163
+      },
+      "heroCTAVisible": true,
+      "images": [
+        true,
+        true
+      ],
+      "insightsAlign": "center",
+      "mainHeadings": [
+        {
+          "align": "center",
+          "text": "A feed youcan finish."
+        },
+        {
+          "align": "center",
+          "text": "Learn from what you watch."
+        },
+        {
+          "align": "start",
+          "text": "Good videos, better company."
+        },
+        {
+          "align": "center",
+          "text": "Designed for lifebeyond the screen."
+        },
+        {
+          "align": "start",
+          "text": "Ideas beyond Villow."
+        },
+        {
+          "align": "center",
+          "text": "Watch what you meant to.Then get back to your day."
+        }
+      ],
+      "socialAlign": "start",
+      "width": 760
+    },
+    {
+      "cinemaState": "ready",
+      "cinemaVisible": true,
+      "contentWidth": 746,
+      "devicesDirection": "row",
+      "feedAlign": "start",
+      "hero": {
+        "bottom": 604.3125,
+        "height": 441.3125,
+        "left": 0,
+        "right": 746,
+        "top": 163,
+        "width": 746,
+        "x": 0,
+        "y": 163
+      },
+      "heroCTAVisible": true,
+      "images": [
+        true,
+        true
+      ],
+      "insightsAlign": "left",
+      "mainHeadings": [
+        {
+          "align": "start",
+          "text": "A feed youcan finish."
+        },
+        {
+          "align": "left",
+          "text": "Learn from what you watch."
+        },
+        {
+          "align": "start",
+          "text": "Good videos, better company."
+        },
+        {
+          "align": "center",
+          "text": "Designed for lifebeyond the screen."
+        },
+        {
+          "align": "start",
+          "text": "Ideas beyond Villow."
+        },
+        {
+          "align": "center",
+          "text": "Watch what you meant to.Then get back to your day."
+        }
+      ],
+      "socialAlign": "start",
+      "width": 761
+    },
+    {
+      "cinemaState": "ready",
+      "cinemaVisible": true,
+      "contentWidth": 846,
+      "devicesDirection": "row",
+      "feedAlign": "start",
+      "hero": {
+        "bottom": 586.71875,
+        "height": 423.71875,
+        "left": 0,
+        "right": 846,
+        "top": 163,
+        "width": 846,
+        "x": 0,
+        "y": 163
+      },
+      "heroCTAVisible": true,
+      "images": [
+        true,
+        true
+      ],
+      "insightsAlign": "left",
+      "mainHeadings": [
+        {
+          "align": "start",
+          "text": "A feed youcan finish."
+        },
+        {
+          "align": "left",
+          "text": "Learn from what you watch."
+        },
+        {
+          "align": "start",
+          "text": "Good videos, better company."
+        },
+        {
+          "align": "center",
+          "text": "Designed for lifebeyond the screen."
+        },
+        {
+          "align": "start",
+          "text": "Ideas beyond Villow."
+        },
+        {
+          "align": "center",
+          "text": "Watch what you meant to.Then get back to your day."
+        }
+      ],
+      "socialAlign": "start",
+      "width": 861
+    },
+    {
+      "cinemaState": "ready",
+      "cinemaVisible": true,
+      "contentWidth": 1153,
+      "devicesDirection": "row",
+      "feedAlign": "start",
+      "hero": {
+        "bottom": 653.53125,
+        "height": 533.53125,
+        "left": 0,
+        "right": 1153,
+        "top": 120,
+        "width": 1153,
+        "x": 0,
+        "y": 120
+      },
+      "heroCTAVisible": true,
+      "images": [
+        true,
+        true
+      ],
+      "insightsAlign": "left",
+      "mainHeadings": [
+        {
+          "align": "start",
+          "text": "A feed youcan finish."
+        },
+        {
+          "align": "left",
+          "text": "Learn from what you watch."
+        },
+        {
+          "align": "start",
+          "text": "Good videos, better company."
+        },
+        {
+          "align": "center",
+          "text": "Designed for lifebeyond the screen."
+        },
+        {
+          "align": "start",
+          "text": "Ideas beyond Villow."
+        },
+        {
+          "align": "center",
+          "text": "Watch what you meant to.Then get back to your day."
+        }
+      ],
+      "socialAlign": "start",
+      "width": 1168
+    },
+    {
+      "cinemaState": "ready",
+      "cinemaVisible": true,
+      "contentWidth": 1621,
+      "devicesDirection": "row",
+      "feedAlign": "start",
+      "hero": {
+        "bottom": 713.015625,
+        "height": 593.015625,
+        "left": 0,
+        "right": 1621,
+        "top": 120,
+        "width": 1621,
+        "x": 0,
+        "y": 120
+      },
+      "heroCTAVisible": true,
+      "images": [
+        true,
+        true
+      ],
+      "insightsAlign": "left",
+      "mainHeadings": [
+        {
+          "align": "start",
+          "text": "A feed youcan finish."
+        },
+        {
+          "align": "left",
+          "text": "Learn from what you watch."
+        },
+        {
+          "align": "start",
+          "text": "Good videos, better company."
+        },
+        {
+          "align": "center",
+          "text": "Designed for lifebeyond the screen."
+        },
+        {
+          "align": "start",
+          "text": "Ideas beyond Villow."
+        },
+        {
+          "align": "center",
+          "text": "Watch what you meant to.Then get back to your day."
+        }
+      ],
+      "socialAlign": "start",
+      "width": 1636
+    },
+    {
+      "cinemaState": "ready",
+      "cinemaVisible": true,
+      "contentWidth": 2545,
+      "devicesDirection": "row",
+      "feedAlign": "start",
+      "hero": {
+        "bottom": 835.90625,
+        "height": 715.90625,
+        "left": 0,
+        "right": 2545,
+        "top": 120,
+        "width": 2545,
+        "x": 0,
+        "y": 120
+      },
+      "heroCTAVisible": true,
+      "images": [
+        true,
+        true
+      ],
+      "insightsAlign": "left",
+      "mainHeadings": [
+        {
+          "align": "start",
+          "text": "A feed youcan finish."
+        },
+        {
+          "align": "left",
+          "text": "Learn from what you watch."
+        },
+        {
+          "align": "start",
+          "text": "Good videos, better company."
+        },
+        {
+          "align": "center",
+          "text": "Designed for lifebeyond the screen."
+        },
+        {
+          "align": "start",
+          "text": "Ideas beyond Villow."
+        },
+        {
+          "align": "center",
+          "text": "Watch what you meant to.Then get back to your day."
+        }
+      ],
+      "socialAlign": "start",
+      "width": 2560
+    }
+  ],
+  "interactions": {
+    "desktopSeekEndShowsRating": true,
+    "cinemaSliderHiddenAt700": true
+  }
+}

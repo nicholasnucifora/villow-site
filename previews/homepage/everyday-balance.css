@@ -1,0 +1,94 @@
+/* E is an alternate composition for three sections of the preserved D page. */
+.version-e .eb-boundaries{max-width:1090px;margin:45px auto 0;padding:46px 48px;background:#eaf1e5;border-radius:22px;color:#244d43}
+.version-e .eb-intro{display:flex;align-items:end;justify-content:space-between;gap:40px}
+.version-e .eb-eyebrow{position:absolute;font:600 10px/1.4 system-ui,sans-serif;letter-spacing:.12em;color:#73917a;transform:translateY(-98px)}
+.version-e .eb-intro h2{font:400 clamp(34px,3.6vw,44px)/1.18 'Varela Round',sans-serif;letter-spacing:-.045em;margin:0}
+.version-e .eb-intro p{max-width:300px;margin:0 0 3px;font-size:15px;line-height:1.8;color:#536f61}
+.version-e .eb-examples{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+.version-e .eb-example{min-width:0;background:#fbfcf6;border-radius:15px;padding:23px 25px 25px;display:flex;flex-direction:column}
+.version-e .eb-example-copy{min-height:85px}
+.version-e .eb-number{font:600 10px/1.4 system-ui,sans-serif;letter-spacing:.09em;color:#80a085}
+.version-e .eb-example h3{font:400 21px/1.3 'Varela Round',sans-serif;letter-spacing:-.025em;margin:7px 0 6px}
+.version-e .eb-example p{font-size:13px;line-height:1.65;color:#627a69;margin:0}
+.version-e .eb-interface{margin-top:20px;min-height:112px;box-sizing:border-box;padding:17px 18px;border:1px solid #d8e5d5;border-radius:10px;background:#f2f7ee;color:#315841;font:13px/1.4 system-ui,sans-serif}
+.version-e .eb-ui-title{font-weight:600;margin-bottom:11px}
+.version-e .eb-limit-row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:6px 0;border-top:1px solid #dfe9db;color:#657b6a;font-size:12px}
+.version-e .eb-limit-row strong{font-weight:500;color:#315841}
+.version-e .eb-reflect{display:flex;flex-direction:column;justify-content:center}
+.version-e .eb-reflect-video{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.version-e .eb-reflect-video img{width:54px;height:32px;object-fit:cover;border-radius:4px}
+.version-e .eb-reflect-video .eb-ui-title{margin:0 0 2px}
+.version-e .eb-reflect-video span{font-size:11px;color:#718477}
+.version-e .eb-verdicts{display:flex;gap:6px;flex-wrap:wrap}
+.version-e .eb-verdicts span{padding:6px 9px;border:1px solid #cfdfcd;border-radius:6px;background:#fffef9;font-size:11px;color:#56705c}
+.version-e .w-devices{max-width:1090px;margin:27px auto 0;padding:22px 0 0;grid-template-columns:minmax(0,1fr) minmax(0,.7fr);gap:30px}
+.version-e .w-device-copy h2{font-size:27px;margin-bottom:10px}
+.version-e .w-device-copy p{font-size:13px;line-height:1.7}
+.version-e .w-device-art{max-width:320px}
+.version-e .i-following{padding-bottom:35px}
+.version-e .rd-together-band{padding:50px 0 54px}
+.version-e .rd-together-band>.i-width{display:grid;grid-template-columns:1fr 1fr;gap:56px;max-width:1090px}
+.version-e .rd-together-band .ics-company,.version-e .rd-together-band .rt-together{display:flex;flex-direction:column;align-items:stretch;gap:18px;margin:0;padding:0;min-width:0}
+.version-e .rd-together-band .ics-copy,.version-e .rd-together-band .rt-copy{order:0;display:block;max-width:none;text-align:left;padding:0}
+.version-e .rd-together-band :is(.ics-copy,.rt-copy) h2{font-size:30px;line-height:1.2;margin:0 0 12px}
+.version-e .rd-together-band :is(.ics-copy,.rt-copy) h2 br{display:none}
+.version-e .rd-together-band :is(.ics-copy,.rt-copy) p{font-size:14px;line-height:1.7;max-width:390px;margin:0}
+.version-e .rd-together-band .ics-scene{order:1;width:100%;max-width:440px;min-height:290px;justify-self:auto;grid-template-columns:52px minmax(0,220px) 52px;gap:15px;padding:20px 0 30px}
+.version-e .rd-together-band .ics-portrait{width:50px;height:50px}
+.version-e .rd-together-band .ics-arrow{background:#f4eae3}
+.version-e .rd-together-band .rt-scene{order:1;width:100%;max-width:440px;align-self:center}
+.version-e .rd-together-band .rt-world{width:100%;margin:0;aspect-ratio:3/2}
+.version-e .rd-together-band .rt-friends{position:static;width:100%;height:100%;object-fit:contain}
+@media(max-width:800px){.version-e .eb-boundaries{padding:38px 30px}.version-e .eb-intro{align-items:start;flex-direction:column;gap:16px}.version-e .eb-eyebrow{position:static;transform:none;margin-bottom:-6px}.version-e .eb-intro p{max-width:480px}.version-e .rd-together-band>.i-width{gap:28px}.version-e .rd-together-band :is(.ics-copy,.rt-copy) h2{font-size:27px}}
+@media(max-width:600px){.version-e .eb-boundaries{margin-top:30px;padding:28px 20px;border-radius:17px}.version-e .eb-intro h2{font-size:32px}.version-e .eb-intro p{font-size:14px}.version-e .eb-examples{grid-template-columns:1fr;gap:12px;margin-top:24px}.version-e .eb-example{padding:20px}.version-e .eb-example-copy{min-height:0}.version-e .eb-interface{margin-top:15px;min-height:100px}.version-e .w-devices{margin-top:20px;padding-top:20px;grid-template-columns:1fr 1fr;gap:14px}.version-e .w-device-copy h2{font-size:23px;margin-bottom:8px}.version-e .w-device-copy p{font-size:12px;line-height:1.6}.version-e .w-device-art{max-width:220px}.version-e .rd-together-band{padding:37px 0 40px}.version-e .rd-together-band>.i-width{grid-template-columns:1fr;gap:35px}.version-e .rd-together-band .ics-company,.version-e .rd-together-band .rt-together{gap:12px}.version-e .rd-together-band :is(.ics-copy,.rt-copy) h2{font-size:29px}.version-e .rd-together-band .ics-scene{align-self:center;min-height:270px;grid-template-columns:45px minmax(0,220px) 45px}.version-e .rd-together-band .rt-scene{max-width:360px}.version-e .rd-together-band .rt-world{aspect-ratio:3/2}}
+@media(max-width:360px){.version-e .w-devices{grid-template-columns:1fr}.version-e .w-device-art{justify-self:center;max-width:240px}.version-e .eb-intro h2{font-size:29px}.version-e .rd-together-band :is(.ics-copy,.rt-copy) h2{font-size:27px}}
+@media(max-width:600px){.version-e .w-devices{grid-template-columns:1fr;gap:12px}.version-e .w-device-copy{max-width:430px}.version-e .w-device-copy h2 br{display:none}.version-e .w-device-art{justify-self:center;max-width:280px}}
+
+/* A single quiet surface for each example, without nested cards. */
+.version-e .eb-boundaries{padding:40px 0 0;background:transparent;border-radius:0;border-top:1px solid #dce5d4}
+.version-e .eb-eyebrow,.version-e .eb-number{display:none}
+.version-e .eb-examples{gap:50px;margin-top:35px}
+.version-e .eb-example{padding:0;background:transparent;border-radius:0}
+.version-e .eb-example-copy{min-height:0}
+.version-e .eb-example h3{margin:0 0 7px}
+.version-e .eb-interface{margin-top:17px;padding:20px 22px;min-height:125px;background:#eaf1e5;border:0;border-radius:12px}
+.version-e .eb-limit-row{border:0;padding:0 0 13px;font-size:13px;color:#315841}
+.version-e .eb-limit-row strong{font:400 20px/1.2 'Varela Round',sans-serif;color:#315841}
+.version-e .eb-add-day{display:inline-flex;align-items:center;gap:8px;min-height:38px;padding:0;border:0;background:transparent;color:#326c4d;font:600 12px/1.4 system-ui,sans-serif;text-align:left;cursor:pointer}
+.version-e .eb-add-day span{display:grid;place-items:center;width:23px;height:23px;border-radius:50%;background:#d4e6d0;font:400 20px/1 system-ui,sans-serif}
+.version-e .eb-add-day:hover{color:#184c32;text-decoration:underline;text-underline-offset:3px}
+.version-e .eb-add-day:focus-visible{outline:2px solid #54836c;outline-offset:4px;border-radius:3px}
+.version-e .eb-day-example{display:flex;align-items:center;gap:12px;padding-top:10px;font-size:12px;color:#526d59}
+.version-e .eb-day-example[hidden]{display:none}
+.version-e .eb-day-example strong{font-weight:600}
+.version-e .eb-example-hint{font-size:10px;color:#79917b}
+.version-e .eb-verdicts span{border:0;background:#fbfdf8}
+
+/* Keep the illustrated devices together as a small, centered reassurance. */
+.version-e .w-devices{grid-template-columns:minmax(0,320px) minmax(0,350px);justify-content:center;gap:42px}
+.version-e .w-device-art{grid-column:1;grid-row:1;justify-self:center}
+.version-e .w-device-copy{grid-column:2;grid-row:1}
+
+/* Make the sharing postcard and its note a little more compact. */
+.version-e .rd-together-band .ics-scene{min-height:245px;grid-template-columns:52px minmax(0,190px) 52px;padding:12px 0 23px}
+.version-e .ics-video-copy{padding:8px 5px 10px}
+.version-e .ics-message{margin-top:-2px;padding:10px 11px 11px}
+.version-e .ics-message>p{margin-top:3px;font-size:14px}
+.version-e .rd-together-band .rt-world{--rt-screen-left:25%;--rt-screen-top:17%;--rt-screen-width:50%;--rt-screen-height:46%}
+
+/* Expand the comparison in a visible, gentle movement. */
+.version-e .rd-accordion-ready .rd-panel{transition:grid-template-rows 450ms cubic-bezier(.22,.7,.22,1)}
+.version-e .rd-panel-inner>.xl-pair{opacity:0;transform:translateY(-8px);transition:opacity 260ms ease,transform 420ms ease}
+.version-e .rd-panel.is-open .rd-panel-inner>.xl-pair{opacity:1;transform:none;transition-delay:60ms}
+
+/* Give both links a clear, coherent clickable shape. */
+.version-e .rd-concepts{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:65px;align-items:start;margin-top:42px;padding-top:34px;border-top:1px solid #dce5d4}
+.version-e .rd-concepts-copy>p{max-width:490px}
+.version-e .rd-concepts-link,.version-e .fs-mission .hc-movement{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:46px;padding:10px 16px;border-radius:999px;background:#dcebd8;color:#28583e;font:500 13px/1.35 system-ui,sans-serif;text-decoration:none;cursor:pointer;box-sizing:border-box;transition:background-color 180ms ease,transform 180ms ease}
+.version-e .rd-concepts-link:hover,.version-e .fs-mission .hc-movement:hover{background:#cde2c9;transform:translateY(-1px)}
+.version-e .rd-concepts-link:focus-visible,.version-e .fs-mission .hc-movement:focus-visible{outline:2px solid #54836c;outline-offset:3px}
+.version-e .eb-link-arrow{font-size:18px;line-height:1}
+@media(max-width:700px){.version-e .eb-boundaries{padding-top:30px}.version-e .eb-examples{gap:26px}.version-e .rd-concepts{gap:22px}.version-e .w-devices{gap:25px}}
+@media(max-width:600px){.version-e .eb-boundaries{padding:28px 0 0}.version-e .eb-examples{gap:26px}.version-e .eb-example{padding:0}.version-e .eb-interface{margin-top:14px;padding:18px 20px}.version-e .w-devices{grid-template-columns:1fr;gap:14px}.version-e .w-device-art{grid-column:1;grid-row:1;max-width:280px}.version-e .w-device-copy{grid-column:1;grid-row:2;justify-self:center;text-align:center}.version-e .rd-together-band .ics-scene{min-height:235px;grid-template-columns:45px minmax(0,190px) 45px}.version-e .rd-concepts{grid-template-columns:1fr;gap:16px;margin-top:30px;padding-top:27px}}
+@media(prefers-reduced-motion:reduce){.version-e .rd-accordion-ready .rd-panel,.version-e .rd-concepts-link,.version-e .fs-mission .hc-movement{transition:none}.version-e .x-life .rd-panel-inner>.xl-pair{transform:none;transition:opacity 180ms ease!important;transition-delay:0ms!important}}
+@media print{.version-e .rd-panel-inner>.xl-pair{opacity:1;transform:none}}

@@ -1,0 +1,308 @@
+[
+  {
+    "entries": [
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "14px / 21px \"Varela Round\", sans-serif",
+        "text": "Get started"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "14px / 21px \"Varela Round\", sans-serif",
+        "text": "Hosting guide"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "14px / 21px \"Varela Round\", sans-serif",
+        "text": "About Villow"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "14px / 21px \"Varela Round\", sans-serif",
+        "text": "Privacy"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "14px / 21px \"Varela Round\", sans-serif",
+        "text": "Terms"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "14px / 21px \"Varela Round\", sans-serif",
+        "text": "Contact"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "14px / 21px \"Varela Round\", sans-serif",
+        "text": "Discord"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "14px / 21px \"Varela Round\", sans-serif",
+        "text": "Reddit"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "14px / 21px \"Varela Round\", sans-serif",
+        "text": "Get involved"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "14px / 21px \"Varela Round\", sans-serif",
+        "text": "GitHub"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "14px / 21px \"Varela Round\", sans-serif",
+        "text": "Fix the Web"
+      }
+    ],
+    "heading": {
+      "font": "15px / 24px \"Varela Round\", sans-serif",
+      "stroke": "",
+      "synthesis": "none"
+    },
+    "hover": {
+      "fill": "rgb(212, 230, 216)",
+      "radius": "8px",
+      "text": "Questions"
+    },
+    "overflow": false,
+    "preset": "33",
+    "width": 1265
+  },
+  {
+    "entries": [
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "450 15px / 22.5px \"Navigation Nunito\", sans-serif",
+        "text": "Get started"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "450 15px / 22.5px \"Navigation Nunito\", sans-serif",
+        "text": "Hosting guide"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "450 15px / 22.5px \"Navigation Nunito\", sans-serif",
+        "text": "About Villow"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "450 15px / 22.5px \"Navigation Nunito\", sans-serif",
+        "text": "Privacy"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "450 15px / 22.5px \"Navigation Nunito\", sans-serif",
+        "text": "Terms"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "450 15px / 22.5px \"Navigation Nunito\", sans-serif",
+        "text": "Contact"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "450 15px / 22.5px \"Navigation Nunito\", sans-serif",
+        "text": "Discord"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "450 15px / 22.5px \"Navigation Nunito\", sans-serif",
+        "text": "Reddit"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "450 15px / 22.5px \"Navigation Nunito\", sans-serif",
+        "text": "Get involved"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "450 15px / 22.5px \"Navigation Nunito\", sans-serif",
+        "text": "GitHub"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "450 15px / 22.5px \"Navigation Nunito\", sans-serif",
+        "text": "Fix the Web"
+      }
+    ],
+    "heading": {
+      "font": "650 15.5px / 24px \"Navigation Nunito\", sans-serif",
+      "stroke": "",
+      "synthesis": "none"
+    },
+    "hover": {
+      "fill": "rgb(212, 230, 216)",
+      "radius": "8px",
+      "text": "Questions"
+    },
+    "overflow": false,
+    "preset": "34",
+    "width": 1265
+  },
+  {
+    "entries": [
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "500 14px / 21px \"Navigation Quicksand\", sans-serif",
+        "text": "Get started"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "500 14px / 21px \"Navigation Quicksand\", sans-serif",
+        "text": "Hosting guide"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "500 14px / 21px \"Navigation Quicksand\", sans-serif",
+        "text": "About Villow"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "500 14px / 21px \"Navigation Quicksand\", sans-serif",
+        "text": "Privacy"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "500 14px / 21px \"Navigation Quicksand\", sans-serif",
+        "text": "Terms"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "500 14px / 21px \"Navigation Quicksand\", sans-serif",
+        "text": "Contact"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "500 14px / 21px \"Navigation Quicksand\", sans-serif",
+        "text": "Discord"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "500 14px / 21px \"Navigation Quicksand\", sans-serif",
+        "text": "Reddit"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "500 14px / 21px \"Navigation Quicksand\", sans-serif",
+        "text": "Get involved"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "500 14px / 21px \"Navigation Quicksand\", sans-serif",
+        "text": "GitHub"
+      },
+      {
+        "color": "rgb(49, 89, 79)",
+        "font": "500 14px / 21px \"Navigation Quicksand\", sans-serif",
+        "text": "Fix the Web"
+      }
+    ],
+    "heading": {
+      "font": "600 15px / 24px \"Navigation Quicksand\", sans-serif",
+      "stroke": "",
+      "synthesis": "none"
+    },
+    "hover": {
+      "fill": "rgb(212, 230, 216)",
+      "radius": "8px",
+      "text": "Questions"
+    },
+    "overflow": false,
+    "preset": "35",
+    "width": 1265
+  },
+  {
+    "entryColors": [
+      "rgb(49, 89, 79)"
+    ],
+    "headingWidths": [
+      {
+        "scroll": 156,
+        "text": "Villow",
+        "width": 156
+      },
+      {
+        "scroll": 156,
+        "text": "Help",
+        "width": 156
+      },
+      {
+        "scroll": 156,
+        "text": "Community",
+        "width": 156
+      },
+      {
+        "scroll": 156,
+        "text": "Project",
+        "width": 156
+      }
+    ],
+    "overflow": false,
+    "preset": "33",
+    "width": 375
+  },
+  {
+    "entryColors": [
+      "rgb(49, 89, 79)"
+    ],
+    "headingWidths": [
+      {
+        "scroll": 156,
+        "text": "Villow",
+        "width": 156
+      },
+      {
+        "scroll": 156,
+        "text": "Help",
+        "width": 156
+      },
+      {
+        "scroll": 156,
+        "text": "Community",
+        "width": 156
+      },
+      {
+        "scroll": 156,
+        "text": "Project",
+        "width": 156
+      }
+    ],
+    "overflow": false,
+    "preset": "34",
+    "width": 375
+  },
+  {
+    "entryColors": [
+      "rgb(49, 89, 79)"
+    ],
+    "headingWidths": [
+      {
+        "scroll": 156,
+        "text": "Villow",
+        "width": 156
+      },
+      {
+        "scroll": 156,
+        "text": "Help",
+        "width": 156
+      },
+      {
+        "scroll": 156,
+        "text": "Community",
+        "width": 156
+      },
+      {
+        "scroll": 156,
+        "text": "Project",
+        "width": 156
+      }
+    ],
+    "overflow": false,
+    "preset": "35",
+    "width": 375
+  }
+]

@@ -37,7 +37,7 @@ blocks:
       - **Use Villow:** [create your own or join a friend's](/download), and see what fits your day.
       - **Invite friends:** give people a trusted place to try it and something to watch together.
       - **Spread the word:** share it with creators, communities and people with reach. Describe what you found useful rather than promising an outcome.
-      - **Give feedback:** optional check-ins and the app's Feedback page help improve the design.
+      - **Give feedback:** the app's required milestone check-ins and optional Feedback page help improve the design.
       - **Contribute:** [code, bug reports, accessibility feedback and tested owner guidance](/developers#contributing).
       - **Support the wider movement:** [Fix the Web](link:fixTheWeb) campaigns for these kinds of choices across the internet.
     actions:
@@ -66,7 +66,7 @@ blocks:
     body: |
       Villow is a substantial working prototype. We want to learn whether finite feeds, optional reflection, explained suggestions and social support help people spend time in ways they value. These are design intentions, not established wellbeing or polarization results.
 
-      Private viewing measurements stay in the Villow you use. Only feedback you choose to submit goes to Fix the Web. Voluntary feedback can strengthen the evidence, but self-reported surveys have limits. Findings will need context about who participated and how they were measured.
+      Private viewing measurements stay in the Villow you use. Responses to required app check-ins and optional ad hoc feedback go to the project operator through Tally, as explained in the [app privacy policy](link:appPrivacy). Self-reported surveys have limits. Findings will need context about who participated and how they were measured.
     actions:
       - label: Understand the data flows →
         href: /privacy-overview

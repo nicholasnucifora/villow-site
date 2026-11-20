@@ -1,0 +1,69 @@
+---
+import type { BlockOf } from "../../lib/schema";
+import { inline, md, slugify } from "../../lib/markdown";
+import Action from "../ui/Action.astro";
+import BlockShell from "../ui/BlockShell.astro";
+import Media from "../ui/Media.astro";
+
+interface Props {
+  block: BlockOf<"spotlight">;
+}
+
+const { block } = Astro.props;
+const headingId = `${block.id ?? slugify(block.heading)}-title`;
+---
+
+<BlockShell type="spotlight" id={block.id} background={block.background} labelledBy={headingId}>
+  <div class:list={["spotlight", block.image && "spotlight--with-image", `spotlight--image-${block.imageSide}`]}>
+    <div class="spotlight__text">
+      {block.eyebrow && <p class="eyebrow" set:html={inline(block.eyebrow)} />}
+      <h2 id={headingId} set:html={inline(block.heading)} />
+      <div class="prose" set:html={md(block.body)} />
+      {
+        block.actions && (
+          <div class="actions">
+            {block.actions.map((action) => (
+              <Action action={action} />
+            ))}
+          </div>
+        )
+      }
+    </div>
+    {
+      block.image && (
+        <div class="spotlight__media">
+          <Media image={block.image} />
+        </div>
+      )
+    }
+  </div>
+</BlockShell>
+
+<style>
+  .spotlight {
+    display: grid;
+    gap: var(--space-xl);
+    align-items: center;
+    padding: clamp(var(--space-lg), 4vw, var(--space-2xl));
+    border-radius: var(--radius-lg);
+    background: var(--color-accent-soft);
+  }
+  .spotlight__text {
+    display: grid;
+    gap: var(--space-md);
+    justify-items: start;
+  }
+  .spotlight__text .prose {
+    font-size: var(--text-lg);
+  }
+
+  @media (min-width: 56rem) {
+    .spotlight--with-image {
+      grid-template-columns: 1fr 1.1fr;
+      gap: var(--space-2xl);
+    }
+    .spotlight--image-left .spotlight__media {
+      order: -1;
+    }
+  }
+</style>

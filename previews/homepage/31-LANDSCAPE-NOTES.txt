@@ -1,0 +1,37 @@
+PRESET 31 — ORIGINAL LANDSCAPE, REFINED
+http://127.0.0.1:4411/31.html
+
+The user rejected 30's AI-repainted trees/hill and explicitly forbade new
+image generation. 31 uses the original supplied artwork from preset 29.
+No image generation or texture synthesis was used for 31.
+
+The page/layout derives from 30, preserving its accepted footer, the higher
+mobile landscape, hero CTA, hidden mobile cinema and centred stacked copy.
+Original shrubs sit slightly higher using the same layer positions as 30.
+
+qa/prepare-31-assets.mjs applies a deterministic repair to the decoded 29
+WebP pixels, then writes lossless WebP deliveries under
+assets/31-original-landscape:
+- Foreground: remove isolated transparent-mask residue; reduce only excess
+  brightness in the first six delivery-pixel rows along the connected edge,
+  using the neighbouring existing hill colour. The hill's original contour,
+  green gradient and interior texture remain unchanged.
+- Trees: clean the final two/three rows of the bottom cut and continue sampled
+  existing tree colour 80 pixels below it. This added base is covered by the
+  foreground, allowing the original shrubs to sit higher without floating.
+  Close tiny transparent pinholes at the lower join; retain original opaque
+  artwork, tree tops, silhouettes and larger gaps.
+
+Pixel checks record 733,667 unchanged hill-interior pixels and 109,605
+unchanged opaque tree pixels outside the bottom matte in provenance.json.
+All source assets and earlier preset designs are unchanged; only shared
+preview navigation gains 31. 30's generated tree/hill assets are not loaded.
+
+Validation: navigation/position tests pass. 31-preservation.mjs checks 29/30
+main content/styles/renderers, original asset hashes and exact retention of
+30's footer/mobile/centred-copy CSS. Browser observations cover 320–3440px,
+including 700/701px, with no overflow and correct CTA/cinema visibility.
+31-forest-grounding.json checks raster alpha edges against browser geometry.
+Proofs: qa/31-hero-2560.png, qa/31-hero-390.png, qa/31-footer-390.png.
+
+Keep the local server on 4411 running. No production changes or publication.

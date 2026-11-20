@@ -1,0 +1,15 @@
+title: Page not found
+description: This page doesn't exist.
+
+blocks:
+  - type: hero
+    eyebrow: "404"
+    title: There's nothing here.
+    lead: The page you were looking for doesn't exist, or it's moved. Which, if you think about it, is a good place to stop for now.
+    actions:
+      - label: Back to the home page
+        href: /
+        style: primary
+      - label: FAQ →
+        href: /faq
+        style: text

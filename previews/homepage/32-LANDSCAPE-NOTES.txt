@@ -1,0 +1,26 @@
+PRESET 32 — A GROUNDED FOREST
+http://127.0.0.1:4411/32.html
+
+Tree-size refinement: added a smooth minimum scale through tablet/smaller
+laptop widths, avoiding the previous tiny trees. Existing phone and wide
+desktop sizes remain. Both groups stay grounded; 25 widths from 320–3440px
+pass overlap/no-overflow checks. Proof: qa/32-trees-sizing-1242.png.
+
+Latest update: user-supplied trees2.png removes the trailing shrub from the
+left forest. Its exact PNG is saved in assets/32-grounded-bush. The delivery
+uses this silhouette with the approved edge-cleaned colours; positioning,
+foreground, right forest and footer are unchanged. No image generation.
+
+31's extended columns below the left forest became visible as vertical stripes
+and a square edge beneath the last bush when the forest was raised.
+
+32 removes that extension, restores the original alpha silhouette and tucks
+the original cut just behind the hill. This keeps the bush's rounded contour
+without painting, stretching or generating new artwork. The original tree
+colours and 31's small edge cleanup remain. The foreground, right forest,
+footer, mobile layout and all other content remain from 31.
+
+Browser checks: 18 widths from 320 to 3440px, no horizontal overflow, retained
+CTA/mobile cinema visibility. Raster-alpha/geometry checks confirm covered
+bases at all observed widths. Existing navigation checks pass.
+Keep the local server on port 4411 running. Earlier presets remain available.

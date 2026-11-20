@@ -1,0 +1,43 @@
+{
+  "preservedFiles": 45,
+  "changed": [],
+  "sameOtherContent": true,
+  "assets": [
+    {
+      "asset": "w-watcher-gardener-v1.webp",
+      "width": 1536,
+      "height": 1024,
+      "alpha": true
+    },
+    {
+      "asset": "w-watcher-shorts-v1.webp",
+      "width": 1536,
+      "height": 1024,
+      "alpha": true
+    },
+    {
+      "asset": "w-watcher-browser-v1.webp",
+      "width": 1536,
+      "height": 1024,
+      "alpha": true
+    },
+    {
+      "asset": "w-watcher-evenings-v1.webp",
+      "width": 1536,
+      "height": 1024,
+      "alpha": true
+    },
+    {
+      "asset": "w-hero-feet-v1.webp",
+      "width": 1774,
+      "height": 887,
+      "alpha": true
+    }
+  ],
+  "latestRefinement": {
+    "changedPriorFiles": [],
+    "browserAsset": "assets/w-watcher-browser-v2.webp",
+    "markerController": "w-watching-stories.js",
+    "durationMs": 620
+  }
+}

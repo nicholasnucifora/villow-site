@@ -1,0 +1,46 @@
+{
+  "created": "2026-11-10",
+  "mode": "built-in image_gen edits and transparent extraction",
+  "assets": [
+    {
+      "name": "backdrop-wide",
+      "prompt": "Use case: precise-object-edit. Edit target: the provided soft sage sunrise landscape. Make a background layer for the same website illustration. Preserve its landscape 3:1 aspect ratio, very pale neutral-white sky, subtle painted texture and soft gradients. KEEP the sun, its surrounding warm glow, its size and right-side position, all pale/middle-distance rolling hills, cream clouds and small birds in their existing positions. REMOVE every dark tree and bush from both edges, reconstructing continuous sky and hills behind them. REMOVE only the nearest/darkest green foreground hill that runs along the very bottom; extend the lighter middle-distance hills naturally to the bottom edge to fill the space behind the removed hill. No new objects. No trees anywhere. No text, border or labels. Opaque full canvas. Match the original look rather than redesigning it.",
+      "reference": "C:/Users/Nebula PC/Development/villow-site/previews/homepage/commission-background/w-background-original.png",
+      "transparent": false,
+      "sourcePath": "C:\\Users\\Nebula PC\\.codex\\generated_images\\01a1bbf5-0840-7600-a1af-48b492fe1751\\exec-0da78987-cd6e-4e64-ae5c-5a9f274def45.png",
+      "delivery": "backdrop-wide.webp"
+    },
+    {
+      "name": "backdrop-phone",
+      "prompt": "Use case: precise-object-edit. Edit target: supplied compact sage landscape. Prepare its background layer, keeping this exact 3:2 composition and the exact original sky, sun WITH its glow, sun position, cloud/bird positions and pale/middle-distance hills. Remove all trees and bushes on both edges. Remove the nearest dark green foreground hill at the bottom; fill behind it by naturally continuing the lighter midground hills to the bottom of the image. Keep the very pale neutral-white sky and original soft gradients/texture. No new objects, no new sun position, no trees, no labels or border. Opaque full canvas, no transparency.",
+      "reference": "C:/Users/Nebula PC/Development/villow-site/previews/homepage/assets/y-landscape/phone-source.png",
+      "transparent": false,
+      "sourcePath": "C:\\Users\\Nebula PC\\.codex\\generated_images\\01a1bbf5-0840-7600-a1af-48b492fe1751\\exec-d3394daa-0e32-4847-aa5f-b87af7f9e8a6.png",
+      "delivery": "backdrop-phone.webp"
+    },
+    {
+      "name": "foreground",
+      "prompt": "Use case: background-extraction. Edit target: provided landscape. Extract ONLY the single darkest nearest foreground green hill, the broad smooth continuous ribbon along the very bottom of the original image, as a genuine RGBA transparent layer. Reconstruct any hill surface that was hidden by trees/bushes so this is a clean continuous foreground. Preserve the original 3:1 canvas and the hill's position: its curved top starts roughly 84% down the left edge, dips around 91% near the left-middle, rises to roughly 78% near the right-middle then ends around 88% down the right edge; it fills the bottom edge with no gap. Preserve the same muted dark sage greens and subtle painted gradient. Every pixel above the hill must be actually transparent. No sky, sun, glow, clouds, distant hills, trees, bushes, text, shadow, checkerboard or border. One foreground hill layer only.",
+      "reference": "C:/Users/Nebula PC/Development/villow-site/previews/homepage/commission-background/w-background-original.png",
+      "transparent": true,
+      "sourcePath": "C:\\Users\\Nebula PC\\.codex\\generated_images\\01a1bbf5-0840-7600-a1af-48b492fe1751\\exec-3d1a4c45-a4fa-49c0-8063-e27fb92e4450.png",
+      "delivery": "foreground.webp"
+    },
+    {
+      "name": "trees-left",
+      "prompt": "Use case: background-extraction. Edit target: provided landscape. Isolate the dark sage tree and low shrub cluster from the LEFT edge as one clean freestanding transparent cutout. Include the tall gently rounded conifer, its shorter neighbouring conifers and low round bush silhouettes. Reconstruct whole silhouettes wherever cut off by the image edge or nearest hill, with discreet short trunks at the bottom so they can be planted behind a foreground hill. Keep the soft simple painted shapes and same muted forest/sage colors, subtle gradients, no black outlines or added detail. Frame the whole compact group tightly in a roughly 4:3 canvas, no large empty margins; all treetops and sides fully inside the canvas. Actual alpha transparency around the plants, including between shapes. No grass platform, ground ellipse, hill, sky, sun, birds, background, checkerboard, text, label or border.",
+      "reference": "C:/Users/Nebula PC/Development/villow-site/previews/homepage/commission-background/w-background-original.png",
+      "transparent": true,
+      "sourcePath": "C:\\Users\\Nebula PC\\.codex\\generated_images\\01a1bbf5-0840-7600-a1af-48b492fe1751\\exec-b407f750-6856-438e-8cbf-811b414c7747.png",
+      "delivery": "trees-left.webp"
+    },
+    {
+      "name": "trees-right",
+      "prompt": "Use case: background-extraction. Edit target: provided landscape. Isolate the smaller group of dark sage conifers at the RIGHT edge as one clean transparent cutout, reconstructing their entire simple silhouettes and discreet short trunks where hidden by the hill or cut off by the image edge. A group of four to five varied-height conifers, tallest at the right, small ones toward the left, with at most two small rounded bushes at the feet. Match the original soft simple rounded triangular trees exactly in style, muted dark forest green colors and restrained painted gradients. Frame all plants tightly inside a roughly 4:3 canvas with small margins, all tips and sides visible. Genuine alpha transparency around plants. No hill, sky, sun, ground platform/ellipse, shadows, birds, checkerboard, text, border or labels.",
+      "reference": "C:/Users/Nebula PC/Development/villow-site/previews/homepage/commission-background/w-background-original.png",
+      "transparent": true,
+      "sourcePath": "C:\\Users\\Nebula PC\\.codex\\generated_images\\01a1bbf5-0840-7600-a1af-48b492fe1751\\exec-16b19a28-d199-4408-8ab5-37f6f714a73c.png",
+      "delivery": "trees-right.webp"
+    }
+  ]
+}

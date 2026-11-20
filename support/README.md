@@ -1,12 +1,33 @@
 # Shared supporter service
 
+**Contact form activated (13 November 2026):** The owner explicitly approved backend activation. Worker version `f96d0acf-287e-456a-8aa8-f5cf08b1e2ba` has `CONTACT_ENABLED=true` and `CONTACT_TO=support@villow.app`. `POST /v1/projects/villow/contact` accepts an email, one of the fixed topics, a 10–3,000-character message and a UUID request ID. It sends plain text through the existing Resend sender, with the visitor's address as reply-to. It never adds a supporter or mailing-list entry. The API enforces allowed origins, a 16 KiB request limit, a honeypot, per-IP/per-email limits and an aggregate hourly limit. Retry keys prevent duplicate provider sends; provider failures never return success. Email/message contents are not logged or saved to D1. Live readiness reports enabled; invalid input returns 400 with the correct local CORS origin, and an untrusted origin returns 403. Existing live payment/Discord configuration still reports enabled. All 47 backend and six relevant preview tests passed. No real test email was sent, so inbox delivery has not been exercised in this activation. The forms are in the local Get involved and Contact previews; this change does not publish the website.
+
+**Amount-sharing update (5 November 2026):** The owner approved explicit public
+amount sharing and confirmed updating all four live Payment Links. Their third
+optional field now reads **Share my name, message and amount publicly?**, with
+Yes/No and no Yes default. The old label remains accepted for compatibility.
+Server-created Checkout Sessions use the new label. Webhooks validate consent
+against the authenticated session snapshot, including its original field keys
+and options, so subsequent Payment Link edits cannot expand old permission.
+`public-name-message-amount-v2` permits publishing the initial paid amount and
+currency alongside approved name/message data; `public-name-message-v1` never
+exposes amounts. Moderation, removal and suppression still apply. No migration
+or additional secret was needed. `GET supporters?recent=50` supplies the bounded
+design-preview list; old pagination/default responses remain compatible.
+
+Amount-sharing release Worker: `cfc8d32b-8594-4bef-9e7b-a877a765326e`. All 50 backend/UI checks passed for that release.
+The four live options returned 200 after the label edits; an unpaid A$5 checkout
+was created without submitting payment. The local redesign remains unpublished.
+
+**Live local support (updated 5 November 2026):** The owner explicitly chose real payments in the local How to help preview. It now uses the live service, with Discord enabled and exact loopback origins allowed alongside villow.app. Migration `0003_discord_return_origin.sql` binds OAuth returns to the trusted initiating origin. All 41 tests pass. Discord now verifies every requesting inbox before revealing eligibility; unmatched emails see No payment found privately, and delivery failures return an error. Live one-time and all monthly checkout creation passed without submitting payment; live payment/webhook/completed OAuth verification remains outstanding. Sandbox Discord stays disabled. The redesign is not published. See [Discord setup and activation](DISCORD-SETUP.md).
+
 **Live website:** [villow.app/support](https://villow.app/support), launched 3 November 2026 (Australia/Brisbane). Live checkout is enabled on the production Worker. Monthly A$5/A$10/A$20 link responses, the A$5 minimum, the live Customer Portal login page, and opening an unpaid A$5 one-time Checkout Session were verified. No real payment was submitted. The first genuine contribution still needs a successful live webhook delivery check; public messages require moderation as described below.
 
-Website source release: `44702bb` on the repository's `main` branch; initial Cloudflare website version `fff1af9a-4795-4e84-9148-f42829ca7699`. Enabled production Worker version: `86dc4039-9268-412b-9fc9-5e6ab63dea8a`. The release was built in an isolated checkout so unrelated local website work was not published. Future website builds must retain the public build variable documented below. To pause new checkout, set production `PAYMENTS_ENABLED=false` and deploy with `--config wrangler.production.jsonc`; portal access, removal and webhook processing remain available.
+Website source release: `44702bb` on the repository's `main` branch; initial Cloudflare website version `fff1af9a-4795-4e84-9148-f42829ca7699`. Current production Worker version: `cfc8d32b-8594-4bef-9e7b-a877a765326e` (5 November; explicit amount-sharing consent and latest-50 feed). The website release was built in an isolated checkout so unrelated local website work was not published. Future website builds must retain the public build variable documented below. To pause new checkout, set production `PAYMENTS_ENABLED=false` and deploy with `--config wrangler.production.jsonc`; portal access, removal and webhook processing remain available.
 
 ## Setup and verification record
 
-**Test backend deployed; sandbox checkout, moderation, emailed removal, and portal cancellation scheduling verified.** The test Worker is [fixtheweb-support-test.nuciforan.workers.dev](https://fixtheweb-support-test.nuciforan.workers.dev), bound to D1 database `771fc8a2-e821-4065-aca5-e2ba3b7c8c59`; migration `0001_support.sql` is applied. Its allowed website origin is `http://localhost:4321`; this test Worker handles sandbox payments only. The website is Astro static content on Cloudflare (`../wrangler.jsonc`). Its existing `review/` Supabase migrations belong to the separate extension review environment. This service uses a separate Cloudflare Worker and D1 database. **No Supabase project is needed.** No app or extension code is changed.
+**Test backend deployed; sandbox checkout, moderation, emailed removal, and portal cancellation scheduling verified.** The test Worker is [fixtheweb-support-test.nuciforan.workers.dev](https://fixtheweb-support-test.nuciforan.workers.dev), bound to D1 database `771fc8a2-e821-4065-aca5-e2ba3b7c8c59`; migration `0001_support.sql` is applied. Its allowed website origin is `http://127.0.0.1:4411` (the current How to help design preview); this test Worker handles sandbox payments only. The website is Astro static content on Cloudflare (`../wrangler.jsonc`). Its existing `review/` Supabase migrations belong to the separate extension review environment. This service uses a separate Cloudflare Worker and D1 database. **No Supabase project is needed.** No app or extension code is changed.
 
 **Production infrastructure prepared and launched on 2026-11-03.** `wrangler.production.jsonc` deploys Worker `fixtheweb-support` at `https://fixtheweb-support.nuciforan.workers.dev`, with its own Oceania D1 database `71446adf-ba53-4cd2-9efb-b1c782e8c996`. Migration `0001_support.sql` is applied; all seven application tables exist. A fresh `EMAIL_HASH_SECRET` was generated in memory and saved directly to Cloudflare. Cloudflare confirms all four production secrets are present: `EMAIL_HASH_SECRET`, `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, and `RESEND_API_KEY`. `STRIPE_MODE=live`, `PAYMENTS_ENABLED=true`, and `MAIL_FROM=Villow <support@mail.villow.app>` are set. `PROJECTS_JSON` maps the four owner-supplied live Payment Link IDs below to `https://villow.app`, in AUD, with the supplied live Customer Portal URL. The deployed config endpoint confirms enabled live checkout. The owner reported no activation/verification warnings in the main Stripe dashboard. The public website is connected to this Worker.
 
@@ -45,7 +66,7 @@ Actual sandbox checks still outstanding include payment completion for the other
 
 The owner resent an existing `checkout.session.completed` event from the sandbox destination and confirmed the new delivery returned HTTP 200. Before and after the replay, D1 contained four contributions, four payments, three subscriptions, twelve processed event IDs, and one suppression. All four contributions retained consent withdrawn or absent and both public text columns NULL; the removed one-time contribution retained its removal marker. The public feed remained empty. The replay created no duplicate records and restored no public details.
 
-The local preview was started with `PUBLIC_SUPPORT_API_URL=https://fixtheweb-support-test.nuciforan.workers.dev` in the development process environment, using `npm run dev -- --host 127.0.0.1 --port 4321 --force`. Open `http://localhost:4321/support` (the configured origin uses `localhost`, not `127.0.0.1`). This setting was not written to the production website's environment. Resend's `mail.villow.app` domain is verified, its sending-only key is saved as the test Worker's `RESEND_API_KEY` secret, and `MAIL_FROM=Villow <support@mail.villow.app>` is deployed as a server-side, non-secret variable. Delivery to the owner's inbox and the complete removal flow were verified on 2026-11-03.
+The current live interface is the local How to help design preview at `http://127.0.0.1:4411/help-a.html#financial-support`. Run `node previews/homepage/serve-r.mjs` from the repository root, or reuse the existing shared server. Its `/support` alias handles Stripe returns and email-removal links. See [preview integration notes](../previews/homepage/SUPPORT-INTEGRATION.md). The earlier Astro preview on port 4321 is no longer the configured sandbox origin.
 
 Sandbox account: `acct_1UXQtn3AH36bMHbI`. These are test configuration identifiers, not credentials:
 
@@ -63,7 +84,7 @@ The one-time ID comes from the supplied Markdown link's actual destination; its 
 ```text
 villow.app/support ── public API ── Cloudflare Worker ── D1
        │                                │
-       └── Stripe Checkout              ├── Resend (removal email only)
+       └── Stripe Checkout              ├── Resend (requested verification emails)
                     └── signed webhook ─┘
 ```
 
@@ -71,7 +92,7 @@ Use a separate Worker so the existing site's hosting remains unchanged. Start on
 
 Monthly contributions use your three existing Payment Links. The supplied variable-amount link is also accepted by the webhook if shared directly. For an exact preset/custom amount selected on Villow, the Worker creates a one-time Checkout Session using that link's product and three custom fields. Payment Links do not document an amount-prefill URL parameter. This does **not** inherit every Payment Link setting: the generated one-time session uses the Stripe account's applicable payment settings, no discounts, and the explicitly configured success/cancel URLs. Review it in the sandbox.
 
-Amounts are AUD, with a server-enforced A$5 minimum and A$10,000 per-checkout cap. The recurring options are exactly A$5, A$10 and A$20 per month. Contribution amounts never appear in the public feed.
+Amounts are AUD, with a server-enforced A$5 minimum and A$10,000 per-checkout cap. The recurring options are exactly A$5, A$10 and A$20 per month. The public feed includes an amount only for an approved contribution with the explicit v2 amount-sharing permission. Earlier amounts remain private.
 
 ## Before you start
 
@@ -94,9 +115,9 @@ Create test equivalents of all four links, in AUD:
 - For each link add exactly these **optional** fields:
   1. Text: `Display name`
   2. Text: `Supporter message`
-  3. Dropdown: `Can we publicly display your name and message?` — `Yes` and `No`. Do not default to Yes.
+  3. Dropdown: `Share my name, message and amount publicly?` — `Yes` and `No`. Do not default to Yes. The older `Can we publicly display your name and message?` label remains supported for name/message-only consent.
 - Set text limits to 80 characters for the name and 255 for the message when available. The backend independently caps them.
-- Add consent help explaining that approved text can appear on Villow and other Fix the Web projects. Link to `https://villow.app/support#supporter-privacy` (or your staging equivalent).
+- Add consent help explaining that approved names, messages and permitted contribution amounts can appear on Villow and other Fix the Web projects. Link to `https://villow.app/support#supporter-privacy` (or your staging equivalent).
 - Set successful-payment redirect to `<WEBSITE_ORIGIN>/support?payment=returned`. The page does not treat this redirect as proof of payment.
 - Enable the Customer Portal's hosted login link, payment-method updates, invoice access, and subscription cancellation. Keep product/quantity switching and trials off for this initial setup. Enable test mode separately from live mode.
 - Set the account's public business/support information and receipt settings in Stripe.
@@ -114,7 +135,7 @@ npm ci
 Copy `stripe-links.json` to an ignored local file such as `.env.test-links.json`. Replace its four payment URLs and portal URL with their test equivalents. Keep `currency` as `aud`. Set `STRIPE_SECRET_KEY` securely in the shell environment, then run:
 
 ```sh
-npm run discover -- --links .env.test-links.json --origin http://localhost:4321 --mode test
+npm run discover -- --links .env.test-links.json --origin http://127.0.0.1:4411 --mode test
 ```
 
 For hosted staging, pass its HTTPS origin instead. This is read-only: it matches the URLs, checks amounts, currency, minimum and consent fields, and prints a **non-secret** JSON value for `PROJECTS_JSON`. Missing or mismatched configuration fails closed. Its structure is:
@@ -223,7 +244,17 @@ Automated tests use the real Stripe SDK for signed webhook verification and SQLi
 
 ## Moderation
 
-Use Cloudflare Dashboard → D1 → the correct database → Console (or authenticated Wrangler). There is no public admin endpoint and no admin key in the browser. Limit database access to trusted operators.
+The live owner interface is <https://fixtheweb.org/admin/support>, activated on
+16 November 2026. Use it to filter Unreviewed, Approved, Hidden and Needs review,
+approve/hide messages and preview optional censorship. Screened, consented paid
+messages publish immediately as Unreviewed. See [the moderation guide](MODERATION.md)
+for sign-in, the isolated local preview and deployment evidence.
+
+### Legacy operator recovery only
+
+Routine review does not need D1. The historical queries below are for operator
+recovery only. Prefer the authenticated admin API, which also handles versioned
+decisions and original/censored public text. Limit database access to trusted operators.
 
 Review pending records:
 
@@ -249,7 +280,7 @@ Hide an entry at any time:
 UPDATE contributions SET moderation = 'hidden' WHERE session_id = 'cs_REPLACE';
 ```
 
-Hiding keeps a private moderation record; supporter removal clears the public text. Nothing auto-approves. Browser rendering uses `textContent`, not HTML. Entries are returned with `Cache-Control: no-store`, so removal is effective on the next fetch. Already-open pages or copies made by others cannot be recalled.
+Hiding keeps a private moderation record; supporter removal clears original and censored text. New screened messages publish as Unreviewed; Approved remains an explicit owner decision. Browser rendering uses `textContent`, not HTML. Entries are returned with `Cache-Control: no-store`, so removal is effective on the next fetch. Already-open pages or copies made by others cannot be recalled.
 
 ## Going live — only after the test checklist
 
@@ -267,13 +298,44 @@ You can immediately disable new website checkouts with `PAYMENTS_ENABLED=false` 
 - Keep dependencies pinned and upgrade the SDK/API version together after sandbox regression testing.
 - D1 transactions atomically commit payment records with event deduplication. Stable Checkout/invoice IDs provide a second deduplication layer. No raw webhook payloads or payment method details are stored.
 - Email addresses stay with Stripe and the user's requested Resend delivery. D1 keeps only a secret-keyed email fingerprint for matching. Preserve the hashing key; don't rotate it without a migration plan. IP rate-limit keys are also hashed and expire.
-- The daily cron removes expired rate limits and tokens and event IDs older than 90 days. Contribution/payment references, consent evidence and suppression records remain until an operator's retention/deletion action. Test and confirm your retention policy before launch. D1 backups have their own retention.
+- Scheduled cleanup removes expired rate limits and tokens and event IDs older than 90 days. The prepared production Worker runs every 15 minutes. Contribution/payment references, consent evidence and suppression records remain until an operator's retention/deletion action. Test and confirm your retention policy before launch. D1 backups have their own retention.
 - Refunds/disputes do not automatically remove a consenting message. Hide it manually if appropriate; payment reconciliation remains in Stripe. “Monthly supporter” means Stripe currently reports an active subscription, not a promise of a future payment.
 - Status changes rely on delivered webhooks. Investigate delivery failures and replay events in Stripe Workbench before its retry window ends. If missed for longer, reconcile against Stripe rather than inventing payment records.
 - Configuration failures emit a fixed diagnostic category (for example, `support_link_configuration_failed field_labels`) available through authenticated Cloudflare tail logs. Stripe authentication/permission failures have separate fixed categories. Raw SDK error messages, secrets, and supporter data are never logged by the application; avoid retaining platform-generated request metadata from temporary tail sessions.
 - To add Fix the Web, create its own four Payment Links and add a `fixtheweb` entry to `PROJECTS_JSON` with its exact origin. Links cannot be reused between projects: source attribution comes from the server-side mapping, not a forgeable URL parameter. Directly shared links are attributed to the project owning that link.
 - Other projects may read Villow's explicitly consented feed server-side. Browser readers must be configured as trusted origins. Keep the public response allowlist and removal behavior when reusing data; don't maintain unrevocable cached copies. Build only the Villow interface in this release.
 
-Future community rewards: Discord supporter roles and Reddit supporter flair are planned separately from this release. Add opt-in, verified platform-account linking to private supporter records; never infer Discord/Reddit identity from a public display name or message. Public-display consent and reward enrollment must remain separate. Use successful contribution records and subscription status to calculate eligibility, define the duration of one-time benefits, and specify how cancellation, failed payments, refunds, and disputes affect rewards before implementing them. Add retryable platform updates and periodic reconciliation so webhook redelivery cannot duplicate rewards or leave stale roles. Each platform needs its own authorized integration and permissions; no Discord or Reddit credentials, calls, or UI are added now.
+### Payment-email privacy boundary
+
+Stripe sends the payment email to the Worker in its verified webhook. The Worker
+normalises it and stores only an HMAC-SHA-256 fingerprint made with
+`EMAIL_HASH_SECRET`, which is a Worker secret, not a D1 value. A later email entered
+by the supporter is fingerprinted the same way to match their payment. The original
+address is used transiently to request delivery from Resend; it is not recovered
+from D1 or fetched from Stripe just to send that link. The application logs fixed
+error categories, never email addresses, request bodies or raw Stripe payloads.
+
+A D1-only disclosure does not provide a list of payment email addresses or the
+secret needed to test guesses against their fingerprints. D1 still contains
+private Discord IDs, contribution references and permitted public text, so it
+must remain private. If someone enters an email address in their own public name
+or message, that free text can contain an address; moderation must check it.
+
+This is not protection against complete account/backend takeover. A compromised
+Worker could capture incoming addresses or use Stripe credentials and stored
+references to retrieve payment records. Stripe retains payment contact details.
+Resend receives email recipients and message bodies, including the expiring link;
+its current policy retains email/log data for 30 days on Free, Pro and Scale
+plans, with separate backup retention. Protect those accounts and use limited
+API keys. Never rotate the fingerprint secret casually: existing matches depend
+on it. See [Cloudflare Worker secrets](https://developers.cloudflare.com/workers/configuration/secrets/)
+and [Resend retention](https://resend.com/security/gdpr/).
+
+`test/privacy.test.mjs` verifies keyed normalisation and checks every application
+table after payment, removal and Discord verification for raw payment emails,
+secrets and usable email/OAuth tokens. This is a regression check of our storage,
+not a claim about third-party storage or total compromise resistance.
+
+Discord supporter linking and role updates are verified in the sandbox, with permanent Supporter access and a separate Ongoing Supporter role through the paid monthly period. The production backend is prepared with linking disabled. See [Discord setup](DISCORD-SETUP.md) for activation, privacy boundaries and current limitations. Reddit flair automation remains deferred.
 
 References: [Stripe webhook signatures, duplicates and event order](https://docs.stripe.com/webhooks), [Payment Link parameters](https://docs.stripe.com/payment-links/url-parameters), [Checkout Session creation](https://docs.stripe.com/api/checkout/sessions/create), [Cloudflare D1 batch transactions](https://developers.cloudflare.com/d1/worker-api/d1-database/), [Resend email API](https://resend.com/docs/api-reference/emails/send-email).

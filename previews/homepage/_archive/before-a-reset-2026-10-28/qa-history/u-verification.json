@@ -1,0 +1,79 @@
+[
+  {
+    "action": "https://villow.app/download",
+    "copyFitsHero": true,
+    "desktopTitleClearOfArt": null,
+    "invitationBelowAction": true,
+    "leadBeforeAction": true,
+    "mobileArtAfterCopy": true,
+    "overflow": 0,
+    "titleWithinHero": true,
+    "width": 320
+  },
+  {
+    "action": "https://villow.app/download",
+    "copyFitsHero": true,
+    "desktopTitleClearOfArt": null,
+    "invitationBelowAction": true,
+    "leadBeforeAction": true,
+    "mobileArtAfterCopy": true,
+    "overflow": 0,
+    "titleWithinHero": true,
+    "width": 390
+  },
+  {
+    "action": "https://villow.app/download",
+    "copyFitsHero": true,
+    "desktopTitleClearOfArt": null,
+    "invitationBelowAction": true,
+    "leadBeforeAction": true,
+    "mobileArtAfterCopy": true,
+    "overflow": 0,
+    "titleWithinHero": true,
+    "width": 600
+  },
+  {
+    "action": "https://villow.app/download",
+    "copyFitsHero": true,
+    "desktopTitleClearOfArt": true,
+    "invitationBelowAction": true,
+    "leadBeforeAction": true,
+    "mobileArtAfterCopy": null,
+    "overflow": 0,
+    "titleWithinHero": true,
+    "width": 768
+  },
+  {
+    "action": "https://villow.app/download",
+    "copyFitsHero": true,
+    "desktopTitleClearOfArt": true,
+    "invitationBelowAction": true,
+    "leadBeforeAction": true,
+    "mobileArtAfterCopy": null,
+    "overflow": 0,
+    "titleWithinHero": true,
+    "width": 1024
+  },
+  {
+    "action": "https://villow.app/download",
+    "copyFitsHero": true,
+    "desktopTitleClearOfArt": true,
+    "invitationBelowAction": true,
+    "leadBeforeAction": true,
+    "mobileArtAfterCopy": null,
+    "overflow": 0,
+    "titleWithinHero": true,
+    "width": 1440
+  },
+  {
+    "action": "https://villow.app/download",
+    "copyFitsHero": true,
+    "desktopTitleClearOfArt": true,
+    "invitationBelowAction": true,
+    "leadBeforeAction": true,
+    "mobileArtAfterCopy": null,
+    "overflow": 0,
+    "titleWithinHero": true,
+    "width": 1920
+  }
+]

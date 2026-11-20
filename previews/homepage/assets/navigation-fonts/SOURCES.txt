@@ -1,0 +1,17 @@
+Rounded header typography comparisons, 12 November 2026.
+Locally served, unmodified variable font files from the Google Fonts repository.
+
+Nunito (weights 200–1000):
+https://github.com/google/fonts/tree/main/ofl/nunito
+https://raw.githubusercontent.com/google/fonts/main/ofl/nunito/Nunito%5Bwght%5D.ttf
+Licence: Nunito-OFL.txt
+
+Quicksand (weights 300–700):
+https://github.com/google/fonts/tree/main/ofl/quicksand
+https://raw.githubusercontent.com/google/fonts/main/ofl/quicksand/Quicksand%5Bwght%5D.ttf
+Licence: Quicksand-OFL.txt
+
+Preset 33 continues to use the existing assets/VarelaRound-Regular.ttf.
+34 and its 35–37 comparisons now use Nunito. Quicksand is retained here only
+as provenance for the earlier 35 font study and is no longer loaded.
+No third-party font request at runtime.

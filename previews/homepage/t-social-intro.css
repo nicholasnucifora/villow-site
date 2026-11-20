@@ -1,0 +1,6 @@
+.t-social-intro{max-width:760px;margin:0 auto 78px;text-align:center;color:#244d43;scroll-margin-top:125px}
+.t-social-intro h2{font:400 clamp(35px,3.6vw,46px)/1.18 'Varela Round',sans-serif;letter-spacing:-.045em;margin:0 0 25px;text-wrap:balance}
+.t-social-intro p{max-width:630px;margin:0 auto;font-size:16px;line-height:1.85;color:#536f61;text-wrap:pretty}
+@media(max-width:900px){.t-social-intro{margin-bottom:58px}.t-social-intro h2{font-size:39px}.t-social-intro p{font-size:15px;max-width:620px}}
+@media(max-width:600px){.t-social-intro{margin-bottom:45px;text-align:left}.t-social-intro h2{font-size:34px;max-width:360px;margin-bottom:22px}.t-social-intro h2 br{display:none}.t-social-intro p{font-size:14px;line-height:1.85;max-width:440px}}
+@media(max-width:360px){.t-social-intro h2{font-size:31px}}

@@ -1,0 +1,140 @@
+[
+  {
+    "dayLabels": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "documentWidth": 305,
+    "height": 207,
+    "imagesLoaded": true,
+    "miniCount": 2,
+    "overflow": [],
+    "pending": 0,
+    "width": 320,
+    "hourHeight": 207,
+    "visibleCharts": [
+      "time-of-day"
+    ],
+    "axisOverflow": []
+  },
+  {
+    "dayLabels": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "documentWidth": 375,
+    "height": 207,
+    "imagesLoaded": true,
+    "miniCount": 2,
+    "overflow": [],
+    "pending": 0,
+    "width": 390,
+    "hourHeight": 207,
+    "visibleCharts": [
+      "time-of-day"
+    ],
+    "axisOverflow": []
+  },
+  {
+    "dayLabels": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "documentWidth": 753,
+    "height": 226,
+    "imagesLoaded": true,
+    "miniCount": 2,
+    "overflow": [],
+    "pending": 0,
+    "width": 768,
+    "hourHeight": 226,
+    "visibleCharts": [
+      "time-of-day"
+    ],
+    "axisOverflow": []
+  },
+  {
+    "dayLabels": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "documentWidth": 1009,
+    "height": 226,
+    "imagesLoaded": true,
+    "miniCount": 2,
+    "overflow": [],
+    "pending": 0,
+    "width": 1024,
+    "hourHeight": 226,
+    "visibleCharts": [
+      "time-of-day"
+    ],
+    "axisOverflow": []
+  },
+  {
+    "dayLabels": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "documentWidth": 1265,
+    "height": 226,
+    "imagesLoaded": true,
+    "miniCount": 2,
+    "overflow": [],
+    "pending": 0,
+    "width": 1280,
+    "hourHeight": 226,
+    "visibleCharts": [
+      "time-of-day"
+    ],
+    "axisOverflow": []
+  },
+  {
+    "dayLabels": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "documentWidth": 1425,
+    "height": 226,
+    "imagesLoaded": true,
+    "miniCount": 2,
+    "overflow": [],
+    "pending": 0,
+    "width": 1440,
+    "hourHeight": 226,
+    "visibleCharts": [
+      "time-of-day"
+    ],
+    "axisOverflow": []
+  }
+]

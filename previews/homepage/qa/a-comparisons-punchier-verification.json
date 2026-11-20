@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-28",
+  "responsive": [
+    {
+      "broken": 0,
+      "labelsFit": true,
+      "overflow": false,
+      "playerFits": true,
+      "taskTargets": [
+        44,
+        44
+      ],
+      "width": 320
+    },
+    {
+      "broken": 0,
+      "labelsFit": true,
+      "overflow": false,
+      "playerFits": true,
+      "taskTargets": [
+        44,
+        44
+      ],
+      "width": 390
+    },
+    {
+      "broken": 0,
+      "labelsFit": true,
+      "overflow": false,
+      "playerFits": true,
+      "taskTargets": [
+        44,
+        44
+      ],
+      "width": 600
+    },
+    {
+      "broken": 0,
+      "labelsFit": true,
+      "overflow": false,
+      "playerFits": true,
+      "taskTargets": [
+        44,
+        44
+      ],
+      "width": 768
+    },
+    {
+      "broken": 0,
+      "labelsFit": true,
+      "overflow": false,
+      "playerFits": true,
+      "taskTargets": [
+        44,
+        44
+      ],
+      "width": 1024
+    },
+    {
+      "broken": 0,
+      "labelsFit": true,
+      "overflow": false,
+      "playerFits": true,
+      "taskTargets": [
+        44,
+        44
+      ],
+      "width": 1440
+    }
+  ],
+  "nativeCheckboxKeyboard": "Space toggles completion on/off; checked control fills green",
+  "scope": "x-life comparisons only; all earlier content and concepts/closing preserved"
+}

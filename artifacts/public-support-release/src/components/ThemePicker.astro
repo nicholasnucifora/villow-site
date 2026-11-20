@@ -1,0 +1,46 @@
+---
+/* Only rendered by `npm run dev`, for trying themes quickly. The real choice is `theme:` in site.config.yaml. */
+import { config } from "../lib/config";
+import { ui } from "../lib/content";
+import { themes } from "../lib/themes";
+---
+
+<label class="theme-picker">
+  <span>{ui.themePicker}</span>
+  <select data-theme-picker>
+    {themes.map((theme) => <option value={theme} selected={theme === config.theme}>{theme}</option>)}
+  </select>
+</label>
+
+<script is:inline>
+  (() => {
+    const select = document.querySelector("[data-theme-picker]");
+    const saved = sessionStorage.getItem("dev-theme");
+    if (saved) {
+      document.documentElement.dataset.theme = saved;
+      select.value = saved;
+    }
+    select.addEventListener("change", () => {
+      document.documentElement.dataset.theme = select.value;
+      sessionStorage.setItem("dev-theme", select.value);
+    });
+  })();
+</script>
+
+<style>
+  .theme-picker {
+    position: fixed;
+    left: var(--space-md);
+    bottom: var(--space-md);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-pill);
+    background: var(--color-surface);
+    border: var(--border);
+    box-shadow: var(--shadow-md);
+    font-size: var(--text-xs);
+  }
+</style>

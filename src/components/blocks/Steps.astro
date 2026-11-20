@@ -1,7 +1,7 @@
 ---
 import type { BlockOf } from "../../lib/schema";
 import { inline, md, slugify } from "../../lib/markdown";
-import Action from "../ui/Action.astro";
+import Actions from "../ui/Actions.astro";
 import BlockShell from "../ui/BlockShell.astro";
 import BlockHeader from "../ui/BlockHeader.astro";
 import Media from "../ui/Media.astro";
@@ -29,9 +29,7 @@ const row = block.layout === "row";
             {item.body && <div class="prose" set:html={md(item.body)} />}
             {item.actions && (
               <div class="actions">
-                {item.actions.map((action) => (
-                  <Action action={action} size="small" />
-                ))}
+                <Actions actions={item.actions} size="small" />
               </div>
             )}
           </div>

@@ -16,7 +16,7 @@ const headingId = block.heading ? `${block.id ?? slugify(block.heading)}-title` 
 
 <BlockShell type="cards" id={block.id} background={block.background} labelledBy={headingId}>
   <BlockHeader eyebrow={block.eyebrow} heading={block.heading} intro={block.intro} headingId={headingId} />
-  <ul class="cards">
+  <ul class:list={["cards", block.variant === "screenshots" && "cards--screenshots"]}>
     {
       block.items.map((item) => (
         <li class:list={["card", "cards__item", item.href && "cards__item--link"]}>
@@ -84,5 +84,23 @@ const headingId = block.heading ? `${block.id ?? slugify(block.heading)}-title` 
   }
   .cards__actions {
     margin-top: var(--space-xl);
+  }
+  .cards--screenshots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .cards--screenshots .cards__item {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .cards--screenshots .cards__item h3 {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+  @media (max-width: 40rem) {
+    .cards--screenshots {
+      grid-template-columns: 1fr;
+    }
   }
 </style>

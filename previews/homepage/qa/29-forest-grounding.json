@@ -1,0 +1,65 @@
+{
+  "method": "Tree cutout bottom alpha edge vs continuous foreground crest, sampled every CSS pixel. Negative values mean the base is behind the hill.",
+  "measurements": [
+    {
+      "width": 390,
+      "leftMaxGap": -9.1,
+      "rightMaxGap": -5
+    },
+    {
+      "width": 700,
+      "leftMaxGap": -5.6,
+      "rightMaxGap": -5
+    },
+    {
+      "width": 701,
+      "leftMaxGap": -11.6,
+      "rightMaxGap": -7.2
+    },
+    {
+      "width": 1168,
+      "leftMaxGap": -20.1,
+      "rightMaxGap": -15.5
+    },
+    {
+      "width": 1200,
+      "leftMaxGap": -20,
+      "rightMaxGap": -15.7
+    },
+    {
+      "width": 1201,
+      "leftMaxGap": -20,
+      "rightMaxGap": -15.7
+    },
+    {
+      "width": 1440,
+      "leftMaxGap": -17.6,
+      "rightMaxGap": -17.7
+    },
+    {
+      "width": 1636,
+      "leftMaxGap": -13.2,
+      "rightMaxGap": -18
+    },
+    {
+      "width": 1920,
+      "leftMaxGap": -3.1,
+      "rightMaxGap": -18.5
+    },
+    {
+      "width": 2560,
+      "leftMaxGap": -21.5,
+      "rightMaxGap": -20.4
+    },
+    {
+      "width": 3440,
+      "leftMaxGap": -35.8,
+      "rightMaxGap": -28.9
+    },
+    {
+      "width": 1948,
+      "leftMaxGap": -2.2,
+      "rightMaxGap": -18.5
+    }
+  ]
+}

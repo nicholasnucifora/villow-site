@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-28",
+  "viewportChecks": [
+    {
+      "clearance": 37,
+      "closingOverflow": false,
+      "libraryWidth": 273,
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "clearance": 38,
+      "closingOverflow": false,
+      "libraryWidth": 545,
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "clearance": 68,
+      "closingOverflow": false,
+      "libraryWidth": 273,
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "clearance": 43,
+      "closingOverflow": false,
+      "libraryWidth": 307,
+      "overflow": 0,
+      "width": 850
+    },
+    {
+      "clearance": 34,
+      "closingOverflow": false,
+      "libraryWidth": 334,
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "clearance": 50,
+      "closingOverflow": false,
+      "libraryWidth": 337,
+      "overflow": 0,
+      "width": 1440
+    }
+  ],
+  "browsing": "Next4 preserved all5 and saved set; previous restores cards",
+  "actions": "save/remove atcursor2, realleftandrightdrag, unsave, empty,replaypassed",
+  "keyboard": "Enterprevious/next and boundaryfocuspassed",
+  "swipeCue": "noncommitting; unchangedcount/saved/inline state",
+  "motion": "reducedmotion320msfade/200mssettle;activeinputcancellationreviewed"
+}

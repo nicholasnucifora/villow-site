@@ -1,0 +1,13 @@
+# R art generation
+
+Built-in image_gen, transparent edit of assets/q-shared-friends.png. Output copied into this project as assets/r-shared-friends.png and losslessly encoded to assets/r-shared-friends.webp by prepare-r-art.mjs; no pixel edits.
+
+Source: C:/Users/Nebula PC/.codex/generated_images/01a16282-9002-7403-9596-5820d6fa455a/exec-7dbe6e26-5661-487a-a031-087d7942b0ef.png
+
+PROMPT
+Use case: precise-object-edit
+Asset type: transparent illustration layer for Villow's shared-video website demonstration, landscape 1536x1024.
+Primary request: refine the supplied illustration of two seated friends. Replace the left woman with a clearly DIFFERENT woman: short softly curly chestnut bob, warm medium brown skin, a muted terracotta cardigan over a cream shirt. Keep a friendly male viewer on the right in a sage jumper, with short brown hair. Both heads should turn inward toward a shared screen located between them, their pupils visibly looking inward at the screen's LOWER-MIDDLE (around x50%, y38% of the canvas), NOT up at the ceiling. Relaxed necks and natural seated posture; thoughtful warm smiles.
+Style/medium: preserve the reference's minimal polished soft cartoon illustration, simple broad shapes, very restrained gentle gradients, no texture or fiddly detail. Cream, sage, forest teal, warm terracotta palette.
+Composition/framing: keep the two cosy armchairs in the bottom corners. Left face centred near x12%,y64%; right face near x88%,y64%. Feet visible at bottom. Leave the entire upper central rectangle x19%-81%, y1%-63% completely transparent and empty for a real HTML video display. Faces and hair must remain outside this rectangle. Both people looking at that screen, not at each other or into space.
+Constraints: no screen, monitor, display, frame, connecting line, UI, text, icons, background scenery or clouds. Actual transparent background. Preserve warm understated character and pleasing seated silhouettes, but do not reuse the long teal-haired woman. No blank black rectangle. No baked shadow or glow filling the transparent central area. Whole canvas 3:2 landscape.

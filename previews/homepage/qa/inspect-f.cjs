@@ -1,0 +1,2 @@
+const {chromium}=require('C:/Users/Nebula PC/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+(async()=>{const b=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});const p=await b.newPage({viewport:{width:1200,height:900}});await p.goto('http://127.0.0.1:4401/f.html',{waitUntil:'networkidle'});await p.locator('.rf-insights').scrollIntoViewIfNeeded();await p.screenshot({path:'previews/homepage/qa/f-insights.png'});await b.close()})().catch(e=>{console.error(e);process.exit(1)});

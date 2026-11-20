@@ -1,0 +1,159 @@
+[
+  {
+    "brandBottom": 142,
+    "brandRight": 135.015625,
+    "client": 885,
+    "ctaLeft": 649.109375,
+    "links": [
+      {
+        "rect": {
+          "bottom": 143.984375,
+          "height": 40,
+          "left": 345.21875,
+          "right": 467.15625,
+          "top": 103.984375,
+          "width": 121.9375,
+          "x": 345.21875,
+          "y": 103.984375
+        },
+        "text": "How to help"
+      },
+      {
+        "rect": {
+          "bottom": 143.984375,
+          "height": 40,
+          "left": 471.15625,
+          "right": 641.109375,
+          "top": 103.984375,
+          "width": 169.953125,
+          "x": 471.15625,
+          "y": 103.984375
+        },
+        "text": "Hosting your Villow"
+      }
+    ],
+    "overflow": false,
+    "width": 900
+  },
+  {
+    "brandBottom": 142,
+    "brandRight": 135.015625,
+    "client": 686,
+    "ctaLeft": 450.109375,
+    "links": [
+      {
+        "rect": {
+          "bottom": 143.984375,
+          "height": 40,
+          "left": 146.21875,
+          "right": 268.15625,
+          "top": 103.984375,
+          "width": 121.9375,
+          "x": 146.21875,
+          "y": 103.984375
+        },
+        "text": "How to help"
+      },
+      {
+        "rect": {
+          "bottom": 143.984375,
+          "height": 40,
+          "left": 272.15625,
+          "right": 442.109375,
+          "top": 103.984375,
+          "width": 169.953125,
+          "x": 272.15625,
+          "y": 103.984375
+        },
+        "text": "Hosting your Villow"
+      }
+    ],
+    "overflow": false,
+    "width": 701
+  },
+  {
+    "brandBottom": 134,
+    "brandRight": 135.015625,
+    "client": 375,
+    "ctaLeft": 214.1875,
+    "links": [
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 40,
+          "left": 41.546875,
+          "right": 159.484375,
+          "top": 144,
+          "width": 117.9375,
+          "x": 41.546875,
+          "y": 144
+        },
+        "text": "How to help"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 40,
+          "left": 167.484375,
+          "right": 333.4375,
+          "top": 144,
+          "width": 165.953125,
+          "x": 167.484375,
+          "y": 144
+        },
+        "text": "Hosting your Villow"
+      }
+    ],
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "brandBottom": 134,
+    "brandRight": 122.90625,
+    "client": 305,
+    "ctaLeft": 150.1875,
+    "links": [
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 40,
+          "left": 6.5625,
+          "right": 124.5,
+          "top": 144,
+          "width": 117.9375,
+          "x": 6.5625,
+          "y": 144
+        },
+        "text": "How to help"
+      },
+      {
+        "rect": {
+          "bottom": 184,
+          "height": 40,
+          "left": 132.5,
+          "right": 298.453125,
+          "top": 144,
+          "width": 165.953125,
+          "x": 132.5,
+          "y": 144
+        },
+        "text": "Hosting your Villow"
+      }
+    ],
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "check": "copied menu",
+    "entryFont": "450 15px / 22.5px \"Navigation Nunito\", sans-serif",
+    "fill": "rgb(212, 230, 216)",
+    "headingFont": "650 15.5px / 24px \"Navigation Nunito\", sans-serif",
+    "hover": true,
+    "radius": "8px"
+  },
+  {
+    "check": "Escape",
+    "expanded": "false",
+    "focus": "Open menu"
+  }
+]

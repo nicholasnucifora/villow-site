@@ -1,0 +1,72 @@
+/* 27: whole backgrounds scale naturally; trees and the nearest hill are
+   separate layers. Hero height follows content so scenery never drifts away. */
+.version-27-supplied {--i-sky:#fdfdfd;background-color:var(--i-sky)}
+.version-27-supplied .preview-site-header,
+.version-27-supplied .ip-hero {background:var(--i-sky)}
+.version-27-supplied .ip-hero[data-ip-view] .i-hero-inner {
+ min-height:0;
+ padding-top:24px;
+ padding-bottom:clamp(84px,calc(13.3vw - 30px),504px);
+ align-items:center;
+}
+.version-27-supplied .ip-hero .ip-product-space {min-height:0;align-self:center}
+.version-27-supplied .ip-hero[data-ip-view] [data-ic-panel] {width:100%;max-width:680px;margin:0 auto}
+.version-27-supplied .ip-hero[data-ip-view] .ic-stage {height:auto;min-height:0;aspect-ratio:2/1}
+.version-27-supplied .ip-hero .ig-cinema {height:100%;min-height:0}
+.version-27-supplied .ip-hero .ig-cinema-art {transform:none}
+.version-27-supplied .p27-scenery {position:absolute;inset:0;z-index:0;pointer-events:none;user-select:none;overflow:hidden}
+.version-27-supplied .p27-scenery-backdrop {position:absolute;inset:auto 0 0;display:block;width:100%;mask-image:linear-gradient(to bottom,transparent,#000 22%)}
+.version-27-supplied .p27-scenery-backdrop img {display:block;width:100%;height:auto}
+.version-27-supplied .p27-scenery-trees {position:absolute;display:block;height:auto;z-index:1}
+.version-27-supplied .p27-scenery-trees-left {left:0;bottom:calc(3.2vw - 10px);width:clamp(148px,calc(38vw - 300px),440px)}
+.version-27-supplied .p27-scenery-trees-right {right:-4px;bottom:calc(3.2vw - 14px);width:clamp(132px,9.5vw,240px)}
+.version-27-supplied .p27-scenery-foreground {position:absolute;z-index:2;inset:auto 0 0;display:block;width:100%;height:auto}
+@media (max-width:1100px) {
+ .version-27-supplied .ip-hero[data-ip-view] [data-ic-panel] {max-width:600px}
+}
+@media (max-width:700px) {
+ .version-27-supplied .ip-hero[data-ip-view] .i-hero-inner {
+  width:calc(100% - 40px);max-width:600px;min-height:0;
+  padding-top:20px;padding-bottom:118px;
+  display:grid;grid-template-columns:minmax(0,1fr);gap:0;
+ }
+ .version-27-supplied .ip-hero .i-hero-copy {padding-top:0}
+ .version-27-supplied .ip-hero .i-hero-copy > .i-primary {display:none}
+ .version-27-supplied .ip-hero .i-lead {max-width:510px}
+ .version-27-supplied .ip-hero .ip-product-space {margin-top:8px}
+ .version-27-supplied .ip-hero[data-ip-view] [data-ic-panel] {max-width:440px}
+ .version-27-supplied .p27-scenery {--p27-ground-drop:clamp(0px,calc(40px - 5.7vw),22px)}
+ .version-27-supplied .p27-scenery-backdrop {width:800px;left:auto;right:0}
+ /* Bury the cutout edges and trailing shrubs, keeping the taller trees
+    visible as a compact group instead of a flat strip on the hillside. */
+ .version-27-supplied .p27-scenery-trees-left {width:clamp(160px,28vw,195px);left:-12px;bottom:calc(clamp(5px,calc(83px - 14vw),28px) - var(--p27-ground-drop))}
+ /* The right-aligned foreground keeps the same ground beneath this group. */
+ .version-27-supplied .p27-scenery-trees-right {width:132px;right:-4px;bottom:calc(22px - var(--p27-ground-drop))}
+}
+@media (max-width:700px) {
+ /* Shift hill and trees together, revealing the distant hills on phones. */
+ .version-27-supplied .p27-scenery-foreground {width:900px;max-width:none;left:auto;right:0;bottom:calc(0px - var(--p27-ground-drop))}
+}
+@media (max-width:360px) {
+ .version-27-supplied .ip-hero[data-ip-view] [data-ic-panel] {width:calc(100% + 20px);max-width:none;margin-inline:-10px}
+}
+@container (max-width:95px) {
+ .version-27-supplied .ig-cinema-reflection {bottom:16px}
+}
+
+/* Preserve Y's existing footer treatment in this independent stylesheet. */
+.version-27-supplied .fs-closing {
+ position:relative;isolation:isolate;
+ background-image:linear-gradient(to bottom,#fbfaf3 calc(100% - 4px),#c7cfb7 0);
+ padding-bottom:calc(25px + clamp(220px,13.75vw,440px));
+}
+.version-27-supplied .fs-closing::after {
+ content:"";position:absolute;z-index:-1;inset:auto 0 -1px;
+ height:clamp(220px,13.75vw,440px);
+ background:url('assets/p-meadow-simple.svg') center bottom / max(1600px,100vw) auto no-repeat;
+ pointer-events:none;
+}
+@media (max-width:650px) {
+ .version-27-supplied .fs-closing {padding-bottom:160px}
+ .version-27-supplied .fs-closing::after {height:140px;background-size:1000px auto;background-position:20% bottom}
+}

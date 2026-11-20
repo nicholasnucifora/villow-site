@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-28",
+  "responsive": [
+    {
+      "bridgeColumns": "273px",
+      "bridgeHeight": 238.078125,
+      "gapToInsights": 62,
+      "overflow": false,
+      "textFits": true,
+      "width": 320
+    },
+    {
+      "bridgeColumns": "335px",
+      "bridgeHeight": 217.828125,
+      "gapToInsights": 62,
+      "overflow": false,
+      "textFits": true,
+      "width": 390
+    },
+    {
+      "bridgeColumns": "293.844px 359.156px",
+      "bridgeHeight": 137.0625,
+      "gapToInsights": 78,
+      "overflow": false,
+      "textFits": true,
+      "width": 768
+    },
+    {
+      "bridgeColumns": "389.297px 526.703px",
+      "bridgeHeight": 114.890625,
+      "gapToInsights": 78,
+      "overflow": false,
+      "textFits": true,
+      "width": 1440
+    }
+  ],
+  "factualGrounding": {
+    "mobile": "Time Usage centre of five navigation buttons",
+    "desktop": "Main sidebar and header allowance status",
+    "reflection": "Optional at player completion"
+  }
+}

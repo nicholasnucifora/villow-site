@@ -1,0 +1,48 @@
+PRESET 30 — A SOFTER LANDSCAPE
+11 November 2026
+http://127.0.0.1:4411/30.html
+
+Preset 30 derives from saved 29 with independent CSS and its own repaired
+artwork. The earlier presets and their artwork remain available unchanged
+apart from shared preview navigation.
+
+LANDSCAPE
+- Built-in image_gen cleaned the foreground hill's cutout fringe and stray
+  pixels while retaining the low contour and sage shading.
+- The tree cutout has extended hidden bases. A second targeted image edit
+  removed the artificial curved join where the old cutout ended. This lets
+  the tree groups sit a little higher and reveals the trailing rounded
+  shrubs without exposing gaps below them. The bases stay behind the hill.
+- CSS retains 29's wide-screen landscape height and tree sizes. The left
+  group rises by 14–32px, the right by 8–16px, with dedicated phone offsets.
+- At <=700px the whole landscape rises 44px by reducing lower hero spacing
+  from 184px to 140px. The CTA stays, the cinema stays hidden, and all of
+  28/29's centred stacked marketing sections are retained.
+
+FOOTER
+Retains W's existing p-meadow-simple.svg shapes and colours. Its image
+height is now independent of text height and bounded between 160–510px;
+the visible band is 72–130px. A 900px minimum artwork width on small screens
+shows broad, shallow bends instead of squeezing both waves onto the phone.
+This also removes the unnecessarily deep blank footer scenery area.
+
+ASSETS / EDIT RECORD
+assets/30-landscape/foreground-source.png + foreground.webp
+assets/30-landscape/trees-source.png + trees.webp (final repaired version)
+assets/30-landscape/trees-v1-source.png (earlier extension with a visible join)
+assets/30-landscape/provenance.json records all exact prompts and sources.
+qa/prepare-30-assets.mjs copies generated sources and encodes transparent
+WebPs only. Image editing used the built-in tool, not the CLI fallback.
+
+VALIDATION
+Existing navigation/position checks pass. qa/30-preservation.mjs verifies
+29's main content, CSS and renderer, and 30's retained non-scenery content.
+Browser measurements cover 320, 390, 500, 650, 700, 701, 861, 1168, 1280,
+1636, 1920, 2560 and 3440px: no horizontal overflow, loaded landscape,
+hero CTA visible, and cinema hidden only at <=700px. Pixel-alpha grounding
+checks confirm the extended tree bases stay covered at every measured size.
+Wide/phone hero and footer screenshot proofs are qa/30-hero-* and
+qa/30-footer-*. Measurements are qa/30-responsive-checks.json and
+qa/30-forest-grounding.json.
+
+Keep the local port 4411 preview running. No production changes/publication.

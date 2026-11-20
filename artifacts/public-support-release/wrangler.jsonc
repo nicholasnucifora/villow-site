@@ -1,0 +1,13 @@
+{
+  // Must match the Worker's name in the Cloudflare dashboard.
+  "name": "villow-site",
+  "compatibility_date": "2026-09-01",
+  // Static site: Cloudflare serves the Astro build output directly, no Worker script.
+  "assets": {
+    "directory": "./dist",
+    // Serves /features from features.html, and redirects /features.html and /features/ to /features.
+    // This is how /privacy (the extension's privacy policy) is served today; keep it.
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "checked": "2026-11-10",
+  "viewports": [
+    {
+      "artWidth": 285,
+      "heroHeight": 559,
+      "image": "phone.webp",
+      "imageLoaded": true,
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "artWidth": 355,
+      "heroHeight": 607,
+      "image": "phone.webp",
+      "imageLoaded": true,
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "artWidth": 520,
+      "heroHeight": 722,
+      "image": "phone.webp",
+      "imageLoaded": true,
+      "overflow": false,
+      "width": 600
+    },
+    {
+      "artWidth": 520,
+      "heroHeight": 726,
+      "image": "tablet.webp",
+      "imageLoaded": true,
+      "overflow": false,
+      "width": 601
+    },
+    {
+      "artWidth": 520,
+      "heroHeight": 761,
+      "image": "tablet.webp",
+      "imageLoaded": true,
+      "overflow": false,
+      "width": 700
+    },
+    {
+      "artWidth": 285,
+      "heroHeight": 552,
+      "image": "tablet.webp",
+      "imageLoaded": true,
+      "overflow": false,
+      "width": 701
+    },
+    {
+      "artWidth": 317,
+      "heroHeight": 552,
+      "image": "tablet.webp",
+      "imageLoaded": true,
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "artWidth": 356,
+      "heroHeight": 555,
+      "image": "tablet.webp",
+      "imageLoaded": true,
+      "overflow": false,
+      "width": 861
+    },
+    {
+      "artWidth": 433,
+      "heroHeight": 616,
+      "image": "tablet.webp",
+      "imageLoaded": true,
+      "overflow": false,
+      "width": 1024
+    },
+    {
+      "artWidth": 470,
+      "heroHeight": 625,
+      "image": "tablet.webp",
+      "imageLoaded": true,
+      "overflow": false,
+      "width": 1100
+    },
+    {
+      "artWidth": 551,
+      "heroHeight": 655,
+      "image": "sage-sunrise.webp",
+      "imageLoaded": true,
+      "overflow": false,
+      "width": 1101
+    },
+    {
+      "artWidth": 655,
+      "heroHeight": 655,
+      "image": "sage-sunrise.webp",
+      "imageLoaded": true,
+      "overflow": false,
+      "width": 1280
+    },
+    {
+      "artWidth": 680,
+      "heroHeight": 655,
+      "image": "sage-sunrise.webp",
+      "imageLoaded": true,
+      "overflow": false,
+      "width": 1920
+    },
+    {
+      "artWidth": 680,
+      "heroHeight": 655,
+      "image": "sage-sunrise.webp",
+      "imageLoaded": true,
+      "overflow": false,
+      "width": 2560
+    }
+  ],
+  "cinema": "320px: keyboard seek to end, question and answers inside screen, Worth it aria-pressed true; seek Home resets.",
+  "console": "No warnings or errors observed."
+}

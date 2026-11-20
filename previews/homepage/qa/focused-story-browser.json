@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-28",
+  "origin": "http://127.0.0.1:4399",
+  "checkedWith": "In-app browser through cua_repl",
+  "cResponsive": [
+    {
+      "width": 320,
+      "height": 5346,
+      "heroHeight": 656,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "width": 390,
+      "height": 5303,
+      "heroHeight": 668,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "width": 768,
+      "height": 4583,
+      "heroHeight": 655,
+      "overflow": false,
+      "brokenImages": []
+    },
+    {
+      "width": 1440,
+      "height": 4344,
+      "heroHeight": 655,
+      "overflow": false,
+      "brokenImages": []
+    }
+  ],
+  "bResponsive": [
+    {
+      "width": 390,
+      "height": 7872,
+      "overflow": false,
+      "brokenImages": 0,
+      "comparisonRows": 3
+    },
+    {
+      "width": 1440,
+      "height": 6812,
+      "overflow": false,
+      "brokenImages": 0,
+      "comparisonRows": 3
+    }
+  ],
+  "interactions": {
+    "cinemaSeekToEnd": true,
+    "optionalWorthItRating": true,
+    "allFiveFeedActionsAndTerminalState": true,
+    "noFeedReset": true,
+    "worthwhileKeyboardEndAndEscape": true,
+    "singleComparisonMouseAndKeyboard": true,
+    "bAllThreeComparisonsSwitch": true,
+    "wholePageNavigationBothWays": true
+  },
+  "consoleWarningsAndErrors": [],
+  "scope": "Local homepage previews only; no production build or publication."
+}

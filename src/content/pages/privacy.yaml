@@ -21,4 +21,4 @@ blocks:
         body: Google sign-in and YouTube permissions, what a Villow stores, who can see it, and how to delete it.
       - title: This website
         href: link:sitePrivacy
-        body: What villow.app itself collects, which is very little, and what happens when you support Villow.
+        body: Browsing, contact messages, support payments, public supporter details and optional Discord linking.

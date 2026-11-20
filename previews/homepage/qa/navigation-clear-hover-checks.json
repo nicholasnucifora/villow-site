@@ -1,0 +1,142 @@
+[
+  {
+    "entryColors": [
+      "rgb(49, 89, 79)"
+    ],
+    "headings": [
+      {
+        "font": "700 17px / 23.8px \"Varela Round\", sans-serif",
+        "text": "Villow"
+      },
+      {
+        "font": "700 17px / 23.8px \"Varela Round\", sans-serif",
+        "text": "Help"
+      },
+      {
+        "font": "700 17px / 23.8px \"Varela Round\", sans-serif",
+        "text": "Community"
+      },
+      {
+        "font": "700 17px / 23.8px \"Varela Round\", sans-serif",
+        "text": "Project"
+      }
+    ],
+    "overflow": false,
+    "preset": "33",
+    "width": 375
+  },
+  {
+    "entryColors": [
+      "rgb(101, 119, 110)"
+    ],
+    "headings": [
+      {
+        "font": "700 17px / 23.8px \"Varela Round\", sans-serif",
+        "text": "Villow"
+      },
+      {
+        "font": "700 17px / 23.8px \"Varela Round\", sans-serif",
+        "text": "Help"
+      },
+      {
+        "font": "700 17px / 23.8px \"Varela Round\", sans-serif",
+        "text": "Community"
+      },
+      {
+        "font": "700 17px / 23.8px \"Varela Round\", sans-serif",
+        "text": "Project"
+      }
+    ],
+    "overflow": false,
+    "preset": "34",
+    "width": 375
+  },
+  {
+    "entryColors": [
+      "rgb(49, 89, 79)"
+    ],
+    "headingWidths": [
+      {
+        "client": 95,
+        "scroll": 95,
+        "text": "Villow"
+      },
+      {
+        "client": 95,
+        "scroll": 95,
+        "text": "Help"
+      },
+      {
+        "client": 95,
+        "scroll": 99,
+        "text": "Community"
+      },
+      {
+        "client": 95,
+        "scroll": 95,
+        "text": "Project"
+      }
+    ],
+    "overflow": false,
+    "panel": {
+      "height": 275,
+      "scroll": 275
+    },
+    "preset": "35",
+    "width": 845
+  },
+  {
+    "entryColors": [
+      "rgb(49, 89, 79)"
+    ],
+    "headingWidths": [
+      {
+        "client": 125,
+        "scroll": 125,
+        "text": "Villow"
+      },
+      {
+        "client": 125,
+        "scroll": 125,
+        "text": "Help"
+      },
+      {
+        "client": 125,
+        "scroll": 125,
+        "text": "Community"
+      },
+      {
+        "client": 125,
+        "scroll": 125,
+        "text": "Project"
+      }
+    ],
+    "overflow": false,
+    "panel": {
+      "height": 637,
+      "scroll": 637
+    },
+    "preset": "35",
+    "width": 305
+  },
+  {
+    "background": "rgba(0, 0, 0, 0)",
+    "check": "brand focus",
+    "color": "rgb(35, 69, 56)",
+    "decoration": "none",
+    "text": "A Fix the Web project"
+  },
+  {
+    "background": "rgba(212, 230, 216, 0.85)",
+    "check": "link focus",
+    "color": "rgb(27, 67, 57)",
+    "decoration": "none",
+    "text": "Get started",
+    "transition": "color 0.18s, background-color 0.18s"
+  },
+  {
+    "check": "Escape",
+    "expanded": "false",
+    "focus": "Open menu"
+  }
+]

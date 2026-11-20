@@ -1,0 +1,84 @@
+/* Homepage "One experience, across your devices."
+ *
+ * The selected figure, chosen on 20 November 2026 after four rounds. It keeps
+ * what 34 already did - three devices as bold sage frames around a pale screen,
+ * in two colours, with nothing inside them - and gathers them into one group
+ * instead of a spaced row. Each device is cut out of the one behind it by a rim
+ * of the page's own paper, so the three silhouettes stay separate.
+ *
+ * Rejected along the way, and archived in _archive/device-art-2026-11-20/: a
+ * raster illustration (42), the real feed shrunk onto three screens (43), a
+ * hillside continuing across them and three bare cards with no hardware (both
+ * unclear), truer silhouettes in a row (44) and the same devices as strokes
+ * (45). No scene, no interface, no photograph and no second hue belong here. */
+.n-device-set {
+  position: relative;
+  flex: none;
+  width: 134px;
+  height: 72px;
+  --dv-body: #769180;
+  --dv-screen: #edf3eb;
+  --dv-base: #9db3a0;
+  --dv-paper: #fbfaf3;
+}
+.n-device-set > span {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  background: var(--dv-body);
+  box-shadow: 0 3px 8px #36583c18;
+}
+.n-device-set-screen {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--dv-screen);
+}
+.n-device-set-laptop {
+  left: 0;
+  bottom: 10px;
+  width: 92px;
+  height: 59px;
+  padding: 5px;
+  border-radius: 6px 6px 2px 2px;
+  z-index: 1;
+}
+.n-device-set-laptop::after {
+  content: '';
+  position: absolute;
+  left: -7px;
+  right: -7px;
+  bottom: -6px;
+  height: 5px;
+  border-radius: 1px 1px 7px 7px;
+  background: var(--dv-base);
+}
+.n-device-set-tablet {
+  left: 84px;
+  bottom: 3px;
+  width: 38px;
+  height: 50px;
+  padding: 4px;
+  border-radius: 6px;
+  z-index: 2;
+  box-shadow: 0 0 0 2.5px var(--dv-paper), 0 3px 8px #36583c18;
+}
+.n-device-set-phone {
+  left: 116px;
+  bottom: 3px;
+  width: 18px;
+  height: 34px;
+  /* Chosen from six proportion studies on 20 November 2026. The frame holds the
+   * same weight as the laptop's and the tablet's - that is settled, and a
+   * thinner phone border was tried and rejected - so the body alone was sized,
+   * down to about two thirds of the tablet's height. */
+  padding: 4px;
+  border-radius: 6px;
+  z-index: 3;
+  box-shadow: 0 0 0 2.5px var(--dv-paper), 0 3px 8px #36583c18;
+}
+
+@media (max-width: 650px) {
+  .n-device-set { transform: scale(.84); transform-origin: left center; margin-right: -21px; }
+}
+

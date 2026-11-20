@@ -1,0 +1,58 @@
+[
+  {
+    "key": "hills",
+    "source": "C:/Users/Nebula PC/.codex/generated_images/01a16282-9002-7403-9596-5820d6fa455a/exec-92b44a59-f895-4fb1-98f5-ae03d7850512.png",
+    "width": 2172,
+    "height": 724,
+    "desktop": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-minimal\\hills.webp",
+    "phone": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-minimal\\hills-mobile.webp",
+    "crop": {
+      "left": 900,
+      "top": 0,
+      "width": 1272,
+      "height": 724
+    }
+  },
+  {
+    "key": "willow",
+    "source": "C:/Users/Nebula PC/.codex/generated_images/01a16282-9002-7403-9596-5820d6fa455a/exec-425d3be4-3141-485f-b65a-3fbd1ffda639.png",
+    "width": 2172,
+    "height": 724,
+    "desktop": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-minimal\\willow.webp",
+    "phone": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-minimal\\willow-mobile.webp",
+    "crop": {
+      "left": 900,
+      "top": 0,
+      "width": 1272,
+      "height": 724
+    }
+  },
+  {
+    "key": "lake",
+    "source": "C:/Users/Nebula PC/.codex/generated_images/01a16282-9002-7403-9596-5820d6fa455a/exec-842eb7a5-724f-4737-902d-47c80acf86d9.png",
+    "width": 2172,
+    "height": 724,
+    "desktop": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-minimal\\lake.webp",
+    "phone": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-minimal\\lake-mobile.webp",
+    "crop": {
+      "left": 900,
+      "top": 0,
+      "width": 1272,
+      "height": 724
+    }
+  },
+  {
+    "key": "meadow",
+    "source": "C:/Users/Nebula PC/.codex/generated_images/01a16282-9002-7403-9596-5820d6fa455a/exec-8d4184d0-d70f-4301-9eee-818c2d8d6141.png",
+    "width": 2172,
+    "height": 724,
+    "desktop": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-minimal\\meadow.webp",
+    "phone": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-minimal\\meadow-mobile.webp",
+    "crop": {
+      "left": 900,
+      "top": 0,
+      "width": 1272,
+      "height": 724
+    }
+  }
+]

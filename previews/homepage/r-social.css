@@ -1,0 +1,10 @@
+/* A shared warm backdrop groups the two ways of connecting around videos. */
+.version-r .r-social-band{background:#f4eae3;padding:76px 0 72px;margin-top:94px}
+.version-r .r-social-band .ics-company{margin-top:0;padding:0 0 44px;border-top:0;background:transparent}
+.version-r .r-social-band .ics-arrow{background:#f4eae3}
+.version-r .r-social-band .ics-connection{background:#cbd9ce}
+.version-r .r-social-band .rt-together{margin:48px auto 0;padding:38px 0 0}
+.version-r .r-social-band .rt-kicker{color:#627365}
+@media(max-width:900px){.version-r .r-social-band{margin-top:72px;padding:56px 0 56px}.version-r .r-social-band .ics-company{padding-bottom:28px}.version-r .r-social-band .rt-together{margin-top:32px;padding-top:20px}}
+@media(max-width:600px){.version-r .r-social-band{margin-top:52px;padding:43px 0 42px}.version-r .r-social-band .ics-company{padding-bottom:20px}.version-r .r-social-band .rt-together{margin-top:28px;padding-top:20px}}
+.version-r .i-following{padding-bottom:0}

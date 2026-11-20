@@ -1,0 +1,39 @@
+.about-eyebrow,.secondary-preview .about-eyebrow{display:block;margin:0 0 19px;color:#55715e;font:600 11px/1.5 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+.about-involvement{padding-top:clamp(42px,5vw,65px);padding-bottom:35px;scroll-margin-top:100px}
+.about-intro{max-width:880px;margin-bottom:42px}
+.about-intro h1{font-size:clamp(42px,4.5vw,60px);line-height:1.16;margin-bottom:24px}
+.about-intro h1 span{color:#278574}
+.about-intro .about-lead{max-width:710px;font-size:17px;line-height:1.85}
+.about-actions{display:flex;align-items:center;flex-wrap:wrap;gap:14px 27px;margin-top:24px}
+.about-actions svg,.about-text-link svg,.about-email svg{width:19px;height:19px;flex:none}
+.about-text-link{display:inline-flex;align-items:center;gap:9px;min-height:44px;color:#2e6754;font-size:14px;font-weight:600;text-decoration:none;border-radius:6px}
+.about-text-link:hover{color:#184738;text-decoration:underline;text-underline-offset:5px}
+.about-opportunities{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.about-opportunity{display:flex;flex-direction:column;align-items:flex-start;padding:30px 32px 23px;border-radius:18px;background:#e9efe1}
+.about-research{background:#f2e9dc}.about-policy{background:#e7efec}.about-share{background:#f1edda}
+.about-opportunity-icon{display:grid;place-items:center;width:42px;height:42px;margin-bottom:19px;color:#4a735e}
+.about-opportunity-icon svg{width:28px;height:28px}
+.about-opportunity h3{font-size:24px;letter-spacing:-.035em;line-height:1.3;margin-bottom:14px}
+.about-opportunity p{font-size:14px;line-height:1.85;color:#506858;margin-bottom:15px}
+.about-opportunity .about-text-link{margin-top:auto}
+.about-open-invitation{padding-top:23px;font-size:14px;line-height:1.75;text-align:center}
+.about-contact{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:50px;background:#e8efdf;border-radius:24px;padding:40px 44px;margin-top:6px;margin-bottom:65px;scroll-margin-top:110px}
+.about-contact h2{margin-bottom:16px}.about-contact p{max-width:470px;line-height:1.8}
+.about-email{display:inline-flex;align-items:center;gap:16px;padding-block:9px;color:#244d43;font:400 clamp(19px,2.3vw,26px)/1.4 'Varela Round',sans-serif;text-decoration:none;overflow-wrap:anywhere}
+.about-email:hover{text-decoration:underline;text-underline-offset:6px}.about-contact-note{align-self:center;padding-top:25px;font-size:14px}
+.about-contact-note p+p{margin-top:25px;margin-bottom:3px}
+.about-team{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:70px;border-top:1px solid #dce3d5;padding-top:42px;padding-bottom:48px;scroll-margin-top:110px}
+.about-team-intro p{max-width:340px;font-size:15px;line-height:1.85}
+.about-team-person{padding-top:5px;max-width:490px}
+.about-team-person h3{font-size:27px;margin-bottom:9px}
+.about-team-person .about-team-role{font:600 14px/1.6 'Navigation Nunito',sans-serif;color:#2d6d58;margin-bottom:16px}
+.about-team-person p{font-size:15px;line-height:1.85}
+.about-message{padding:40px 44px 35px;background:#f2ecdf;border-radius:24px;margin-bottom:80px}
+.about-message-copy{max-width:760px;margin-inline:auto}
+.about-message h2{font-size:32px;margin-bottom:22px}
+.about-message-copy>p{font-size:15px;line-height:1.9}
+.about-message-copy .about-signature{font:400 20px/1.5 'Varela Round',sans-serif;color:#315b4a;margin-top:23px;margin-bottom:0}
+.about-message .about-actions{margin-top:15px}
+@media(max-width:850px){.about-contact{padding:34px;gap:30px}.about-team{gap:38px}.about-message{padding:35px}}
+@media(max-width:700px){.about-involvement{padding-top:38px;padding-bottom:25px}.about-intro{margin-bottom:32px}.about-intro h1{font-size:clamp(40px,9vw,55px)}.about-intro .about-lead{font-size:16px}.about-opportunities{grid-template-columns:1fr;gap:18px}.about-opportunity{padding:25px 25px 18px}.about-opportunity-icon{margin-bottom:12px}.about-opportunity h3{font-size:23px}.about-contact{grid-template-columns:1fr;padding:28px 25px;gap:3px;margin-bottom:40px}.about-contact-note{padding-top:12px}.about-open-invitation{text-align:left}.about-actions{gap:10px 22px}.about-contact-note p+p{margin-top:20px}.about-team{grid-template-columns:1fr;gap:15px;padding-top:32px;padding-bottom:30px}.about-team-person{padding-top:0}.about-team-person h3{font-size:25px}.about-message{padding:30px 25px;margin-bottom:55px}.about-message h2{font-size:28px}}
+@media(max-width:360px){.about-contact{padding:25px 20px}.about-email{gap:9px;font-size:18px}.about-opportunity{padding-inline:22px}.about-message{padding:26px 22px}}

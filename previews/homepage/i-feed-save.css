@@ -1,0 +1,73 @@
+/* A finite, local example: discover on the left, return on the right. */
+.ifs-section{position:relative;margin:88px auto 0;padding:62px 0 25px;border-top:1px solid #dce3d5;color:#244d43;isolation:isolate;overflow:clip;overflow-clip-margin:24px}
+.ifs-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;margin-bottom:42px}
+.ifs-kicker{margin:0 0 15px;font:11px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:.04em;color:#778776}
+.ifs-intro h2{margin:0;font:400 clamp(33px,3.5vw,44px)/1.18 "Varela Round",sans-serif;letter-spacing:-.055em;-webkit-text-stroke:.15px currentColor}
+.ifs-intro>p{margin:0 2px 4px 0;font:14px/1.9 system-ui,-apple-system,"Segoe UI",sans-serif;color:#63796b}
+.ifs-workspace{display:grid;grid-template-columns:minmax(0,1fr) 58px minmax(0,1.08fr);gap:30px;align-items:start}
+.ifs-panel-heading{display:flex;align-items:center;gap:10px;padding-bottom:19px;border-bottom:1px solid #dce3d5}
+.ifs-panel-heading h3{margin:0;font:400 19px/1.4 "Varela Round",sans-serif;letter-spacing:-.035em}
+.ifs-panel-icon{width:20px;height:20px;display:inline-flex;color:#6b8773}
+.ifs-panel-icon svg{width:100%;height:100%;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.ifs-stack-space{position:relative;width:100%;max-width:440px;height:450px;margin:17px auto 0}
+.ifs-stack{position:relative;display:grid;grid-template-areas:"pile";align-items:start;justify-items:center;height:450px;isolation:isolate}
+/* Keep the hero's fanned cards, dimensions and front-card treatment. */
+.ifs-card{grid-area:pile;width:min(370px,84%);min-width:0;margin-top:47px;padding:10px;border:1px solid #e8ede5;background:#fffefb;border-radius:16px;box-shadow:0 3px 3px #173e3505,0 18px 32px -20px #153d3540;transform-origin:center;will-change:transform,opacity;color:#193e43}
+.ifs-back{z-index:calc(10 - var(--ifs-depth));pointer-events:none;transform:translate(calc(var(--ifs-depth)*3px),calc(var(--ifs-depth)*-12px)) rotate(var(--ifs-back-angle));box-shadow:0 6px 18px -13px #153d3540}
+.ifs-front{z-index:20;transform:rotate(var(--ifs-front-angle));touch-action:pan-y;user-select:none;cursor:grab}
+.ifs-front:active{cursor:grabbing}
+.ifs-card-image{position:relative;overflow:hidden;aspect-ratio:16/9;border-radius:9px;background:#e0e6d6}
+.ifs-card-image img{display:block;width:100%;height:100%;object-fit:cover;border-radius:9px;user-select:none;pointer-events:none}
+.ifs-card-copy{min-height:94px;padding:15px 8px 12px}
+.ifs-card-copy h4{margin:0 0 7px;font:600 14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;letter-spacing:-.01em;color:#193e43}
+.ifs-card-copy p{margin:0;font:10px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;color:#6b7e75}
+.ifs-card-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 5px 5px}
+.ifs-section button{appearance:none;cursor:pointer;font:500 12px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-tap-highlight-color:transparent}
+.ifs-card-actions button{display:flex;align-items:center;justify-content:center;gap:8px;min-width:0;min-height:46px;padding:9px 7px;font-weight:400;border:1px solid #d9e6dd;border-radius:8px;background:#fffefa;color:#193e43;transition:background 140ms}
+.ifs-card-actions .ifs-save{background:#275e53;border-color:#275e53;color:#fff}
+.ifs-card-actions button:hover{background:#edf3ed}.ifs-card-actions .ifs-save:hover{background:#194c43}
+.ifs-card-actions button svg{width:17px;height:17px;flex:none;stroke-width:1.6}
+.ifs-card button:disabled{opacity:1}
+.ifs-swipe-feedback{position:absolute;inset:0;display:grid;place-items:center;background:#e1f3e9ed;color:#1c5a49;font-size:18px;font-weight:600;opacity:0;pointer-events:none;border:2px solid #83bda5;border-radius:9px}
+.ifs-front.is-dragging .ifs-swipe-feedback{opacity:var(--ifs-swipe-opacity,0)}
+.ifs-section button:focus-visible{outline:2px solid #28786a;outline-offset:4px}
+.ifs-section button:disabled{cursor:wait}
+.ifs-bridge{display:flex;align-items:center;justify-content:center;padding-top:160px;color:#a0b198}
+.ifs-bridge svg{width:31px;height:31px}
+.ifs-library-body{min-height:355px;display:flex;flex-direction:column;padding-top:18px}
+.ifs-saved-list{list-style:none;padding:0;margin:0}
+.ifs-saved-row{display:flex;align-items:center;gap:15px;min-width:0;padding:14px 0;border-bottom:1px solid #e4e8dc}
+.ifs-saved-row>img{width:102px;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:5px;background:#e3e6d8;flex:none}
+.ifs-saved-copy{flex:1;min-width:0}
+.ifs-saved-copy h4{margin:0;font:500 12px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;color:#365c4a;text-wrap:pretty}
+.ifs-saved-copy p{margin:5px 0 0;font:10px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:#7b8978}
+.ifs-saved-row button{display:grid;place-items:center;width:44px;height:44px;flex:none;border:0;border-radius:7px;background:transparent;color:#8b9b87;transition:background .16s ease,color .16s ease}
+.ifs-saved-row button:hover{color:#496d57;background:#e9eee1}
+.ifs-saved-row button svg{width:15px;height:15px}
+.ifs-list-note{margin:auto 0 0;padding-top:22px;font:11px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;color:#84917f}
+.ifs-list-empty{flex:1;min-height:210px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;color:#82907a}
+.ifs-list-empty>span{width:30px;height:30px;margin-bottom:16px;color:#9aaf92}.ifs-list-empty svg{width:100%;height:100%}
+.ifs-list-empty h4{margin:0;font:400 17px/1.5 "Varela Round",sans-serif;letter-spacing:-.03em;color:#678260}
+.ifs-list-empty p{margin:8px 0 0;font:12px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+.ifs-complete{position:absolute;top:30px;left:6%;width:88%;min-height:365px;padding:35px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;isolation:isolate}
+.ifs-complete-sprout,.ifs-complete-sprout svg{display:block;width:96px;height:96px}
+.ifs-complete h4{margin:14px 0 10px;font:400 46px/1.14 "Varela Round",sans-serif;letter-spacing:-.045em;color:#277e70}
+.ifs-complete>p{margin:0;font:13px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif;color:#5b7b6d}
+.ifs-complete>button{position:absolute;bottom:0;right:13px;display:grid;place-items:center;width:44px;min-height:44px;padding:0;border:1px solid #cedecf;border-radius:50%;background:#fffffa9c;color:#507963}
+.ifs-complete>button:hover{background:#e4f0e1}
+.ifs-complete>button svg{width:18px;height:18px}
+.ifs-confetti{position:absolute;inset:0;pointer-events:none;z-index:-1}
+.ifs-confetti i{position:absolute;left:50%;top:40%;display:block;width:6px;height:11px;border-radius:2px;background:var(--ifs-confetti-color);opacity:0}
+.ifs-confetti i:nth-child(3n){width:7px;height:7px;border-radius:50%}
+.ifs-confetti i:nth-child(4n){width:5px;height:13px;border-radius:6px 0 6px 0}
+.ifs-complete.is-celebrating .ifs-confetti i{animation:ifs-confetti-burst 1100ms var(--ifs-confetti-delay) cubic-bezier(.14,.6,.28,1) both}
+.ifs-complete.is-celebrating .ifs-complete-sprout{animation:ifs-sprout-grow 500ms cubic-bezier(.2,.8,.3,1) both}
+@keyframes ifs-confetti-burst{0%{opacity:0;transform:translate(0,0) rotate(0) scale(.5)}12%{opacity:1}65%{opacity:1}100%{opacity:0;transform:translate(var(--ifs-confetti-x),var(--ifs-confetti-y)) rotate(var(--ifs-confetti-turn)) scale(.8)}}
+@keyframes ifs-sprout-grow{from{opacity:0;transform:translateY(10px) scale(.85)}to{opacity:1;transform:none}}
+.ifs-section [hidden]{display:none!important}
+@media(max-width:1100px){.ifs-workspace{gap:19px;grid-template-columns:minmax(0,1fr) 32px minmax(0,1.08fr)}.ifs-saved-row{gap:11px}.ifs-saved-row>img{width:85px}.ifs-card{width:88%}.ifs-card-copy{min-height:95px}.ifs-card-copy h4{font-size:13px}.ifs-card-actions button{font-size:11px;gap:6px}}
+@media(min-width:761px) and (max-width:850px){.ifs-card{padding:8px}.ifs-card-copy{padding:13px 5px 10px;min-height:94px}.ifs-card-copy h4{font-size:12px}.ifs-card-actions{padding:0 2px 3px;gap:6px}.ifs-card-actions button{font-size:10px;gap:4px}.ifs-card-actions button svg{width:15px;height:15px}.ifs-stack-space,.ifs-stack{height:405px}}
+@media(max-width:760px){.ifs-section{margin-top:62px;padding-top:43px}.ifs-intro{align-items:flex-start;gap:25px;margin-bottom:32px}.ifs-intro>p{font-size:12px}.ifs-kicker{font-size:10px}.ifs-workspace{grid-template-columns:minmax(0,1fr);gap:14px}.ifs-feed,.ifs-library{min-width:0}.ifs-stack-space{max-width:390px;margin:17px auto 0}.ifs-stack-space,.ifs-stack{height:405px}.ifs-card{width:86%;max-width:330px;margin-top:43px;padding:9px;border-radius:14px}.ifs-back{transform:translate(calc(var(--ifs-depth)*2px),calc(var(--ifs-depth)*-10px)) rotate(var(--ifs-back-angle))}.ifs-card-image,.ifs-card-image img{border-radius:8px}.ifs-card-copy{min-height:92px;padding:13px 6px 12px}.ifs-card-copy h4{font-size:13px;line-height:1.45}.ifs-card-actions{gap:7px;padding-inline:2px;padding-bottom:3px}.ifs-card-actions button{font-size:11px;gap:7px}.ifs-card-actions button svg{width:16px;height:16px}.ifs-bridge{padding:0 0 7px}.ifs-bridge svg{width:25px;height:25px;transform:rotate(90deg)}.ifs-library-body{min-height:210px;padding-top:10px}.ifs-saved-row>img{width:106px}.ifs-saved-row{gap:15px}.ifs-saved-copy h4{font-size:13px}.ifs-saved-copy p{font-size:11px}.ifs-list-note{padding-top:22px;margin-top:0}.ifs-panel-heading{padding-bottom:15px}.ifs-list-empty{min-height:180px}.ifs-complete{top:20px;min-height:345px}.ifs-complete h4{font-size:40px}.ifs-complete>p{font-size:12px}.ifs-complete>button{bottom:3px;right:10px}.ifs-complete-sprout,.ifs-complete-sprout svg{width:84px;height:84px}}
+@media(max-width:440px){.ifs-intro{display:block}.ifs-intro h2{font-size:33px}.ifs-intro>p{margin-top:17px;font-size:13px}.ifs-intro>p br{display:none}.ifs-intro>p br:after{content:" "}.ifs-saved-row>img{width:80px}.ifs-saved-row{gap:11px}.ifs-saved-copy h4{font-size:12px}.ifs-saved-copy p{font-size:10px}.ifs-panel-heading h3{font-size:18px}.ifs-saved-row button{width:44px}}
+@media(max-width:360px){.ifs-card{width:87%}.ifs-stack-space,.ifs-stack{height:390px}.ifs-card-copy h4{font-size:12px}.ifs-card-copy{min-height:93px}.ifs-card-actions button{font-size:10px;gap:5px}.ifs-complete h4{font-size:37px}.ifs-complete{min-height:332px}.ifs-confetti{transform:scale(.85)}}
+@media(prefers-reduced-motion:reduce){.ifs-section *, .ifs-section *:before, .ifs-section *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.ifs-complete.is-celebrating .ifs-confetti i{opacity:.65;transform:translate(var(--ifs-confetti-x),var(--ifs-confetti-y)) rotate(var(--ifs-confetti-turn))}}

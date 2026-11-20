@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-28",
+  "responsive": [
+    {
+      "broken": 0,
+      "overflow": false,
+      "rows": "273px",
+      "sectionSpills": 0,
+      "taskTargetHeights": [
+        44,
+        44
+      ],
+      "width": 320
+    },
+    {
+      "broken": 0,
+      "overflow": false,
+      "rows": "335px",
+      "sectionSpills": 0,
+      "taskTargetHeights": [
+        44,
+        44
+      ],
+      "width": 390
+    },
+    {
+      "broken": 0,
+      "overflow": false,
+      "rows": "545px",
+      "sectionSpills": 0,
+      "taskTargetHeights": [
+        44,
+        44
+      ],
+      "width": 600
+    },
+    {
+      "broken": 0,
+      "overflow": false,
+      "rows": "325.5px 325.5px",
+      "sectionSpills": 0,
+      "taskTargetHeights": [
+        44,
+        44
+      ],
+      "width": 768
+    },
+    {
+      "broken": 0,
+      "overflow": false,
+      "rows": "442.5px 442.5px",
+      "sectionSpills": 0,
+      "taskTargetHeights": [
+        44,
+        44
+      ],
+      "width": 1024
+    },
+    {
+      "broken": 0,
+      "overflow": false,
+      "rows": "505px 505px",
+      "sectionSpills": 0,
+      "taskTargetHeights": [
+        44,
+        44
+      ],
+      "width": 1440
+    }
+  ],
+  "keyboardCheckbox": "Space toggles checked and unchecked",
+  "inactiveConceptLink": {
+    "href": null,
+    "ariaDisabled": "true"
+  },
+  "scope": "Only x-life comparisons and intro; concepts invitation and rest of page preserved"
+}

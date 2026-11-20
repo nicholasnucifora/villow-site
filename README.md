@@ -2,11 +2,13 @@
 
 The public website for Villow, a Fix the Web project. Built with [Astro](https://astro.build) as a static site, served by Cloudflare.
 
-## ⚠️ `/privacy` is the extension's privacy policy
+**Local redesign, not released (14 November 2026).** The main local routes now use homepage 34 / Soft Nunito and the active secondary previews. Keep the preset rail while iterating. Do not push or deploy until the owner explicitly approves publication. `npm run build` is guarded; `npm run build:local` validates the local design without publishing anything. Noindex metadata is a supplement, not access control: the development server binds only to `127.0.0.1`.
+
+## Privacy policy sources and stable URLs
 
 **Privacy pages.** `/privacy` is a short page (`src/content/pages/privacy.yaml`) linking to the three policies: the extension's, the app's (`/app-privacy`) and the website's (`/site-privacy`, text in `src/content/prose/site-privacy.md`). The build fails if it stops linking to any of them.
 
-`public/extension-privacy.html` is the extension policy, served at `https://villow.app/extension-privacy`. Until 14 November 2026 it was `public/privacy.html` at `/privacy`, and the store listings pointed there; point them at `/extension-privacy`. **Keep that URL and file location stable** once the stores use it. Deliberate policy updates must match the app/extension contract and store disclosures; update `PRIVACY_SHA256` in `scripts/check-build.mjs` after reviewing the change. The 12 October 2026 revision corrects bidirectional settings, report fields, local retention and revocation wording. The 14 November 2026 revision (extension 0.8.4) adds Watch now progress and Shorts allowance data, and drops the 14-day watched history and the removed Clear all marks button. Store-release parity and disclosure updates remain separate checks. Firefox Add-ons also keeps a pasted copy of the policy text, which has to be updated there by hand.
+`src/content/policies/extension-privacy.html` is the reviewed extension policy source. Its bytes are unchanged from the former `public/extension-privacy.html`; the Astro route wraps its full policy content in the shared design at the same `https://villow.app/extension-privacy` URL. The build checks both the pinned source hash and verbatim policy content in the rendered page. Keep that URL stable. Deliberate policy updates must match the app/extension contract and store disclosures; update `PRIVACY_SHA256` in `scripts/check-build.mjs` only after reviewing a wording change. The 14 November 2026 revision covers extension 0.8.4. Store-release parity and disclosure updates remain separate checks, including the pasted Firefox Add-ons policy.
 
 The web app's privacy content lives at `/privacy-overview` (plain-language summary) and `/app-privacy` (formal policy).
 
@@ -14,12 +16,16 @@ The web app's privacy content lives at `/privacy-overview` (plain-language summa
 
 ```sh
 npm install
-npm run dev           # http://localhost:4321, with a theme picker in the corner
-npm run build         # builds to dist/, then runs the checks
+npm run dev           # http://127.0.0.1:4411, with the active page presets
+npm run build:local   # builds to dist/ and checks; does not publish
 npm run placeholders  # lists everything still TBD
 ```
 
 Node 22.12 or newer.
+
+For private Android testing, enable USB debugging, connect the phone, accept its computer authorisation, and run `adb reverse tcp:4411 tcp:4411`. Open `http://127.0.0.1:4411/` in the phone's browser. The computer and dev server must stay running. Reconnect forwarding after unplugging/restarting. The optional app demo uses port 5173 and needs its own local server plus `adb reverse tcp:5173 tcp:5173`. No Wi-Fi exposure or public tunnel is needed.
+
+The active design remains in `previews/homepage/`; Astro renders those sources through `src/lib/site-design.mjs`. `scripts/site-design-integration.mjs` serves/copies only their dependency closure under `/_design/`, excluding historical studies, tests and build scripts. Existing policy/FAQ content uses the same header, footer and design through `Base.astro`. Terms remains unset until a real policy is supplied.
 
 ## Where things live
 
@@ -103,7 +109,7 @@ Light and dark follow the visitor's system setting. Animations respect reduced m
 
 ## Build checks
 
-`npm run build` runs `scripts/check-build.mjs` after building, and fails if:
+`npm run build:local` runs `scripts/check-build.mjs` after building, and fails if:
 
 - `/privacy` differs from its deliberately reviewed hash
 - an internal link points to a missing page or fragment, or HTML anchor ids are duplicated
@@ -113,7 +119,7 @@ Light and dark follow the visitor's system setting. Animations respect reduced m
 
 ## Deploying
 
-Cloudflare serves `dist/` as static files (see `wrangler.jsonc`). In the Cloudflare dashboard, set the build command to `npm run build` and the output directory to `dist`. Check that the Worker name matches `wrangler.jsonc`. Pages build to `name.html` and are served without the extension, the same way `/privacy` always has been.
+The existing public site uses Cloudflare and `dist/` (see `wrangler.jsonc`). Its usual `npm run build` command is deliberately blocked for this private development work. Leave publication disabled until the owner approves a release; that review must also remove the draft noindex rules and check the app demo destination. Local builds never invoke Cloudflare or Git pushes. Pages build to `name.html` and are served without the extension.
 
 The source adds no analytics, cookies or third-party asset loads. Verify Cloudflare's live configuration separately; hosting can add network diagnostics or other behaviour.
 

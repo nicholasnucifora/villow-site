@@ -1,0 +1,38 @@
+PRESET 28 — A QUIETER MOBILE PAGE
+11 November 2026
+http://127.0.0.1:4411/28.html
+
+Derived from preset 27 with independent 28-calm-mobile.css.
+Preset 27's main content, stylesheet and renderer are preserved.
+Only shared navigation updates earlier pages to expose the new comparison.
+
+At 700px and below, keep the hero Get started CTA, centre the headline and
+introductory copy, and hide the whole cinema/cloud demo including its playback
+and rating controls. A 184px lower hero area gives the existing landscape
+space beneath the CTA. The hidden demo is excluded from layout, focus order
+and the accessibility tree. Its existing IntersectionObserver stops playback
+when the scene leaves view. The desktop cinema remains available.
+
+Marketing copy centres at each section's established stacking breakpoint:
+- Feed and insights: 760px.
+- Social headings/card copy and device information: 650px. The device visual
+  and copy are arranged vertically at this size.
+- Concepts, final CTA and closing copy: 600px. Watching-story headings and
+  descriptions were already centred at their 600px stacked breakpoint.
+The internal feed cards, chart controls, suggestion UI and chat previews keep
+their original text alignment. All artwork is reused without edits.
+
+Checks: existing navigation tests pass. Browser measurements cover 320, 390,
+600, 650, 651, 700, 701, 760, 761, 861, 1168, 1636 and 2560px. No overflow,
+hero CTA always visible, cinema hidden only <=700px, and section alignment
+switches at the intended breakpoints. Desktop End seeking reveals the rating
+prompt; the cinema slider is hidden at 700px. Landscape assets load.
+
+qa/28-responsive-checks.json
+qa/28-27-preservation-baseline.json
+qa/28-phone-hero-390.png
+qa/28-phone-insights-390.png
+qa/28-phone-social-390.png
+qa/28-desktop-1168.png
+
+Keep the local port 4411 preview available. No production changes/publication.

@@ -1,0 +1,38 @@
+[
+  {
+    "controlsInside": true,
+    "externalButtons": 0,
+    "noOverflow": true,
+    "noOverlap": true,
+    "state": "ended",
+    "targets24": true,
+    "width": 320
+  },
+  {
+    "controlsInside": true,
+    "externalButtons": 0,
+    "noOverflow": true,
+    "noOverlap": true,
+    "state": "ended",
+    "targets24": true,
+    "width": 390
+  },
+  {
+    "controlsInside": true,
+    "externalButtons": 0,
+    "noOverflow": true,
+    "noOverlap": true,
+    "state": "ended",
+    "targets24": true,
+    "width": 768
+  },
+  {
+    "controlsInside": true,
+    "externalButtons": 0,
+    "noOverflow": true,
+    "noOverlap": true,
+    "state": "ended",
+    "targets24": true,
+    "width": 1280
+  }
+]

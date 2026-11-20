@@ -1,0 +1,12 @@
+/* Vary the reading rhythm: wide feed, centred limits, then chart-led insights. */
+.version-s .no-feed .ifs-intro{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:100px;margin-bottom:52px}
+.version-s .no-feed .ifs-intro>p{max-width:420px;justify-self:end}
+.s-viewing{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(260px,.8fr);gap:76px;align-items:center;margin-top:136px;color:#244d43;scroll-margin-top:125px}
+.s-viewing-copy{max-width:320px}
+.s-viewing-copy h2{margin:0 0 23px;font:400 clamp(36px,3.5vw,46px)/1.18 'Varela Round',sans-serif;letter-spacing:-.045em;text-wrap:balance}
+.s-viewing-copy p{margin:0;max-width:300px;font-size:15px;line-height:1.85;color:#536f61;text-wrap:pretty}
+.s-viewing-visual{min-width:0;width:100%}
+@media(max-width:1100px){.s-viewing{gap:48px;grid-template-columns:minmax(0,1.7fr) minmax(230px,.8fr)}.s-viewing-copy h2{font-size:38px}.version-s .no-feed .ifs-intro{gap:60px}}
+@media(max-width:900px){.s-viewing{grid-template-columns:1fr;gap:34px;margin-top:104px}.s-viewing-copy{order:-1;max-width:none;display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.s-viewing-copy h2{margin:0}.s-viewing-copy p{max-width:390px}.version-s .no-feed .ifs-intro{gap:35px}}
+@media(max-width:600px){.version-s .no-feed .ifs-intro{grid-template-columns:1fr;gap:23px;margin-bottom:38px}.version-s .no-feed .ifs-intro>p{justify-self:start;max-width:430px}.s-viewing{margin-top:86px;gap:30px}.s-viewing-copy{display:block}.s-viewing-copy h2{font-size:35px;margin-bottom:21px;max-width:320px}.s-viewing-copy p{font-size:14px;max-width:430px}}
+@media(max-width:360px){.s-viewing-copy h2{font-size:32px}}

@@ -1,0 +1,101 @@
+{
+  "responsive": [
+    {
+      "actionButtons": 2,
+      "cueFits": true,
+      "cueShown": true,
+      "cueTarget": 44,
+      "introBeforeFeatures": true,
+      "introFits": true,
+      "oneIntro": true,
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "actionButtons": 2,
+      "cueFits": true,
+      "cueShown": true,
+      "cueTarget": 44,
+      "introBeforeFeatures": true,
+      "introFits": true,
+      "oneIntro": true,
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "actionButtons": 2,
+      "cueFits": true,
+      "cueShown": true,
+      "cueTarget": 44,
+      "introBeforeFeatures": true,
+      "introFits": true,
+      "oneIntro": true,
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "actionButtons": 2,
+      "cueFits": true,
+      "cueShown": true,
+      "cueTarget": 44,
+      "introBeforeFeatures": true,
+      "introFits": true,
+      "oneIntro": true,
+      "overflow": 0,
+      "width": 760
+    },
+    {
+      "actionButtons": 2,
+      "cueFits": true,
+      "cueShown": false,
+      "cueTarget": null,
+      "introBeforeFeatures": true,
+      "introFits": true,
+      "oneIntro": true,
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "actionButtons": 2,
+      "cueFits": true,
+      "cueShown": false,
+      "cueTarget": null,
+      "introBeforeFeatures": true,
+      "introFits": true,
+      "oneIntro": true,
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "actionButtons": 2,
+      "cueFits": true,
+      "cueShown": false,
+      "cueTarget": null,
+      "introBeforeFeatures": true,
+      "introFits": true,
+      "oneIntro": true,
+      "overflow": 0,
+      "width": 1440
+    },
+    {
+      "actionButtons": 2,
+      "cueFits": true,
+      "cueShown": false,
+      "cueTarget": null,
+      "introBeforeFeatures": true,
+      "introFits": true,
+      "oneIntro": true,
+      "overflow": 0,
+      "width": 1920
+    }
+  ],
+  "behaviors": {
+    "previewNoncommitting": true,
+    "rightSave": true,
+    "leftRemove": true,
+    "previewInterruptedByAction": true,
+    "completionHidesCue": true,
+    "replayRestoresSamples": true,
+    "keyboardFocusPreserved": true
+  }
+}

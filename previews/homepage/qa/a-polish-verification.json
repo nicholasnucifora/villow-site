@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-28",
+  "viewports": [
+    {
+      "artWidth": 273,
+      "broken": 0,
+      "overflow": false,
+      "visibleSample": false,
+      "width": 320
+    },
+    {
+      "artWidth": 335,
+      "broken": 0,
+      "overflow": false,
+      "visibleSample": false,
+      "width": 390
+    },
+    {
+      "artWidth": 334,
+      "broken": 0,
+      "overflow": false,
+      "visibleSample": false,
+      "width": 768
+    },
+    {
+      "artWidth": 500,
+      "broken": 0,
+      "overflow": false,
+      "visibleSample": false,
+      "width": 1440
+    }
+  ],
+  "cursorDuringBusy": "pointer",
+  "temporaryFeedback": false,
+  "completion": "five actions -> one celebration; no replay/reset; terminalcount0",
+  "mobileSwipes": "leftremove/rightsave passed",
+  "chartTooltip": "Recent30 ratings; noSample suffix",
+  "sharedVideo": "play/scrub/end passed; captionremoved",
+  "deviceArt": "assets/a-connected-devices.webp",
+  "console": "No warnings/errors"
+}

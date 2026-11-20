@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-28",
+  "responsive": [
+    {
+      "brokenImages": 0,
+      "conceptsVisible": "block",
+      "gridColumns": "273px",
+      "noticeWidth": 273,
+      "overflow": 0,
+      "width": 320
+    },
+    {
+      "brokenImages": 0,
+      "conceptsVisible": "block",
+      "gridColumns": "335px",
+      "noticeWidth": 335,
+      "overflow": 0,
+      "width": 390
+    },
+    {
+      "brokenImages": 0,
+      "conceptsVisible": "block",
+      "gridColumns": "545px",
+      "noticeWidth": 420,
+      "overflow": 0,
+      "width": 600
+    },
+    {
+      "brokenImages": 0,
+      "conceptsVisible": "flex",
+      "gridColumns": "325.5px 325.5px",
+      "noticeWidth": 326,
+      "overflow": 0,
+      "width": 768
+    },
+    {
+      "brokenImages": 0,
+      "conceptsVisible": "flex",
+      "gridColumns": "442.5px 442.5px",
+      "noticeWidth": 420,
+      "overflow": 0,
+      "width": 1024
+    },
+    {
+      "brokenImages": 0,
+      "conceptsVisible": "flex",
+      "gridColumns": "505px 505px",
+      "noticeWidth": 420,
+      "overflow": 0,
+      "width": 1440
+    }
+  ],
+  "taskInteraction": "Keyboard Space checks and unchecks sample; strikethrough visible",
+  "motion": "Reduced motion true; static content complete. One-time reveal implemented for normal motion.",
+  "preservation": "Renderer asserts all W sections unchanged",
+  "console": "No warnings/errors",
+  "server": "HTTP200"
+}

@@ -1,0 +1,85 @@
+VILLOW — BACKGROUND CLEANUP AND MOVABLE ELEMENTS
+9 November 2026
+
+CURRENT REQUEST
+
+The owner wants an affordable cleanup/paint-over of the existing generated
+landscape, preserving the look they already like. This supersedes the
+previous full original-illustration commissioning brief. A new visual style,
+character redraw, animation and alternate watching/thinking poses are not
+part of this job.
+
+START WITH ONE IMAGE
+
+Use the supplied wide landscape from preset W. Review it at full size and
+repair the specific artifacts agreed before ordering: malformed details,
+messy edges, inconsistent shading or shapes that do not read naturally.
+Keep the overall palette, soft shading, hill shapes and composition.
+Please use controlled manual retouching/painting for those repairs.
+
+The owner wants to reposition the sun at different screen widths, rather
+than rely entirely on cropping. Please quote cleanup plus the following
+limited layer preparation; this is more than a flattened-image touch-up:
+
+- A clean, continuous sky/background layer with movable objects removed.
+- The complete sun and its glow on a separate layer. Reconstruct any hidden
+  part of the sun so it can move without exposing an abruptly cut edge.
+- Hills and trees as a foreground group, so the sun can sit behind them.
+- Clouds and birds on separate groups if practical; itemise this extra if
+  it materially changes the quote. Individual trees need not be separated.
+
+Fill/reconstruct the scenery behind removed objects. Simply cutting them
+out of the flattened picture would leave holes when they move.
+
+Deliver a layered PSD plus a full-resolution flattened PNG for comparison.
+Also export the movable groups as PNGs with transparency where appropriate.
+Keep every export aligned to the SAME 2172 x 724 canvas, without trimming
+each layer differently. Preserve the soft edges and colour transitions.
+No automatic vector tracing, restyling or animation is required.
+
+Quote edge extension or a separate mobile drawing only if needed after
+reviewing the source. The developer handles responsive positioning, scale,
+cropping and spacing using these layers. The existing mobile file is a
+reference crop, not a request for another fully redrawn illustration.
+
+COPYABLE MESSAGE
+
+Hi, I like this AI-generated landscape and want its artifacts cleaned up
+while keeping the colours, soft shading and overall look.
+
+I also need to move the sun slightly on different screen sizes. Could you
+provide a layered PSD with clean sky, the complete sun/glow, and hills/trees
+separated, filling in the areas behind anything removed? If practical,
+please separate the clouds and birds too, and quote that extra separately.
+
+Please include a flattened PNG and aligned PNG exports of the layers on
+the original 2172 x 724 canvas. My developer handles resizing and positioning
+on the website. No character work or animation is needed. Could you quote
+for the cleanup and this layer preparation, with one revision?
+
+CANDIDATE FOR A FIRST PAID TEST
+
+Visionscraft (orang_dig_art95)
+https://www.fiverr.com/orang_dig_art95/redraw-fix-and-repaint-your-illustration-digital-painting-ai-image
+
+The listing explicitly offers hand corrections/redraws of existing AI art,
+matching the original style. A before/after example was inspected; shown
+samples are mainly character/game illustration, so landscape suitability
+and the quote should be confirmed from the actual image.
+
+On 9 November 2026 the browser displayed A$13.37 for The Touch-Up and
+A$21.39 for The Redraw, including service fees. These are advertised package
+prices, not an agreed price for Villow. No seller has been contacted or hired.
+
+SOURCE REFERENCES
+
+Wide landscape:
+  commission-background/w-background-original.png
+  Original source: C:/Users/Nebula PC/Downloads/Minimalist Pastel Sunrise Landscape.png
+Existing mobile landscape:
+  illustration-studies/i-supplied/sage-sunrise-mobile.webp
+Page screenshot:
+  qa/w-restored-after-x-removal.png
+
+The artwork will remain AI-origin imagery with human corrections. This
+cleanup scope does not describe it as an entirely human-created original.

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "i15",
+    "key": "sage-sunrise",
+    "title": "Sage sunrise",
+    "source": "C:/Users/Nebula PC/Development/villow-site/previews/homepage/assets/supplied-landscape/original-source.png",
+    "phoneLeft": 900,
+    "sourceWidth": 9050,
+    "sourceHeight": 3017,
+    "desktopCrop": {
+      "left": 0,
+      "top": 0,
+      "width": 9050,
+      "height": 3017
+    },
+    "desktop": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-supplied\\sage-sunrise.webp",
+    "phone": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-supplied\\sage-sunrise-mobile.webp",
+    "phoneCrop": {
+      "left": 900,
+      "top": 0,
+      "width": 1272,
+      "height": 724
+    },
+    "previousSource": "C:/Users/Nebula PC/Downloads/Minimalist Pastel Sunrise Landscape.png",
+    "normalizedSize": [
+      2172,
+      724
+    ],
+    "updated": "2026-11-11"
+  },
+  {
+    "id": "i16",
+    "key": "soft-horizon",
+    "title": "Soft horizon",
+    "source": "C:/Users/Nebula PC/Downloads/Pastel Hills at Sunrise.png",
+    "phoneLeft": 900,
+    "sourceWidth": 2172,
+    "sourceHeight": 724,
+    "desktopCrop": {
+      "left": 0,
+      "top": 0,
+      "width": 2172,
+      "height": 724
+    },
+    "desktop": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-supplied\\soft-horizon.webp",
+    "phone": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-supplied\\soft-horizon-mobile.webp",
+    "phoneCrop": {
+      "left": 900,
+      "top": 0,
+      "width": 1272,
+      "height": 724
+    }
+  },
+  {
+    "id": "i17",
+    "key": "low-sun",
+    "title": "Low sun",
+    "source": "C:/Users/Nebula PC/Downloads/Minimalist Pastel Sunrise Hillscape.png",
+    "phoneLeft": 900,
+    "sourceWidth": 2103,
+    "sourceHeight": 748,
+    "desktopCrop": {
+      "left": 0,
+      "top": 47,
+      "width": 2103,
+      "height": 701
+    },
+    "desktop": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-supplied\\low-sun.webp",
+    "phone": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-supplied\\low-sun-mobile.webp",
+    "phoneCrop": {
+      "left": 900,
+      "top": 0,
+      "width": 1272,
+      "height": 724
+    }
+  },
+  {
+    "id": "i18",
+    "key": "morning-glow",
+    "title": "Morning glow",
+    "source": "C:/Users/Nebula PC/Downloads/Serene Pastel Rolling Hills at Sunrise.png",
+    "phoneLeft": 0,
+    "sourceWidth": 2172,
+    "sourceHeight": 724,
+    "desktopCrop": {
+      "left": 0,
+      "top": 0,
+      "width": 2172,
+      "height": 724
+    },
+    "desktop": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-supplied\\morning-glow.webp",
+    "phone": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-supplied\\morning-glow-mobile.webp",
+    "phoneCrop": {
+      "left": 0,
+      "top": 0,
+      "width": 1272,
+      "height": 724
+    }
+  },
+  {
+    "id": "i19",
+    "key": "open-countryside",
+    "title": "Open countryside",
+    "source": "C:/Users/Nebula PC/Downloads/Pastel Countryside Sunrise Landscape.png",
+    "phoneLeft": 900,
+    "sourceWidth": 2172,
+    "sourceHeight": 724,
+    "desktopCrop": {
+      "left": 0,
+      "top": 0,
+      "width": 2172,
+      "height": 724
+    },
+    "desktop": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-supplied\\open-countryside.webp",
+    "phone": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-supplied\\open-countryside-mobile.webp",
+    "phoneCrop": {
+      "left": 900,
+      "top": 0,
+      "width": 1272,
+      "height": 724
+    }
+  },
+  {
+    "id": "i20",
+    "key": "green-valley",
+    "title": "Green valley",
+    "source": "C:/Users/Nebula PC/Downloads/Minimalist Pastel Mountain Sunrise.png",
+    "phoneLeft": 900,
+    "sourceWidth": 2087,
+    "sourceHeight": 753,
+    "desktopCrop": {
+      "left": 0,
+      "top": 57,
+      "width": 2087,
+      "height": 696
+    },
+    "desktop": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-supplied\\green-valley.webp",
+    "phone": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\illustration-studies\\i-supplied\\green-valley-mobile.webp",
+    "phoneCrop": {
+      "left": 900,
+      "top": 0,
+      "width": 1272,
+      "height": 724
+    }
+  }
+]

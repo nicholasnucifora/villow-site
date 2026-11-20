@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; Villow browser extension</title>
+<style>
+  :root { color-scheme: light dark; --bg:#fdfcfb; --fg:#1b1613; --mid:#574e49;
+          --line:#e4ddd9; --accent:#c4302b; --code:#f2eeec; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141110; --fg:#ece7e4; --mid:#b1a7a1;
+            --line:#332d2b; --accent:#ff6259; --code:#232020; }
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--fg); margin: 0;
+         padding: 56px 22px 96px; line-height: 1.65;
+         font: 17px/1.65 ui-serif, Georgia, "Times New Roman", serif; }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 .6em; text-wrap: balance; }
+  h2 { font-size: 1.35rem; margin: 2.2em 0 .5em; text-wrap: balance; }
+  h3 { font-size: 1.08rem; margin: 1.8em 0 .4em; }
+  h1, h2, h3 { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+               letter-spacing: -.015em; }
+  p, li { color: var(--mid); }
+  strong { color: var(--fg); font-weight: 600; }
+  ul { padding-left: 1.25em; }
+  li { margin: .45em 0; }
+  a { color: var(--accent); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 2.6em 0; }
+  code { background: var(--code); border-radius: 3px; padding: .1em .35em;
+         font: .85em ui-monospace, Menlo, Consolas, monospace; }
+  em { color: var(--mid); }
+</style>
+</head>
+<body>
+<main>
+<p><a href="/privacy">← All Villow privacy policies</a></p>
+<h1>Villow browser extension — Privacy Policy</h1>
+<p><strong>Last updated:</strong> 14 November 2026</p>
+<p>This policy covers the <strong>Villow browser extension</strong>. Villow the web application has <a href="/app-privacy">its own policy</a>, which covers Google account authorization and data stored on your instance, and this website has <a href="/site-privacy">another</a>. Available features depend on the extension and instance versions you use.</p>
+<hr>
+<h2>The short version</h2>
+<p>The extension sends data to <strong>one place: the Villow instance whose address you typed in yourself.</strong> It has no server of its own, contacts no analytics service, and contacts no third party of any kind. Before you connect it to an instance, it sends nothing anywhere at all.</p>
+<p>You can also choose, during setup, to <strong>run it without a Villow instance.</strong> In that mode there is nowhere for anything to go, and nothing is sent anywhere, ever. Everything below about sending applies only once you have connected one.</p>
+<p>We do not run any central server the extension reports to. It sends only to the instance you connect it to. If you self-host, your data never reaches us. If you connect an instance we operate — for example a trial or review instance — that instance receives what is described below, and it is covered by Villow's own privacy policy.</p>
+<hr>
+<h2>What the extension collects, and why</h2>
+<h3>Sent to your Villow instance</h3>
+<p><strong>Videos you click on YouTube.</strong> When you click a video tile while blocking is on and the extension is connected, it reads what is already visible on that tile and sends it to your instance so the video can enter your queue:</p>
+<ul>
+<li>the video's YouTube ID, title, and page URL</li>
+<li>the channel name and channel URL</li>
+<li>the duration, whether it is a live stream, the view count and upload age as YouTube displays them</li>
+<li>the thumbnail image URL</li>
+</ul>
+<p>This is the extension's core function. Nothing is sent for videos you do not click, and nothing is sent when the extension is disconnected.</p>
+<p><strong>Where you got to in a video you started with Watch now.</strong> When you press <strong>Watch now</strong> on a video already in your Villow queue, the extension reports your progress in that video to your instance, so Villow can show where you left off and that you have started it. Each report contains the video's YouTube ID, the position you reached and the video's length in seconds, whether it finished, when you started it and when the position was taken, plus the random install identifier and browser label described below. Reports are made while the video plays, about every 15 seconds, and when you pause, skip or finish. Nothing is reported for videos you open any other way.</p>
+<p><strong>Your Shorts scrolling choice and allowance.</strong> When you are connected, your choice about Shorts scrolling is kept by your instance so it applies in every browser you connect. The extension sends whether you allow scrolling, the number of minutes you allow yourself for the day, how many seconds of that you have used, and — once the allowance is used up — your yes-or-no answer to whether it was worth it. Each request carries the date it belongs to and random request identifiers, so nothing is counted twice; time reports also carry the random install identifier. While you scroll, the extension checks in with your instance every few seconds so the allowance holds across browsers. It does not send which Shorts you watched, their titles or their channels.</p>
+<p><strong>Legacy screen-time fallback.</strong> The extension sends a daily screen-time total to <code>/api/screen-time</code> only when a Villow instance does not support the current usage endpoint and answers <code>404</code> or <code>501</code> to <code>/api/extension-usage</code>. The fallback remains in use for 24 hours after that response. Current Villow instances do not receive these fallback requests. Time accrues only while a YouTube tab is focused and visible.</p>
+<p><strong>Your pairing token,</strong> on every request, as proof the request is yours.</p>
+<h3>Received from your Villow instance</h3>
+<p><strong>Your subscribed channel list</strong>, if the "hide subscribed channels" option is on. The extension cannot ask YouTube for this and holds no Google credentials — it asks your Villow instance, which already has it. The list is cached in your browser and refreshed every few hours.</p>
+<p><strong>This cache is deleted on the next rejected request.</strong> If your Villow instance answers a request with <code>401</code> or <code>403</code>, the extension deletes its local copy of the list. An offline browser keeps the cache until it next attempts a request and receives one of those responses. Pressing <strong>Disconnect</strong> deletes it immediately.</p>
+<p><strong>Shared daily totals, saved-video status and chosen settings.</strong> Your instance returns the combined counts for your account, the status and receipts of videos saved to Villow, and supported settings you choose in the app. Saved-video status lets the extension distinguish videos still waiting from videos watched or removed.</p>
+<h3>Stored locally in your browser</h3>
+<ul>
+<li>Your instance address and pairing token</li>
+<li>Which videos you have marked, so tiles stay greyed out when you scroll back</li>
+<li>Videos waiting to be delivered when your instance is unreachable</li>
+<li>Your extension settings, daily usage records and the last shared totals and settings received from your instance</li>
+<li>For videos started with Watch now, where you got to — up to 300 videos, each kept for 90 days after you last opened it</li>
+<li>Your Shorts choices and daily Shorts time for the last 35 days, and your yes-or-no answers at the end of an allowance</li>
+<li>A record of the last 20 requests to your instance that failed, so a connection problem can be diagnosed. It stays in your browser unless you copy it out yourself.</li>
+</ul>
+<h3>Kept only in your browser and never transmitted</h3>
+<ul>
+<li><strong>Which</strong> recommendations you were shown — the video ids behind the daily count. Only the count itself is reported; the list never leaves your browser.</li>
+<li><strong>Which videos you watched today</strong>, when running without an instance: the video ids and their titles, so today can be listed back to you and the daily cap knows what it has already counted. Only today's list is kept: it is replaced the first time a video is counted on a new day. <strong>This watched-video list is never sent to an instance, including if you connect one later.</strong></li>
+</ul>
+<h3>Sent to your Villow instance, and nowhere else</h3>
+<ul>
+<li>Videos you chose to save, when you save them</li>
+<li>Where you got to in videos you started with <strong>Watch now</strong></li>
+<li>Your <strong>Shorts</strong> scrolling choice, daily allowance, time used and end-of-allowance answer</li>
+<li><strong>Daily totals</strong>: how many seconds you spent on YouTube, how many recommendations you were shown, how many videos you saved, and whether you ran into any of your limits</li>
+<li><strong>Supported shared settings</strong>, so Villow can display them and synchronize choices: recommendation and save-count limits, save-limit mode and duration allowance, time allowance and whether YouTube is blocked</li>
+</ul>
+<p>Your daily limit on videos watched, and the count against it, are <strong>not</strong> among these. They describe a browser that has no Villow, so there would be nothing for them to mean at the other end.</p>
+<p>The daily statistics and settings sent to <code>/api/extension-usage</code> contain counts and settings rather than video ids or channel names. Reports include measurement schema and definition versions and up to 14 retained daily records. Changed data is normally scheduled to flush after about ten minutes; startup, day changes and relevant actions can trigger earlier reporting, with retries when the instance is unavailable. Saved videos are different: they include the identifying details needed to save the video.</p>
+<p><strong>Cross-browser daily limits.</strong> The extension sends requests to <code>/api/extension-day</code> to exchange the current day's counts and settings. Activity-driven background checks are normally at most once a minute; opening the panel, saving or removing a save, changing settings, startup or reaching a cap can request an earlier update. The request includes today's date, a random install identifier, recommendations seen, active seconds, external-save counts, saved duration and unknown-duration counts, plus supported current settings. It does not send the list of recommendations seen or a list of external-save video ids. Your instance combines contributions for one account across connected browsers and returns shared totals and saved-video receipts.</p>
+<p>The random install identifier is generated locally for this browser profile. It keeps contributions from two browsers apart so they can be added rather than overwriting each other. It is a random value; it is not derived from your device, and it is not a fingerprint.</p>
+<p>The reports include the browser's configured time zone (for example, <code>Australia/Brisbane</code>) and browser label; usage reports also include the extension version. The time zone describes the browser's calendar-day context. It is a browser setting, not GPS or precise location.</p>
+<p><strong>Settings can travel in both directions.</strong> You can edit supported shared settings in the extension or in Villow. The instance stores a chosen settings record, and compatible connected extensions receive and adopt a newer choice on synchronization, then report the adopted values. This does not mean every appearance or hide option synchronizes. Disconnected or older clients may not adopt a choice until they reconnect or are updated.</p>
+<hr>
+<h2>What the extension never does</h2>
+<ul>
+<li>It never contacts Google or YouTube's API. It holds no Google credentials and uses no YouTube API quota.</li>
+<li>It never contacts a server you did not choose. There is no telemetry endpoint, no analytics host, and no phone-home of any kind.</li>
+<li>It never sends data to any third party, advertiser, or analytics provider.</li>
+<li>It does not sell your viewing data. It sends the disclosed data to the instance you connect; the instance owner's access and the app's sharing controls are described separately.</li>
+<li>It never reads pages other than YouTube.</li>
+<li>It never modifies, replaces, or blocks advertising on YouTube. Advertisements behave exactly as they would without the extension installed.</li>
+<li>It never collects your name, email address, passwords, payment details, or any Google account credential.</li>
+</ul>
+<hr>
+<h2>Where your data goes and who can see it</h2>
+<p>To the Villow instance you choose. Hosted connections use HTTPS; local development connections may use HTTP on localhost. If you self-host, you control its hosting accounts. If someone else hosts it, that owner controls the database and can access stored data. Ordinary member sharing controls are separate from operator access. The extension does not choose the destination — you do, using your connect link.</p>
+<hr>
+<h2>Retention and deletion</h2>
+<p><strong>In your browser:</strong> removing the extension deletes everything it stored. You can also clear it at any time without uninstalling:</p>
+<ul>
+<li><strong>Disconnect</strong> — deletes the pairing token, the cached subscription list, the shared totals received from your instance and your Watch now positions</li>
+<li><strong>Reset today's count</strong> — clears the local recommendation counter; this is separate from deleting data already stored in your instance</li>
+<li><strong>Reset today's time</strong>, <strong>Reset today's saves</strong> and <strong>Reset today's watched videos</strong> — the same, for those</li>
+</ul>
+<p><strong>On your Villow instance:</strong> deletion is handled there, under <a href="/app-privacy">the app policy</a>. Disconnecting or uninstalling the extension does not itself delete data already stored in the instance. Ask its owner about deletion. Revoked credentials are detected on a subsequent rejected request; an offline browser cannot detect revocation immediately. The subscription-cache deletion behaviour is described above.</p>
+<hr>
+<h2>Children</h2>
+<p>The extension is not directed at children under 13 and does not knowingly collect their data.</p>
+<hr>
+<h2>Limited Use</h2>
+<p>The extension's use of user data is subject to the <a href="https://developer.chrome.com/docs/webstore/program-policies/privacy">Chrome Web Store user-data policies</a>, including Limited Use requirements. The extension uses the disclosed data for its viewing controls, queue saving and connected-instance features, rather than selling it for advertising.</p>
+<hr>
+<h2>Changes</h2>
+<p>If the extension's data handling changes, this policy will be updated and the change described in the extension's release notes before the new version collects anything new.</p>
+<hr>
+<h2>Contact</h2>
+<p><strong>Contact:</strong> nuciforan+villow@hotmail.com</p>
+<hr>
+<p><em>Villow is not affiliated with, endorsed by, or sponsored by YouTube or Google. YouTube is a trademark of Google LLC.</em></p>
+</main>
+</body>
+</html>

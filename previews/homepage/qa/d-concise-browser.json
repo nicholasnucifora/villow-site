@@ -1,0 +1,58 @@
+{
+  "date": "2026-10-28",
+  "responsive": [
+    {
+      "allowanceFits": true,
+      "allowanceWidth": 273,
+      "boundaryPadding": "26px",
+      "brokenImages": [],
+      "conceptsBorder": "0px",
+      "feedToBoundariesGap": 20,
+      "overflow": false,
+      "socialColor": "rgb(244, 234, 227)",
+      "socialTogether": true,
+      "width": 320
+    },
+    {
+      "allowanceFits": true,
+      "allowanceWidth": 335,
+      "boundaryPadding": "26px",
+      "brokenImages": [],
+      "conceptsBorder": "0px",
+      "feedToBoundariesGap": 20,
+      "overflow": false,
+      "socialColor": "rgb(244, 234, 227)",
+      "socialTogether": true,
+      "width": 390
+    },
+    {
+      "allowanceFits": true,
+      "allowanceWidth": 305,
+      "boundaryPadding": "32px",
+      "brokenImages": [],
+      "conceptsBorder": "0px",
+      "feedToBoundariesGap": 35,
+      "overflow": false,
+      "socialColor": "rgb(244, 234, 227)",
+      "socialTogether": true,
+      "width": 768
+    },
+    {
+      "allowanceFits": true,
+      "allowanceWidth": 430,
+      "boundaryPadding": "32px",
+      "brokenImages": [],
+      "conceptsBorder": "0px",
+      "feedToBoundariesGap": 35,
+      "overflow": false,
+      "socialColor": "rgb(244, 234, 227)",
+      "socialTogether": true,
+      "width": 1440
+    }
+  ],
+  "interactions": {
+    "graphKeyboardInspectAndEscape": true,
+    "sharedVideoSeekAndOptionalReflection": true
+  },
+  "consoleWarningsAndErrors": []
+}

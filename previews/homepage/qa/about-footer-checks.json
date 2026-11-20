@@ -1,0 +1,422 @@
+[
+  {
+    "file": "34.html",
+    "client": 1265,
+    "contact": "mailto:support@villow.app",
+    "footerHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "footerLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "footerSpiders": 1,
+    "menuHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "menuLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "previewIsPlaceholder": true,
+    "sameText": true,
+    "scroll": 1265,
+    "width": 1280
+  },
+  {
+    "file": "about-a.html",
+    "client": 1265,
+    "contact": "mailto:support@villow.app",
+    "footerHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "footerLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "footerSpiders": 1,
+    "menuHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "menuLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "previewIsPlaceholder": true,
+    "sameText": true,
+    "scroll": 1265,
+    "width": 1280
+  },
+  {
+    "file": "setup-hosting-d.html",
+    "client": 1265,
+    "contact": "mailto:support@villow.app",
+    "footerHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "footerLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "footerSpiders": 1,
+    "menuHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "menuLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "previewIsPlaceholder": true,
+    "sameText": true,
+    "scroll": 1265,
+    "width": 1280
+  },
+  {
+    "file": "help-a.html",
+    "client": 1265,
+    "contact": "mailto:support@villow.app",
+    "footerHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "footerLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "footerSpiders": 1,
+    "menuHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "menuLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "previewIsPlaceholder": true,
+    "sameText": true,
+    "scroll": 1265,
+    "width": 1280
+  },
+  {
+    "file": "concepts-b.html",
+    "client": 1265,
+    "contact": "mailto:support@villow.app",
+    "footerHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "footerLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "footerSpiders": 1,
+    "menuHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "menuLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "previewIsPlaceholder": true,
+    "sameText": true,
+    "scroll": 1265,
+    "width": 1280
+  },
+  {
+    "file": "34.html",
+    "client": 305,
+    "contact": "mailto:support@villow.app",
+    "footerHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "footerLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "footerSpiders": 1,
+    "menuHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "menuLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "previewIsPlaceholder": true,
+    "sameText": true,
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "file": "about-a.html",
+    "client": 305,
+    "contact": "mailto:support@villow.app",
+    "footerHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "footerLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "footerSpiders": 1,
+    "menuHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "menuLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "previewIsPlaceholder": true,
+    "sameText": true,
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "file": "setup-hosting-d.html",
+    "client": 305,
+    "contact": "mailto:support@villow.app",
+    "footerHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "footerLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "footerSpiders": 1,
+    "menuHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "menuLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "previewIsPlaceholder": true,
+    "sameText": true,
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "file": "help-a.html",
+    "client": 305,
+    "contact": "mailto:support@villow.app",
+    "footerHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "footerLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "footerSpiders": 1,
+    "menuHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "menuLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "previewIsPlaceholder": true,
+    "sameText": true,
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "file": "concepts-b.html",
+    "client": 305,
+    "contact": "mailto:support@villow.app",
+    "footerHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "footerLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "footerSpiders": 1,
+    "menuHeading": {
+      "color": "rgb(33, 76, 60)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "24px",
+      "radius": "0px",
+      "size": "15.5px",
+      "weight": "650"
+    },
+    "menuLink": {
+      "color": "rgb(49, 89, 79)",
+      "font": "\"Navigation Nunito\", sans-serif",
+      "lineHeight": "22.5px",
+      "radius": "8px",
+      "size": "15px",
+      "weight": "450"
+    },
+    "previewIsPlaceholder": true,
+    "sameText": true,
+    "scroll": 305,
+    "width": 320
+  }
+]

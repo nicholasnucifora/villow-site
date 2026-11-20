@@ -1,0 +1,15 @@
+{
+  "activeAssets": "v2",
+  "captionRemoved": true,
+  "counterAndNextLinkRemoved": true,
+  "markers": 4,
+  "keyboardSelection": true,
+  "automaticMarkerUpdate": true,
+  "narrow320Overflow": false,
+  "markerTargets": {
+    "width": 36,
+    "height": 40
+  },
+  "mobile390SectionHeight": 634.78125,
+  "consoleErrors": []
+}

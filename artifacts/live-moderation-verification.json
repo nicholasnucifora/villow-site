@@ -1,0 +1,17 @@
+{
+  "unauthenticatedDataDenied": true,
+  "otherHostDenied": true,
+  "secureSignIn": true,
+  "foreignOriginDenied": true,
+  "countsBefore": {
+    "unreviewed": 0,
+    "approved": 0,
+    "hidden": 0,
+    "needs_review": 1,
+    "all": 1
+  },
+  "privateFieldsExcluded": true,
+  "ownerMessageApproved": true,
+  "ownerMessagePublic": true,
+  "signOutRevokesSession": true
+}

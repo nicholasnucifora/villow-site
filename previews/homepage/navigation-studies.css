@@ -1,0 +1,37 @@
+/* Selected 34 navigation, shared across the previews. Bottom footers are separate. */
+@font-face{font-family:'Navigation Nunito';src:url('assets/navigation-fonts/Nunito-Variable.ttf') format('truetype');font-style:normal;font-weight:200 1000;font-display:swap}
+[data-directory-variant]{--nav-font:'Varela Round',sans-serif;--nav-weight:400;--nav-size:14px;--nav-heading-weight:400;--nav-heading-size:15px;--nav-ease:180ms ease;--nav-ink:#31594f;--nav-hover:#173f35;--nav-feedback:color var(--nav-ease),background-color var(--nav-ease)}
+[data-directory-variant] .n-footer-nav a,
+[data-directory-variant] .n-footer-brand{position:relative;text-decoration:none!important;background:none}
+[data-directory-variant] .n-footer-nav ul,
+[data-directory-variant] .n-footer-brand{font-family:var(--nav-font);font-weight:var(--nav-weight);font-size:var(--nav-size);font-synthesis:none;letter-spacing:0}
+/* Natural font weights: no simulated bold, text stroke or stretched lettering. */
+[data-directory-variant] .n-footer-nav h2{font-family:var(--nav-font);font-size:var(--nav-heading-size);font-weight:var(--nav-heading-weight);font-synthesis:none;font-stretch:normal;line-height:24px;letter-spacing:-.015em;-webkit-text-stroke:0;color:#214c3c;margin-bottom:18px;cursor:default}
+[data-directory-variant] .n-footer-nav a,
+[data-directory-variant] .n-footer-nav li>span{position:relative;display:inline-flex;align-items:center;min-height:32px;line-height:1.5;padding:5px 9px;margin-left:-9px;border-radius:8px;color:var(--nav-ink);transition:var(--nav-feedback)}
+/* Unfinished destinations remain plain text, but share the same visual treatment. */
+[data-directory-variant] .n-footer-nav li>span{cursor:default}
+[data-directory-variant] .n-footer-nav ul{gap:3px}
+[data-directory-variant] .n-footer-nav a>span{text-wrap:balance}
+[data-directory-variant] .n-footer-project p{text-wrap:pretty}
+[data-directory-variant] .n-footer-brand{padding:3px 8px;margin:-3px -8px}
+[data-directory-variant] .n-footer-brand:focus-visible{outline-offset:5px}
+/* The approved 33 hover stays identical across all three typography studies. */
+[data-directory-variant] :is(.n-footer-nav a,.n-footer-nav li>span):is(:hover,:focus-visible){color:var(--nav-hover);background-color:#d4e6d8}
+
+/* 33: familiar Varela Round, at its original unemboldened weight. */
+/* 34 uses the approved Nunito typography. */
+[data-directory-variant="34"]{--nav-font:'Navigation Nunito',sans-serif;--nav-weight:450;--nav-size:15px;--nav-heading-weight:650;--nav-heading-size:15.5px}
+@media(max-width:1100px) and (min-width:851px){
+ [data-directory-variant] .site-directory-content{grid-template-columns:240px minmax(0,1fr);gap:28px}
+ [data-directory-variant] .n-footer-nav{column-gap:16px}
+}
+@media(max-width:850px){
+ [data-directory-variant] .n-footer-nav a,
+ [data-directory-variant] .n-footer-nav li>span{min-height:38px}
+}
+@media(prefers-reduced-motion:reduce){
+ body:not([data-r-preview-motion]) [data-directory-variant] *{transition:none!important}
+ body[data-r-preview-motion] [data-directory-variant] .n-footer-nav a,
+ body[data-r-preview-motion] [data-directory-variant] .n-footer-nav li>span{transition:var(--nav-feedback)!important}
+}

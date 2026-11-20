@@ -43,7 +43,9 @@ blocks:
     body: |
       Review usage and billing in your provider dashboards. The Google Cloud YouTube quota is shared by your installation's users.
 
-      Group capacity and paid-plan requirements are untested: {tbd:groupSizeGuide}. Behaviour and recovery at provider allowances still need a verified guide: {tbd:freeLimitReached}. Don't assume the software being free makes its hosting unlimited.
+      Vercel hosting usage is also shared by everyone on your Villow. Reaching a hosting allowance can pause the app for the whole group. Group capacity and paid-plan requirements are untested: {tbd:groupSizeGuide}. Don't assume the software being free makes its hosting unlimited.
+
+      If you see **This deployment is temporarily paused**, follow the [Vercel recovery guide](/hosting-help). It explains how to ask about a one-time support boost, reduce access through Admin → People once the app is available, and review waiting or paid-plan options. Other provider-limit recovery remains to be verified: {tbd:freeLimitReached}.
 
   - type: section
     id: updates
@@ -61,9 +63,11 @@ blocks:
     id: leaving
     heading: Helping someone leave
     body: |
-      Someone can revoke Villow's Google access from [their Google account](link:googleSecuritySettings). This prevents further authorized access; it doesn't itself delete data already stored in your database.
+      Someone can revoke Villow's Google access from [their Google account](link:googleSecuritySettings). The operator must also handle the associated stored-data deletion requirements. The revised local app adds Google disconnection, validity checks and reference cleanup, with an export of retained authored text and measurements. Covered saved video and clip links can be removed. Coverage of older/shared API copies and their source dates remains a release blocker; revoking a token does not prove all stored copies are gone.
 
-      Revoke the member in Admin before using the separate permanent-delete action. Full member self-service account deletion hasn't been verified. General retention and provider backup handling still need confirmation: {tbd:appPolicyRetention}.
+      The revised local app provides **Delete my account** for members, including from paused-access and policy-review screens; accepting new terms is not a prerequisite. The owner can also revoke another member in Admin and use the separate permanent-delete action. Verify the installed version and its migrations before relying on either path. The installation owner needs an ownership transfer or controlled shutdown before account removal.
+
+      Confirm database deletion, provider-authorisation revocation and device clearing separately. If revocation or device clearing is incomplete, explain the remaining action. Include backups, manual exports and external survey records in the request process. See the [app privacy policy](link:appPrivacy) for retained categories and current limits.
 
   - type: section
     id: shutdown

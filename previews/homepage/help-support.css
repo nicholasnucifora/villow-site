@@ -1,0 +1,162 @@
+#help-funding-title{scroll-margin-top:100px}
+.help-funding{padding:65px 0 15px;scroll-margin-top:100px}
+.help-checkout-return{margin:0 0 36px;padding:24px;border-radius:18px;background:#e7eddc;text-align:center;scroll-margin-top:100px;color:#365441}
+.help-checkout-return h3{margin:0 0 8px;font-size:22px;line-height:1.3}
+.help-checkout-return p{max-width:600px;margin:0 auto;font-size:15px;line-height:1.7}
+.help-funding-intro{max-width:710px;margin-bottom:30px}
+.help-funding-intro p{font-size:17px;line-height:1.8;margin:0}
+.help-support-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(35px,6vw,80px);align-items:start}
+.help-donation{padding:32px;background:#eaf0e2;border-radius:23px;min-width:0}
+.secondary-preview .help-donation h3{font-size:26px;margin:0 0 2px}
+.help-donation-intro{margin:0 0 22px;color:#60745f;font-size:14px}
+.help-frequency,.help-amounts{border:0;min-width:0;padding:0;margin:0 0 23px}
+.help-frequency{display:grid;grid-template-columns:1fr 1fr;gap:5px;padding:5px;background:#dce6d3;border-radius:100px}
+.help-frequency label,.help-amounts label{position:relative;cursor:pointer}
+.help-frequency input,.help-amounts input[type=radio]{position:absolute;width:100%;height:100%;inset:0;opacity:0;margin:0;cursor:pointer}
+.help-frequency label>span{display:flex;justify-content:center;align-items:center;min-height:42px;border-radius:100px;font-size:14px;font-weight:600;color:#536c55}
+.help-frequency input:checked+span{background:#fbfaf3;color:#244d43;box-shadow:0 1px 4px #244d4310}
+.help-frequency input:focus-visible+span,.help-amounts input[type=radio]:focus-visible+span{outline:2px solid #54755e;outline-offset:3px}
+.help-amounts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.help-amounts legend{padding:0;width:100%;margin-bottom:12px;font-size:13px;font-weight:600}
+.help-amounts legend>span{float:right;font-size:11px;font-weight:500;letter-spacing:.08em;color:#536b53}
+.help-amounts label>span{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:80px;border-radius:13px;background:#fbfaf3;color:#315b46}
+.help-amounts strong{font-size:24px;font-weight:500;line-height:1.5}
+.help-amounts small{font-size:11px}
+.help-amounts input:checked+span{background:#42684f;color:#fffdf5}
+.help-amounts label:hover>span{background:#f3f5e9}
+.help-amounts label:hover input:checked+span{background:#365d43}
+.help-custom-choice{grid-column:1/-1}
+.help-custom-choice>label{display:block}
+.help-amounts .help-custom-choice>label>span{min-height:48px;font-size:13px}
+.help-custom-amount{display:flex;justify-content:center;align-items:center;gap:9px;min-height:48px;border-radius:13px;background:#fbfaf3;color:#315b46}
+.help-custom-amount>span{font-size:18px}
+.help-custom-amount input{position:static;opacity:1;box-sizing:border-box;width:7ch;min-width:0;border:0;padding:7px 0;background:none;outline:none;font:400 21px/1.4 'Varela Round',sans-serif;color:#244d43;caret-color:#315b46}
+.help-custom-amount input::placeholder{color:#91a28b}
+.help-custom-amount:focus-within{box-shadow:0 0 0 2px #709278}
+.help-primary.help-pay{width:100%;border:0;justify-content:center;padding:16px 24px;cursor:pointer;font-family:inherit}
+.help-pay>[data-pay-label]{display:block;width:auto;height:auto;border-radius:0;background:none;color:inherit;font-size:14px}
+.help-pay:disabled{background:#d6ded0;color:#71816f;opacity:1;cursor:default;box-shadow:none}
+.help-pay[aria-busy=true]{cursor:progress}
+.help-pay-wrap{position:relative;border-radius:100px}
+.help-pay-wrap.has-amount-issue{cursor:help}
+.help-pay-wrap.has-amount-issue .help-pay{pointer-events:none}
+.help-amount-tip{position:absolute;bottom:calc(100% + 12px);left:50%;transform:translateX(-50%);width:max-content;max-width:100%;box-sizing:border-box;padding:10px 14px;border-radius:12px;background:#315b46;color:#fffdf5;font-size:12px;text-align:center;opacity:0;visibility:hidden;pointer-events:none;z-index:2}
+.help-pay-wrap:hover .help-amount-tip,.help-pay-wrap:focus .help-amount-tip{opacity:1;visibility:visible}
+.help-pay-wrap:focus-visible{outline:2px solid #54755e;outline-offset:4px}
+.help-payment-status:empty{display:none}
+.help-payment-status{font-size:13px;line-height:1.7;margin:24px 0 0;text-align:center;color:#536f5c;overflow-wrap:anywhere}
+.help-support-notes{min-width:0}
+.help-message-viewport{--message-gap:24px;box-sizing:border-box;width:100%;overflow:hidden;touch-action:auto;cursor:auto;mask-image:linear-gradient(to right,transparent,#000 20%,#000 80%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 20%,#000 80%,transparent)}
+.help-message-viewport+.help-message-viewport{margin-top:20px}
+.help-message-viewport:focus-visible{background:#eaf0e34d;outline:0}
+.help-supporters{display:flex;align-items:stretch;gap:var(--message-gap);width:max-content;list-style:none;padding:0;margin:0;user-select:none}
+.help-message-viewport[data-moving=true] .help-supporters{will-change:transform}
+.help-supporters li{box-sizing:border-box;flex:0 0 auto;width:clamp(260px,78vw,380px);padding:23px 26px;overflow-wrap:anywhere;border:0;border-radius:21px;background:#edf2e6}
+.help-message-viewport[data-single=true]{mask-image:none;-webkit-mask-image:none;cursor:auto}
+.help-message-viewport[data-single=true] .help-supporters{width:100%;user-select:text}
+.help-message-viewport[data-single=true] .help-supporters li{max-width:100%}
+.help-supporters li>p{margin:12px 0 0;line-height:1.8;font-size:16px;color:#365848}
+.help-supporter-meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 14px;font-size:12px;color:#71816d}
+.help-supporter-meta strong{font-size:15px;font-weight:600;color:#355a47}
+.help-supporter-amount{font-size:13px;color:#4d7055}
+.help-supporter-meta time{margin-left:0;white-space:nowrap}
+.help-supporter-meta time::before{content:'·';margin-right:10px;color:#8e9d85}
+.help-supporter-sample{font-size:10px;font-weight:600;line-height:1.5;padding:2px 7px;border-radius:6px;background:#faf4e6;color:#7a6849}
+.help-preview .r-motion-preview{border:0;border-radius:100px;background:#e7eee5;color:#365d49;padding:7px 12px;font:inherit;font-size:11px;cursor:pointer}
+.help-preview .r-motion-preview:focus-visible{background:#d5e2ca;box-shadow:0 3px 0 #54755e;outline:0}
+.help-preview .r-motion-preview{flex:none;white-space:nowrap}
+.help-text-button{background:none;border:0;border-radius:100px;min-height:38px;padding:8px 12px;color:#365d49;text-decoration:none;font:inherit;font-size:12px;font-weight:600;cursor:pointer}
+.help-text-button:hover{background:#e7eedd}
+@media(max-width:900px){.help-donation{padding:25px}.help-support-grid{gap:35px}}
+@media(max-width:760px){.help-funding{padding-top:44px;scroll-margin-top:100px}.help-funding-intro p{font-size:15px}.help-funding-intro{margin-bottom:22px}.help-support-grid{grid-template-columns:1fr;gap:32px}}
+@media(max-width:380px){.help-donation{padding:20px}.help-pay>[data-pay-label]{font-size:12px}.help-amounts{gap:7px}.secondary-preview .help-donation h3{font-size:23px}.help-supporter-meta time{margin-left:0}}
+/* Financial introduction beside checkout, followed by an open supporter wall. */
+.help-support-grid{align-items:center;gap:clamp(45px,8vw,110px)}
+.help-funding-intro{margin:0;max-width:460px}
+.help-funding-intro h2{max-width:390px}
+.help-support-notes{box-sizing:border-box;max-width:1100px;padding:0;margin:55px auto 0;border:0;background:none;scroll-margin-top:100px}
+.secondary-preview .help-support-notes-title{font-size:18px;font-weight:600;line-height:1.5;margin:0 0 28px;color:#365848}
+.help-funding [hidden]{display:none!important}
+.help-amount-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px;font-size:13px;font-weight:600}
+.help-currency{position:relative;display:inline-grid;place-items:center;min-width:44px;min-height:36px;border-radius:100px;color:#315b46;font-size:13px;font-weight:600;cursor:pointer}
+.help-currency:hover{background:#dce6d3}
+.help-currency:has(select:focus-visible){outline:2px solid #54755e;outline-offset:3px}
+.help-currency select{position:absolute;inset:0;width:100%;height:100%;opacity:0;border:0;cursor:pointer;font:inherit}
+.help-currency:has(select:disabled){opacity:.65;cursor:default}
+.help-amounts strong{font-size:clamp(16px,1.8vw,24px);text-align:center;overflow-wrap:anywhere}
+.help-exchange-note{font-size:11px;color:#536b53;line-height:1.65;margin:12px 0 0;text-align:center}
+@media(max-width:960px){.help-support-grid{gap:35px}}
+@media(max-width:760px){.help-support-grid{gap:30px}.help-support-notes{margin-top:40px}.help-supporters li{padding:21px 23px;border-radius:19px}.help-supporters li>p{font-size:15px}.help-message-viewport{--message-gap:18px;mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent)}.help-message-viewport+.help-message-viewport{margin-top:16px}.help-amounts strong{font-size:21px}}
+@media(max-width:380px){.secondary-preview .help-support-notes-title{font-size:16px}}
+.help-amounts legend.sr-only{width:1px;padding:0;margin:0}
+.help-amounts strong.help-price-long{font-size:16px}
+.help-amounts strong.help-price-very-long{font-size:13px}
+/* Keep benefits beside the contribution and account controls out of the reading flow. */
+.help-payment-side{min-width:0}
+.help-discord-benefit{margin-top:28px;padding-top:0}
+.secondary-preview .help-discord-benefit h3{font-size:18px;margin:0 0 10px}
+.help-funding-intro .help-discord-benefit p{font-size:14px;line-height:1.8;color:#536f5c}
+.help-connect-button{display:inline-flex;align-items:center;margin-top:17px;padding:12px 22px;border:0;background:#e7eedd;border-radius:100px;font-family:inherit;font-size:13px;font-weight:600;line-height:1.6;color:#315c49;cursor:pointer}
+.help-connect-button:hover{background:#e0e9d6}
+.help-inline-tools{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:14px 0 0;font-size:12px;color:#3e624d}
+.help-inline-tools a,.help-inline-tools button{display:inline-flex;align-items:center;justify-content:center;min-height:38px;box-sizing:border-box;padding:8px 10px;border:0;border-radius:100px;background:none;font:inherit;font-weight:600;color:inherit;text-decoration:none;cursor:pointer}
+.help-inline-tools a:hover,.help-inline-tools button:hover{color:#163f2b}
+.help-funding button:focus-visible,.help-funding a:focus-visible{outline:2px solid #54755e;outline-offset:4px}
+.help-dialog{box-sizing:border-box;width:min(490px,calc(100% - 32px));max-height:calc(100dvh - 48px);overflow-y:auto;border:0;border-radius:23px;padding:24px 28px;text-align:center;background:#fbfaf3;color:#315c49;box-shadow:0 25px 90px #193f3330}
+.help-dialog::backdrop{background:#203e3766;backdrop-filter:blur(3px)}
+.help-dialog [hidden]{display:none!important}
+body:has(.help-dialog[open]){overflow:hidden}
+.secondary-preview .help-dialog h3{font-size:25px;line-height:1.3;letter-spacing:-.5px;margin:0 24px 20px;text-align:center}
+.help-dialog h3:focus{outline:none}
+.help-dialog h4{font-family:'Varela Round',sans-serif;font-size:18px;font-weight:400;margin:25px 0 15px}
+.help-dialog p{font-size:14px;line-height:1.75;margin:0 0 18px}
+.help-dialog p:empty{display:none}
+.help-dialog label{display:block;text-align:left;font-size:13px;font-weight:600;margin:16px 0 7px}
+.help-dialog input[type=email]{box-sizing:border-box;width:100%;padding:14px 16px;border:0;background:#eaf0e2;color:#244d43;border-radius:12px;font:inherit;font-size:16px;margin-bottom:15px}
+.help-dialog button{font-family:inherit;cursor:pointer}
+.help-dialog-close{position:absolute;right:16px;top:24px;width:32px;height:32px;display:grid;place-items:center;background:transparent;border:0;border-radius:50%;color:#54735c}
+.help-dialog-close:hover{background:#e7eedd}
+.help-dialog-close svg{width:18px;height:18px}
+.help-dialog .help-dialog-primary{display:flex;align-items:center;justify-content:center;gap:15px;width:100%;box-sizing:border-box;border:0;border-radius:100px;font-size:14px;padding:13px 21px;min-height:48px;text-decoration:none}
+.help-dialog button:disabled{opacity:.55;cursor:default}
+.help-dialog [role=status]:empty{display:none}
+.help-dialog [role=status]{font-size:13px;line-height:1.7;margin:15px 0 0;overflow-wrap:anywhere}
+.help-dialog [data-discord-return]{margin:0!important;font-size:14px;font-weight:400}
+.help-email-sent{text-align:center}
+.help-email-sent strong{display:inline-block;font-weight:600;overflow-wrap:anywhere;color:#244d43}
+.help-email-sent p{margin-bottom:8px}
+.help-email-sent .help-email-hint{font-size:12px;color:#61755f}
+.help-email-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;margin-top:16px}
+.help-email-actions button{font-size:12px}
+.help-flow-error{background:none;border:0;padding:0;margin-top:18px;color:#864d3d;text-align:center}
+.help-flow-notice{color:#49644e}
+.help-flow-error strong{display:block;font-size:14px;line-height:1.5}
+.help-dialog .help-flow-error p{font-size:13px;line-height:1.65;margin:5px 0 0}
+.help-dialog-problem [data-discord-result-message]{background:none;border:0;padding:0;margin:0;color:#864d3d}
+.help-dialog-problem [data-discord-return]{margin:0!important}
+.help-dialog-problem h3{color:#713f2d}
+.help-dialog .help-disconnect-action{display:inline-flex;justify-content:center;min-width:130px;background:#e6ecdf;margin:0;padding:11px 23px;font-size:13px}
+.help-dialog .help-disconnect-action:hover{background:#d9e5cf}
+.help-dialog [data-discord-confirm-retry]{margin-top:20px}
+.help-dialog [data-discord-change-email]{display:block;margin:10px auto 0}
+.help-dialog-centered{text-align:center}
+.help-dialog-centered [data-discord-return]{max-width:310px;margin:0 auto!important;color:#536f5c;line-height:1.8}
+.help-supporter-reward>svg{display:block;width:180px;height:150px;margin:21px auto 12px;transform-origin:50% 90%;animation:help-sprout-arrive .65s ease-out both}
+.help-reward-roles{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.help-reward-roles>span{padding:6px 12px;border-radius:100px;background:#e7eddd;color:#3e654b;font-size:12px}
+.help-reward-roles>span>span{margin-left:5px;color:#54794e}
+.help-dialog button:focus-visible,.help-dialog a:focus-visible,.help-dialog input:focus-visible{outline:2px solid #54755e;outline-offset:3px}
+.help-dialog [data-removal-title]:focus{outline:none}
+.help-dialog .help-community{justify-content:center;gap:12px}
+.help-dialog .help-community:has(>button:not([hidden])){margin-top:20px}
+.help-dialog .help-community:not(:has(>button:not([hidden]))){display:none}
+.help-dialog [data-removal-retry]{margin-top:20px}
+.help-dialog .help-status-error{color:#864d3d}
+.help-dialog>p:last-child,.help-dialog .help-flow-error p:last-child{margin-bottom:0}
+.help-dialog>p:not(:has(~ :not([hidden]):not(:empty))){margin-bottom:0}
+.help-dialog [data-discord-result-message]{margin:0}
+.help-dialog [data-discord-result]:has([data-discord-server]:not([hidden]),[data-discord-retry]:not([hidden])) [data-discord-result-message]{margin-bottom:20px}
+.help-dialog:has([data-discord-confirm-copy]:empty):not(:has([data-discord-confirm-error]:not([hidden]))):not(:has([data-discord-confirm-retry]:not([hidden]))):not(:has([data-discord-start]:not([hidden]))) h3{margin-bottom:0}
+@keyframes help-sprout-arrive{from{opacity:0;transform:translateY(9px) scale(.94)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.help-supporter-reward>svg{animation:none}}
+@media(max-width:760px){.help-discord-benefit{margin-top:24px;padding-top:0}.help-dialog{padding:24px 22px}.secondary-preview .help-dialog h3{font-size:23px}.help-dialog-close{top:23px;right:13px}.help-dialog .help-community{gap:10px}}

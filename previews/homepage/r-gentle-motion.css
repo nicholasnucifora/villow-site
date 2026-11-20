@@ -1,0 +1,70 @@
+/* The note overlaps the lower-left corner; the runtime stays clear at right. */
+.version-r-motion .ics-postcard{transform:none;padding:7px;border-radius:10px}
+.version-r-motion .ics-video{aspect-ratio:16/9;width:100%;height:auto}
+.version-r-motion .ics-video img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.version-r-motion .ics-video .social-cat-thumbnail{object-position:50% 70%}
+.version-r-motion .r-video-duration{position:absolute;right:6px;bottom:6px;padding:3px 5px;border-radius:4px;background:#171717eb;color:#fff;font:600 11px/1.15 system-ui,sans-serif;font-variant-numeric:tabular-nums}
+.version-r-motion .ics-message{left:4px;right:auto;top:calc(100% - 24px);bottom:auto;max-width:calc(100% - 56px);transform:rotate(-3deg);padding:9px;box-shadow:0 5px 10px #35574412}
+.version-r-motion .ics-message:before{top:-9px;height:17px;left:39%;background:#cbdcc4b8}
+
+/* The current social example shows a clean playback frame. */
+.version-r-motion #watch-together .o-watch-window{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
+.version-r-motion .o-video{padding-bottom:0;background:#a8bdc1;box-shadow:0 5px 13px #294c4514}
+.version-r-motion .o-video>img{object-fit:cover}
+.version-r-motion .o-video>.social-cat-thumbnail{object-fit:cover;object-position:50% 73%}
+@media(max-width:650px){
+ .version-r-motion .o-video>.social-cat-thumbnail{transform:scale(1.18);transform-origin:50% 63%}
+}
+.version-r-motion .r-watch-state,.version-r-motion .r-watch-runtime{position:absolute;bottom:7px;display:flex;align-items:center;justify-content:center;box-sizing:border-box;height:21px;border-radius:4px;background:#244d43df;color:#fffef8}
+.version-r-motion .r-watch-state{left:7px;width:23px;gap:3px}
+.version-r-motion .r-watch-state i{display:block;width:2px;height:9px;border-radius:1px;background:currentColor}
+.version-r-motion .r-watch-runtime{right:7px;padding:3px 5px;font:600 11px/1.15 system-ui,sans-serif;font-variant-numeric:tabular-nums}
+
+/* Distinguish the video and its sidebar without adding a surrounding panel. */
+.version-r-motion [data-xl-topic="sidebar"] .xl-watch-video{box-shadow:0 5px 13px #294c451a}
+.version-r-motion [data-xl-topic="sidebar"] .xl-watch-video:after{content:"";position:absolute;inset:auto 0 0;height:22px;background:#294c45}
+.version-r-motion [data-xl-topic="sidebar"] .xl-watch-pause{z-index:1;left:8px;bottom:6px;font-size:11px;text-shadow:none}
+.version-r-motion [data-xl-topic="sidebar"] .xl-watch-progress{z-index:1;left:27px;right:8px;bottom:10px;background:linear-gradient(to right,#f6f3dc 62%,#ffffff40 62%)}
+.version-r-motion [data-xl-topic="sidebar"] .xl-watch-recommendations{mask-image:none}
+.version-r-motion [data-xl-topic="sidebar"] .xl-watch-suggestion img{filter:saturate(.8);opacity:1}
+.version-r-motion [data-xl-topic="sidebar"] .xl-watch-suggestion i{background:linear-gradient(#b6ac9b 0 3px,transparent 3px 9px,#d2c7b5 9px 12px,transparent 12px)}
+.version-r-motion [data-xl-topic="sidebar"] .xl-watch-plans{background:#fffdf6;box-shadow:0 5px 13px #294c451a}
+.r-motion-preview{flex:none;border:0;border-radius:6px;padding:5px 8px;background:#e4eddf;color:#315b45;font:600 11px/1.3 system-ui,sans-serif;cursor:pointer}
+.r-motion-preview:hover{background:#d3e3cd}
+.r-motion-preview:focus-visible{outline:2px solid #54836c;outline-offset:3px}
+@media(max-width:900px){
+ .version-r-motion .study-navigation-row:has(.r-motion-preview){grid-template-columns:minmax(0,1fr) auto}
+ .version-r-motion .r-motion-preview{grid-column:2;grid-row:1;justify-self:end;margin-right:4px}
+}
+
+/* Whole compositions arrive once. Their internal controls/plots never animate
+   separately, and no geometry changes during the entrance. */
+.version-r-motion .r-arrival-pending{opacity:0}
+.version-r-motion .r-arrival-entering{animation:r-section-arrive 440ms cubic-bezier(.2,.65,.3,1) both}
+@keyframes r-section-arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* Keep labels and the selected tab stationary; only the incoming example fades. */
+.version-r-motion .l-topics-ready .xl-compare-row:not([hidden]){animation:r-comparison-arrive 260ms cubic-bezier(.2,.65,.3,1) both}
+@keyframes r-comparison-arrive{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:650px){
+ .version-r-motion .ics-message{padding:8px 9px}
+ .version-r-motion .ics-message>p{font-size:13px}
+}
+@media(max-width:360px){
+ .version-r-motion .ics-message{left:4px;right:auto;top:calc(100% - 24px);bottom:auto;padding:8px}
+ .version-r-motion .r-video-duration{font-size:10px;right:5px;bottom:5px}
+}
+@media(prefers-reduced-motion:reduce){
+ .version-r-motion:not([data-r-preview-motion]) .r-arrival-pending{opacity:1;transform:none}
+ .version-r-motion:not([data-r-preview-motion]) .r-arrival-entering,.version-r-motion:not([data-r-preview-motion]) .l-topics-ready .xl-compare-row:not([hidden]){animation:none}
+ /* The base page disables all animation with !important for reduced motion.
+    Override only these two effects after an explicit preview-rail opt-in. */
+ body.version-r-motion[data-r-preview-motion] .r-arrival-entering{animation:r-section-arrive 440ms cubic-bezier(.2,.65,.3,1) both!important}
+ body.version-r-motion[data-r-preview-motion] .l-topics-ready .xl-compare-row:not([hidden]){animation:r-comparison-arrive 260ms cubic-bezier(.2,.65,.3,1) both!important}
+}
+@media print{
+ .version-r-motion .r-arrival-pending{opacity:1;transform:none}
+ .version-r-motion .r-arrival-entering,.version-r-motion .l-topics-ready .xl-compare-row:not([hidden]){animation:none}
+ body.version-r-motion[data-r-preview-motion] .r-arrival-entering,body.version-r-motion[data-r-preview-motion] .l-topics-ready .xl-compare-row:not([hidden]){animation:none!important}
+}

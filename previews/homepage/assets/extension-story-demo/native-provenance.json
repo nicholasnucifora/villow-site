@@ -1,0 +1,29 @@
+{
+  "source": "villow_extension/src/content",
+  "css": "ede50c8d91fdb29085e0c24bef25e61984faa9d598070d1408ebb7a495c96692",
+  "content": "bf03abc03ab32e7d6049ccd838ec29ef4dcdf5421556edc1facb8650a197ffac",
+  "dom": "567b937c9dd49771c7a32fae08b6b79be61d6d3848e8372596267fd3ec11de53",
+  "helpers": [
+    "buildRingButton",
+    "buildTimeText",
+    "paintSaveGlyph",
+    "buildLimitRow",
+    "measuredWidth",
+    "remeasureAmount",
+    "markTile",
+    "markCapped",
+    "clearCapped",
+    "buildSavedRow",
+    "savedShot",
+    "savedQuotaCount"
+  ],
+  "omissions": [
+    "Watch now",
+    "watched and external-playlist rows (fictional queue only)"
+  ],
+  "adapters": [
+    "local fictional state instead of worker",
+    "shadow host theme selectors",
+    "explicit mobile preview touch hints"
+  ]
+}

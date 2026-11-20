@@ -1,0 +1,92 @@
+/* The hero is one scene: a neutral sky and a full-height landscape behind
+   its content. Crop the edges at a steady art scale instead of shrinking
+   the entire landscape into a strip underneath the cinema. */
+.version-y-scenery {--i-sky:#fdfdfd;background-color:var(--i-sky)}
+.version-y-scenery .preview-site-header,
+.version-y-scenery .ip-hero {background:var(--i-sky)}
+.version-y-scenery .ip-hero[data-ip-view] .i-hero-inner {
+ min-height:620px;
+ padding-top:24px;
+ padding-bottom:170px;
+ align-items:center;
+}
+.version-y-scenery .ip-hero .ip-product-space {min-height:0;align-self:center}
+.version-y-scenery .ip-hero[data-ip-view] [data-ic-panel] {width:100%;max-width:680px;margin:0 auto}
+.version-y-scenery .ip-hero[data-ip-view] .ic-stage {height:auto;min-height:0;aspect-ratio:2/1}
+.version-y-scenery .ip-hero .ig-cinema {height:100%;min-height:0}
+.version-y-scenery .ip-hero .ig-cinema-art {transform:none}
+.version-y-scenery .i-illustration {
+ position:absolute;
+ inset:auto 0 0;
+ height:max(100%,740px);
+ margin:0;
+ background:none;
+ mask-image:linear-gradient(to bottom,transparent,#000 120px);
+}
+.version-y-scenery .i-illustration picture {height:100%;max-width:none}
+.version-y-scenery .i-illustration img {
+ width:100%;height:100%;max-height:none;aspect-ratio:auto;
+ object-fit:cover;object-position:center bottom;
+}
+@media (max-width:1600px) {
+ .version-y-scenery .i-illustration {height:max(100%,1000px)}
+ .version-y-scenery .i-illustration img {object-position:65% bottom}
+}
+@media (max-width:1100px) {
+ .version-y-scenery .ip-hero[data-ip-view] .i-hero-inner {
+  min-height:580px;
+  padding-bottom:140px;
+ }
+ .version-y-scenery .ip-hero[data-ip-view] [data-ic-panel] {max-width:600px}
+}
+@media (max-width:700px) {
+ .version-y-scenery .ip-hero[data-ip-view] .i-hero-inner {
+  width:calc(100% - 40px);
+  max-width:600px;
+  min-height:0;
+  padding-top:20px;
+  padding-bottom:88px;
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:0;
+ }
+ .version-y-scenery .ip-hero .i-hero-copy {padding-top:0}
+ .version-y-scenery .ip-hero .i-lead {max-width:510px}
+ .version-y-scenery .ip-hero .ip-product-space {margin-top:12px}
+ .version-y-scenery .ip-hero[data-ip-view] [data-ic-panel] {max-width:520px}
+ .version-y-scenery .i-illustration {
+  height:max(100%,900px);
+  /* Fade the upper decorations out of the stacked copy; the sun and terrain
+     remain behind the cinema. The fade reveals the same neutral sky colour. */
+  mask-image:linear-gradient(to bottom,transparent 66%,#000 80%);
+ }
+ .version-y-scenery .i-illustration img {object-position:70% bottom}
+}
+@media (max-width:400px) {
+ .version-y-scenery .ip-hero[data-ip-view] [data-ic-panel] {width:calc(100% + 20px);max-width:none;margin-inline:-10px}
+}
+@container (max-width:95px) {
+ .version-y-scenery .ig-cinema-reflection {bottom:16px}
+}
+
+/* Use the accepted footer curves at a fixed aspect ratio. The landscape band
+   is independent of the closing copy, so extra lines cannot squash the hills. */
+.version-y-scenery .fs-closing {
+ position:relative;
+ isolation:isolate;
+ background-image:linear-gradient(to bottom,#fbfaf3 calc(100% - 4px),#c7cfb7 0);
+ padding-bottom:calc(25px + clamp(220px,13.75vw,440px));
+}
+.version-y-scenery .fs-closing::after {
+ content:"";
+ position:absolute;
+ z-index:-1;
+ inset:auto 0 -1px;
+ height:clamp(220px,13.75vw,440px);
+ background:url('assets/p-meadow-simple.svg') center bottom / max(1600px,100vw) auto no-repeat;
+ pointer-events:none;
+}
+@media (max-width:650px) {
+ .version-y-scenery .fs-closing {padding-bottom:160px}
+ .version-y-scenery .fs-closing::after {height:140px;background-size:1000px auto;background-position:20% bottom}
+}

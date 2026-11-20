@@ -1,0 +1,13 @@
+---
+import type { Action as ActionData } from '../../lib/schema';
+import Action from './Action.astro';
+import ExtensionStoreLinks from './ExtensionStoreLinks.astro';
+interface Props { actions: ActionData[]; size?: 'normal' | 'small'; }
+const { actions, size = 'normal' } = Astro.props;
+const storeKeys = ['link:chromeStore', 'link:firefoxAddons', 'link:edgeAddons'];
+const isStore = (action: ActionData) => storeKeys.includes(action.href);
+const firstStore = actions.findIndex(isStore);
+---
+{actions.map((action, index) => isStore(action)
+  ? index === firstStore && <ExtensionStoreLinks />
+  : <Action action={action} size={size} />)}

@@ -107,12 +107,14 @@ blocks:
       Villow and Villow Setup are free and open source. Your installation runs on your own provider accounts.
 
       We haven't established a reliable capacity guide or group cost estimate yet. Free allowances may suit some use, but we can't promise free hosting for you or your group, or say that a paid plan is necessarily required. Check current provider terms, allowances and billing in your accounts.
+
+      Everyone using your Villow contributes to the same hosting usage. Reaching Vercel's allowance can pause the app for the whole group. [What to do if Vercel pauses your Villow](/hosting-help) covers a possible one-time support boost, reducing access after recovery, waiting and upgrading directly with Vercel.
     callouts:
       - heading: Still to verify
         body: |
           - Practical group sizes: {tbd:groupSizeGuide}
           - Which plans different groups need: {tbd:paidPlanProviders}
-          - Exact recovery steps when an allowance is reached: {tbd:freeLimitReached}
+          - Recovery from other provider limits: {tbd:freeLimitReached}
       - heading: Plan for ongoing ownership
         body: |
           YouTube API quota is shared by people using your Google Cloud project. Existing paid provider accounts can incur charges under their plans. A custom domain is optional. Uninstalling Setup doesn't close the hosted projects.

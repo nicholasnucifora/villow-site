@@ -1,0 +1,103 @@
+---
+import type { BlockOf } from "../../lib/schema";
+import { inline, md } from "../../lib/markdown";
+import Action from "../ui/Action.astro";
+import Media from "../ui/Media.astro";
+
+interface Props {
+  block: BlockOf<"hero">;
+}
+
+const { block } = Astro.props;
+---
+
+<section class:list={["hero", block.image ? "hero--with-image" : "hero--compact"]} id={block.id}>
+  <div class="container hero__inner">
+    <div class="hero__text">
+      {block.eyebrow && <p class="eyebrow" set:html={inline(block.eyebrow)} />}
+      <h1 set:html={inline(block.title)} />
+      {block.lead && <div class="hero__lead prose" set:html={md(block.lead)} />}
+      {
+        block.actions && (
+          <div class="actions">
+            {block.actions.map((action) => (
+              <Action action={action} />
+            ))}
+          </div>
+        )
+      }
+      {
+        block.smallPrint && (
+          <ul class="hero__small-print">
+            {block.smallPrint.map((item) => (
+              <li set:html={inline(item)} />
+            ))}
+          </ul>
+        )
+      }
+    </div>
+    {
+      block.image && (
+        <div class="hero__media">
+          <Media image={block.image} eager />
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding-block: var(--space-2xl) calc(var(--block-space) / 2);
+  }
+  .hero__inner {
+    display: grid;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+  .hero__text {
+    display: grid;
+    gap: var(--space-lg);
+    justify-items: start;
+  }
+  .hero--compact .hero__text {
+    max-width: var(--width-narrow);
+  }
+  .hero--compact h1 {
+    font-size: var(--text-3xl);
+  }
+  .hero__lead {
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    max-width: 40rem;
+  }
+  .hero__small-print {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2xs) var(--space-lg);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+  .hero__small-print li::before {
+    content: "";
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    margin-right: var(--space-xs);
+    border-radius: 50%;
+    background: var(--color-accent);
+    vertical-align: 0.15em;
+  }
+
+  @media (min-width: 60rem) {
+    .hero {
+      padding-block: var(--space-3xl) calc(var(--block-space) / 2);
+    }
+    .hero--with-image .hero__inner {
+      grid-template-columns: 1fr 1.15fr;
+    }
+  }
+</style>

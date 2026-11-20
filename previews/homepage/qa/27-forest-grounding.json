@@ -1,0 +1,75 @@
+{
+  "method": "Rendered tree cutout base versus foreground alpha crest; negative gap means hidden behind the hill. Alpha threshold 128, sampled at 1 CSS px.",
+  "measurements": [
+    {
+      "width": 320,
+      "leftMaxGap": -20.6,
+      "rightMaxGap": -5
+    },
+    {
+      "width": 390,
+      "leftMaxGap": -9.1,
+      "rightMaxGap": -5
+    },
+    {
+      "width": 500,
+      "leftMaxGap": -6.5,
+      "rightMaxGap": -5
+    },
+    {
+      "width": 600,
+      "leftMaxGap": -6.2,
+      "rightMaxGap": -5
+    },
+    {
+      "width": 700,
+      "leftMaxGap": -5.6,
+      "rightMaxGap": -5
+    },
+    {
+      "width": 701,
+      "leftMaxGap": -11.6,
+      "rightMaxGap": -7.2
+    },
+    {
+      "width": 768,
+      "leftMaxGap": -13.5,
+      "rightMaxGap": -8.8
+    },
+    {
+      "width": 861,
+      "leftMaxGap": -14.9,
+      "rightMaxGap": -11
+    },
+    {
+      "width": 1024,
+      "leftMaxGap": -17.8,
+      "rightMaxGap": -13.6
+    },
+    {
+      "width": 1168,
+      "leftMaxGap": -20.1,
+      "rightMaxGap": -15.5
+    },
+    {
+      "width": 1280,
+      "leftMaxGap": -19.7,
+      "rightMaxGap": -16.8
+    },
+    {
+      "width": 1636,
+      "leftMaxGap": -17.8,
+      "rightMaxGap": -18.9
+    },
+    {
+      "width": 1920,
+      "leftMaxGap": -12.3,
+      "rightMaxGap": -20.1
+    },
+    {
+      "width": 2560,
+      "leftMaxGap": -26.1,
+      "rightMaxGap": -22.9
+    }
+  ]
+}

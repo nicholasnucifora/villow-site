@@ -1,0 +1,115 @@
+/*
+ * Design tokens: type, spacing, shape and motion.
+ * Colours live in themes.css. Components use only these variables, so changing a value here restyles the whole site.
+ */
+:root {
+  /* ── Type ─────────────────────────────────────────────────────────────── */
+  /* System fonts for now. To use a custom font, put the .woff2 files in public/fonts/,
+     add @font-face rules at the top of base.css, and name the font first in these stacks. */
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.1875rem;
+  --text-xl: clamp(1.3rem, 1.15rem + 0.6vw, 1.55rem);
+  --text-2xl: clamp(1.6rem, 1.3rem + 1.4vw, 2.25rem);
+  --text-3xl: clamp(2rem, 1.5rem + 2.4vw, 3rem);
+  --text-4xl: clamp(2.5rem, 1.7rem + 4vw, 4.5rem);
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.3;
+  --leading-body: 1.6;
+  --weight-heading: 700;
+  --weight-strong: 600;
+  --tracking-heading: -0.02em;
+  --tracking-eyebrow: 0.08em;
+
+  /* ── Space ────────────────────────────────────────────────────────────── */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: clamp(3.5rem, 2.2rem + 5vw, 6.5rem);
+
+  /* Vertical space around each block on a page. */
+  --block-space: var(--space-3xl);
+  /* Space at the sides of the page. */
+  --gutter: clamp(1.125rem, 0.6rem + 2.4vw, 2.25rem);
+
+  --width-page: 74rem;
+  --width-narrow: 54rem;
+  --width-prose: 42rem;
+
+  /* ── Shape ────────────────────────────────────────────────────────────── */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.5rem;
+  --radius-pill: 999px;
+  --border: 1px solid var(--color-border);
+  --shadow-sm: 0 1px 2px color-mix(in srgb, var(--color-shadow) 10%, transparent);
+  --shadow-md: 0 10px 30px -12px color-mix(in srgb, var(--color-shadow) 28%, transparent);
+
+  /* ── Motion ───────────────────────────────────────────────────────────── */
+  --motion-fast: 120ms;
+  --motion: 220ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  /* ── Placeholders ─────────────────────────────────────────────────────── */
+  /* The same in every theme, so unfinished things always look unfinished. */
+  --tbd-bg: #fde8f1;
+  --tbd-text: #9b1c50;
+  --tbd-border: #d63d7c;
+
+  /* ── Status badges ────────────────────────────────────────────────────── */
+  --badge-coming-bg: #fdf0d5;
+  --badge-coming-text: #7a4b00;
+  --badge-showcase-bg: #ece6fb;
+  --badge-showcase-text: #4a2f99;
+  --badge-exploring-bg: #e3edf5;
+  --badge-exploring-text: #24506f;
+  --badge-tbd-bg: var(--tbd-bg);
+  --badge-tbd-text: var(--tbd-text);
+
+  /* ── Fix the Web bands ────────────────────────────────────────────────── */
+  /* Fix the Web's own colours, so policy sections feel related to fixtheweb.org. */
+  --ftw-bg: #ecece4;
+  --ftw-text: #1b1e29;
+  --ftw-muted: #4a4d57;
+  --ftw-accent: #2b8666;
+  --ftw-on-accent: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tbd-bg: #3d0f25;
+    --tbd-text: #f9b2d2;
+    --tbd-border: #e05592;
+
+    --badge-coming-bg: #3a2a0c;
+    --badge-coming-text: #f5cf85;
+    --badge-showcase-bg: #2a2147;
+    --badge-showcase-text: #cbbdf7;
+    --badge-exploring-bg: #1b2d3b;
+    --badge-exploring-text: #a9cbe4;
+
+    --ftw-bg: #282c3b;
+    --ftw-text: #f2f2ee;
+    --ftw-muted: #b9bac2;
+    --ftw-accent: #6ac7a7;
+    --ftw-on-accent: #10231c;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion: 0ms;
+  }
+}

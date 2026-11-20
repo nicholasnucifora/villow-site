@@ -3,16 +3,30 @@
 import Base from "../layouts/Base.astro";
 import Blocks from "../components/Blocks.astro";
 import { pages } from "../lib/content";
+import {designPages, renderDesignPage, designAliases} from '../lib/site-design.mjs';
 
 export function getStaticPaths() {
-  return pages
+  const content = pages
     .filter((page) => page.slug !== "404")
     .map((page) => ({ params: { slug: page.slug === "index" ? undefined : page.slug }, props: { page } }));
+  for (const design of designPages) {
+    const slug = design.slug === 'index' ? undefined : design.slug;
+    if (!content.some(entry => entry.params.slug === slug)) content.push({params:{slug}, props:{page:{slug:design.slug}}});
+  }
+  for (const path of Object.keys(designAliases)) {
+    const slug = path.slice(1);
+    if (!content.some(entry => entry.params.slug === slug)) content.push({params:{slug}, props:{page:{slug}}});
+  }
+  const hostingDetails = pages.find(page => page.slug === 'running-villow');
+  content.push({params:{slug:'hosting-details'}, props:{page:{...hostingDetails, slug:'hosting-details', path:'/hosting-details'}}});
+  return content;
 }
 
 const { page } = Astro.props;
+const alias = designAliases[`/${page.slug}`];
+const design = renderDesignPage(alias === '/' ? 'index' : alias?.slice(1) ?? page.slug);
 ---
 
-<Base title={page.title} description={page.description} path={page.path}>
+{design ? <Fragment set:html={design} /> : <Base title={page.title} description={page.description} path={page.path}>
   <Blocks blocks={page.blocks} />
-</Base>
+</Base>}

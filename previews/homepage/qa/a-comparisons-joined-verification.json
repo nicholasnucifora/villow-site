@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-28",
+  "checks": [
+    {
+      "brokenImages": 0,
+      "overflow": false,
+      "pairs": [
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "vertical"
+        },
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "vertical"
+        },
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "vertical"
+        }
+      ],
+      "playerFits": true,
+      "targets": [
+        44,
+        44
+      ],
+      "width": 320
+    },
+    {
+      "brokenImages": 0,
+      "overflow": false,
+      "pairs": [
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "vertical"
+        },
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "vertical"
+        },
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "vertical"
+        }
+      ],
+      "playerFits": true,
+      "targets": [
+        44,
+        44
+      ],
+      "width": 390
+    },
+    {
+      "brokenImages": 0,
+      "overflow": false,
+      "pairs": [
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "vertical"
+        },
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "vertical"
+        },
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "vertical"
+        }
+      ],
+      "playerFits": true,
+      "targets": [
+        44,
+        44
+      ],
+      "width": 600
+    },
+    {
+      "brokenImages": 0,
+      "overflow": false,
+      "pairs": [
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "horizontal"
+        },
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "horizontal"
+        },
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "horizontal"
+        }
+      ],
+      "playerFits": true,
+      "targets": [
+        44,
+        44
+      ],
+      "width": 768
+    },
+    {
+      "brokenImages": 0,
+      "overflow": false,
+      "pairs": [
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "horizontal"
+        },
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "horizontal"
+        },
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "horizontal"
+        }
+      ],
+      "playerFits": true,
+      "targets": [
+        44,
+        44
+      ],
+      "width": 1024
+    },
+    {
+      "brokenImages": 0,
+      "overflow": false,
+      "pairs": [
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "horizontal"
+        },
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "horizontal"
+        },
+        {
+          "connectorAligned": true,
+          "joined": true,
+          "orientation": "horizontal"
+        }
+      ],
+      "playerFits": true,
+      "targets": [
+        44,
+        44
+      ],
+      "width": 1440
+    }
+  ]
+}

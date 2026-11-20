@@ -1,0 +1,105 @@
+{
+  "root": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage",
+  "missing": [],
+  "kept": [
+    "a-preview.css",
+    "a-preview.js",
+    "a-source.html",
+    "a.html",
+    "assets/VarelaRound-Regular.ttf",
+    "assets/a-connected-devices.webp",
+    "assets/c-thumb-garden.webp",
+    "assets/c-thumb-mountain.webp",
+    "assets/c-thumb-pasta.webp",
+    "assets/h-thumb-shelf.webp",
+    "assets/i-cinema-cat-clip.webp",
+    "assets/i-cinema-cloud-cat.webp",
+    "assets/i-cinema-cloud-turn-v1.webp",
+    "assets/i-cinema-cloud-watching-v1.webp",
+    "assets/i-thumb-rain.webp",
+    "assets/i-thumb-rest.webp",
+    "assets/r-shared-friends.webp",
+    "assets/villow-mark-small-on-light.svg",
+    "b.html",
+    "compact-comparisons.css",
+    "compact-comparisons.js",
+    "h-data.js",
+    "homepage-closing.css",
+    "i-cinema-gallery.css",
+    "i-cinema-gallery.js",
+    "i-company.css",
+    "i-concepts.css",
+    "i-data.js",
+    "i-feed-save.css",
+    "i-illustration.css",
+    "i-landscape.css",
+    "i-next.css",
+    "i-product.css",
+    "i.css",
+    "illustration-studies/i-supplied/sage-sunrise-mobile.webp",
+    "illustration-studies/i-supplied/sage-sunrise.webp",
+    "index.html",
+    "n-data.js",
+    "n-overview.css",
+    "o-overview.css",
+    "o-overview.js",
+    "p-insights-data.js",
+    "r-insights-data.js",
+    "r-social.css",
+    "r-together.css",
+    "r-together.js",
+    "s-insights-data.js",
+    "s-insights.css",
+    "s-insights.js",
+    "s-layout.css",
+    "s-limits.css",
+    "s-limits.js",
+    "study-navigation.css",
+    "t-social-intro.css",
+    "t-swipe-cue.css",
+    "t-swipe-cue.js",
+    "w-feed.css",
+    "w-feed.js",
+    "w-page.css",
+    "x-life.css",
+    "x-life.js"
+  ],
+  "deleteFiles": [
+    {
+      "path": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\qa\\b-comparison-desktop.png",
+      "relative": "qa/b-comparison-desktop.png",
+      "bytes": 134858
+    },
+    {
+      "path": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\qa\\b-comparison-mobile.png",
+      "relative": "qa/b-comparison-mobile.png",
+      "bytes": 30355
+    },
+    {
+      "path": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\qa\\b-comparison-preview.png",
+      "relative": "qa/b-comparison-preview.png",
+      "bytes": 53994
+    },
+    {
+      "path": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\qa\\c-comparison-desktop.png",
+      "relative": "qa/c-comparison-desktop.png",
+      "bytes": 143405
+    },
+    {
+      "path": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\qa\\c-comparison-mobile.png",
+      "relative": "qa/c-comparison-mobile.png",
+      "bytes": 32879
+    },
+    {
+      "path": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\qa\\d-comparison-desktop.png",
+      "relative": "qa/d-comparison-desktop.png",
+      "bytes": 128353
+    },
+    {
+      "path": "C:\\Users\\Nebula PC\\Development\\villow-site\\previews\\homepage\\qa\\d-comparison-mobile.png",
+      "relative": "qa/d-comparison-mobile.png",
+      "bytes": 30521
+    }
+  ],
+  "totalBytes": 554365
+}

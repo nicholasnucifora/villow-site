@@ -1,0 +1,92 @@
+[
+  {
+    "preset": "33",
+    "normal": {
+      "brand": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(35, 69, 56)",
+        "decoration": "none",
+        "font": "14px / 19.6px \"Varela Round\", sans-serif"
+      },
+      "client": 375,
+      "heading": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(66, 103, 91)",
+        "decoration": "none",
+        "font": "13px / 19.5px \"Varela Round\", sans-serif"
+      },
+      "scroll": 375
+    },
+    "brandFocus": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(35, 69, 56)",
+      "decoration": "none"
+    },
+    "linkFocus": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(8, 115, 94)",
+      "decoration": "none",
+      "text": "Get started"
+    }
+  },
+  {
+    "preset": "34",
+    "normal": {
+      "brand": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(35, 69, 56)",
+        "decoration": "none",
+        "font": "14px / 19.6px \"Varela Round\", sans-serif"
+      },
+      "client": 375,
+      "heading": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(88, 114, 104)",
+        "decoration": "none",
+        "font": "11px / 18.7px \"Varela Round\", sans-serif"
+      },
+      "scroll": 375
+    },
+    "brandFocus": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(35, 69, 56)",
+      "decoration": "none"
+    },
+    "linkFocus": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(29, 100, 77)",
+      "decoration": "none",
+      "text": "Get started"
+    }
+  },
+  {
+    "preset": "35",
+    "normal": {
+      "brand": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(35, 69, 56)",
+        "decoration": "none",
+        "font": "14px / 19.6px \"Varela Round\", sans-serif"
+      },
+      "client": 375,
+      "heading": {
+        "background": "rgba(0, 0, 0, 0)",
+        "color": "rgb(55, 93, 80)",
+        "decoration": "none",
+        "font": "15px / 21px \"Varela Round\", sans-serif"
+      },
+      "scroll": 375
+    },
+    "brandFocus": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(35, 69, 56)",
+      "decoration": "none"
+    },
+    "linkFocus": {
+      "background": "rgba(0, 0, 0, 0)",
+      "color": "rgb(23, 77, 61)",
+      "decoration": "none",
+      "text": "Get started"
+    }
+  }
+]

@@ -1,0 +1,26 @@
+/* Current pages share W's wordmark, dimensions and navigation. */
+.preview-site-header.preview-site-header{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%;max-width:none;height:78px;min-height:78px;margin-inline:0;padding:0 max(20px,calc((100% - 1090px)/2));box-sizing:border-box;color:#193e43}
+.preview-site-header .preview-site-brand{display:inline-flex;align-items:center;gap:10px;flex:none;text-decoration:none;color:#193e43;letter-spacing:-.02em}
+.preview-site-header .preview-site-brand img{display:block;width:auto;height:28px}
+.preview-site-header .preview-site-brand span{font:400 27px/1 'Varela Round',sans-serif;letter-spacing:-.02em;-webkit-text-stroke:.5px currentColor}
+.preview-site-header .preview-site-nav{display:flex;align-items:center;gap:28px}
+.preview-site-header .preview-site-nav.preview-site-nav>a{display:block;font:500 13px/1.3 system-ui,sans-serif;color:#315b4d;text-decoration:none;white-space:nowrap}
+.preview-site-header .preview-site-nav>a:not(.preview-site-cta):hover{text-decoration:underline;text-underline-offset:4px}
+.preview-site-header .preview-site-nav a.preview-site-cta{padding:12px 20px;border-radius:100px;background:#244f3d;color:#fff;font-weight:600}
+.preview-site-header .preview-site-nav a.preview-site-cta:hover{background:#346749}
+.preview-site-header a:focus-visible{outline:2px solid #5d8b6d;outline-offset:4px}
+@media(max-width:650px){.preview-site-header.preview-site-header{height:66px;min-height:66px;gap:16px}.preview-site-header .preview-site-nav{gap:14px}.preview-site-header .preview-site-nav>a:not(.preview-site-cta){font-size:12px}.preview-site-header .preview-site-nav a.preview-site-cta{padding:10px 14px}}
+@media(max-width:420px){.preview-site-header .preview-site-nav>a:not(.preview-site-cta){display:none}.preview-site-header .preview-site-nav a.preview-site-cta{font-size:12px}}
+@media print{.preview-site-header .preview-site-nav{display:none}}
+/* Shared opt-in for reviewing motion when the OS requests reduced motion. */
+.setup-motion-preview{flex:none;border:0;border-radius:6px;padding:5px 8px;background:#e4eddf;color:#315b45;font:600 11px/1.3 system-ui,sans-serif;cursor:pointer}
+.setup-motion-preview:hover{background:#d3e3cd}
+.setup-motion-preview:focus-visible{outline:2px solid #54836c;outline-offset:3px}
+@media(max-width:900px){.study-navigation-row:has(.setup-motion-preview){grid-template-columns:minmax(0,1fr) auto}.setup-motion-preview{grid-column:2;grid-row:1;justify-self:end;margin-right:4px}}
+/* A single scrolling preset row gives every current page the same toolbar
+   height, so the site header also stays aligned on phones and tablets. */
+@media(max-width:900px){
+ .study-navigation[data-study-series] .study-navigation-row{display:grid;grid-template-rows:40px 44px;height:84px}
+ .study-navigation[data-study-series] .preview-tabs{display:flex;align-items:stretch;grid-column:1/-1;grid-row:2;height:44px;min-height:44px;overflow-x:auto;overflow-y:hidden}
+ .study-navigation[data-study-series] .preview-tabs a{flex:0 0 auto;height:100%;min-height:0;padding:0 12px}
+}

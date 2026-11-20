@@ -1,0 +1,95 @@
+/* Q keeps P's page structure and refines the supporting details. */
+.version-q-story .wf-copy .q-feed-intro{margin-top:0;color:inherit}
+
+/* Full-width reading beneath a small, recognisable channel header. */
+.version-q-story .it-l-suggest{padding:22px 24px;min-height:190px}
+.version-q-story .it-l-suggest .it-suggestion{display:flex;flex-direction:column;gap:9px;margin:0}
+.version-q-story .it-l-suggest .it-source{display:flex;flex-direction:row;align-items:center;align-self:stretch;gap:9px}
+.version-q-story .it-l-suggest .it-avatar{flex:none;width:32px;height:32px}
+.version-q-story .it-l-suggest .it-source strong{font:500 12px/1.4 system-ui,sans-serif;color:#55715e}
+.version-q-story .it-l-suggest .it-suggestion h3{font-size:18px;line-height:1.4;letter-spacing:-.025em}
+.version-q-story .it-l-suggest .it-suggestion p{font-size:14px;line-height:1.5;color:#5f7666}
+.version-q-story .it-l-suggest .it-actions{margin:2px 0 0;gap:18px}
+.version-q-story .it-l-suggest .it-actions button{font-size:13px}
+.version-q-story .it-l-suggest .it-actions button:first-child{padding:11px 14px}
+.version-q-story .it-l-suggest .it-actions button:last-child{padding:11px 5px}
+
+/* The same people connect the two stories. Keep the taped, personal note. */
+.version-q-story .ics-scene,.version-q-story .o-watch-scene{max-width:460px;margin-inline:auto;height:270px;min-height:270px}
+.version-q-story .ics-person .q-share-portrait{width:52px;height:52px;margin:0;border:3px solid #fffef8;box-shadow:0 3px 8px #35574412}
+.version-q-story .ics-person-label{font-size:12px;margin-top:9px}
+.version-q-story .ics-scene{grid-template-columns:52px minmax(12px,1fr) minmax(0,220px) minmax(12px,1fr) 52px}
+.version-q-story .ics-postcard{padding:7px;border:0}
+.version-q-story .ics-message{position:absolute;right:-8px;bottom:-20px;left:auto;margin:0;max-width:calc(100% - 6px);padding:10px 11px;box-sizing:border-box}
+.version-q-story .ics-message>p{margin:0;font-size:14px;line-height:1.5}
+.version-q-story .o-watch-window{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:16px;align-items:stretch}
+.version-q-story .o-video{aspect-ratio:16/12;padding-bottom:23px}
+.version-q-story .p-video-playback{height:23px;padding-inline:7px;gap:5px}
+.version-q-story .o-social-panel{padding:13px 12px;border-radius:13px;gap:17px;background:#eff5ed;box-shadow:0 6px 16px #3557440a}
+.version-q-story .o-panel-top{gap:9px}
+.version-q-story .o-viewers{gap:4px}
+.version-q-story .o-viewers .n-person{width:29px;height:29px;border-width:2px;border-color:#fffef8}
+.version-q-story .o-panel-top strong{font-size:12px;line-height:1.35}
+.version-q-story .o-panel-top small{font-size:11px;line-height:1.35;color:#557461}
+.version-q-story .o-chat>strong{font-size:11px;font-weight:500;color:#66816e}
+.version-q-story .o-chat-message{margin-top:8px;display:block}
+.version-q-story .o-chat-message b{font-size:12px;font-weight:600;color:#315b45}
+.version-q-story .o-chat-message p{margin-top:4px;font-size:13px;line-height:1.5;color:#3d624c}
+
+/* The full watching composition starts with its heading and ends with the chart. */
+.version-q-story .o-watch-scene{max-width:none;margin-inline:0}
+.version-q-story .n-devices{margin-top:88px}
+.version-q-story .x-life{padding-top:112px}
+@media(min-width:901px){
+ .version-q-story .n-social-cards{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:80px}
+ .version-q-story #watch-together{width:100%;max-width:500px;justify-self:end}
+}
+
+/* Keep the existing hills and seamless footer; remove the repeated mission. */
+.version-q-story .fs-closing{padding-bottom:185px}
+
+/* One centred introduction leads straight into the comparison choices. */
+.version-q-story .xl-intro{display:flex;flex-direction:column;align-items:center;gap:0;max-width:760px;margin:0 auto 34px;text-align:center}
+.version-q-story .xl-intro h2{max-width:700px;margin:0;text-align:center}
+
+/* The concepts remain an obvious button, with setup keeping primary emphasis. */
+.version-q-story .m-concepts .rd-concepts-link{background:#d5e3cd;color:#315b45}
+.version-q-story .m-concepts .rd-concepts-link:hover{background:#c3d6b9;color:#244e3c}
+
+@media(min-width:651px) and (max-width:1000px){
+ .version-q-story .o-watch-window{grid-template-columns:minmax(0,.95fr) minmax(0,1fr);gap:10px}
+ .version-q-story .o-social-panel{padding:10px 9px;gap:13px}
+ .version-q-story .o-panel-top{flex-wrap:wrap;gap:6px}
+ .version-q-story .o-panel-top>span:last-child{width:100%}
+ .version-q-story .o-video{height:100%;aspect-ratio:auto;box-sizing:border-box}
+ .version-q-story .o-video>img{object-fit:contain}
+}
+@media(max-width:650px){
+ .version-q-story .it-l-suggest{padding:20px;min-height:190px}
+ .version-q-story .it-l-suggest .it-suggestion h3{font-size:17px}
+ .version-q-story .it-l-suggest .it-suggestion p{font-size:13px}
+ .version-q-story .ics-scene{height:255px;min-height:255px}
+ .version-q-story .ics-scene{grid-template-columns:45px minmax(10px,1fr) minmax(0,220px) minmax(10px,1fr) 45px}
+ .version-q-story .o-watch-scene{height:auto;min-height:0;margin:20px auto}
+ .version-q-story .o-watch-window{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+ .version-q-story .o-video{height:100%;min-height:180px;aspect-ratio:auto;box-sizing:border-box}
+ .version-q-story .o-video>img{object-fit:contain}
+ .version-q-story .o-social-panel{padding:12px 10px;gap:15px}
+ .version-q-story .o-panel-top{flex-wrap:wrap;gap:7px}
+ .version-q-story .o-panel-top>span:last-child{width:100%}
+ .version-q-story .ics-person .q-share-portrait{width:45px;height:45px}
+ .version-q-story .n-devices{margin-top:64px}
+ .version-q-story .x-life{padding-top:72px}
+ .version-q-story .fs-closing{padding-bottom:160px}
+}
+@media(max-width:360px){
+ .version-q-story .it-l-suggest{padding:18px}
+ .version-q-story .it-l-suggest .it-actions{gap:12px}
+ .version-q-story .o-watch-window{gap:10px}
+ .version-q-story .o-social-panel{padding:11px 8px}
+ .version-q-story .o-chat-message p{font-size:12px}
+ .version-q-story .ics-person .q-share-portrait{width:38px;height:38px}
+ .version-q-story .ics-scene{grid-template-columns:38px 12px minmax(0,1fr) 12px 38px;gap:2px}
+ .version-q-story .ics-message{right:-5px;bottom:-19px;padding:8px}
+ .version-q-story .ics-message>p{font-size:13px}
+}

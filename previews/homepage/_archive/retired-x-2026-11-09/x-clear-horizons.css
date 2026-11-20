@@ -1,0 +1,44 @@
+/* X alone: geometry follows the artwork's ratio, with no raster pose patches. */
+.version-x-horizon .ip-hero[data-ip-view] .i-hero-inner{width:min(1090px,calc(100% - 80px));max-width:none;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:38px;min-height:0;padding-top:66px;padding-bottom:142px}
+.version-x-horizon .ip-hero[data-ip-view] .i-hero-copy{padding:0}
+.version-x-horizon .i-hero h1{font-size:clamp(44px,4.4vw,64px);line-height:1.13;margin-bottom:24px;max-width:540px}
+.version-x-horizon .i-hero .i-lead{font-size:16px;max-width:430px}
+.version-x-horizon .ip-hero[data-ip-view] .ip-product-space{min-height:0;align-self:center;width:100%;margin:0;padding:0}
+.version-x-horizon .ip-hero[data-ip-view] .ip-product-space>[data-ip-view-panel]{width:100%;max-width:none;margin:0}
+.version-x-horizon .ip-hero[data-ip-view] .ic-stage{width:100%;max-width:none;height:auto;min-height:0;aspect-ratio:620/360}
+.version-x-horizon .ig-cinema{height:100%;min-height:0}
+.version-x-horizon .ig-cinema-art{aspect-ratio:620/360;transform:none}
+.version-x-horizon .xh-cinema-drawing{display:block;width:100%;height:auto;overflow:visible;pointer-events:none}
+.version-x-horizon .xh-arm-think{opacity:0}
+.version-x-horizon [data-ig-pose=thinking] .xh-arm-think{opacity:1}
+.version-x-horizon [data-ig-pose=thinking] .xh-arm-rest{opacity:0}
+.version-x-horizon .ig-cinema-screen{border-radius:4px}
+.version-x-horizon .ig-cinema-clip img{object-fit:contain}
+.version-x-horizon .ig-cinema-reflection{inset:8% 0 22px;gap:10px}
+.version-x-horizon .ig-cinema-question{font-size:clamp(11px,6.8cqw,18px)!important;line-height:1.2!important}
+.version-x-horizon .ig-cinema-verdict{width:clamp(32px,21cqw,48px);height:clamp(28px,18cqw,40px)}
+.version-x-horizon .ig-cinema-toggle{min-width:32px;min-height:32px}
+.version-x-horizon .xh-horizon{position:absolute;inset:auto 0 -1px;height:clamp(65px,7vw,112px);pointer-events:none;line-height:0}
+.version-x-horizon .xh-horizon>svg{display:block;width:100%;height:100%}
+/* A small band owns the curves; the height of the copy cannot stretch them. */
+.version-x-horizon .fs-closing{position:relative;background-image:none;padding-bottom:calc(72px + clamp(40px,6vw,96px))}
+.version-x-horizon .fs-closing::after{content:'';position:absolute;inset:auto 0 -1px;height:clamp(40px,6vw,96px);background:url('assets/x-footer-wave.svg') center bottom/100% 100% no-repeat;pointer-events:none}
+@media(max-width:1000px){
+ .version-x-horizon .ip-hero[data-ip-view] .i-hero-inner{width:calc(100% - 48px);grid-template-columns:1fr;gap:27px;padding-top:34px;padding-bottom:95px}
+ .version-x-horizon .i-hero-copy{max-width:610px;margin-inline:auto;width:100%}
+ .version-x-horizon .i-hero h1{font-size:clamp(38px,6.4vw,57px)}
+ .version-x-horizon .i-hero .i-lead{max-width:530px}
+ .version-x-horizon .ip-hero[data-ip-view] .ip-product-space{max-width:610px;margin-inline:auto}
+}
+@media(max-width:650px){
+ .version-x-horizon .ip-hero[data-ip-view] .i-hero-inner{width:calc(100% - 36px);gap:22px;padding-top:26px;padding-bottom:76px}
+ .version-x-horizon .i-hero h1{font-size:clamp(34px,8.5vw,49px);margin-bottom:20px;-webkit-text-stroke:.35px}
+ .version-x-horizon .i-hero .i-lead{font-size:15px;margin-bottom:23px}
+ .version-x-horizon .ig-cinema-reflection{inset:4% 0 16px;gap:4px}
+ .version-x-horizon .ig-cinema-progress,.version-x-horizon .ig-cinema-seek{height:16px}
+ .version-x-horizon .ig-cinema-question{font-size:clamp(10px,6.8cqw,16px)!important}
+ .version-x-horizon .ig-cinema-verdict{width:34px;height:28px}
+ .version-x-horizon .xh-horizon{height:50px}
+ .version-x-horizon .fs-closing{padding-bottom:112px}
+}
+@media(prefers-reduced-motion:reduce){.version-x-horizon .xh-cinema-drawing *{transition:none!important}}

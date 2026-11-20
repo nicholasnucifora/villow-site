@@ -2,7 +2,7 @@
 
 Nicholas signs off every item. Nobody else ticks a box.
 
-Implementation/review note: 12 October 2026. The messaging update was checked against local app and extension code and current official YouTube Help. Local implementation is not evidence that the same app or extension version is deployed. All boxes remain unticked.
+Implementation/review note: updated 14 November 2026. Terms/privacy work is local and unpublished. The researched wording and cross-product implementation record is in `docs/legal/terms-review-2026-11-14.md`; website data-request operations are in `support/PRIVACY_OPERATIONS.md`. Local implementation is not evidence that the same app or extension version is deployed. All boxes remain unticked.
 
 ## Messaging and availability
 
@@ -43,10 +43,10 @@ Implementation/review note: 12 October 2026. The messaging update was checked ag
 
 ## Extension policy and stores
 
-- [ ] Review the deliberate policy revision at the stable /privacy URL.
-  The 12 October update replaces the obsolete one-way-settings assertion, specifies supported shared config, report timing/triggers, received receipts, local 14-day history and revocation/deletion distinctions. The build pins its reviewed source hash and checks the copied output. Do not move or rename the file.
+- [ ] Review the 14 November extension policy revision at /extension-privacy.
+  The local revision now covers separate essential-link/optional-sync consent, old-connection review, Watch now progress, Shorts choices, current-day carryover, local retention/diagnostics, thumbnail requests to YouTube, private-window exclusion and disconnect/deletion distinctions. Source: `src/content/policies/extension-privacy.html`. The build pins the deliberately reviewed source hash and checks the policy verbatim. `/privacy` is the three-policy directory, retaining old incoming store links.
 - [ ] Align the policy, store disclosures and release notes with actual shipped packages.
-  Local extension manifest is 0.8.3. Compatible local code adopts settings.chosen and sends the supported config fields, but uploaded Chrome/Edge/Firefox package parity is unverified. A website policy edit alone doesn't complete store disclosure or consent requirements.
+  Check the exact release package, including native Firefox optional technical-data permissions and the custom disclosure on supported older browsers. Verify the explicit opt-out contract with the app backend. Uploaded Chrome/Edge/Firefox package parity is unverified. A website policy edit alone doesn't complete store disclosure or consent requirements.
   [Chrome privacy requirements](https://developer.chrome.com/docs/webstore/program-policies/privacy).
 - [ ] Confirm all store destinations and device guidance.
   Chrome, Edge and Firefox URLs match the app's extension-browser-support.ts. Orion is the iPhone/iPad workaround; native Safari remains planned. The web app's availability is separate.
@@ -57,20 +57,29 @@ Implementation/review note: 12 October 2026. The messaging update was checked ag
 
 ## App privacy and permissions
 
-- [ ] Complete the app policy's remaining draft fields.
-  Effective date, minimum age, general aggregate/social/room/chat retention and provider-backup handling remain unfinished. The page keeps its draft notice.
+- [ ] Review the completed factual app policy against the exact release and operator settings.
+  The owner has chosen 16+ for the connected app. Set an effective date only at the approved release. Confirm actual retention, deletion, providers/regions, backups and scheduled cleanup; no policy wording can substitute for the required behavior. The page remains a local draft.
 - [ ] Verify Google scopes and actual account writes against the release.
   Local main-oauth.ts requests youtube.force-ssl plus email/profile. It isn't read-only. Subscriptions and managed playlists can be written; worthwhile verdicts stay in Villow rather than writing YouTube likes.
 - [ ] Verify token transition and device storage wording.
   New server writes are encrypted; historical plaintext rows remain readable and encrypt on next write. Browser storage also holds authentication data, profile and local state. Encryption doesn't hide data from the owner who controls secrets.
 - [ ] Verify task integration descriptions.
   Google Tasks uses task-management access; Todoist uses data:read_write. Both can write/delete for supported task operations, including moves. The obsolete “Todoist has no delete permission” statement is removed. Disconnect removes local imported rows/credentials without deleting remote originals.
-- [ ] Verify owner/member access and deletion.
-  Operator database access is separate from app sharing. Admin can revoke another member and then separately delete that revoked member. Logout and Google revocation aren't data deletion. Full member self-service deletion hasn't been verified.
-- [ ] Verify optional survey flow and Tally disclosures.
-  Voluntary responses go to Fix the Web using a separate participant code. Private installation viewing records aren't automatically submitted. Review Tally's current data handling and form configuration.
-- [ ] Complete terms of use and ensure policy links are accessible inside the app.
-  The site's terms destination remains TBD. A draft policy and code review aren't a completed compliance sign-off.
+- [ ] Verify owner/member access and the revised deletion controls on the release candidate.
+  Operator database access is separate from app sharing. The revised local app adds member self-service deletion without requiring new policy acceptance, ownership-transfer handling, provider-revocation retries and explicit incomplete-device-cleanup reporting. Reference cleanup can remove saved video/clip links while preserving authored text and measurements in an account-linked export. The archive has no automatic expiry, so source-row cleanup windows are not universal retention maxima. Verify tracked-data reset against archived activity as well as original records. Confirm migrations and account-owned/shared-copy behavior with the app handoff; test receipts are not production evidence. Clear all remaining API retention/provenance blockers before public activation.
+- [ ] Verify required milestone check-ins, optional feedback and Tally disclosures.
+  The owner confirms first-use, two-week and three-month check-ins are required; ad hoc feedback and supporter messages are optional. The local app requires the newest due milestone at 14/90 days after onboarding, keeps Settings/privacy controls reachable and does not backfill an older missed survey. Tally receives the account-linked participant code when its form loads, before submission. Completion timestamps sync to settings; this is client-observed completion, not a provider-signed receipt. Private viewing records aren't automatically uploaded with the survey. Verify the actual forms, data categories, retention and lawful basis for required check-ins before release; do not call the code anonymous or all feedback voluntary.
+- [ ] Review terms, operator configuration and in-product consent before activation.
+  Local `/terms` covers the website, app, extension and support; it is not effective or approved for release. ABN records identify Nicholas Francis Nucifora as an individual/sole trader, and the owner supplied Stripe's matching name/Individual type. Exact Stripe ABN placement is an administrative verification item, not an unresolved operator identity. The approved age and MIT decisions are implemented in the local drafts. Test fresh/returning/demo access, renewed agreement and extension optional-data decline/withdrawal. Local review receipts must never become production acceptance.
+- [ ] Obtain focused legal and platform review for the actual product.
+  Assess Australian privacy coverage and eSafety classification; self-hosting, a finite feed and 16+ wording do not establish an exemption or age-assurance compliance. Review YouTube retention, extension-derived page metadata and interface-modification requirements. See the source-backed release prerequisites in `docs/legal/terms-review-2026-11-14.md`.
+
+## Website privacy and support terms
+
+- [ ] Verify provider facts and retention operations before publishing the revised website policy.
+  The local policy covers Resend/contact correspondence, Cloudflare requests, Stripe merchant access, public-amount consent, Discord linking/cookie/roles and removal retries. Confirm the actual mailbox provider, relevant countries, backup/log settings and successful scheduled cleanup. Do not promise an unimplemented automatic mailbox/payment-record deletion deadline.
+- [ ] Confirm checkout and support-offer parity.
+  The owner approved private Discord access while the community operates, subject to rules, and individually reviewed voluntary refunds beyond mandatory remedies. Preserve any broader rights already promised to earlier supporters. Verify actual recurring-payment cancellation timing and sharing questions in a controlled test workflow; no live payment/account change is authorised by this review.
 
 ## Ownership and practical setup
 

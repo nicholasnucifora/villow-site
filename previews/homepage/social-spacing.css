@@ -1,0 +1,32 @@
+/* Social section spacing for the active homepage presets (34, 42, 43).
+
+   Both scenes were pinned to 270px so the two headings would line up. The share
+   artwork is only ~165px tall, so its heading sat adrift below a block of empty
+   space; meanwhile the watch-together artwork grows past 270px between 850 and
+   1000px and crowded its own heading. Subgrid lets the shared row height follow
+   the taller scene instead, keeping the headings aligned with no fixed box.
+   Scoped to .n-social and loaded only by the active presets, so the saved
+   lettered studies keep their original spacing. */
+
+.n-social .ics-scene{padding:23px 0 12px}
+.n-social .n-devices{margin-top:52px}
+
+@media(min-width:651px){
+ @supports (grid-template-rows:subgrid){
+  /* row-gap would otherwise open up between each card's figure, heading and text */
+  .n-social .n-social-cards{grid-template-rows:auto auto auto;row-gap:0}
+  .n-social .n-social-card{display:grid;grid-template-rows:subgrid;grid-row:span 3}
+  .n-social .ics-scene,
+  .n-social .o-watch-scene{height:auto;min-height:0}
+ }
+ @supports not (grid-template-rows:subgrid){
+  .n-social .ics-scene,
+  .n-social .o-watch-scene{height:220px;min-height:220px}
+ }
+}
+
+@media(max-width:650px){
+ .n-social .ics-scene{height:215px;min-height:215px;padding:18px 0 10px}
+ .n-social .o-watch-scene{height:auto;min-height:0}
+ .n-social .n-devices{margin-top:40px}
+}

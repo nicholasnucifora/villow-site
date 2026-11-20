@@ -1,0 +1,60 @@
+.it-section{max-width:1090px;margin:50px auto 0;padding:48px 0 12px;border-top:1px solid #dce5d4;color:#244d43;scroll-margin-top:80px}
+.it-section *{box-sizing:border-box}
+.it-section h2{font:400 clamp(34px,3.5vw,43px)/1.18 'Varela Round',sans-serif;letter-spacing:-.045em;margin:0}
+.it-section p{font:14px/1.75 system-ui,sans-serif;color:#536f61;margin:0}
+.it-intro p,.it-l-header p{max-width:390px;margin-top:15px}
+.it-overline,.it-j-label,.it-k-label,.it-l-label{font:600 10px/1.4 system-ui,sans-serif;letter-spacing:.08em;color:#76917c}
+.it-rating{background:#244e43;color:white;border-radius:12px;padding:20px 22px}
+.it-rating .it-overline{color:#b4d1ba;display:block}
+.it-rating strong{display:block;margin-top:8px;font:400 17px/1.35 'Varela Round',sans-serif}
+.it-choices{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}
+.it-choices span{border:1px solid #ffffff55;border-radius:5px;padding:7px 10px;font:600 11px/1 system-ui,sans-serif}
+.it-chart{margin:0;min-width:0}
+.it-chart figcaption{font:600 13px/1.4 system-ui,sans-serif;color:#42634f}
+.it-plot{height:100px;display:grid;grid-template-columns:30px 1fr;grid-template-rows:1fr 1fr;gap:0 7px;margin-top:12px;color:#819584;font:10px/1 system-ui,sans-serif}
+.it-plot span:last-child{grid-column:1;grid-row:2;align-self:end}.it-plot svg{grid-column:2;grid-row:1 / 3;width:100%;height:100%;overflow:visible}
+.it-grid{fill:none;stroke:#d6e3d4;stroke-width:1;vector-effect:non-scaling-stroke}.it-area{fill:#deecda}.it-line{fill:none;stroke:#588b6d;stroke-width:2;vector-effect:non-scaling-stroke}
+.it-time{display:flex;justify-content:space-between;margin:6px 0 0 37px;color:#819584;font:10px/1.4 system-ui,sans-serif}
+.it-chart p{margin:10px 0 0;color:#718776;font:11px/1.5 system-ui,sans-serif}
+.it-suggestion{text-align:center;color:#315b45;min-width:0}
+.it-source{display:flex;flex-direction:column;align-items:center;gap:7px;font:600 13px/1.4 system-ui,sans-serif;color:#506e58}
+.it-avatar{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#d6e7d6;color:#416b50;font:600 17px/1 system-ui,sans-serif}
+.it-suggestion h3{font:400 18px/1.4 'Varela Round',sans-serif;letter-spacing:-.015em;margin:12px auto 0;max-width:320px}
+.it-suggestion p{margin:8px 0 0;font:12px/1.55 system-ui,sans-serif;color:#718776}
+.it-actions{display:flex;justify-content:center;align-items:center;gap:18px;margin-top:15px;color:#52745b;font:600 12px/1 system-ui,sans-serif}
+.it-actions span:first-child{padding:11px 14px;border-radius:7px;background:#416f51;color:white}
+/* J uses a shared, quiet surface with two balanced examples. */
+.it-j .it-intro{max-width:620px}.it-j .it-intro p{max-width:560px;margin-top:12px}
+.it-j-content{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:30px;padding:30px 35px;background:#edf3e9;border-radius:14px;align-items:stretch}
+.it-j-ratings{display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:1px solid #d3e1d0;padding-right:30px}
+.it-j-ratings .it-j-label,.it-j-ratings .it-chart{width:100%;max-width:320px}
+.it-j-ratings .it-chart{margin-top:14px}.it-j-ratings .it-plot{height:150px}
+.it-j-suggest{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.it-j-suggest .it-suggestion{margin-top:20px}.it-j-suggest .it-avatar{width:52px;height:52px;font-size:20px}.it-j-suggest .it-suggestion h3{font-size:19px}
+/* K places the graph beneath the introduction and gives the suggestion its own space. */
+.it-k{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.it-k-graph{max-width:370px;margin-top:27px}.it-k-label{margin-bottom:12px}.it-k .it-plot{height:130px}
+.it-k-suggestion{justify-self:center;text-align:center;max-width:410px;width:100%;padding:30px 24px;background:#edf3e9;border-radius:14px}
+.it-k-suggestion .it-suggestion{margin-top:20px}.it-k-suggestion .it-avatar{width:50px;height:50px;font-size:19px}
+/* L gives the two outcomes matching surfaces and equal visual weight. */
+.it-l-header{text-align:center}.it-l-header p{margin:12px auto 0;max-width:590px}
+.it-l-columns{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:30px auto 0;max-width:900px;align-items:stretch}
+.it-l-ratings,.it-l-suggest{background:#edf3e9;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column}
+.it-l-ratings .it-chart{margin-top:16px}.it-l-ratings .it-plot{height:145px}
+.it-l-suggest{text-align:center;align-items:center;justify-content:center}.it-l-suggest .it-suggestion{margin-top:18px}
+.it-l-suggest .it-avatar{width:50px;height:50px;font-size:19px}
+@media(max-width:850px){.it-k{gap:35px}.it-j-content{padding:25px;gap:25px}.it-j-ratings{padding-right:25px}.it-l-ratings,.it-l-suggest{padding:22px}}
+@media(max-width:650px){.it-section{margin-top:32px;padding:32px 0 10px;scroll-margin-top:90px}.it-section h2{font-size:32px}.it-section p{font-size:14px}.it-j-content,.it-k,.it-l-columns{grid-template-columns:1fr;gap:22px}.it-j-content{padding:22px;margin-top:25px}.it-j-ratings{border:0;border-bottom:1px solid #d3e1d0;padding:0 0 25px}.it-j-ratings .it-j-label,.it-j-ratings .it-chart{max-width:none}.it-j-suggest{padding:3px 0}.it-k-graph{max-width:none;margin-top:24px}.it-k-suggestion{justify-self:stretch;max-width:none}.it-l-columns{margin-top:25px}.it-l-ratings,.it-l-suggest{padding:22px}.it-chart p{font-size:12px}.it-suggestion p{font-size:12px}}
+.it-overline,.it-j-label,.it-k-label,.it-l-label{font-size:11px}
+.it-chart p{font-size:12px}
+.it-suggestion p{font-size:13px}
+@media(max-width:650px){.it-chart p{font-size:12px}.it-suggestion p{font-size:12px}}
+
+/* L: centered heading and a clearer percentage scale. */
+.it-l-ratings .it-l-label,.it-l-ratings .it-chart figcaption{text-align:center}
+.it-l-ratings .it-plot{height:180px;grid-template-rows:1fr 1fr 1fr}
+.it-l-ratings .it-plot .it-y-top{grid-column:1;grid-row:1}
+.it-l-ratings .it-plot .it-y-mid{grid-column:1;grid-row:2;align-self:center}
+.it-l-ratings .it-plot span:last-child{grid-column:1;grid-row:3;align-self:end}
+.it-l-ratings .it-plot svg{grid-row:1 / 4}
+.it-l-ratings .it-time{justify-content:center}

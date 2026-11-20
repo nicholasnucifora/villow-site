@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-28",
+  "origin": "http://127.0.0.1:4399/d.html",
+  "responsive": [
+    {
+      "brokenImages": [],
+      "conceptsCTAHeight": 52,
+      "overflow": false,
+      "pageHeight": 6883,
+      "tabs": [
+        {
+          "fits": true,
+          "text": "B\n · Shared switch"
+        },
+        {
+          "fits": true,
+          "text": "C\n · Focused story"
+        },
+        {
+          "fits": true,
+          "text": "D\n · Balanced story"
+        }
+      ],
+      "togetherBackground": "rgb(244, 234, 227)",
+      "width": 320
+    },
+    {
+      "brokenImages": [],
+      "conceptsCTAHeight": 52,
+      "overflow": false,
+      "pageHeight": 6903,
+      "tabs": [
+        {
+          "fits": true,
+          "text": "B\n · Shared switch"
+        },
+        {
+          "fits": true,
+          "text": "C\n · Focused story"
+        },
+        {
+          "fits": true,
+          "text": "D\n · Balanced story"
+        }
+      ],
+      "togetherBackground": "rgb(244, 234, 227)",
+      "width": 390
+    },
+    {
+      "brokenImages": [],
+      "conceptsCTAHeight": 52,
+      "overflow": false,
+      "pageHeight": 6231,
+      "tabs": [
+        {
+          "fits": true,
+          "text": "B\n · Shared switch"
+        },
+        {
+          "fits": true,
+          "text": "C\n · Focused story"
+        },
+        {
+          "fits": true,
+          "text": "D\n · Balanced story"
+        }
+      ],
+      "togetherBackground": "rgb(244, 234, 227)",
+      "width": 768
+    },
+    {
+      "brokenImages": [],
+      "conceptsCTAHeight": 52,
+      "overflow": false,
+      "pageHeight": 5851,
+      "tabs": [
+        {
+          "fits": true,
+          "text": "B\n · Shared switch"
+        },
+        {
+          "fits": true,
+          "text": "C\n · Focused story"
+        },
+        {
+          "fits": true,
+          "text": "D\n · Balanced story"
+        }
+      ],
+      "togetherBackground": "rgb(244, 234, 227)",
+      "width": 1440
+    }
+  ],
+  "interactions": {
+    "sharedPlayback": true,
+    "sharedSeekToEndAndHome": true,
+    "optionalSharedRating": true,
+    "allThreeComparisonsSwitch": true,
+    "keyboardEndSelectsVillow": true,
+    "checkboxPersistsAcrossSwitches": true,
+    "conceptsIntentionallyDisabled": true
+  },
+  "consoleWarningsAndErrors": []
+}

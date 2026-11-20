@@ -153,7 +153,7 @@ blocks:
   - type: cta
     variant: fixtheweb
     heading: YouTube could offer these controls directly.
-    body: Villow demonstrates that these controls are possible. Fix the Web is asking platforms to offer them to everyone, and learning from voluntary feedback about what helps.
+    body: Villow demonstrates that these controls are possible. Fix the Web is asking platforms to offer them to everyone, and learning from required app check-ins and optional feedback about what helps. The [app privacy policy](link:appPrivacy) explains those flows.
     actions:
       - label: The case for change →
         href: /youtube-could-do-this

@@ -1,0 +1,180 @@
+/*
+ * Colour themes, picked with `theme:` in site.config.yaml.
+ * Each theme sets the same tokens for light, then again for dark.
+ * These are starting points named after Villow's palettes, not the app's exact colours.
+ *
+ * To add a theme: copy a block, rename it, and add the name to src/lib/themes.ts.
+ *
+ *   --color-bg            page background
+ *   --color-bg-soft       tinted bands (background: soft)
+ *   --color-surface       cards and panels
+ *   --color-text          main text
+ *   --color-text-muted    secondary text
+ *   --color-border        hairlines
+ *   --color-accent        buttons and key highlights
+ *   --color-accent-text   accent used as text or links (readable on the background)
+ *   --color-on-accent     text on top of the accent
+ *   --color-accent-soft   gentle accent fill
+ *   --color-highlight     a second, warmer colour for eyebrows and small details
+ *   --color-shadow        base colour for shadows
+ */
+
+/* ── Fern ─────────────────────────────────────────────────────────────── */
+:root[data-theme="fern"] {
+  --color-bg: #f7f8f2;
+  --color-bg-soft: #edf1e5;
+  --color-surface: #ffffff;
+  --color-text: #1c291f;
+  --color-text-muted: #4e5c51;
+  --color-border: #d8dfcf;
+  --color-accent: #3a7a48;
+  --color-accent-text: #2e6139;
+  --color-on-accent: #ffffff;
+  --color-accent-soft: #e0ecd8;
+  --color-highlight: #85661a;
+  --color-shadow: #1c291f;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="fern"] {
+    --color-bg: #111712;
+    --color-bg-soft: #172019;
+    --color-surface: #1c261e;
+    --color-text: #e7eee4;
+    --color-text-muted: #a8b5a8;
+    --color-border: #2d3a2f;
+    --color-accent: #86c794;
+    --color-accent-text: #a3d9ad;
+    --color-on-accent: #0f1e13;
+    --color-accent-soft: #213325;
+    --color-highlight: #d9b85c;
+    --color-shadow: #000000;
+  }
+}
+
+/* ── Forest ───────────────────────────────────────────────────────────── */
+:root[data-theme="forest"] {
+  --color-bg: #f5f3ee;
+  --color-bg-soft: #ebe7dd;
+  --color-surface: #fffdf8;
+  --color-text: #1f2419;
+  --color-text-muted: #53594a;
+  --color-border: #d8d3c4;
+  --color-accent: #2f5d3a;
+  --color-accent-text: #264d30;
+  --color-on-accent: #ffffff;
+  --color-accent-soft: #dde6d6;
+  --color-highlight: #7a4f2a;
+  --color-shadow: #1f2419;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="forest"] {
+    --color-bg: #12140f;
+    --color-bg-soft: #191c15;
+    --color-surface: #20241b;
+    --color-text: #ece9df;
+    --color-text-muted: #b0ad9f;
+    --color-border: #33372c;
+    --color-accent: #7fb58a;
+    --color-accent-text: #9fcca8;
+    --color-on-accent: #10170f;
+    --color-accent-soft: #223024;
+    --color-highlight: #d19a66;
+    --color-shadow: #000000;
+  }
+}
+
+/* ── Sunset ───────────────────────────────────────────────────────────── */
+:root[data-theme="sunset"] {
+  --color-bg: #fcf6f0;
+  --color-bg-soft: #f7eadd;
+  --color-surface: #fffdfa;
+  --color-text: #2b1d17;
+  --color-text-muted: #65524a;
+  --color-border: #ecdccd;
+  --color-accent: #b4532a;
+  --color-accent-text: #93421f;
+  --color-on-accent: #ffffff;
+  --color-accent-soft: #f6e0d2;
+  --color-highlight: #7a4a8c;
+  --color-shadow: #2b1d17;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="sunset"] {
+    --color-bg: #1a1210;
+    --color-bg-soft: #221815;
+    --color-surface: #2a1e1a;
+    --color-text: #f5e9e1;
+    --color-text-muted: #c2aca0;
+    --color-border: #3d2d27;
+    --color-accent: #f0956a;
+    --color-accent-text: #f6b08f;
+    --color-on-accent: #2b140a;
+    --color-accent-soft: #3a2219;
+    --color-highlight: #c9a2d9;
+    --color-shadow: #000000;
+  }
+}
+
+/* ── Beach ────────────────────────────────────────────────────────────── */
+:root[data-theme="beach"] {
+  --color-bg: #f8f6f0;
+  --color-bg-soft: #efeadd;
+  --color-surface: #ffffff;
+  --color-text: #16282c;
+  --color-text-muted: #4b5e62;
+  --color-border: #dcd8ca;
+  --color-accent: #1f7a80;
+  --color-accent-text: #17605f;
+  --color-on-accent: #ffffff;
+  --color-accent-soft: #d7ebe9;
+  --color-highlight: #95602a;
+  --color-shadow: #16282c;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="beach"] {
+    --color-bg: #0f1719;
+    --color-bg-soft: #142023;
+    --color-surface: #1a2a2d;
+    --color-text: #e6efee;
+    --color-text-muted: #a3b6b6;
+    --color-border: #2a3b3e;
+    --color-accent: #6cc5c9;
+    --color-accent-text: #93d8db;
+    --color-on-accent: #082023;
+    --color-accent-soft: #16353a;
+    --color-highlight: #e0b07a;
+    --color-shadow: #000000;
+  }
+}
+
+/* ── Dusk ─────────────────────────────────────────────────────────────── */
+:root[data-theme="dusk"] {
+  --color-bg: #f6f5fa;
+  --color-bg-soft: #ecebf5;
+  --color-surface: #ffffff;
+  --color-text: #1e1b2e;
+  --color-text-muted: #54506f;
+  --color-border: #dcd9ea;
+  --color-accent: #5b4fa8;
+  --color-accent-text: #493f8a;
+  --color-on-accent: #ffffff;
+  --color-accent-soft: #e4e0f5;
+  --color-highlight: #a0476f;
+  --color-shadow: #1e1b2e;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="dusk"] {
+    --color-bg: #13121c;
+    --color-bg-soft: #1a1826;
+    --color-surface: #211f30;
+    --color-text: #ebe9f5;
+    --color-text-muted: #aeaac6;
+    --color-border: #332f48;
+    --color-accent: #a79cf0;
+    --color-accent-text: #c1b8f7;
+    --color-on-accent: #1a1433;
+    --color-accent-soft: #2a2545;
+    --color-highlight: #e59ac0;
+    --color-shadow: #000000;
+  }
+}

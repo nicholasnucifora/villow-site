@@ -1,0 +1,36 @@
+PRESET 29 — A CLOSER LANDSCAPE
+11 November 2026
+http://127.0.0.1:4411/29.html
+
+Derived from saved 28 with independent 29-raised-landscape.css.
+Preset 28's main content, stylesheet and renderer are preserved.
+Only shared preview navigation changes earlier pages to expose 29.
+
+Above 1200px, progressively reduce the hero's lower spacing, bringing all
+bottom-anchored landscape layers up together. The adjustment begins at zero
+and reaches about 109px at 2560px (capped at 160px on ultrawide screens).
+Keep the full landscape width and matching sky; no new cropping or artwork.
+
+Increase the left forest by up to 80px and the right group by up to 32px,
+also gradually above 1200px. At 2560px, widths are 520px and 272px, versus
+28's 440px and 240px. Their cut edges remain behind the foreground hill.
+
+At 1200px and below, 29 matches 28's layout. In particular, mobile keeps
+the hero CTA, hides the cinema/cloud demo and centres stacked marketing
+sections. The remaining content, artwork and interactions are inherited.
+
+Validation: existing navigation and position checks pass. Preservation
+hashes verify 28's main, stylesheet and renderer. Browser measurements
+cover 390, 700, 701, 1168, 1200, 1201, 1440, 1636, 1920, 1948, 2560 and
+3440px: no overflow, landscape images loaded, exact observed geometry
+match to 28 at <=1200px. Actual raster alpha edges combined with browser
+geometry confirm both forest bases remain covered by the foreground at
+all measured widths. Wide and phone compositions were visually reviewed.
+
+qa/29-responsive-checks.json
+qa/29-forest-grounding.json
+qa/29-28-preservation-baseline.json
+qa/29-wide-2560.png
+qa/29-phone-390.png
+
+Keep port 4411 running for comparison. No production changes/publication.

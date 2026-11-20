@@ -1,0 +1,32 @@
+.extension-store-link {
+  /* Store artwork stays static on hover. */
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.extension-store-link:focus-visible {
+  outline: 2px solid var(--app-focus-ring);
+  outline-offset: 4px;
+}
+
+.extension-store-alternatives {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+  margin-top: 14px;
+  color: var(--app-text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+}
+.extension-store-alternatives:first-child { margin-top: 0; }
+.extension-store-alternatives ul { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0; padding: 0; list-style: none; }
+.extension-store-alternatives a { color: var(--app-accent-text); font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+.extension-store-alternatives a:focus-visible { outline: 2px solid var(--app-focus-ring); outline-offset: 4px; }
+

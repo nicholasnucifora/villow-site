@@ -1,0 +1,8 @@
+{
+  "currency": "aud",
+  "once": "https://buy.stripe.com/00weVe6N513FeA6aZT5J603",
+  "monthly5": "https://buy.stripe.com/14AcN6c7ph2D9fMgkd5J600",
+  "monthly10": "https://buy.stripe.com/7sY4gAdbt8w72Ro4Bv5J601",
+  "monthly20": "https://buy.stripe.com/9B64gAdbt7s3dw23xr5J602",
+  "portal": "https://billing.stripe.com/p/login/14AcN6c7ph2D9fMgkd5J600"
+}

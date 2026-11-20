@@ -1,0 +1,303 @@
+{
+  "views": [
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 227,
+      "tipFits": true,
+      "tooltip": "12am (next day)–1am0.1%",
+      "view": "day",
+      "width": 320
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 227,
+      "tipFits": true,
+      "tooltip": "Sun7 min",
+      "view": "week",
+      "width": 320
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 227,
+      "tipFits": true,
+      "tooltip": "Day 3019 min",
+      "view": "time",
+      "width": 320
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 227,
+      "tipFits": true,
+      "tooltip": "Sample 3086.7% worth it",
+      "view": "worth",
+      "width": 320
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 227,
+      "tipFits": true,
+      "tooltip": "12am (next day)–1am0.1%",
+      "view": "day",
+      "width": 390
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 227,
+      "tipFits": true,
+      "tooltip": "Sun7 min",
+      "view": "week",
+      "width": 390
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 227,
+      "tipFits": true,
+      "tooltip": "Day 3019 min",
+      "view": "time",
+      "width": 390
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 227,
+      "tipFits": true,
+      "tooltip": "Sample 3086.7% worth it",
+      "view": "worth",
+      "width": 390
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": true,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "12am (next day)–1am0.1%",
+      "view": "day",
+      "width": 768
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": true,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "Sun7 min",
+      "view": "week",
+      "width": 768
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": true,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "Day 3019 min",
+      "view": "time",
+      "width": 768
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": true,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "Sample 3086.7% worth it",
+      "view": "worth",
+      "width": 768
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "12am (next day)–1am0.1%",
+      "view": "day",
+      "width": 1024
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "Sun7 min",
+      "view": "week",
+      "width": 1024
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "Day 3019 min",
+      "view": "time",
+      "width": 1024
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "Sample 3086.7% worth it",
+      "view": "worth",
+      "width": 1024
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "12am (next day)–1am0.1%",
+      "view": "day",
+      "width": 1280
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "Sun7 min",
+      "view": "week",
+      "width": 1280
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "Day 3019 min",
+      "view": "time",
+      "width": 1280
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "Sample 3086.7% worth it",
+      "view": "worth",
+      "width": 1280
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "12am (next day)–1am0.1%",
+      "view": "day",
+      "width": 1440
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "Sun7 min",
+      "view": "week",
+      "width": 1440
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "Day 3019 min",
+      "view": "time",
+      "width": 1440
+    },
+    {
+      "badImages": 0,
+      "onePanel": true,
+      "overflow": false,
+      "plotHeight": 249,
+      "tipFits": true,
+      "tooltip": "Sample 3086.7% worth it",
+      "view": "worth",
+      "width": 1440
+    }
+  ],
+  "finalResponsive": [
+    {
+      "overflow": false,
+      "overflowing": [],
+      "tipFits": true,
+      "tooltip": "26 worth it · 4 not worth it86.7% worth it",
+      "visualBeforeCopy": false,
+      "width": 320
+    },
+    {
+      "overflow": false,
+      "overflowing": [],
+      "tipFits": true,
+      "tooltip": "26 worth it · 4 not worth it86.7% worth it",
+      "visualBeforeCopy": false,
+      "width": 390
+    },
+    {
+      "overflow": false,
+      "overflowing": [],
+      "tipFits": true,
+      "tooltip": "26 worth it · 4 not worth it86.7% worth it",
+      "visualBeforeCopy": false,
+      "width": 768
+    },
+    {
+      "overflow": false,
+      "overflowing": [],
+      "tipFits": true,
+      "tooltip": "26 worth it · 4 not worth it86.7% worth it",
+      "visualBeforeCopy": true,
+      "width": 1024
+    },
+    {
+      "overflow": false,
+      "overflowing": [],
+      "tipFits": true,
+      "tooltip": "26 worth it · 4 not worth it86.7% worth it",
+      "visualBeforeCopy": true,
+      "width": 1280
+    },
+    {
+      "overflow": false,
+      "overflowing": [],
+      "tipFits": true,
+      "tooltip": "26 worth it · 4 not worth it86.7% worth it",
+      "visualBeforeCopy": true,
+      "width": 1440
+    },
+    {
+      "overflow": false,
+      "overflowing": [],
+      "tipFits": true,
+      "tooltip": "26 worth it · 4 not worth it86.7% worth it",
+      "visualBeforeCopy": true,
+      "width": 1920
+    }
+  ],
+  "note": "Initial tablet comparison-rail overflow corrected and rechecked. All final widths pass."
+}

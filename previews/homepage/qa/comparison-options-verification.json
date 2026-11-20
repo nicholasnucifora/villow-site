@@ -1,0 +1,293 @@
+{
+  "date": "2026-10-28",
+  "checks": [
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/d.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [],
+      "width": 320
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/d.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [],
+      "width": 390
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/d.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [
+        0,
+        0,
+        0
+      ],
+      "width": 768
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/d.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [
+        0,
+        0,
+        0
+      ],
+      "width": 1100
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/d.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [
+        0,
+        0,
+        0
+      ],
+      "width": 1440
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/c.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [],
+      "width": 320
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/c.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [],
+      "width": 390
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/c.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [
+        0,
+        0,
+        0
+      ],
+      "width": 768
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/c.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [
+        0,
+        0,
+        0
+      ],
+      "width": 1100
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/c.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [
+        0,
+        0,
+        0
+      ],
+      "width": 1440
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/b.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [],
+      "width": 320
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/b.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [],
+      "width": 390
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/b.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [
+        0,
+        0,
+        0
+      ],
+      "width": 768
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/b.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [
+        0,
+        0,
+        0
+      ],
+      "width": 1100
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/b.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [
+        0,
+        0,
+        0
+      ],
+      "width": 1440
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/a.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [],
+      "width": 320
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/a.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [],
+      "width": 390
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/a.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [
+        0,
+        0,
+        0
+      ],
+      "width": 768
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/a.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [
+        0,
+        0,
+        0
+      ],
+      "width": 1100
+    },
+    {
+      "broken": 0,
+      "headerFits": true,
+      "labelsResolve": true,
+      "navCount": 4,
+      "overflow": false,
+      "page": "/a.html",
+      "playerFits": true,
+      "taskTargets": true,
+      "visualAlignment": [
+        0,
+        0,
+        0
+      ],
+      "width": 1440
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+/* Two compact examples: a chosen limit and an optional ratings trend. */
+.version-f .rf-boundaries{max-width:1090px;margin:45px auto 0;padding:43px 0 15px;border-top:1px solid #dce5d4;color:#244d43;scroll-margin-top:80px}
+.version-f .rf-intro{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.version-f .rf-intro h2{font:400 clamp(34px,3.6vw,44px)/1.18 'Varela Round',sans-serif;letter-spacing:-.045em;margin:0}
+.version-f .rf-intro>p{font-size:15px;line-height:1.8;color:#536f61;margin:0;max-width:375px}
+.version-f .rf-examples{display:grid;grid-template-columns:1fr 1fr;gap:70px;margin-top:33px;align-items:start}
+.version-f .rf-examples article{min-width:0}
+.version-f .rf-examples h3{font:400 22px/1.3 'Varela Round',sans-serif;letter-spacing:-.025em;margin:0 0 7px}
+.version-f .rf-examples article>p{font-size:13px;line-height:1.7;color:#647d6b;margin:0;max-width:390px}
+/* A simple illustration of a default limit and different days. */
+.version-f .rf-limit-example{max-width:410px;margin-top:20px;padding:20px 22px;border-radius:13px;background:#eaf1e5;box-sizing:border-box;color:#597361;font:13px/1.4 system-ui,sans-serif}
+.version-f .rf-limit-head,.version-f .rf-custom-days>div{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.version-f .rf-limit-head{color:#315d45;font-weight:600}
+.version-f .rf-limit-example strong{font:600 13px/1.4 system-ui,sans-serif;color:#315d45}
+.version-f .rf-custom-days{border-top:1px solid #d2e0ce;margin-top:14px;padding-top:12px;display:grid;gap:8px}
+.version-f .rf-custom-days>span{font-size:11px;color:#7a907d}
+.version-f .rf-rating-scene{margin-top:20px;max-width:410px}
+.version-f .rf-rating-card{max-width:365px;padding:10px 13px 8px;border-radius:16px;background:#fff;box-shadow:0 8px 22px #344d3422;color:#263c33;font:13px/1.3 system-ui,sans-serif;box-sizing:border-box}
+.version-f .rf-rating-handle{display:block;width:36px;height:4px;border-radius:4px;background:#d8ded8;margin:0 auto 9px}
+.version-f .rf-rating-content{display:flex;gap:12px;align-items:center}
+.version-f .rf-rating-content img{width:84px;height:48px;object-fit:cover;border-radius:9px;background:#dfeadb}
+.version-f .rf-rating-content div{min-width:0}
+.version-f .rf-rating-content strong{display:block;font-size:13px;line-height:1.3}
+.version-f .rf-rating-content div span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#839087;font-size:11px;margin-top:4px}
+.version-f .rf-rating-cues{display:flex;justify-content:space-between;align-items:center;color:#a3ada5;margin:6px 2px 0;font-size:12px}
+.version-f .rf-rating-cues span{display:flex;align-items:center;gap:4px}
+.version-f .rf-rating-cues svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.version-f .rf-rating-cues .rf-rating-dots{letter-spacing:2px;font-size:12px}
+.version-f .rf-rating-scene>p{font:11px/1.5 system-ui,sans-serif;color:#718776;margin:10px 0 0}
+.version-f .rf-insights{max-width:1090px;margin:50px auto 0;padding:42px 0 10px;border-top:1px solid #dce5d4;color:#244d43}
+.version-f .rf-insights-intro{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.version-f .rf-insights-intro h2{font:400 clamp(32px,3.2vw,40px)/1.2 'Varela Round',sans-serif;letter-spacing:-.045em;margin:0}
+.version-f .rf-insights-intro>p{font-size:15px;line-height:1.8;color:#536f61;margin:0;max-width:435px}
+.version-f .rf-insight-examples{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;margin-top:32px}
+.version-f .rf-insight-examples article{min-width:0}
+.version-f .rf-insight-examples h3{font:400 22px/1.3 'Varela Round',sans-serif;letter-spacing:-.025em;margin:0 0 7px}
+.version-f .rf-insight-examples article>p{font-size:13px;line-height:1.7;color:#647d6b;margin:0;max-width:390px}
+.version-f .rf-suggestion-example{max-width:410px;margin-top:20px;color:#456552;text-align:center;box-sizing:border-box}
+.version-f .rf-suggestion-source{display:flex;flex-direction:column;align-items:center;gap:7px}
+.version-f .rf-suggestion-avatar{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#d2e3d2;color:#416b50;font:600 18px system-ui,sans-serif}
+.version-f .rf-suggestion-source strong{font:600 13px/1.4 system-ui,sans-serif;color:#506e58}
+.version-f .rf-suggestion-example h4{font:400 17px/1.35 'Varela Round',sans-serif;color:#315b45;margin:12px 0 0}
+.version-f .rf-suggestion-facts{display:flex;justify-content:center;gap:45px;margin:16px 0 0}
+.version-f .rf-suggestion-facts div{display:flex;flex-direction:column;gap:3px}
+.version-f .rf-suggestion-facts dd{margin:0;color:#315b45;font:600 19px/1.2 system-ui,sans-serif}
+.version-f .rf-suggestion-facts dt{color:#718776;font:11px/1.4 system-ui,sans-serif}
+.version-f .rf-suggestion-actions{display:flex;justify-content:center;gap:18px;align-items:center;margin-top:16px;font:600 12px/1 system-ui,sans-serif;color:#55735c}
+.version-f .rf-suggestion-actions span:first-child{padding:11px 18px;border-radius:7px;background:#416f51;color:white}
+.version-f .rf-chart{margin:18px 0 0;max-width:445px}
+.version-f .rf-chart figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:15px;color:#3e6652;font:600 12px/1.45 system-ui,sans-serif}
+.version-f .rf-chart figcaption span{font:11px/1.4 system-ui,sans-serif;color:#8b9a89}
+.version-f .rf-chart-plot{display:grid;grid-template-columns:36px minmax(0,1fr);gap:10px;height:120px;margin-top:15px}
+.version-f .rf-chart-y{display:flex;flex-direction:column;justify-content:space-between;text-align:right;color:#7a8f7c;font:10px/1 system-ui,sans-serif}
+.version-f .rf-chart-plot svg{width:100%;height:100%;display:block;overflow:visible}
+.version-f .rf-grid{fill:none;stroke:#dbe7d7;stroke-width:1;vector-effect:non-scaling-stroke}
+.version-f .rf-area{fill:#e5efdf}
+.version-f .rf-line{fill:none;stroke:#568a6c;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.version-f .rf-chart-x{display:flex;justify-content:space-between;margin:7px 0 0 46px;color:#7a8f7c;font:10px/1.4 system-ui,sans-serif}
+.version-f .rf-chart-note{margin:10px 0 0;color:#748a77;font:11px/1.6 system-ui,sans-serif}
+@media(max-width:800px){.version-f .rf-intro,.version-f .rf-examples,.version-f .rf-insights-intro,.version-f .rf-insight-examples{gap:35px}}
+@media(max-width:600px){.version-f .rf-boundaries{margin-top:30px;padding:30px 0 12px}.version-f .rf-intro,.version-f .rf-insights-intro{grid-template-columns:1fr;gap:15px}.version-f .rf-intro h2{font-size:32px}.version-f .rf-intro>p,.version-f .rf-insights-intro>p{font-size:14px}.version-f .rf-examples,.version-f .rf-insight-examples{grid-template-columns:1fr;gap:30px;margin-top:27px}.version-f .rf-examples h3,.version-f .rf-insight-examples h3{font-size:21px}.version-f .rf-limit-example,.version-f .rf-rating-scene{margin-top:15px}.version-f .rf-insights{margin-top:35px;padding-top:30px}.version-f .rf-insights-intro h2{font-size:30px}.version-f .rf-chart{margin-top:15px}.version-f .rf-chart-plot{height:115px}}
+@media(max-width:360px){.version-f .rf-intro h2,.version-f .rf-insights-intro h2{font-size:29px}}

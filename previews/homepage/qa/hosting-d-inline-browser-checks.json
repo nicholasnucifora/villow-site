@@ -1,0 +1,8 @@
+{
+  "checked": "2026-11-09",
+  "route": "http://127.0.0.1:4411/setup-hosting-d.html",
+  "desktop": {"viewport": 1280, "documentWidth": 1280, "cardsShareTop": true, "serviceOrder": ["YouTube API", "Vercel", "Supabase"], "logosLoaded": true, "answersInitiallyCollapsed": true},
+  "mobile": [{"viewport": 390, "documentWidth": 390, "comparisonViewportWidth": 350, "comparisonScrollWidth": 762, "cardsShareTop": true}, {"viewport": 319, "documentWidth": 304, "cardsShareTop": true, "adminInputFits": true}],
+  "behavior": {"allThreeCardLinksOpenLocalAnswers": true, "faqToFaqLinkOpensTarget": true, "repeatedHashReopensAnswer": true, "keyboardActivation": true, "pausedScreenshotLoadsWhenOpened": true, "adminFormVisibleWhenOpened": true},
+  "legacyLink": {"from": "setup-hosting-troubleshooting-d.html?path=both#wont-open", "to": "setup-hosting-d.html?path=both#wont-open", "answerOpen": true, "setupReturnPath": "both"}
+}

@@ -1,0 +1,83 @@
+{
+  "reduced": {
+    "mode": "static",
+    "story": "browser",
+    "widths": [
+      "6px",
+      "6px",
+      "19px",
+      "6px"
+    ]
+  },
+  "manual": {
+    "dots": [
+      {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "width": "15.0312px"
+      },
+      {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "width": "6px"
+      },
+      {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "width": "9.95312px"
+      },
+      {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "width": "6px"
+      }
+    ],
+    "mode": "paused",
+    "motion": "manual",
+    "story": "gardener"
+  },
+  "rapid": {
+    "selected": [
+      "browser"
+    ],
+    "story": "browser"
+  },
+  "rapidSettled": {
+    "story": "evenings",
+    "widths": [
+      "6px",
+      "6px",
+      "6px",
+      "19px"
+    ]
+  },
+  "autoBefore": {
+    "rotation": "playing",
+    "story": "evenings"
+  },
+  "autoAfter": {
+    "dots": [
+      {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "width": "6px"
+      },
+      {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "width": "19px"
+      },
+      {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "width": "6px"
+      },
+      {
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "width": "6px"
+      }
+    ],
+    "motion": "auto",
+    "rotation": "playing",
+    "story": "shorts"
+  },
+  "final": {
+    "asset": "assets/w-watcher-browser-v2.webp",
+    "overflow": false,
+    "rotation": "playing",
+    "story": "browser"
+  }
+}

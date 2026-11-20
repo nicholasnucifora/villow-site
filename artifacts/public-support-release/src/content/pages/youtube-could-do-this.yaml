@@ -1,0 +1,83 @@
+title: YouTube could do this
+description: A sourced comparison of YouTube's existing time controls and the additional choices Villow demonstrates, plus the limits of building through its public API.
+
+blocks:
+  - type: hero
+    eyebrow: YouTube could do this
+    title: We built this from the outside. YouTube could offer it directly.
+    lead: Villow demonstrates that these controls are possible. YouTube could offer them directly to everyone. Fix the Web is asking for native choices over feeds, boundaries and reflection, informed by evidence about what helps.
+
+  - type: table
+    id: what-the-api-made-possible
+    heading: What public access made possible
+    columns: [Access, What Villow builds with it]
+    rows:
+      - ["Subscriptions and channels' uploads", "A chronological feed shaped channel by channel"]
+      - ["The official embedded player", "Watching within chosen limits, breaks and optional reflection"]
+      - ["Playlists", "Saved videos and a manageable library"]
+      - ["Country charts", "Shared discovery filtered by chosen topics"]
+      - ["Search and channel details", "Finding and following channels deliberately"]
+
+  - type: table
+    id: next-step
+    variant: comparison
+    heading: YouTube has started. Here's what Villow adds.
+    intro: YouTube already offers useful time-management tools. This compares specific controls, rather than claiming it has none. Availability and defaults can differ by device and account.
+    columns: [YouTube's documented controls, Additional choices in Villow]
+    rows:
+      - ["[Take a break reminders](https://support.google.com/youtube/answer/9012523?hl=en) pause playback until dismissed or resumed", "Enforced break intervals in Villow, alongside daily limits and schedules"]
+      - ["[Bedtime reminders](https://support.google.com/youtube/answer/9884905?hl=en) can interrupt or wait for the video to end, and can be dismissed or snoozed", "A bedtime window with stop-for-tonight, 30-minute snooze or dismiss-for-tonight choices, alongside per-day schedules"]
+      - ["[Shorts feed limits](https://support.google.com/youtube/answer/16671528?hl=en) include zero, with an option to dismiss or ignore the limit", "Chosen limits on time, opens and individual channels in Villow; the extension adds ceilings on recommendations seen and browser usage"]
+      - ["[Subscriptions](https://support.google.com/youtube/answer/4489286?hl=en) show recent uploads from channels you follow", "Title filters, duration ranges, channel check-in cadence and a maximum feed size with an end"]
+      - ["[Recommendation feedback](https://support.google.com/youtube/answer/6342839?hl=en) includes Not interested and Don't recommend channel", "A daily recommendation-exposure ceiling on YouTube through the extension, plus optional discovery sources in Villow"]
+      - ["[Time watched](https://support.google.com/youtube/answer/9052667?hl=en) summarizes viewing from watch history, with documented exclusions", "Channel and source breakdowns, optional worthwhile ratings, a 30-day review and explained setting suggestions"]
+    note: "Checked against the linked official YouTube Help pages on {tbd:comparisonCheckedDate}. Villow coverage is its own usage plus YouTube in connected extension browsers; native YouTube apps and unconnected browsers are excluded."
+
+  - type: section
+    id: where-the-api-stopped
+    heading: Where the public API stops
+    body: |
+      - **Personalized recommendations and watch history aren't available to import through the Data API.** Villow builds its own finite feed and measures activity within its coverage. You can still explore recommendations on YouTube through the extension.
+      - **Embedded playback has constraints.** Villow doesn't provide background playback or change YouTube's official player functionality.
+      - **API access has quotas.** Your installation shares its Google Cloud project's allowance.
+      - **Native creator controls would need YouTube support.** An independent creator-submission service is also conceivable, but isn't implemented.
+
+      The [YouTube Data API reference](https://developers.google.com/youtube/v3/docs) and [developer policies](link:youtubeDeveloperPolicies) describe the API and its constraints. Native platform support could make these choices easier to reach.
+    actions:
+      - label: Browser coverage →
+        href: /extension#coverage
+        style: text
+
+  - type: section
+    id: creator-showcase
+    eyebrow: A separate set of proposals
+    heading: What we'd like to explore next
+    body: Creator action panels and persistent correction notices are proposals, separate from Villow's implemented controls. They need their own design, moderation and evidence.
+    actions:
+      - label: Roadmap and ideas →
+        href: /roadmap#ideas
+        style: text
+      - label: For creators →
+        href: /creators
+        style: text
+
+  - type: section
+    id: bigger-picture
+    heading: Shared reference points, room for different interests
+    body: Country charts can give people some common things to discuss beyond individualized recommendations. That consistency is part of the vision. Popularity still doesn't establish quality or truth, and we aren't claiming Villow has demonstrated reduced polarization.
+
+  - type: cta
+    id: the-ask
+    variant: fixtheweb
+    heading: Imagine these choices built into the platforms you use.
+    body: |
+      Fix the Web is asking for control over feeds and boundaries, access for independent research, and working prototypes that let people test different designs.
+
+      Villow is one such prototype. Optional feedback can help improve it and test its intentions. Private viewing data isn't automatically submitted to Fix the Web.
+    actions:
+      - label: Read the campaign →
+        href: link:fixTheWeb
+        style: primary
+      - label: Help people find Villow →
+        href: /about#get-involved
+        style: text

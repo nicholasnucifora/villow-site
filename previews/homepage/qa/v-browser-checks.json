@@ -1,0 +1,39 @@
+{
+  "mobile390": [
+    {
+      "active": 1,
+      "height": 478.1875,
+      "overflow": false,
+      "story": "gardener"
+    },
+    {
+      "active": 1,
+      "height": 478.1875,
+      "overflow": false,
+      "story": "shorts"
+    },
+    {
+      "active": 1,
+      "height": 478.1875,
+      "overflow": false,
+      "story": "browser"
+    },
+    {
+      "active": 1,
+      "height": 478.1875,
+      "overflow": false,
+      "story": "evenings"
+    }
+  ],
+  "narrow320": {
+    "overflow": false,
+    "storyHeight": 456.6875,
+    "keyboardNext": true
+  },
+  "desktop": {
+    "height": 392.609375,
+    "automaticRotationObserved": true,
+    "pauseHeld": true
+  },
+  "reducedMotionStatic": true
+}

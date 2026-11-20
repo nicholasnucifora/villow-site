@@ -1,0 +1,81 @@
+---
+/* A screenshot or recording from images: in site.config.yaml, or a labelled frame of the same shape until it's added. */
+import { getImage } from "../../lib/config";
+import { ui } from "../../lib/content";
+
+interface Props {
+  image: string;
+  /** Load straight away (for images near the top of the page). */
+  eager?: boolean;
+}
+
+const { image, eager = false } = Astro.props;
+const { src, alt, label, ratio } = getImage(image);
+const isVideo = /\.(mp4|webm)$/i.test(src);
+---
+
+<figure class="media" style={`--ratio: ${ratio}`}>
+  {
+    !src ? (
+      <div class="media__placeholder" role="img" aria-label={`${ui.imagePlaceholder}: ${label}`}>
+        <span class="tbd">
+          <span class="tbd__label">{ui.tbd}</span>
+          <span class="tbd__note">{ui.imagePlaceholder}</span>
+        </span>
+        <span class="media__label">{label}</span>
+        <span class="media__ratio">{ratio}</span>
+      </div>
+    ) : isVideo ? (
+      <video src={src} controls muted playsinline preload="metadata" aria-label={alt || label} />
+    ) : (
+      <img src={src} alt={alt} loading={eager ? "eager" : "lazy"} decoding="async" />
+    )
+  }
+</figure>
+
+<style>
+  .media {
+    margin: 0;
+    width: 100%;
+    aspect-ratio: var(--ratio);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--color-bg-soft);
+    box-shadow: var(--shadow-md);
+  }
+  .media img,
+  .media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .media__placeholder {
+    height: 100%;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-lg);
+    text-align: center;
+    border: 2px dashed var(--tbd-border);
+    border-radius: inherit;
+    background:
+      repeating-linear-gradient(-45deg, transparent 0 14px, color-mix(in srgb, var(--tbd-border) 7%, transparent) 14px 28px),
+      var(--color-surface);
+  }
+  .media__placeholder .tbd {
+    white-space: nowrap;
+  }
+  .media__label {
+    max-width: 28ch;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-text);
+    text-wrap: balance;
+  }
+  .media__ratio {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+  }
+</style>

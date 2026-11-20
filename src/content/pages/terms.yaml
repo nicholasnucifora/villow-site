@@ -1,0 +1,13 @@
+title: Villow terms of use · Draft
+description: Proposed terms for the Villow website, web app and browser extension, including independently hosted installations and optional support.
+blocks:
+  - type: hero
+    eyebrow: Terms of use · Draft for review
+    title: Using Villow.
+    lead: One place for the proposed terms for this website, the web app and the browser extension. Each part keeps its own privacy policy.
+  - type: notice
+    tone: draft
+    heading: These terms are not in effect.
+    body: This is a local review draft, revised 14 November 2026. It includes the confirmed operator, 16+ connected-app rule, community-access and refund choices. Product controls and data handling are being checked locally. Final legal review, deployment checks and an authorised effective date are still required. No acceptance of this draft is requested.
+  - type: prose
+    file: terms

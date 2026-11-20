@@ -1,0 +1,118 @@
+---
+import { siteContent, ui } from "../lib/content";
+import { inline, linkHtml, escapeHtml } from "../lib/markdown";
+
+const { project, groups, notes } = siteContent.footer;
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__project">
+      <Fragment
+        set:html={linkHtml(
+          project.href,
+          `<img src="/brand/fixtheweb-spider.svg" alt="" width="40" height="40" /><span>${escapeHtml(project.label)}</span>`,
+          "site-footer__ftw",
+        )}
+      />
+      <p set:html={inline(project.blurb)} />
+    </div>
+
+    <nav class="site-footer__nav" aria-label={ui.footerNav}>
+      {
+        groups.map((group) => (
+          <div>
+            <h2>{group.heading}</h2>
+            <ul>
+              {group.links.map((link) => (
+                <li set:html={linkHtml(link.href, escapeHtml(link.label))} />
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </nav>
+
+    <div class="site-footer__notes">
+      {notes.map((note) => <p set:html={inline(note)} />)}
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: var(--block-space);
+    padding-block: var(--space-2xl);
+    border-top: var(--border);
+    background: var(--color-bg-soft);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+  }
+  .site-footer__inner {
+    display: grid;
+    gap: var(--space-xl);
+  }
+  .site-footer__project {
+    display: grid;
+    align-content: start;
+    gap: var(--space-sm);
+    max-width: 24rem;
+  }
+  .site-footer__project :global(.site-footer__ftw) {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--color-text);
+    font-family: var(--font-heading);
+    font-weight: var(--weight-heading);
+    font-size: var(--text-lg);
+    text-decoration: none;
+    justify-self: start;
+  }
+  .site-footer__project :global(img) {
+    width: 2.5rem;
+    height: auto;
+  }
+  .site-footer__nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+    gap: var(--space-xl);
+  }
+  .site-footer__nav h2 {
+    font-size: var(--text-sm);
+    letter-spacing: 0;
+    color: var(--color-text);
+    margin-bottom: var(--space-xs);
+  }
+  .site-footer__nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: var(--space-2xs);
+  }
+  .site-footer__nav :global(a) {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+  .site-footer__nav :global(a:hover) {
+    color: var(--color-text);
+    text-decoration: underline;
+  }
+  .site-footer__notes {
+    display: grid;
+    gap: var(--space-2xs);
+    padding-top: var(--space-lg);
+    border-top: var(--border);
+    font-size: var(--text-xs);
+  }
+
+  @media (min-width: 56rem) {
+    .site-footer__inner {
+      grid-template-columns: 1fr 2.5fr;
+    }
+    .site-footer__notes {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

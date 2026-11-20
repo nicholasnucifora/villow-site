@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Supporter messages · Fix the Web</title><link rel="stylesheet" href="/admin/support/app.css"><script type="module" src="/admin/support/app.js"></script></head><body>
+<main><header><div><p class="eyebrow">Fix the Web / Villow</p><h1>Supporter messages</h1></div><button id="logout" hidden>Sign out</button></header>
+
+<section id="login-panel" class="login" hidden><h2>A quiet place to review.</h2><p>Sign in to manage the names and messages shared by supporters.</p><form id="login"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required maxlength="200"><button class="primary" type="submit">Sign in</button></form></section>
+<section id="workspace" hidden><p class="intro">Unreviewed messages are already visible. Approve the ones you’ve checked, or hide them. Messages needing review stay private until you decide.</p>
+<nav id="filters" aria-label="Filter messages"><button data-state="unreviewed" aria-pressed="true">Unreviewed <span></span></button><button data-state="needs_review" aria-pressed="false">Needs review <span></span></button><button data-state="approved" aria-pressed="false">Approved <span></span></button><button data-state="hidden" aria-pressed="false">Hidden <span></span></button><button data-state="all" aria-pressed="false">All <span></span></button></nav>
+<div class="toolbar"><p id="filter-help"></p><label>Sort <select id="order"><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></label><button id="refresh">Refresh</button></div>
+<ul id="messages" aria-label="Supporter messages"></ul><p id="empty" hidden>No messages in this view.</p>
+<nav class="pagination" aria-label="Message pages"><button id="previous">Previous</button><span id="page"></span><button id="next">Next</button></nav></section>
+<p id="status" role="status">Checking your sign-in…</p><p id="error" role="alert" hidden></p></main></body></html>

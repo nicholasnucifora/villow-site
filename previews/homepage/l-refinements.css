@@ -1,0 +1,11 @@
+.version-l-insight .it-l-ratings .it-time{display:flex;align-items:center;justify-content:center;gap:9px;color:#67806d;font:11px/1.4 system-ui,sans-serif}
+.version-l-insight .it-l-ratings .it-time svg{display:block;width:21px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.version-l-insight .rd-concepts{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start;gap:65px;margin-top:40px;padding-top:32px;border-top:1px solid #dce5d4}
+.version-l-insight .rd-concepts h3{font:400 clamp(25px,2.6vw,30px)/1.25 'Varela Round',sans-serif;letter-spacing:-.035em;max-width:360px}
+.version-l-insight .rd-concepts-copy>p{max-width:490px}
+.version-l-insight .rd-concepts-link,.version-l-insight .fs-mission .hc-movement{display:inline-flex;align-items:center;justify-content:flex-start;min-height:44px;padding:4px 0;border-radius:0;background:transparent;color:#315f48;text-decoration:underline;text-decoration-color:#92aa91;text-underline-offset:5px;transition:color .18s ease,text-decoration-color .18s ease}
+.version-l-insight .rd-concepts-link:hover,.version-l-insight .fs-mission .hc-movement:hover{background:transparent;color:#244d43;text-decoration-color:currentColor;transform:none}
+.version-l-insight .rd-concepts-link:focus-visible,.version-l-insight .fs-mission .hc-movement:focus-visible{outline:2px solid #54836c;outline-offset:4px}
+@media(max-width:700px){.version-l-insight .rd-concepts{gap:30px}}
+@media(max-width:600px){.version-l-insight .rd-concepts{grid-template-columns:1fr;gap:12px;margin-top:30px;padding-top:27px}.version-l-insight .rd-concepts h3{font-size:26px}.version-l-insight .rd-concepts-link{margin-top:10px}}
+@media(prefers-reduced-motion:reduce){.version-l-insight .rd-concepts-link,.version-l-insight .fs-mission .hc-movement{transition:none}}

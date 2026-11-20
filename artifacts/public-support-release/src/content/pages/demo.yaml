@@ -1,0 +1,91 @@
+title: A guided tour
+description: Walk through a fictional Villow day. Choose a finite feed, stop with your progress saved and consider an explained suggestion. No sign-in or real viewing data.
+
+blocks:
+  - type: hero
+    eyebrow: Guided tour · Sample data
+    title: A little YouTube. A good place to stop.
+    lead: Follow a fictional day in Villow. These are illustrative examples, not a live app session or real people's data. No Google sign-in is needed.
+    actions:
+      - label: Start with your feed →
+        href: "#choose"
+        style: primary
+
+  - type: section
+    id: choose
+    eyebrow: 1 · Choose
+    heading: What do you want from your feed?
+    body: |
+      Imagine you follow two fictional channels: **Small Garden**, for gardening tutorials, and **Quiet Evenings**, for something relaxing.
+
+      Small Garden checks in weekly and includes titles with “tutorial”. Quiet Evenings checks in daily. You choose a maximum feed size so catching up has an end.
+    actions:
+      - label: See what's waiting →
+        href: "#sort"
+        style: primary
+      - label: Explore the real channel controls →
+        href: /features#feed
+        style: text
+
+  - type: table
+    id: sort
+    eyebrow: 2 · Sort
+    heading: Three videos to consider
+    intro: All channel names, titles and durations here are invented for this example. Save what fits today and skip what doesn't.
+    columns: [Fictional video, Your choice]
+    rows:
+      - ["Small Garden · Balcony planter tutorial · 12 minutes", "Save for the weekend"]
+      - ["Quiet Evenings · A rainy window · 8 minutes", "Watch to unwind"]
+      - ["Small Garden · A longer planting tutorial · 35 minutes", "Skip today"]
+    note: In Villow, you can sort with a swipe on your phone. Watch Later size limits, expiry and pinning help keep saved videos manageable.
+
+  - type: section
+    id: stop
+    eyebrow: 3 · Watch and stop
+    heading: You don't have to finish everything now.
+    body: |
+      Partway through the relaxing video, you decide you're done. Your place is saved for another day. After sorting the rest of your finite feed, there isn't an endless next page waiting.
+
+      A limit can also provide a stopping point. Some prompts offer an allowance to finish the current video; use the options available for that limit.
+    actions:
+      - label: Add your perspective →
+        href: "#reflect"
+        style: primary
+
+  - type: section
+    id: reflect
+    eyebrow: 4 · Reflect, if you like
+    heading: Was that worth your time?
+    body: |
+      Maybe the video helped you relax. That's a perfectly good reason to call it worthwhile. Or skip the question entirely; ratings are optional.
+
+      Your time page can show how you spent your time alongside the videos you chose to rate. It doesn't guess a verdict for the ones you didn't.
+    actions:
+      - label: See an explained suggestion →
+        href: "#suggestion"
+        style: primary
+
+  - type: section
+    id: suggestion
+    eyebrow: 5 · Choose an adjustment
+    background: soft
+    heading: Evidence you can use, if it helps.
+    body: |
+      Imagine that, over time, you repeatedly skip a different channel's uploads and rate several as not worthwhile. Once enough evidence exists, Villow could suggest checking it less often and explain the pattern behind that suggestion.
+
+      Accept an adjustment, dismiss it, or keep things as they are. This example doesn't specify a real suggestion threshold. Villow's suggestions concern your habits and settings; they aren't YouTube's personalized video recommendations.
+    actions:
+      - label: How the suggestion system works →
+        href: /features#suggestions
+        style: text
+
+  - type: cta
+    heading: Try it with your own choices.
+    body: Create a private Villow, join a friend's, or begin with the browser extension. Screenshots and app recordings will be added to this tour later.
+    actions:
+      - label: Get started
+        href: /download
+        style: primary
+      - label: Watch with friends →
+        href: /features#friends
+        style: text

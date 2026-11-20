@@ -1,0 +1,16 @@
+/* A shared invitation after the product story; no new demo or decorative art. */
+.hc-closing{background:#eaf1e5;color:#244d43;padding:92px 0 96px;scroll-margin-top:105px}
+.hc-inner{max-width:920px;text-align:center}
+.hc-closing h2{margin:0;font:400 clamp(42px,5.3vw,66px)/1.12 'Varela Round',sans-serif;letter-spacing:-.045em;text-wrap:balance}
+.hc-closing h2 span{color:#42775d}
+.hc-copy{max-width:650px;margin:30px auto 0;font-size:17px;line-height:1.85;color:#496653;text-wrap:pretty}
+.hc-copy p{margin:0}.hc-copy p+p{margin-top:15px}
+.hc-actions{display:flex;align-items:center;justify-content:center;gap:31px;margin-top:33px}
+.hc-actions .i-primary{flex:none}
+.hc-movement{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:50px;padding:7px 0;font:400 14px/1.5 'Varela Round',sans-serif;text-decoration:underline;text-underline-offset:5px;text-decoration-color:#8ba68b;color:#355d46}
+.hc-movement svg{width:17px;height:17px}.hc-movement:hover{color:#244d43;text-decoration-color:currentColor}
+.hc-comparison{min-height:28px;display:inline-flex;align-items:center;text-underline-offset:3px;color:inherit}
+@media(max-width:800px){.hc-closing{padding-block:75px 80px}.hc-copy{font-size:16px;max-width:600px}.hc-closing h2{font-size:52px}}
+@media(max-width:600px){.hc-closing{padding-block:60px 64px;scroll-margin-top:95px}.hc-closing h2{font-size:42px;line-height:1.13}.hc-copy{font-size:15px;line-height:1.85;margin-top:25px;max-width:430px}.hc-copy p+p{margin-top:16px}.hc-actions{flex-direction:column;gap:13px;margin-top:29px}.hc-movement{font-size:13px;min-height:44px}.hc-comparison{min-height:32px}}
+@media(max-width:360px){.hc-closing h2{font-size:37px}.hc-copy{font-size:14px}}
+

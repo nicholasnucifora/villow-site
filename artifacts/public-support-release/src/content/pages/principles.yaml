@@ -1,0 +1,24 @@
+# Principles. The essay itself is in src/content/prose/principles.md.
+title: Principles
+description: The thinking behind Villow. Control, not prohibition. Better time, not a guilt trip. An algorithm that works for you, and shows its working.
+
+blocks:
+  - type: hero
+    eyebrow: Principles
+    title: The thinking behind Villow.
+    lead: Features explain *what*. This explains *why*.
+
+  - type: prose
+    file: principles
+
+  - type: cta
+    variant: fixtheweb
+    heading: These principles shouldn't need a separate app.
+    body: Fix the Web is asking platforms to give people real control over their feeds, with defaults built for wellbeing rather than engagement.
+    actions:
+      - label: See what we're asking platforms to change →
+        href: link:fixTheWeb
+        style: primary
+      - label: YouTube could do this →
+        href: /youtube-could-do-this
+        style: text

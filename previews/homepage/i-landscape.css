@@ -1,0 +1,8 @@
+/* Full-width terrain and proportional details are intentionally separate. */
+.i-landscape{position:absolute;z-index:0;inset:auto 0 -1px;height:208px;pointer-events:none;isolation:isolate}
+.i-landscape-hills{position:absolute;z-index:1;inset:0;display:block;width:100%;height:100%}
+.i-landscape-sun{position:absolute;z-index:0;display:block;right:5%;bottom:60%;width:56px;height:56px;opacity:.95}
+.i-landscape-trees{position:absolute;z-index:2;display:block;right:1.2%;bottom:15px;width:158px;height:112px}
+@media(max-width:1100px){.i-landscape{height:182px}.i-landscape-sun{width:48px;height:48px;right:4.2%;bottom:61%}.i-landscape-trees{width:134px;height:95px;right:.9%;bottom:12px}}
+@media(max-width:700px){.i-landscape{height:132px}.i-landscape-sun{width:40px;height:40px;right:24%;bottom:49%}.i-landscape-trees{width:97px;height:69px;right:2%;bottom:9px}.i-landscape-tree-distant{display:none}}
+@media(max-width:360px){.i-landscape{height:122px}.i-landscape-sun{width:36px;height:36px;right:25%;bottom:49%}.i-landscape-trees{width:87px;height:62px;right:1.5%;bottom:7px}}

@@ -1,0 +1,74 @@
+[
+  {
+    "documentWidth": 753,
+    "headings": [
+      "A feed you\ncan finish.",
+      "Set your own stopping point.",
+      "Understand your viewing."
+    ],
+    "loadedImages": true,
+    "overflow": [],
+    "pending": 0,
+    "width": 768
+  },
+  {
+    "documentWidth": 1009,
+    "headings": [
+      "A feed you\ncan finish.",
+      "Set your own\nstopping point.",
+      "Understand your viewing."
+    ],
+    "loadedImages": true,
+    "overflow": [],
+    "pending": 0,
+    "width": 1024
+  },
+  {
+    "documentWidth": 1265,
+    "headings": [
+      "A feed you\ncan finish.",
+      "Set your own\nstopping point.",
+      "Understand\nyour viewing."
+    ],
+    "loadedImages": true,
+    "overflow": [],
+    "pending": 0,
+    "width": 1280
+  },
+  {
+    "documentWidth": 1425,
+    "headings": [
+      "A feed you\ncan finish.",
+      "Set your own\nstopping point.",
+      "Understand\nyour viewing."
+    ],
+    "loadedImages": true,
+    "overflow": [],
+    "pending": 0,
+    "width": 1440
+  },
+  {
+    "documentWidth": 305,
+    "headings": [
+      "A feed you can finish.",
+      "Set your own\nstopping point.",
+      "Understand\nyour viewing."
+    ],
+    "loadedImages": true,
+    "overflow": [],
+    "pending": 0,
+    "width": 320
+  },
+  {
+    "documentWidth": 375,
+    "headings": [
+      "A feed you can finish.",
+      "Set your own\nstopping point.",
+      "Understand\nyour viewing."
+    ],
+    "loadedImages": true,
+    "overflow": [],
+    "pending": 0,
+    "width": 390
+  }
+]

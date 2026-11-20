@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-28",
+  "viewports": [
+    {
+      "broken": 0,
+      "columns": "273px",
+      "order": [
+        "xl-compare-cell xl-cell-pattern",
+        "xl-compare-cell xl-cell-villow"
+      ],
+      "overflow": false,
+      "rows": 3,
+      "width": 320
+    },
+    {
+      "broken": 0,
+      "columns": "335px",
+      "order": [
+        "xl-compare-cell xl-cell-pattern",
+        "xl-compare-cell xl-cell-villow"
+      ],
+      "overflow": false,
+      "rows": 3,
+      "width": 390
+    },
+    {
+      "broken": 0,
+      "columns": "545px",
+      "order": [
+        "xl-compare-cell xl-cell-pattern",
+        "xl-compare-cell xl-cell-villow"
+      ],
+      "overflow": false,
+      "rows": 3,
+      "width": 600
+    },
+    {
+      "broken": 0,
+      "columns": "325.5px 325.5px",
+      "order": [
+        "xl-compare-cell xl-cell-pattern",
+        "xl-compare-cell xl-cell-villow"
+      ],
+      "overflow": false,
+      "rows": 3,
+      "width": 768
+    },
+    {
+      "broken": 0,
+      "columns": "442.5px 442.5px",
+      "order": [
+        "xl-compare-cell xl-cell-pattern",
+        "xl-compare-cell xl-cell-villow"
+      ],
+      "overflow": false,
+      "rows": 3,
+      "width": 1024
+    },
+    {
+      "broken": 0,
+      "columns": "505px 505px",
+      "order": [
+        "xl-compare-cell xl-cell-pattern",
+        "xl-compare-cell xl-cell-villow"
+      ],
+      "overflow": false,
+      "rows": 3,
+      "width": 1440
+    }
+  ],
+  "pairs": 3,
+  "checkboxKeyboard": "Space toggles and untoggles task with strikethrough",
+  "otherSections": "Source prefix and concepts/closing suffix preserved exactly",
+  "placeholderLink": "Still no href",
+  "socialMeaning": "Optional sharing and shared limits; no invented rewards or causal wellbeing claim"
+}

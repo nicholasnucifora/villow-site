@@ -1,0 +1,13 @@
+import sharp from 'sharp';
+import {mkdir, writeFile} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+const source='C:/Users/NEBULA~1/AppData/Local/Temp/codex-clipboard-40628209-93b3-4712-842b-3409c203449d.png';
+const output=new URL('./illustration-studies/i-selected/',import.meta.url);
+await mkdir(output,{recursive:true});
+const {width,height}=await sharp(source).metadata();
+const crop={left:0,top:height-Math.round(width/3),width,height:Math.round(width/3)};
+const normalized=await sharp(source).extract(crop).resize(2172,724).toBuffer();
+await sharp(normalized).webp({quality:92}).toFile(fileURLToPath(new URL('mint-sunrise.webp',output)));
+await sharp(normalized).extract({left:900,top:0,width:1272,height:724}).resize(1000,569).webp({quality:92}).toFile(fileURLToPath(new URL('mint-sunrise-mobile.webp',output)));
+await writeFile(new URL('assets.json',output),JSON.stringify({id:'i21',title:'Mint sunrise',source,sourceWidth:width,sourceHeight:height,desktopCrop:crop,phoneCrop:{left:900,top:0,width:1272,height:724},operation:'WebP encoding and responsive crops only; user-supplied illustration'},null,2)+'\n');
+console.log('Prepared supplied Mint companion to I15.');

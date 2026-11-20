@@ -1,0 +1,53 @@
+PRESET Z — LAYERED LANDSCAPE
+10 November 2026
+Preview: http://127.0.0.1:4411/z.html
+
+SCOPE
+The user explicitly requested a new preset for this work. Y's main content
+and y-responsive-scenery.css remain byte-for-byte unchanged; only shared
+preview navigation was updated to expose Z. W remains available too.
+No production-site changes or publication are part of this work.
+
+COMPOSITION
+Z keeps the existing woman/projector/cat artwork and controls. The landscape
+uses a wide background and a compact phone background, independent left and
+right tree groups, and an independent transparent foreground hill. The sun
+and its glow remain together in each background. Trees sit behind the nearest
+hill and have their own responsive sizes and offsets.
+
+The wide background scales proportionally to the page width. Below 701px the
+content stacks and uses the compact composition. That background has a 480px
+minimum width and a right-aligned crop on the narrowest phones; the separate
+tree groups remain visible. Content-driven hero height and bottom spacing
+keep the hills close while providing a gap between sun and cinema cloud.
+Header and hero use #fdfdfd, with a fade at the top of the background image.
+
+EDITING
+render-z.mjs derives Z from the saved Y page without modifying Y.
+z-layered-landscape.css contains all Z-only layout and layer positioning.
+Change .z-scenery-trees-left/right width and bottom values to move the groups.
+The foreground stays at its natural aspect ratio along the bottom edge.
+Z copies Y's existing footer treatment in its own stylesheet.
+
+ARTWORK
+Mode: built-in image_gen edits / transparent extraction of supplied art.
+This is still AI-generated artwork. It is not human retouching.
+assets/z-layered/provenance.json records the exact final prompts, references
+and generated source paths for all five assets. PNG source files and WebP
+delivery files are saved beside it. The image tool removed the trees and
+foreground from the backgrounds and reconstructed scenery behind them.
+WebP encoding was the only post-generation asset processing.
+
+VALIDATION
+Browser measurements: 320, 390, 480, 600, 700, 701, 861, 1024, 1168, 1280,
+1636, 1920 and 2560px. All scenery assets load, header/hero colours match,
+and no horizontal overflow was found. Visual review includes phones,
+the stacked/tablet boundary, intermediate desktop and wide desktop.
+At 320px, keyboard seeking to the end reveals the rating prompt, Worth it
+sets aria-pressed=true, and Home restores the beginning.
+Existing page-navigation and semantic-position checks pass.
+Y preservation hashes: qa/z-y-preservation-baseline.json.
+Responsive measurements: qa/z-responsive-checks.json.
+Proof screenshots: qa/z-phone-390.png, qa/z-tablet-861.png,
+qa/z-desktop-1636.png.
+Keep the local port 4411 preview server running for comparison.

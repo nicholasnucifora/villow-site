@@ -1,0 +1,88 @@
+---
+import type { BlockOf } from "../../lib/schema";
+import { inline, linkHtml, md, slugify } from "../../lib/markdown";
+import Action from "../ui/Action.astro";
+import BlockShell from "../ui/BlockShell.astro";
+import BlockHeader from "../ui/BlockHeader.astro";
+import Media from "../ui/Media.astro";
+
+interface Props {
+  block: BlockOf<"cards">;
+}
+
+const { block } = Astro.props;
+const headingId = block.heading ? `${block.id ?? slugify(block.heading)}-title` : undefined;
+---
+
+<BlockShell type="cards" id={block.id} background={block.background} labelledBy={headingId}>
+  <BlockHeader eyebrow={block.eyebrow} heading={block.heading} intro={block.intro} headingId={headingId} />
+  <ul class="cards">
+    {
+      block.items.map((item) => (
+        <li class:list={["card", "cards__item", item.href && "cards__item--link"]}>
+          {item.image && <Media image={item.image} />}
+          <h3 set:html={item.href ? linkHtml(item.href, inline(item.title), "cards__link") : inline(item.title)} />
+          {item.body && <div class="prose" set:html={md(item.body)} />}
+        </li>
+      ))
+    }
+  </ul>
+  {
+    block.actions && (
+      <div class="actions cards__actions">
+        {block.actions.map((action) => (
+          <Action action={action} />
+        ))}
+      </div>
+    )
+  }
+</BlockShell>
+
+<style>
+  .cards {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+    gap: var(--space-lg);
+  }
+  .cards__item {
+    position: relative;
+    display: grid;
+    gap: var(--space-sm);
+    align-content: start;
+    padding: var(--space-lg);
+    transition:
+      border-color var(--motion-fast) var(--ease),
+      transform var(--motion) var(--ease);
+  }
+  .cards__item h3 {
+    font-size: var(--text-lg);
+  }
+  .cards__item .prose {
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+  }
+  .cards__item :global(.cards__link) {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+  /* The whole card is clickable through its title link. */
+  .cards__item :global(.cards__link:not(.is-inert))::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+  }
+  .cards__item--link:hover {
+    border-color: var(--color-accent);
+  }
+  .cards__item :global(.prose a) {
+    position: relative;
+    z-index: 1;
+  }
+  .cards__actions {
+    margin-top: var(--space-xl);
+  }
+</style>

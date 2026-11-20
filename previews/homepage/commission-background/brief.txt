@@ -1,0 +1,33 @@
+VILLOW — LANDSCAPE CLEANUP AND LAYER PREPARATION
+
+I like the supplied AI-generated landscape and want visible artifacts
+cleaned up while preserving its colours, soft shading and overall look.
+
+I also need to move the sun slightly at different website screen widths.
+Please quote for cleanup plus these separate groups:
+
+1. Clean sky/background, filling in the areas behind removed objects.
+2. The complete sun and its glow, including any part hidden by the hills.
+3. Hills and trees as a foreground group, so the sun can remain behind them.
+
+If practical, please separate the clouds and birds as well; quote this
+extra separately if it materially changes the work. Individual trees do
+not need separate layers. Please preserve natural soft edges and avoid
+visible seams or empty holes when elements move.
+
+Deliver a layered PSD, a flattened reference PNG, and aligned PNG exports
+of the groups, with transparency where appropriate. Keep every export on
+the same original 2172 x 724 canvas rather than trimming each differently.
+
+My developer handles the responsive placement, scaling and cropping. No
+new visual style, character work or animation is needed. Please identify
+any areas requiring substantial repainting and quote for the agreed work
+with one revision before starting.
+
+ATTACHMENTS
+
+w-background-original.png — the original full-resolution image to work on.
+w-background-mobile-reference.webp — the existing mobile crop for context;
+this is not a request for an entirely new mobile illustration.
+w-page-context.png — shows where the landscape sits on the website; the
+woman/cat scene and website text are separate and outside this commission.

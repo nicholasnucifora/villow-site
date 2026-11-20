@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; Villow browser extension</title>
+<style>
+  :root { color-scheme: light dark; --bg:#fdfcfb; --fg:#1b1613; --mid:#574e49;
+          --line:#e4ddd9; --accent:#c4302b; --code:#f2eeec; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#141110; --fg:#ece7e4; --mid:#b1a7a1;
+            --line:#332d2b; --accent:#ff6259; --code:#232020; }
+  }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--fg); margin: 0;
+         padding: 56px 22px 96px; line-height: 1.65;
+         font: 17px/1.65 ui-serif, Georgia, "Times New Roman", serif; }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 .6em; text-wrap: balance; }
+  h2 { font-size: 1.35rem; margin: 2.2em 0 .5em; text-wrap: balance; }
+  h3 { font-size: 1.08rem; margin: 1.8em 0 .4em; }
+  h1, h2, h3 { font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+               letter-spacing: -.015em; }
+  p, li { color: var(--mid); }
+  strong { color: var(--fg); font-weight: 600; }
+  ul { padding-left: 1.25em; }
+  li { margin: .45em 0; }
+  a { color: var(--accent); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 2.6em 0; }
+  code { background: var(--code); border-radius: 3px; padding: .1em .35em;
+         font: .85em ui-monospace, Menlo, Consolas, monospace; }
+  em { color: var(--mid); }
+</style>
+</head>
+<body>
+<main>
+<p><a href="/privacy">← All Villow privacy policies</a></p>
+<h1>Villow browser extension — Privacy Policy</h1>
+<p><strong>Local review revision — unpublished.</strong> This revision describes the extension changes being checked locally. It has not replaced the published policy or store disclosures.</p>
+
+<p><strong>Last updated: 14 November 2026. Policy and linked-data disclosure revision: 2026-11-14.</strong></p>
+
+<p>This policy covers the Villow browser extension. Its public address is <a href="/extension-privacy">villow.app/extension-privacy</a>. The <a href="/app-privacy">app privacy policy</a> covers Villow accounts, Google authorization in the app and data held by a Villow instance. The <a href="/site-privacy">website privacy policy</a> covers the Villow website. Available features depend on your extension and instance versions.</p>
+
+<p>The extension is provided by <strong>Nicholas Francis Nucifora</strong>, an individual/sole trader, ABN <strong>68 737 669 690</strong>. Contact: <a href="mailto:support@villow.app">support@villow.app</a> or the <a href="/contact">Villow contact page</a>.</p>
+
+<h2>Your choices</h2>
+
+<p>You can use local viewing controls without a Villow account or connection. In standalone mode, the extension does not send its usage records or saved-video data to Villow. It still operates on YouTube pages, which have their own network activity; thumbnails and links are explained below.</p>
+
+<p>Connecting is optional. Before the extension contacts the proposed instance, it shows that destination and a disclosure of the linked data, recipients and purpose. Choose <strong>Allow linked data</strong> to enable sharing for queue saving, subscriptions and Watch now, or <strong>Use extension on its own</strong> to decline and keep local controls. A separate, initially unchecked choice enables optional activity/settings/Shorts synchronization and associated technical information. Declining that optional synchronization keeps those features local; queue saving, subscription retrieval and Watch now remain available when the essential linked data is allowed.</p>
+
+<p>An existing pairing without a current permission decision is paused until you choose. Permission is recorded locally with its disclosure revision, time and the optional-sync choice, and applies to that pairing. Browser permission to access the instance is a separate control. Allowing linked data is not acceptance of Terms and does not make unpublished draft Terms effective.</p>
+
+<p>While a connection is allowed, permitted sharing can happen in the background and retry after an outage. <strong>Disconnect</strong> withdraws permission and stops future linked sharing. It does not recall requests already sent or delete information the instance has already received. To change your choices in the extension, disconnect and review the connection again. Supported browser permission controls also let you revoke access; removing the optional technical-data permission disables optional synchronization.</p>
+
+<h2>Recipients and essential linked data</h2>
+
+<p>The extension uses the instance address and pairing token you provide. The token is an account access credential sent with authenticated requests. Linked requests use HTTPS, with HTTP exceptions for local development addresses. The instance operator and providers processing requests or storing data for that operator can access information received there, including ordinary network information such as your IP address. If you self-host, the recipient is your deployment and its providers. If you use a deployment operated by the developer or someone else, that operator receives the data. The extension does not have a separate central analytics or error-reporting service.</p>
+
+<p>Allowing the essential linked data enables these exchanges:</p>
+
+<ul>
+<li><strong>Videos you choose to save:</strong> the YouTube video ID, title, video URL, thumbnail URL, channel name and channel URL, duration, and available page metadata such as live/Shorts status, view-count text, upload-age text and other displayed metadata. A random browser-profile identifier identifies the source of a save. Removing a queued video sends its video ID. These operations maintain your Villow queue.</li>
+<li><strong>Watch now progress:</strong> for a queued video you explicitly start with <strong>Watch now</strong>, its video ID, playback position, duration, completion state and start/update timestamps, plus the browser-profile identifier. Progress is reported periodically during playback and around actions such as pausing, seeking or finishing, with retries for unsent progress. This lets Villow resume the video and account for its playback. It is separate from the standalone watched-video list.</li>
+<li><strong>Connection, subscriptions and queue status:</strong> authenticated connection checks, requests for subscribed channels, and requests for saved-video status. The instance returns subscribed-channel identifiers, handles and names, saved-video details/status and source receipts. These support subscription hiding, queue displays and playback restrictions. Request or revision identifiers can accompany operations to avoid duplicate processing.</li>
+</ul>
+
+<p>Subscriptions may be retrieved when linked even if hiding subscribed channels is switched off. The local cache is normally refreshed after it is about six hours old, with periodic checks and a manual refresh control. The extension obtains this list from Villow, not by calling Google&#x27;s API, and it holds no Google OAuth credentials.</p>
+
+<h2>Optional activity, settings and Shorts synchronization</h2>
+
+<p>Only if you separately allow optional synchronization, the extension also exchanges:</p>
+
+<ul>
+<li><strong>Daily activity totals:</strong> active YouTube time, Shorts time and categorized time, recommendations seen, save counts, and whether recommendation, saving or time limits were reached. Reports contain dates, measurement versions and up to 14 retained daily records. These are aggregate counts rather than the list of recommendation IDs or the standalone watched-video list.</li>
+<li><strong>Shared daily limits and settings:</strong> today&#x27;s activity totals, external-save counts, saved duration and unknown-duration counts; recommendation, saving and time limits; the save-limit mode; and the YouTube-blocking, hide-Shorts and hide-subscribed-channel settings. Settings changes can include random mutation identifiers and revision numbers to resolve changes made in different browsers. The instance returns shared totals, supported settings and their synchronization state.</li>
+<li><strong>Shorts choices and allowance:</strong> whether you allow scrolling, the day&#x27;s allowance, time used, and your optional yes-or-no answer about whether the time was worthwhile. Requests include relevant dates, request/mutation/grant identifiers, revision information and a browser-profile identifier where needed. The instance returns shared allowance, usage and reflection state. While you scroll, checks and time reports may occur every few seconds to share the allowance across browsers. This allowance service does not receive the IDs, titles or channels of the individual Shorts you watch.</li>
+<li><strong>Technical context:</strong> a browser label, browser time zone and extension/schema/measurement versions where required by the feature. The browser label can also accompany saves and progress when this choice is enabled. The time zone provides calendar-day context; the extension does not request GPS or a location permission.</li>
+</ul>
+
+<p>Retained usage summaries are cleared when a new linked-data permission is granted. Current-day counts can still reflect activity already recorded in this browser that day. Changed usage is normally scheduled for reporting after about ten minutes. Startup, a day change and relevant actions can cause earlier requests, and failed requests can be retried. Shared-day checks are normally limited to about once per minute during activity, with earlier checks for actions such as saving, opening a panel or changing settings. For an older instance without the usage-report endpoint, the extension can send today&#x27;s screen-time total, date, browser-profile identifier and browser label through the older screen-time endpoint instead.</p>
+
+<p>Each linked request tells the instance whether you allowed optional synchronization, so a compatible instance can avoid retaining optional browser details inferred from request headers when you decline. The receiving server and its network providers still receive ordinary HTTP information such as your IP address and browser-supplied headers. Their processing is covered by the instance&#x27;s policy.</p>
+
+<h2>What stays in this browser, and for how long</h2>
+
+<p>The extension uses the browser&#x27;s local extension storage, rather than its synchronized extension-storage service. Local data includes:</p>
+
+<ul>
+<li><strong>Preferences and setup state:</strong> viewing limits, visibility/blocking choices, layout preferences, temporary daily-block/bedtime state, setup choices, rating-prompt state and the linked-data permission record. Persistent preferences remain until changed or extension data is removed.</li>
+<li><strong>Connection state:</strong> the instance address and pairing token, verification state, a random identifier for this browser profile, synchronization revisions/outboxes and cached instance responses. Connection-specific data and pending work are handled as described under Disconnect below. The browser-profile identifier and local preferences can remain after disconnecting.</li>
+<li><strong>Pending saves and saved marks:</strong> full metadata for saves awaiting delivery, delivery/retry bookkeeping, and up to 5,000 remembered video IDs used to mark saved tiles. Pending saves are removed on successful delivery, cancellation, permanent failure or after the retry limit, and are discarded when the pairing changes. Saved marks have no automatic age expiry and can outlast a connection.</li>
+<li><strong>Current-day counters and lists:</strong> recommendation IDs used to avoid double counting; save IDs and metadata such as title, channel, duration and saving source; the day&#x27;s active time; and, in standalone mode, watched-video IDs, titles and available channel/duration details. Lists are limited to 5,000 entries where applicable. A prior day&#x27;s record stops counting as today&#x27;s and is replaced when that store is next written; this is not a promise of deletion exactly at midnight. The standalone watched-video list and recommendation-ID list are not included in Villow&#x27;s activity reports.</li>
+<li><strong>Daily usage summaries:</strong> the most recent 14 recorded dates of aggregate activity, limit-hit flags and reporting state. These can be recorded while standalone; they are not necessarily 14 consecutive calendar days. Old records are pruned when the summaries are updated. Permission grants and withdrawal clear these summaries.</li>
+<li><strong>Watch now state:</strong> recent positions and pending progress for up to 300 videos. Entries expire during cleanup after 90 days without a recorded update. Permission or connection changes clear this cache.</li>
+<li><strong>Shorts state:</strong> allowance choices, daily time, reflections, instance snapshots and pending synchronization work. Cleanup normally removes unreflected daily records older than 35 days. Days with reflections and incomplete synchronization/grants can remain longer; reflections have no fixed automatic age expiry. Granting or withdrawing linked permission resets this stored Shorts state, including standalone choices and reflections.</li>
+<li><strong>Troubleshooting records:</strong> up to 20 recent failing instance responses, with request endpoint/method, time, status, selected server-response headers, extension origin/identity and a response excerpt of up to 400 characters. There is no fixed age expiry. Known tokens and common credential patterns are redacted, but arbitrary server response text can still contain sensitive information. Review a copied report before sharing it.</li>
+</ul>
+
+<p>Troubleshooting is available through the settings page&#x27;s diagnostics sub-option. <strong>Copy diagnostics</strong> copies a report to your clipboard; if clipboard access fails, it writes the report to that page&#x27;s console. It does not submit the report to the developer or another service. You decide whether to share it.</p>
+
+<p>The extension is disabled in private/incognito windows and does not operate on those tabs.</p>
+
+<h2>YouTube, external links and other providers</h2>
+
+<p>The extension reads relevant content on YouTube pages to operate its controls and identify videos. YouTube page loads, video playback and YouTube features continue to contact YouTube. In addition, the extension&#x27;s watched/saved lists can load video thumbnails from <strong>i.ytimg.com</strong>, a Google/YouTube image service, including in standalone mode. Those requests disclose the requested video ID and ordinary browser/network information to that service. Google&#x27;s handling of that information is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+<p>Links to Villow pages, an instance, YouTube, a browser&#x27;s extension store or the support/donation service open those destinations when you use them. Those sites then receive ordinary browser requests and apply their own policies. The packaged extension does not embed an advertising, analytics or crash-reporting SDK. It does not request your Google password, Google OAuth token, payment information or contact list. Villow&#x27;s Google authorization happens in the app, under the app policy.</p>
+
+<h2>Disconnect, revocation and deletion</h2>
+
+<p><strong>Disconnect</strong> removes the stored pairing token/address and linked permission, discards pending saves and connection-specific synchronization state, and clears subscriptions, shared-day/status caches, diagnostics, Watch now progress, stored Shorts state and retained usage summaries. It keeps local viewing preferences and current-day local saved/watched/count records so standalone controls remain usable. Saved marks and local activity lists are not all erased merely by disconnecting.</p>
+
+<p>Revoking access at the instance is different from disconnecting locally. The extension learns of revocation only when a later request is rejected; an offline browser cannot detect it immediately. A rejected authentication response ends the pairing and clears the linked data described above. A failing or rejected request can create a new local troubleshooting entry after older diagnostics are cleared. Removing Google authorization in the app is governed by the app&#x27;s behavior and policy; the extension cannot independently detect that change before the instance tells it.</p>
+
+<p>The settings page&#x27;s reset controls reset the specified local count/time/save/watched records. They are not a command to erase the account&#x27;s historical data or saved queue. To remove all extension-local data, use your browser&#x27;s extension-data removal controls or uninstall the extension. Server-side deletion and retention are controlled by the operator of the instance and its providers: use the app&#x27;s deletion controls or contact that operator. Disconnecting, resetting a local counter or uninstalling does not itself delete copies already held by the instance.</p>
+
+<h2>Accounts, use of data and changes</h2>
+
+<p>The Villow web app is for people aged <strong>16 or older</strong>, and an account used to link the extension must meet that rule. This account requirement does not impose an additional minimum age on standalone use of the extension, and it is not a condition of the extension&#x27;s MIT software licence.</p>
+
+<p>The extension uses the disclosed data for its viewing controls, queue and connected features. It does not sell extension data or send it to an advertising service. Its use of user data is subject to the <a href="https://developer.chrome.com/docs/webstore/program-policies/privacy">Chrome Web Store user-data policies</a>, including their Limited Use requirements.</p>
+
+<p>When the data handling changes, the policy and release notes will be updated. If a change requires a new linked-data permission decision, sharing stays paused until that decision is given. This privacy disclosure does not claim that unpublished Terms are already binding.</p>
+
+<p>For privacy questions, requests to access or correct information, deletion requests or complaints about the extension, contact <a href="mailto:support@villow.app">support@villow.app</a> or use the <a href="/contact">Villow contact page</a>. Describe the issue and which deployment it concerns, but do not send passwords or pairing tokens. Local-only extension records can be reviewed or removed through the extension and browser controls described above; the developer does not hold a central copy. For information held by a separately operated instance, contact that operator for access, correction, deletion or complaints. We will respond to requests concerning information we hold and help identify the relevant operator where possible.</p>
+
+<p>Villow is not affiliated with, endorsed by or sponsored by YouTube or Google. YouTube is a trademark of Google LLC.</p>
+</main>
+</body>
+</html>

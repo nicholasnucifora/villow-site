@@ -1,0 +1,130 @@
+{
+  "method": "Tree cutout bottom alpha edge vs continuous foreground crest, sampled every CSS pixel. Negative values mean the base is behind the hill.",
+  "measurements": [
+    {
+      "width": 320,
+      "leftMaxGap": -16.6,
+      "rightMaxGap": -30.7
+    },
+    {
+      "width": 390,
+      "leftMaxGap": -5,
+      "rightMaxGap": -30.7
+    },
+    {
+      "width": 500,
+      "leftMaxGap": -2.5,
+      "rightMaxGap": -30.7
+    },
+    {
+      "width": 650,
+      "leftMaxGap": -1,
+      "rightMaxGap": -30.7
+    },
+    {
+      "width": 700,
+      "leftMaxGap": -1.6,
+      "rightMaxGap": -30.7
+    },
+    {
+      "width": 701,
+      "leftMaxGap": -1.1,
+      "rightMaxGap": -32.8
+    },
+    {
+      "width": 760,
+      "leftMaxGap": -3.3,
+      "rightMaxGap": -34.8
+    },
+    {
+      "width": 861,
+      "leftMaxGap": -6.9,
+      "rightMaxGap": -38.1
+    },
+    {
+      "width": 1000,
+      "leftMaxGap": -11.4,
+      "rightMaxGap": -42.5
+    },
+    {
+      "width": 1100,
+      "leftMaxGap": -15.1,
+      "rightMaxGap": -45.2
+    },
+    {
+      "width": 1168,
+      "leftMaxGap": -17.1,
+      "rightMaxGap": -47.2
+    },
+    {
+      "width": 1200,
+      "leftMaxGap": -16.8,
+      "rightMaxGap": -48
+    },
+    {
+      "width": 1242,
+      "leftMaxGap": -15,
+      "rightMaxGap": -49.3
+    },
+    {
+      "width": 1280,
+      "leftMaxGap": -13.4,
+      "rightMaxGap": -50.6
+    },
+    {
+      "width": 1366,
+      "leftMaxGap": -9.6,
+      "rightMaxGap": -52.5
+    },
+    {
+      "width": 1450,
+      "leftMaxGap": -6.1,
+      "rightMaxGap": -53.5
+    },
+    {
+      "width": 1500,
+      "leftMaxGap": -3.9,
+      "rightMaxGap": -53.8
+    },
+    {
+      "width": 1600,
+      "leftMaxGap": -1.9,
+      "rightMaxGap": -54.4
+    },
+    {
+      "width": 1636,
+      "leftMaxGap": -2.2,
+      "rightMaxGap": -54.7
+    },
+    {
+      "width": 1800,
+      "leftMaxGap": -3.2,
+      "rightMaxGap": -55.5
+    },
+    {
+      "width": 1948,
+      "leftMaxGap": -3.9,
+      "rightMaxGap": -58.7
+    },
+    {
+      "width": 2200,
+      "leftMaxGap": -4,
+      "rightMaxGap": -65.5
+    },
+    {
+      "width": 2560,
+      "leftMaxGap": -3,
+      "rightMaxGap": -74.1
+    },
+    {
+      "width": 3000,
+      "leftMaxGap": -0.7,
+      "rightMaxGap": -78.1
+    },
+    {
+      "width": 3440,
+      "leftMaxGap": -7.8,
+      "rightMaxGap": -81.3
+    }
+  ]
+}

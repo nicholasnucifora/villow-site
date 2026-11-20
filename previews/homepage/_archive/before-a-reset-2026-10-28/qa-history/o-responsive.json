@@ -1,0 +1,98 @@
+{
+  "responsive": [
+    {
+      "badImages": 0,
+      "limits": 273,
+      "overflow": false,
+      "overflows": [],
+      "plotCount": 1,
+      "plotHeight": 189,
+      "together": 273,
+      "width": 320
+    },
+    {
+      "badImages": 0,
+      "limits": 335,
+      "overflow": false,
+      "overflows": [],
+      "plotCount": 1,
+      "plotHeight": 189,
+      "together": 335,
+      "width": 390
+    },
+    {
+      "badImages": 0,
+      "limits": 689,
+      "overflow": false,
+      "overflows": [],
+      "plotCount": 1,
+      "plotHeight": 213,
+      "together": 650,
+      "width": 768
+    },
+    {
+      "badImages": 0,
+      "limits": 624,
+      "overflow": false,
+      "overflows": [],
+      "plotCount": 1,
+      "plotHeight": 213,
+      "together": 612.5,
+      "width": 1024
+    },
+    {
+      "badImages": 0,
+      "limits": 737.234375,
+      "overflow": false,
+      "overflows": [],
+      "plotCount": 1,
+      "plotHeight": 213,
+      "together": 650,
+      "width": 1280
+    },
+    {
+      "badImages": 0,
+      "limits": 797.234375,
+      "overflow": false,
+      "overflows": [],
+      "plotCount": 1,
+      "plotHeight": 213,
+      "together": 650,
+      "width": 1440
+    }
+  ],
+  "switches": [
+    {
+      "axis": "Day of week",
+      "measure": "Time spent",
+      "note": false,
+      "visible": [
+        "week"
+      ]
+    },
+    {
+      "axis": "Over time",
+      "measure": "Time spent",
+      "note": false,
+      "visible": [
+        "time"
+      ]
+    },
+    {
+      "axis": "Over time",
+      "measure": "Worthwhile ratings",
+      "note": true,
+      "visible": [
+        "worth"
+      ]
+    },
+    {
+      "axis": "Across the day",
+      "measure": "Chance of watching",
+      "note": false,
+      "visible": [
+        "day"
+      ]
+    }
+  ]
+}

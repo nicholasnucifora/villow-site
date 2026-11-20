@@ -3,16 +3,16 @@
  *  - /extension-privacy differs from the deliberately approved source revision
  *  - /privacy stops linking to any of the three policies
  *  - a page is missing the "not affiliated with YouTube or Google" line
- *  - a page loads anything from another site (the site promises no third parties)
+ *  - a page embeds third-party assets (optional support/contact API requests are disclosed separately)
  *  - copy uses wording the brief rules out (see "Never claim" and "Talking about YouTube")
  */
 import { createHash } from "node:crypto";
 import { readdir, readFile } from "node:fs/promises";
 
 // The SHA-256 of the deliberate 14 November 2026 extension policy update (extension 0.8.4).
-// If you deliberately update public/extension-privacy.html, replace this with the new file's SHA-256.
+// If you deliberately update src/content/policies/extension-privacy.html, review and replace this hash.
 // (.gitattributes stops Git changing its line endings, which would change this hash on Windows.)
-const PRIVACY_SHA256 = "50a6ca9040a5cbf95f42e372afd397022f1597f9bc40d579556dcff6daa63485";
+const PRIVACY_SHA256 = "ee6aa72ff83fbbeea052b6ad54dc0c1166af6e26bc2d4b75eb6c9586507ffbac";
 
 const AFFILIATION = "not affiliated with, endorsed by, or sponsored by YouTube or Google";
 
@@ -51,24 +51,23 @@ const visibleText = (html) =>
       .replace(/\s+/g, " "),
   );
 
-// 1. The extension policy ships exactly as reviewed, at the URL the extension stores link to.
-for (const [label, url] of [
-  ["public/extension-privacy.html", new URL("../public/extension-privacy.html", import.meta.url)],
-  ["dist/extension-privacy.html", new URL("extension-privacy.html", dist)],
-]) {
-  const hash = sha256(await readFile(url));
-  if (hash !== PRIVACY_SHA256) {
-    failures.push(`${label} has changed. It's the extension's privacy policy, linked from the store listings. Restore it, or update PRIVACY_SHA256 in scripts/check-build.mjs if the change is deliberate.`);
-  }
-}
+// 1. Keep the reviewed source byte-identical and its entire policy verbatim
+// inside the shared layout, at the URL used by extension stores.
+const policySource = await readFile(new URL('../src/content/policies/extension-privacy.html', import.meta.url));
+if (sha256(policySource) !== PRIVACY_SHA256) failures.push('The reviewed extension policy source changed. Restore it or deliberately review and update its pinned hash.');
+const policyBody = policySource.toString().match(/<main>([\s\S]*?)<\/main>/)?.[1];
+const policyOutput = await readFile(new URL('extension-privacy.html', dist), 'utf8');
+const wrappedPolicy = policyOutput.match(/<article\b[^>]*data-extension-policy[^>]*>([\s\S]*?)<\/article>/)?.[1];
+const normalizeLines = value => value?.replace(/\r\n/g, '\n').trim();
+if (!policyBody || normalizeLines(policyBody) !== normalizeLines(wrappedPolicy)) failures.push('The styled extension privacy page must retain the entire reviewed policy verbatim.');
 
 // 2–4. Every built page.
-const htmlFiles = (await readdir(dist, { recursive: true })).filter((f) => f.endsWith(".html") && f !== "extension-privacy.html");
+const htmlFiles = (await readdir(dist, { recursive: true })).map(file => file.replaceAll('\\', '/')).filter((f) => f.endsWith(".html") && f !== "extension-privacy.html" && !f.startsWith('_design/'));
 const pages = new Map();
 for (const file of [...htmlFiles, "extension-privacy.html"]) {
   const html = await readFile(new URL(file, dist), "utf8");
   pages.set(file, html);
-  const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => decode(match[1]));
+  const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map((match) => decode(match[1]));
   if (new Set(ids).size !== ids.length) failures.push(`${file}: duplicate HTML anchor id.`);
 }
 
@@ -116,7 +115,7 @@ for (const [file, html] of pages) {
     }
     if (target.hash) {
       const id = decodeURIComponent(target.hash.slice(1));
-      const targetIds = new Set([...targetHtml.matchAll(/\bid="([^"]+)"/g)].map((entry) => decode(entry[1])));
+      const targetIds = new Set([...targetHtml.matchAll(/\sid="([^"]+)"/g)].map((entry) => decode(entry[1])));
       if (!targetIds.has(id)) failures.push(`${file}: missing anchor for ${href}.`);
     }
   }

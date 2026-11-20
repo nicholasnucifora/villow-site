@@ -1,0 +1,43 @@
+---
+import type { BlockOf } from "../../lib/schema";
+import { inline, md } from "../../lib/markdown";
+import BlockShell from "../ui/BlockShell.astro";
+
+interface Props {
+  block: BlockOf<"notice">;
+}
+
+const { block } = Astro.props;
+---
+
+<BlockShell type="notice" id={block.id} background={block.background} width="prose">
+  <div class:list={["notice", `notice--${block.tone}`]} role="note">
+    {block.heading && <p class="notice__heading" set:html={inline(block.heading)} />}
+    <div class="prose" set:html={md(block.body)} />
+  </div>
+</BlockShell>
+
+<style>
+  .notice {
+    display: grid;
+    gap: var(--space-xs);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    background: var(--color-accent-soft);
+    border: var(--border);
+  }
+  .notice__heading {
+    font-family: var(--font-heading);
+    font-weight: var(--weight-heading);
+    font-size: var(--text-lg);
+  }
+  /* Draft: styled like the placeholders, since it's unfinished. */
+  .notice--draft {
+    background: var(--tbd-bg);
+    color: var(--tbd-text);
+    border: 2px dashed var(--tbd-border);
+  }
+  .notice--draft :global(a) {
+    color: inherit;
+  }
+</style>

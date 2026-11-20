@@ -1,0 +1,45 @@
+/* Local review tools only. The preview iframe fills the viewport, never narrows it. */
+.help-state-tools{display:flex;align-items:center;gap:6px;flex:none;margin-left:auto}
+.study-navigation .help-state-tools button{border:0;border-radius:100px;background:#dce7dc;color:#365744;min-height:31px;padding:6px 13px;font:600 11px/1.4 system-ui,sans-serif;white-space:nowrap;cursor:pointer}
+.study-navigation .help-state-tools button:hover{background:#ceddcf}
+.study-navigation .help-state-tools .is-previewing{background:#315d49;color:#fffdf6}
+.study-navigation .help-state-tools .is-previewing:hover{background:#284d3d}
+.study-navigation .help-state-tools .help-state-exit{background:transparent;color:#4f6759}
+.help-state-tools [hidden],.help-state-drawer [hidden],.help-state-stage [hidden],.help-state-drawer[hidden]{display:none!important}
+body.help-state-active{overflow:hidden}
+body.help-state-active>.preview-rail.study-navigation[data-study-page="help"]{z-index:160}
+.help-state-stage{position:fixed;inset:0;z-index:120;background:#fbfaf3}
+.help-state-frame{display:block;width:100%;height:100%;border:0;background:#fbfaf3}
+.help-state-loading{position:absolute;inset:70px 0 auto;text-align:center;pointer-events:none;font:13px system-ui,sans-serif;color:#536f5c}
+.help-state-drawer{position:fixed;z-index:180;top:52px;right:10px;bottom:10px;width:305px;box-sizing:border-box;display:flex;flex-direction:column;border:0;border-radius:18px;background:#f3f6ec;color:#315443;box-shadow:0 10px 45px #183d3529;font:13px/1.5 system-ui,sans-serif}
+.help-state-drawer header{display:flex;justify-content:space-between;align-items:flex-start;padding:21px 19px 13px;gap:10px}
+.help-state-drawer h2{font:600 17px/1.3 system-ui,sans-serif;margin:0 0 5px;color:#294e3b}
+.help-state-drawer header p{font-size:11px;color:#657865;margin:0}
+.help-state-close{display:grid;place-items:center;flex:none;width:29px;height:29px;padding:0;border:0;border-radius:50%;background:#e5ecdf;color:#4f6957;font:24px/1 system-ui,sans-serif;cursor:pointer}
+.help-state-search{display:block;padding:0 17px 12px}
+.help-state-search input{width:100%;box-sizing:border-box;border:0;border-radius:11px;background:#e4ecdd;padding:11px 12px;color:#315443;font:13px system-ui,sans-serif}
+.help-state-list{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;flex:1;min-height:0;padding:0 10px 16px}
+.help-state-list section{margin-bottom:16px}
+.help-state-list h3{font:600 11px/1.5 system-ui,sans-serif;color:#73816d;margin:14px 10px 6px}
+.help-state-list button{display:block;width:100%;box-sizing:border-box;text-align:left;padding:10px 12px;margin:2px 0;border:0;border-radius:9px;background:transparent;color:#3b5e4a;font:13px/1.4 system-ui,sans-serif;cursor:pointer}
+.help-state-list button:hover{background:#e5eddd}
+.help-state-list button[aria-current]{background:#d7e5cb;color:#24482e;font-weight:650}
+.help-state-drawer footer{padding:14px 17px 16px;background:#e9efdf;border-radius:0 0 18px 18px}
+.help-state-current{font-size:11px;color:#536d57;margin-bottom:11px;min-height:16px}
+.help-state-step{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.help-state-step button{border:0;border-radius:100px;min-height:36px;background:#d6e3cc;color:#35563d;font:600 12px system-ui,sans-serif;cursor:pointer}
+.help-state-step button:last-child{background:#315d49;color:#fffdf6}
+.help-state-step button:disabled{opacity:.4;cursor:default}
+.help-state-no-results{padding:0 22px;color:#657865;font-size:12px}
+.help-state-drawer :is(button,input):focus-visible{outline:2px solid #54755e;outline-offset:2px}
+html[data-support-preview] .study-navigation{visibility:hidden;pointer-events:none}
+html[data-support-preview]{scroll-behavior:auto}
+html[data-support-preview] .help-support-notes{scroll-margin-top:100px}
+html[data-support-preview] [data-checkout]{scroll-margin-top:100px}
+@media(max-width:900px){
+  .study-navigation[data-study-page="help"] .study-navigation-row{grid-template-columns:minmax(0,1fr) auto}
+  .study-navigation[data-study-page="help"] .help-state-tools{grid-column:2;grid-row:1;gap:2px}
+  .study-navigation[data-study-page="help"] .preview-rail-status{display:none}
+  .study-navigation[data-study-page="help"] .help-state-tools button{padding-inline:8px;font-size:10px}
+  .help-state-drawer{top:90px;width:min(305px,calc(100vw - 20px))}
+}

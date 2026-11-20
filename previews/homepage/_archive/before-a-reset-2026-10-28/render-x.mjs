@@ -1,0 +1,17 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {studyNavigation} from './study-navigation.mjs';
+import {renderXLife} from './x-life.mjs';
+const baseline=await readFile(new URL('./w.html',import.meta.url),'utf8');
+let next=baseline.replace('<!-- homepage-closing:start -->',renderXLife()+'<!-- homepage-closing:start -->');
+next=next.replace(/<!-- study-navigation:start -->[\s\S]*?<!-- study-navigation:end -->/,studyNavigation('x'));
+next=next.replaceAll('Villow · W · A simpler selection','Villow · X · Beyond watching');
+next=next.replace('version-t version-w"','version-t version-w version-x"').replace('href="w.html" aria-label="Villow home"','href="x.html" aria-label="Villow home"');
+next=next.replace('</head>','<link rel="stylesheet" href="x-life.css"><script type="module" src="x-life.js"></script></head>');
+const section=(html,start)=>{const i=html.indexOf(start);if(i<0)throw new Error(`Missing ${start}`);return html.slice(i,html.indexOf('</section>',i)+10);};
+for(const start of ['<section class="ifs-section','<section class="sl-limits"','<section class="s-viewing"','<section class="w-devices"','<section class="t-social-intro"','<section class="ics-company"','<section class="rt-together"','<section class="hc-closing'])if(section(next,start)!==section(baseline,start))throw new Error(`Changed existing section ${start}`);
+const hero=html=>html.slice(html.indexOf('<main id="main">'),html.indexOf('<section class="i-following"'));
+if(hero(next)!==hero(baseline))throw new Error('Hero changed');
+if((next.match(/id="beyond-watching"/g)||[]).length!==1)throw new Error('Expected one additional section');
+await writeFile(new URL('./x.html',import.meta.url),next);
+if(await readFile(new URL('./w.html',import.meta.url),'utf8')!==baseline)throw new Error('W changed');
+console.log('Rendered X: http://127.0.0.1:4399/x.html#beyond-watching — W preserved.');

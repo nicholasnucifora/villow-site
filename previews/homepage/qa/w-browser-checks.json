@@ -1,0 +1,76 @@
+{
+  "hero": {
+    "watching": true,
+    "thinking": true,
+    "returnedAfterRating": true
+  },
+  "views": [
+    {
+      "current": "gardener",
+      "images": [
+        {
+          "loaded": true,
+          "src": "assets/w-watcher-gardener-v1.webp"
+        },
+        {
+          "loaded": true,
+          "src": "assets/w-watcher-shorts-v1.webp"
+        },
+        {
+          "loaded": true,
+          "src": "assets/w-watcher-browser-v1.webp"
+        },
+        {
+          "loaded": true,
+          "src": "assets/w-watcher-evenings-v1.webp"
+        }
+      ],
+      "overflow": false,
+      "rotation": "paused",
+      "stageHeight": 336.609375,
+      "width": 1280
+    },
+    {
+      "current": "shorts",
+      "overflow": false,
+      "rotation": "paused",
+      "stageHeight": 417.1875,
+      "width": 390
+    },
+    {
+      "current": "browser",
+      "overflow": false,
+      "rotation": "paused",
+      "stageHeight": 395.6875,
+      "width": 320
+    }
+  ],
+  "comparison": {
+    "vURL": "http://127.0.0.1:4411/v.html#your-control",
+    "vArt": "assets/v-watcher-gardener-v2.webp",
+    "vTop": 145,
+    "wURL": "http://127.0.0.1:4411/w.html#your-control",
+    "wArt": "assets/w-watcher-gardener-v1.webp",
+    "wTop": 145
+  },
+  "rotationBefore": {
+    "rotation": "playing",
+    "story": "gardener"
+  },
+  "rotationAfter": {
+    "activeMarker": "shorts",
+    "rotation": "playing",
+    "story": "shorts"
+  },
+  "final": {
+    "url": "http://127.0.0.1:4411/w.html#your-control",
+    "viewport": {
+      "height": 1170,
+      "width": 351
+    },
+    "carousel": {
+      "rotation": "playing",
+      "story": "evenings"
+    }
+  }
+}

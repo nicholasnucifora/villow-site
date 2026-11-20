@@ -1,0 +1,72 @@
+/* Stable illustration; playback and reflection stay inside the projection. */
+.ig-cinema{position:relative;display:flex;flex-direction:column;justify-content:center;min-height:100%;width:100%;color:#285e53}
+.ig-cinema-art{position:relative;flex:none;width:100%;aspect-ratio:2/1;isolation:isolate;transform:translateY(-72px)}
+.ig-cinema-base{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none}
+.ig-pose-masks{position:absolute;pointer-events:none}
+.ig-viewer-pose{position:absolute;inset:0;pointer-events:none}
+.ig-pose-layer{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;opacity:0;user-select:none}
+.ig-pose-watching{opacity:1}
+.ig-cinema[data-ig-pose=thinking] .ig-pose-watching{opacity:0}
+.ig-cinema[data-ig-pose=thinking] .ig-pose-thinking{opacity:1}
+.ig-cinema[data-ig-pose-transition=to-thinking] .ig-pose-watching{animation:ig-watching-out .72s ease-in-out both}
+.ig-cinema[data-ig-pose-transition=to-thinking] .ig-pose-turn{animation:ig-turn-forward .72s ease-in-out both}
+.ig-cinema[data-ig-pose-transition=to-thinking] .ig-pose-thinking{animation:ig-thinking-in .72s ease-in-out both}
+.ig-cinema[data-ig-pose-transition=to-watching] .ig-pose-thinking{animation:ig-thinking-out .72s ease-in-out both}
+.ig-cinema[data-ig-pose-transition=to-watching] .ig-pose-turn{animation:ig-turn-back .72s ease-in-out both}
+.ig-cinema[data-ig-pose-transition=to-watching] .ig-pose-watching{animation:ig-watching-in .72s ease-in-out both}
+.ig-cinema-screen{position:absolute;left:var(--ig-screen-left);top:var(--ig-screen-top);width:var(--ig-screen-width);height:var(--ig-screen-height);overflow:clip;border-radius:2px;background:#000;transform:rotate(var(--ig-screen-rotation));isolation:isolate;container-type:inline-size}
+.ig-cinema-clip{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(160deg,#e1eddf,#f3f5df);opacity:1;transition:opacity .36s ease;pointer-events:none}
+.ig-cinema-clip img{display:block;width:100%;height:100%;object-fit:contain;transform-origin:50% 76%;animation:ig-cat-breath 3.2s ease-in-out infinite;animation-play-state:paused;animation-delay:calc(var(--ig-elapsed,0)*-1s)}
+.ig-cinema[data-ig-state=ended] .ig-cinema-clip{opacity:0}
+.ig-cinema button{font-family:'Varela Round',sans-serif;touch-action:manipulation;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.ig-cinema-toggle{position:absolute;inset:0;z-index:2;display:grid;place-items:center;width:100%;height:100%;padding:0;border:0;border-radius:0;background:#0002;color:#fff;transition:background .2s}
+.ig-cinema-toggle-icon{display:grid;place-items:center;width:clamp(28px,25cqw,42px);height:clamp(28px,25cqw,42px);border-radius:50%;background:#0009;box-shadow:0 1px 3px #0002;transition:opacity .2s,transform .2s}
+.ig-cinema-toggle-icon svg{width:48%;height:48%}
+.ig-cinema[data-ig-state=playing] .ig-cinema-toggle{background:transparent}
+.ig-cinema[data-ig-state=playing] .ig-cinema-toggle-icon{opacity:0;transform:scale(.94)}
+.ig-cinema-screen:hover .ig-cinema-toggle,.ig-cinema-toggle:focus-visible{background:#0002}
+.ig-cinema-screen:hover .ig-cinema-toggle-icon,.ig-cinema-toggle:focus-visible .ig-cinema-toggle-icon{opacity:1;transform:none}
+.ig-cinema-toggle:focus-visible{outline:2px solid #fff;outline-offset:-3px}
+.ig-cinema-progress{position:absolute;z-index:6;left:5px;right:5px;bottom:0;height:20px;display:flex;align-items:center;opacity:.65;transition:opacity .2s;pointer-events:auto}
+.ig-cinema-seek{appearance:none;-webkit-appearance:none;display:block;width:100%;height:20px;margin:0;padding:0;border:0;border-radius:0;background:transparent;cursor:pointer;touch-action:none;color:#fff}
+.ig-cinema-seek::-webkit-slider-runnable-track{height:3px;border-radius:3px;background:linear-gradient(to right,#e6f3de calc(var(--ig-progress,0)*100%),#ffffff50 calc(var(--ig-progress,0)*100%))}
+.ig-cinema-seek::-moz-range-track{height:3px;border-radius:3px;background:linear-gradient(to right,#e6f3de calc(var(--ig-progress,0)*100%),#ffffff50 calc(var(--ig-progress,0)*100%))}
+.ig-cinema-seek::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:9px;height:9px;margin-top:-3px;border:0;border-radius:50%;background:#f0f6e9;box-shadow:0 0 1px #0009}
+.ig-cinema-seek::-moz-range-thumb{width:9px;height:9px;border:0;border-radius:50%;background:#f0f6e9;box-shadow:0 0 1px #0009}
+.ig-cinema-seek:focus-visible{outline:1px solid #fff;outline-offset:0;border-radius:2px}
+.ig-cinema-screen:hover .ig-cinema-progress,.ig-cinema-screen:focus-within .ig-cinema-progress{opacity:1}
+.ig-cinema[data-ig-scrubbing=true] .ig-cinema-progress{opacity:1}
+.ig-cinema-reflection{position:absolute;inset:15% 0 20px;z-index:3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:4px;color:#fff;animation:ig-reflection-in .25s both}
+.ig-cinema-question{flex:none;margin:0!important;text-align:center;font-family:'Varela Round',sans-serif!important;font-weight:400!important;font-synthesis:none;font-size:clamp(9px,7.2cqw,14px)!important;line-height:1.25!important;letter-spacing:normal}
+.ig-cinema-question span{display:block}
+.ig-cinema-answers{display:flex;flex:none;justify-content:center;gap:8px}
+.ig-cinema-verdict{display:grid;place-items:center;flex:none;width:clamp(28px,19.5cqw,40px);height:clamp(26px,17cqw,34px);padding:0;border:0;border-radius:100px;background:#18181b;color:#e4e4e7;transition:background-color .15s,color .15s}
+.ig-cinema-verdict[data-ig-answer=yes]{--verdict-fill:#047857}
+.ig-cinema-verdict[data-ig-answer=no]{--verdict-fill:#b91c1c}
+.ig-cinema-verdict svg{width:clamp(13px,9cqw,18px);height:clamp(13px,9cqw,18px)}
+.ig-cinema-verdict[aria-pressed=true],.ig-cinema-verdict:focus-visible{background:var(--verdict-fill);color:#fff}
+.ig-cinema-verdict[aria-pressed=true] svg{fill:currentColor}
+.ig-cinema-verdict:focus-visible{outline:1px solid #fff;outline-offset:2px}
+.ig-cinema [hidden]{display:none!important}
+.ip-hero[data-ip-view^=cinema-] .ic-stage{aspect-ratio:1.07;min-height:435px}
+@container(max-width:165px){.ig-cinema-reflection{top:10%;gap:7px;padding:3px}.ig-cinema-question{font-size:clamp(9px,7.2cqw,12px)!important}}
+@container(max-width:125px){.ig-cinema-reflection{top:0;bottom:22px;gap:2px;padding:0}.ig-cinema-question{font-size:clamp(9px,8.6cqw,10px)!important;line-height:1.15!important}.ig-cinema-answers{gap:6px}.ig-cinema-verdict{width:28px;height:24px}}
+@container(max-width:95px){.ig-cinema-reflection{bottom:20px}.ig-cinema-question{font-size:8px!important}.ig-cinema-progress,.ig-cinema-seek{height:16px}}
+/* Give the preferred Cloud cinema more room without changing the other studies. */
+.ip-hero[data-ip-view=cinema-cloud-cat] .ip-product-space>[data-ip-view-panel=cinema-cloud-cat]{max-width:680px}
+.ip-hero[data-ip-view=cinema-cloud-cat] .ic-stage{max-width:680px}
+@media(min-width:1101px){.ip-hero[data-ip-view=cinema-cloud-cat] .i-hero-inner{grid-template-columns:minmax(0,.84fr) minmax(0,1.16fr);gap:24px}.ip-hero[data-ip-view=cinema-cloud-cat] .ic-stage{aspect-ratio:auto;height:480px;min-height:480px}.ip-hero[data-ip-view=cinema-cloud-cat] .ig-cinema-art{transform:translateY(-36px)}}
+@media(max-width:700px){.ip-hero[data-ip-view^=cinema-] .ip-product-space>[data-ip-view-panel^=cinema-]{width:calc(100% + 32px);max-width:none;flex:none;margin-inline:-16px}.ip-hero[data-ip-view^=cinema-] .ic-stage{max-width:none}}
+@keyframes ig-cat-breath{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-1px) scale(1.006,1.028)}}
+@keyframes ig-reflection-in{from{opacity:0}to{opacity:1}}
+@keyframes ig-watching-out{0%{opacity:1}45%,100%{opacity:0}}
+@keyframes ig-turn-forward{0%{opacity:0}36%,60%{opacity:1}100%{opacity:0}}
+@keyframes ig-thinking-in{0%,40%{opacity:0}100%{opacity:1}}
+@keyframes ig-thinking-out{0%{opacity:1}45%,100%{opacity:0}}
+@keyframes ig-turn-back{0%{opacity:0}36%,60%{opacity:1}100%{opacity:0}}
+@keyframes ig-watching-in{0%,40%{opacity:0}100%{opacity:1}}
+@media(hover:hover) and (pointer:fine){.ig-cinema-verdict:hover{background:var(--verdict-fill);color:#fff}.ig-cinema-verdict[aria-pressed=true]:hover{filter:brightness(1.1)}}
+@media(max-width:700px){.ip-hero[data-ip-view^=cinema-] .ic-stage{aspect-ratio:1.02;min-height:355px}}
+@media(max-width:360px){.ip-hero[data-ip-view^=cinema-] .ic-stage{min-height:325px}}
+@media(prefers-reduced-motion:reduce){.ig-cinema *, .ig-cinema *:before{animation:none!important;transition:none!important}.ig-cinema[data-ig-manual-motion=true] .ig-cinema-clip img{animation:ig-cat-breath 3.2s ease-in-out infinite!important;animation-play-state:paused!important;animation-delay:calc(var(--ig-elapsed,0)*-1s)!important}}
+@media(prefers-reduced-motion:reduce){.ig-cinema[data-ig-pose-motion=true][data-ig-pose-transition=to-thinking] .ig-pose-watching{animation:ig-watching-out .72s ease-in-out both!important}.ig-cinema[data-ig-pose-motion=true][data-ig-pose-transition=to-thinking] .ig-pose-turn{animation:ig-turn-forward .72s ease-in-out both!important}.ig-cinema[data-ig-pose-motion=true][data-ig-pose-transition=to-thinking] .ig-pose-thinking{animation:ig-thinking-in .72s ease-in-out both!important}.ig-cinema[data-ig-pose-motion=true][data-ig-pose-transition=to-watching] .ig-pose-thinking{animation:ig-thinking-out .72s ease-in-out both!important}.ig-cinema[data-ig-pose-motion=true][data-ig-pose-transition=to-watching] .ig-pose-turn{animation:ig-turn-back .72s ease-in-out both!important}.ig-cinema[data-ig-pose-motion=true][data-ig-pose-transition=to-watching] .ig-pose-watching{animation:ig-watching-in .72s ease-in-out both!important}}

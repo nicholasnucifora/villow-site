@@ -1,0 +1,26 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {studyNavigation} from './study-navigation.mjs';
+import {renderIControls} from './i-controls.mjs';
+import {renderKFiltering} from './k-filter.mjs';
+
+const baselinePath=new URL('./i.html',import.meta.url);
+const baseline=await readFile(baselinePath,'utf8');
+const controls=renderIControls();
+if(baseline.split(controls).length!==2)throw new Error('Expected exactly one current tabbed controls section. Baseline was not changed.');
+let next=baseline.replace(controls,renderKFiltering());
+next=next.replace(/<!-- study-navigation:start -->[\s\S]*?<!-- study-navigation:end -->/,studyNavigation('k'));
+next=next.replace('<title>Villow · I · Card stack and studies</title>','<title>Villow · K · Channel filtering</title>');
+next=next.replace('<body class="version-i">','<body class="version-i version-k" data-i-default-view="cinema-cloud-cat">');
+next=next.replace('href="i.html" aria-label="Villow home"','href="k.html" aria-label="Villow home"');
+next=next.replace('<link rel="stylesheet" href="i-controls.css">','<link rel="stylesheet" href="k-filter.css">');
+next=next.replace('<script type="module" src="i-controls.js"></script>','<script type="module" src="k-filter.js"></script>');
+next=next.replace('aria-label="Your controls"','aria-label="Channel filtering, Watch Later and sharing"');
+next=next.replace('Villow · I · Card stack and product studies','Villow · K · Channel filtering');
+const heroes=html=>html.slice(html.indexOf('<main id="main">'),html.indexOf('<section class="i-following"'));
+const lowerContent=html=>html.slice(html.indexOf('<div data-i-feed-save hidden>'),html.indexOf('<footer class="i-preview-note'));
+if(heroes(next)!==heroes(baseline))throw new Error('Hero content changed unexpectedly.');
+if(lowerContent(next)!==lowerContent(baseline))throw new Error('Watch Later or social content changed unexpectedly.');
+await writeFile(new URL('./k.html',import.meta.url),next);
+if(await readFile(baselinePath,'utf8')!==baseline)throw new Error('Baseline changed unexpectedly.');
+console.log(`Rendered K: http://127.0.0.1:4399/k.html#i15\nBaseline I preserved: ${createHash('sha256').update(baseline).digest('hex')}`);

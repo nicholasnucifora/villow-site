@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-28",
+  "viewportChecks": [
+    {
+      "cardBottomClearance": 36,
+      "cardWidth": 247,
+      "copyLeft": 16,
+      "deviceOverflow": false,
+      "overflow": 0,
+      "stackLeft": 16,
+      "width": 320
+    },
+    {
+      "cardBottomClearance": 59,
+      "cardWidth": 298,
+      "copyLeft": 20,
+      "deviceOverflow": false,
+      "overflow": 0,
+      "stackLeft": 20,
+      "width": 390
+    },
+    {
+      "cardBottomClearance": 35,
+      "cardWidth": 341,
+      "copyLeft": 20,
+      "deviceOverflow": false,
+      "overflow": 0,
+      "stackLeft": 72.5,
+      "width": 600
+    },
+    {
+      "cardBottomClearance": 38,
+      "cardWidth": 357,
+      "copyLeft": 32,
+      "deviceOverflow": false,
+      "overflow": 0,
+      "stackLeft": 328.59375,
+      "width": 768
+    },
+    {
+      "cardBottomClearance": 27,
+      "cardWidth": 377,
+      "copyLeft": 32,
+      "deviceOverflow": false,
+      "overflow": 0,
+      "stackLeft": 361.390625,
+      "width": 850
+    },
+    {
+      "cardBottomClearance": 50,
+      "cardWidth": 377,
+      "copyLeft": 32,
+      "deviceOverflow": false,
+      "overflow": 0,
+      "stackLeft": 477,
+      "width": 1024
+    },
+    {
+      "cardBottomClearance": 50,
+      "cardWidth": 377,
+      "copyLeft": 167.5,
+      "deviceOverflow": false,
+      "overflow": 0,
+      "stackLeft": 757.5,
+      "width": 1440
+    },
+    {
+      "cardBottomClearance": 50,
+      "cardWidth": 377,
+      "copyLeft": 407.5,
+      "deviceOverflow": false,
+      "overflow": 0,
+      "stackLeft": 997.5,
+      "width": 1920
+    }
+  ],
+  "actions": "Enter save, left remove, right save, complete, keyboard replay, and noncommitting swipe practice passed",
+  "preservation": "Render asserts unchanged hero, limits, insights and social; T and V selectable",
+  "console": "No warnings/errors",
+  "server": "HTTP200"
+}

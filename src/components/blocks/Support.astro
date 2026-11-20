@@ -9,6 +9,10 @@ if (api && !/^https:\/\/[^/]+$/.test(api) && !(import.meta.env.DEV && /^http:\/\
 }
 ---
 <section class="support container" id={block.id} data-support data-api={api} data-copy={JSON.stringify(copy.client)}>
+  <section class="support-card checkout-return" data-checkout-return role="status" hidden>
+    <h2 data-checkout-return-title></h2><p data-checkout-return-copy></p>
+    <button class="btn btn--secondary" type="button" data-checkout-return-retry hidden>Check confirmation again</button>
+  </section>
   <div class="support-card contribution">
     <div class="support-intro">
       <h2>{copy.heading}</h2>
@@ -90,6 +94,7 @@ if (api && !/^https:\/\/[^/]+$/.test(api) && !(import.meta.env.DEV && /^http:\/\
 <style>
   [hidden] { display: none !important; }
   .support { display: grid; gap: var(--space-2xl); padding-top: var(--space-xl); }
+  .checkout-return { grid-column: 1 / -1; }
   .support-card { padding: clamp(1.25rem, 3vw, 2.5rem); border: var(--border); border-radius: var(--radius-lg); background: var(--color-surface); display: grid; align-content: start; gap: var(--space-lg); }
   .contribution { background: var(--color-bg-soft); }
   h2 { font-size: var(--text-2xl); }

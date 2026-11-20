@@ -1,0 +1,86 @@
+{
+  "sourceWorkspace": "C:\\Users\\Nebula PC\\Development\\fixtheweb",
+  "captured": "2026-10-31",
+  "authority": "docs/SPIDER-INTEGRATION.md",
+  "note": "Working-tree file hashes; no Git revision lookup needed to use this local bundle.",
+  "correctionAuthority": {
+    "path": "docs/SPIDER-INTEGRATION.md",
+    "captured": "2026-10-31",
+    "section": "Required correction after first integration review",
+    "sha256": "03a2aeb4dd4e3cc5af49521ce5f6b9f8c36dbd291e99aff19d74eec59870ea5a",
+    "note": "Visible facial clocks, cursor attention, natural blinks and emotions remain live in both motion preferences; decorative motion is reduced inside the running renderer. Original captured file hashes below are preserved."
+  },
+  "recipientProfile": {
+    "captured": "2026-10-31",
+    "authority": "Later explicit user instruction in the Villow site preview chat",
+    "scope": "Villow site footer only",
+    "profile": "quiet-pupils-only",
+    "note": "Supersedes the earlier animated-face requirement for this recipient: neutral still face/body/legs, no blinks, emotions, breathing or idle gaze; preserve eased nearby-pointer pupil tracking and the native Fix the Web credit link under both motion preferences. The historical handoff hashes and correctionAuthority above are retained unchanged; the source project and app integration are outside this change."
+  },
+  "files": [
+    {
+      "path": "docs/SPIDER-INTEGRATION.md",
+      "sha256": "aeced54b539f445437e63d662cd8108c64486b77e33d9068b1bca96cf71a98bc"
+    },
+    {
+      "path": "src/assets/spider/spider.svg",
+      "sha256": "bbedfcbe0530c85d2829493481afa56d7f0095a96b424240c3ef164f7e55fd42"
+    },
+    {
+      "path": "src/scripts/spider-string/config.ts",
+      "sha256": "ac3f72772cdca2fe193f8f10bd026cdcc720a86cbdb1bd8938a2d81d9fbeb7ee"
+    },
+    {
+      "path": "src/scripts/spider-string/spider.ts",
+      "sha256": "4445d0e469d9177e733f7b803f971cb5a8f0c1d15c54552418c1c7225b932d57"
+    },
+    {
+      "path": "src/scripts/spider-string/animation.ts",
+      "sha256": "ce39a3afb86389baffa3d7d276be3ce98769cb1c027963eb1ee5f6d51783e9fd"
+    },
+    {
+      "path": "src/scripts/spider-string/mood.ts",
+      "sha256": "f8c7e68cf76c07b7481a7fcccef49cfc9ff22e0003a7f6faaad7d40da649b02d"
+    },
+    {
+      "path": "src/scripts/spider-string/face.ts",
+      "sha256": "0048a0c7a184bdf4358cdf22037d31214c8976b31f89752f3678a4b4b191541c"
+    },
+    {
+      "path": "src/scripts/spider-string/feel.ts",
+      "sha256": "1e3311de846458107ea920f97db63bad851a0647b5ce2cfa13cba14f2d45e68c"
+    },
+    {
+      "path": "src/scripts/spider-string/rotation.ts",
+      "sha256": "85656faecea3d486222233a9d107c511943f118ccb9e90bea2f5770e39e04e09"
+    },
+    {
+      "path": "src/scripts/spider-string/render.ts",
+      "sha256": "cee8ef7667809da347ce6d0a90ea0277017783cb657248f45f6c2bf849f21d1f"
+    },
+    {
+      "path": "src/scripts/spider-string/dress.ts",
+      "sha256": "efb114f9842cdb8e47f5f4f20c02c836d10e1c47c1dbcc7c66acd99cba38ce19"
+    },
+    {
+      "path": "src/scripts/spider-string/wardrobe.ts",
+      "sha256": "27b63dfe1bab8fc08b796aecb839dc4f6dd573cc6232d3f8fb6dc0a10050a286"
+    },
+    {
+      "path": "src/scripts/spider-string/ignore.ts",
+      "sha256": "2554e5e77b721fcd62a7fdf8323471f0de624545700f6358011f13c143637115"
+    },
+    {
+      "path": "src/scripts/spider-string/rope.ts",
+      "sha256": "18d5115b049c89598373502b0883cd9955dd3d37fcae748c10faf9600f690a5c"
+    },
+    {
+      "path": "src/scripts/spider-string/anchor.ts",
+      "sha256": "fcb23d19d8a8a04c6d39d7046a388834320083b56e3e1504a17fe9d269705045"
+    },
+    {
+      "path": "src/scripts/spider-string/particles.ts",
+      "sha256": "79c5c16577637512320563a9a73d509666473a80b4750246ecb344ddcf8aa827"
+    }
+  ]
+}

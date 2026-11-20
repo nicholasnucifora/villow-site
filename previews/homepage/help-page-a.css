@@ -1,0 +1,27 @@
+.help-hero{padding-top:clamp(58px,7vw,90px);padding-bottom:32px}
+.help-hero h1{max-width:860px}
+.help-hero>p{font-size:18px;max-width:650px;line-height:1.75;margin-bottom:0}
+.help-ways{scroll-margin-top:70px}
+.help-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(55px,9vw,120px);align-items:center;padding:70px 0}
+.help-copy{max-width:460px}
+.help-copy p{line-height:1.85}
+.help-actions,.help-community{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:24px}
+.help-primary{display:inline-flex;align-items:center;gap:35px;min-height:58px;padding:8px 9px 8px 25px;border-radius:100px;background:#193e43;color:#fff;text-decoration:none;font-size:14px;font-weight:600;box-shadow:0 3px 0 #173e3c14}
+.help-primary>span{display:grid;place-items:center;width:39px;height:39px;background:#c8e8d9;border-radius:50%;color:#245d51}
+.help-primary svg{width:20px;height:20px}
+.help-primary:hover{background:#295d59}
+.help-devices{margin:0;display:flex;align-items:center;justify-content:center}
+.help-devices img{display:block;width:100%;height:auto;max-width:500px}
+.help-spread .help-copy{grid-column:2;grid-row:1}
+.help-spread .help-spread-art{grid-column:1;grid-row:1}
+.help-spread-art{margin:0}
+.help-spread,.help-spread #contact{scroll-margin-top:100px}
+.help-copy p a{text-underline-offset:4px}
+.help-spread-art svg{display:block;width:100%;height:auto}
+.help-fix{margin-top:35px;padding-top:65px;padding-bottom:85px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.help-fix>p{max-width:570px;margin:0 0 25px}
+.help-fixtheweb-logo{display:block;width:min(220px,70vw);padding-block:10px;color:#1b1e29;text-decoration:none}
+.help-fixtheweb-logo svg{display:block;width:100%;height:auto}
+.help-fixtheweb-logo:focus-visible{outline:3px solid #a77934;outline-offset:8px;border-radius:4px}
+@media(max-width:760px){.help-hero{padding-top:45px;padding-bottom:18px}.help-hero>p{font-size:16px}.help-row{grid-template-columns:1fr;gap:30px;padding:44px 0}.help-spread .help-copy,.help-spread .help-spread-art{grid-column:auto;grid-row:auto}.help-devices img{max-width:400px}.help-spread-art{max-width:400px;justify-self:center}.help-fix{margin-top:15px;padding-top:50px;padding-bottom:60px}}
+@media(max-width:700px){.help-primary{font-size:12px;min-height:52px;padding:8px 8px 8px 21px;gap:25px}.help-primary>span{width:34px;height:34px}.help-primary svg{width:17px;height:17px}}

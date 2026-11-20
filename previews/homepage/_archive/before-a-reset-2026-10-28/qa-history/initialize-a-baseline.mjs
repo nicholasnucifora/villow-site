@@ -1,0 +1,20 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const root=new URL('../',import.meta.url);
+const original=await readFile(new URL('_archive/before-a-reset-2026-10-28/x.html',root),'utf8');
+let next=original.replaceAll('Villow · X · Beyond watching','Villow · Homepage A');
+next=next.replace('class="version-i','class="version-a version-i');
+next=next.replace('href="x.html" aria-label="Villow home"','href="a.html" aria-label="Villow home"');
+next=next.replace(/<!-- study-navigation:start -->[\s\S]*?<!-- study-navigation:end -->/,'<!-- study-navigation:start --><!-- study-navigation:end -->');
+next=next.replace(/<!-- closing-comparison:start -->[\s\S]*?<!-- closing-comparison:end -->/,'');
+for(const script of ['i.js','i-art.js','i-concepts.js','i-quiet.js','i-cinema.js','i-agency-studies.js','n-overview.js'])next=next.replace(`<script type="module" src="${script}"></script>`,'');
+next=next.replace('src="i-product.js"','src="a-preview.js"');
+next=next.replace('</head>','<link rel="stylesheet" href="a-preview.css"></head>');
+const main=html=>html.slice(html.indexOf('<main id="main">'),html.indexOf('</main>')+7);
+const expectedMain=main(original).replace(/<!-- closing-comparison:start -->[\s\S]*?<!-- closing-comparison:end -->/,'').replaceAll('Villow · X · Beyond watching','Villow · Homepage A');
+if(main(next)!==expectedMain)throw new Error('Product/hero content changed during reset');
+if(/<a[^>]+href="(?:[b-z]|i[234]|n-previous)\.html/.test(next))throw new Error('Retired page link remains');
+await writeFile(new URL('a-source.html',root),next);
+await writeFile(new URL('qa/a-reset-verification.json',root),JSON.stringify({source:'Former X selected by user',mainPreserved:true,mainSha256:createHash('sha256').update(main(next)).digest('hex'),date:'2026-10-28'},null,2));
+console.log('Prepared new A source with former X product content unchanged.');
+

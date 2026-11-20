@@ -1,0 +1,363 @@
+{
+  "responsive": [
+    {
+      "answersBelowCenter": true,
+      "answersFit": true,
+      "artFits": true,
+      "hitTargets": true,
+      "namesFit": true,
+      "overflow": 0,
+      "questionFits": true,
+      "width": 320
+    },
+    {
+      "answersBelowCenter": true,
+      "answersFit": true,
+      "artFits": true,
+      "hitTargets": true,
+      "namesFit": true,
+      "overflow": 0,
+      "questionFits": true,
+      "width": 390
+    },
+    {
+      "answersBelowCenter": true,
+      "answersFit": true,
+      "artFits": true,
+      "hitTargets": true,
+      "namesFit": true,
+      "overflow": 0,
+      "questionFits": true,
+      "width": 768
+    },
+    {
+      "answersBelowCenter": true,
+      "answersFit": true,
+      "artFits": true,
+      "hitTargets": true,
+      "namesFit": true,
+      "overflow": 0,
+      "questionFits": true,
+      "width": 1024
+    },
+    {
+      "answersBelowCenter": true,
+      "answersFit": true,
+      "artFits": true,
+      "hitTargets": true,
+      "namesFit": true,
+      "overflow": 0,
+      "questionFits": true,
+      "width": 1280
+    },
+    {
+      "answersBelowCenter": true,
+      "answersFit": true,
+      "artFits": true,
+      "hitTargets": true,
+      "namesFit": true,
+      "overflow": 0,
+      "questionFits": true,
+      "width": 1440
+    },
+    {
+      "answersBelowCenter": true,
+      "answersFit": true,
+      "artFits": true,
+      "hitTargets": true,
+      "namesFit": true,
+      "overflow": 0,
+      "questionFits": true,
+      "width": 1920
+    }
+  ],
+  "charts": [
+    {
+      "label": "12:01am · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "0%",
+      "view": "day",
+      "width": 320
+    },
+    {
+      "label": "Tue · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": null,
+      "tooltipFits": true,
+      "value": "29",
+      "view": "week",
+      "width": 320,
+      "anchor": "categorical bar"
+    },
+    {
+      "label": "30-day average · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "37",
+      "view": "time",
+      "width": 320
+    },
+    {
+      "label": "Recent 30 ratings · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "67%",
+      "view": "worth",
+      "width": 320
+    },
+    {
+      "label": "12:01am · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "0%",
+      "view": "day",
+      "width": 390
+    },
+    {
+      "label": "Tue · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": null,
+      "tooltipFits": true,
+      "value": "29",
+      "view": "week",
+      "width": 390,
+      "anchor": "categorical bar"
+    },
+    {
+      "label": "30-day average · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "37",
+      "view": "time",
+      "width": 390
+    },
+    {
+      "label": "Recent 30 ratings · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "67%",
+      "view": "worth",
+      "width": 390
+    },
+    {
+      "label": "12:01am · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "0%",
+      "view": "day",
+      "width": 768
+    },
+    {
+      "label": "Tue · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": null,
+      "tooltipFits": true,
+      "value": "29",
+      "view": "week",
+      "width": 768,
+      "anchor": "categorical bar"
+    },
+    {
+      "label": "30-day average · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "37",
+      "view": "time",
+      "width": 768
+    },
+    {
+      "label": "Recent 30 ratings · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "67%",
+      "view": "worth",
+      "width": 768
+    },
+    {
+      "label": "12:01am · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "0%",
+      "view": "day",
+      "width": 1024
+    },
+    {
+      "label": "Tue · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": null,
+      "tooltipFits": true,
+      "value": "29",
+      "view": "week",
+      "width": 1024,
+      "anchor": "categorical bar"
+    },
+    {
+      "label": "30-day average · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "37",
+      "view": "time",
+      "width": 1024
+    },
+    {
+      "label": "Recent 30 ratings · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "67%",
+      "view": "worth",
+      "width": 1024
+    },
+    {
+      "label": "12:01am · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "0%",
+      "view": "day",
+      "width": 1280
+    },
+    {
+      "label": "Tue · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": null,
+      "tooltipFits": true,
+      "value": "29",
+      "view": "week",
+      "width": 1280,
+      "anchor": "categorical bar"
+    },
+    {
+      "label": "30-day average · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "37",
+      "view": "time",
+      "width": 1280
+    },
+    {
+      "label": "Recent 30 ratings · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "67%",
+      "view": "worth",
+      "width": 1280
+    },
+    {
+      "label": "12:01am · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "0%",
+      "view": "day",
+      "width": 1440
+    },
+    {
+      "label": "Tue · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": null,
+      "tooltipFits": true,
+      "value": "29",
+      "view": "week",
+      "width": 1440,
+      "anchor": "categorical bar"
+    },
+    {
+      "label": "30-day average · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "37",
+      "view": "time",
+      "width": 1440
+    },
+    {
+      "label": "Recent 30 ratings · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "67%",
+      "view": "worth",
+      "width": 1440
+    },
+    {
+      "label": "12:01am · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "0%",
+      "view": "day",
+      "width": 1920
+    },
+    {
+      "label": "Tue · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": null,
+      "tooltipFits": true,
+      "value": "29",
+      "view": "week",
+      "width": 1920,
+      "anchor": "categorical bar"
+    },
+    {
+      "label": "30-day average · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "37",
+      "view": "time",
+      "width": 1920
+    },
+    {
+      "label": "Recent 30 ratings · Sample",
+      "onlyOnePanel": true,
+      "overflow": 0,
+      "pointGap": 10,
+      "tooltipFits": true,
+      "value": "67%",
+      "view": "worth",
+      "width": 1920
+    }
+  ]
+}

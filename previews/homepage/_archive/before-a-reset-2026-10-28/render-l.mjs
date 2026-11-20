@@ -1,0 +1,26 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {studyNavigation} from './study-navigation.mjs';
+import {renderIControls} from './i-controls.mjs';
+import {renderLOverview} from './l-overview.mjs';
+
+const baselinePath=new URL('./i.html',import.meta.url);
+const baseline=await readFile(baselinePath,'utf8');
+const previousOverview=renderIControls();
+if(baseline.split(previousOverview).length!==2)throw new Error('Expected exactly one original overview. Baseline was not changed.');
+let next=baseline.replace(previousOverview,renderLOverview());
+next=next.replace(/<!-- study-navigation:start -->[\s\S]*?<!-- study-navigation:end -->/,studyNavigation('l'));
+next=next.replace('<title>Villow · I · Card stack and studies</title>','<title>Villow · L · Product overview</title>');
+next=next.replace('<body class="version-i">','<body class="version-i version-l" data-i-default-view="cinema-cloud-cat">');
+next=next.replace('href="i.html" aria-label="Villow home"','href="l.html" aria-label="Villow home"');
+next=next.replace('<link rel="stylesheet" href="i-controls.css">','<link rel="stylesheet" href="l-overview.css">');
+next=next.replace('<script type="module" src="i-controls.js"></script>','<script type="module" src="l-overview.js"></script>');
+next=next.replace('aria-label="Your controls"','aria-label="Villow overview, Watch Later and sharing"');
+next=next.replace('Villow · I · Card stack and product studies','Villow · L · Product overview');
+const heroes=html=>html.slice(html.indexOf('<main id="main">'),html.indexOf('<section class="i-following"'));
+const lower=html=>html.slice(html.indexOf('<div data-i-feed-save hidden>'),html.indexOf('<footer class="i-preview-note'));
+if(heroes(next)!==heroes(baseline))throw new Error('Cloud cinema content changed unexpectedly.');
+if(lower(next)!==lower(baseline))throw new Error('Watch Later or social content changed unexpectedly.');
+await writeFile(new URL('./l.html',import.meta.url),next);
+if(await readFile(baselinePath,'utf8')!==baseline)throw new Error('Baseline changed unexpectedly.');
+console.log(`Rendered L: http://127.0.0.1:4399/l.html#your-choices\nBaseline I preserved: ${createHash('sha256').update(baseline).digest('hex')}`);

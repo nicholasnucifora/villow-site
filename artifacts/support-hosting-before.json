@@ -1,0 +1,487 @@
+{
+  "zones": [
+    {
+      "name": "fixtheweb.org",
+      "id": "f2d15ef98d16f7858b111c4b0735a66b",
+      "status": "active",
+      "routes": []
+    },
+    {
+      "name": "villow.app",
+      "id": "4b1c3fccdbd331cbe893cddba89b9b55",
+      "status": "active",
+      "routes": []
+    }
+  ],
+  "domains": [
+    {
+      "id": "c6dd24184226a4dbe4135b20fe37e28dc1343c37",
+      "zone_id": "4b1c3fccdbd331cbe893cddba89b9b55",
+      "zone_name": "villow.app",
+      "hostname": "villow.app",
+      "service": "villow-site",
+      "environment": "production",
+      "cert_id": "8b53622b-d191-4e12-aa55-27a361aec9eb",
+      "previews_enabled": false,
+      "enabled": true
+    },
+    {
+      "id": "27ea4c72ef0c328aa2790db298aa435e045657fe",
+      "zone_id": "f2d15ef98d16f7858b111c4b0735a66b",
+      "zone_name": "fixtheweb.org",
+      "hostname": "fixtheweb.org",
+      "service": "fixtheweb",
+      "environment": "production",
+      "cert_id": "18c98685-53e2-4890-80d1-02e0bb00b2fc",
+      "previews_enabled": false,
+      "enabled": true
+    },
+    {
+      "id": "8bf0b506d29ba559e0c605a920ad6a90ee379236",
+      "zone_id": "f2d15ef98d16f7858b111c4b0735a66b",
+      "zone_name": "fixtheweb.org",
+      "hostname": "www.fixtheweb.org",
+      "service": "fixtheweb",
+      "environment": "production",
+      "cert_id": "ff19164a-fcf4-4c64-88b3-ae7fa4a7df7a",
+      "previews_enabled": false,
+      "enabled": true
+    },
+    {
+      "id": "b22bce511938dd4fd5fa0d66f41c17665fc05504",
+      "zone_id": "4b1c3fccdbd331cbe893cddba89b9b55",
+      "zone_name": "villow.app",
+      "hostname": "www.villow.app",
+      "service": "villow-site",
+      "environment": "production",
+      "cert_id": "54c7e1bf-698d-48ca-90e0-f8d6761da9fd",
+      "previews_enabled": false,
+      "enabled": true
+    },
+    {
+      "id": "899d72cd0414d01b5c091cbaa07d8364848668c2",
+      "zone_id": "4b1c3fccdbd331cbe893cddba89b9b55",
+      "zone_name": "villow.app",
+      "hostname": "review.villow.app",
+      "service": "villow-review",
+      "environment": "production",
+      "cert_id": "d8b915b0-9978-4d34-b8ce-cdb5456fed26",
+      "previews_enabled": false,
+      "enabled": true
+    }
+  ],
+  "fixtheweb-support": {
+    "bindingNames": [
+      {
+        "name": "CONTACT_ENABLED",
+        "type": "plain_text"
+      },
+      {
+        "name": "CONTACT_TO",
+        "type": "plain_text"
+      },
+      {
+        "name": "DB",
+        "type": "d1"
+      },
+      {
+        "name": "DISCORD_BOT_TOKEN",
+        "type": "secret_text"
+      },
+      {
+        "name": "DISCORD_CLIENT_ID",
+        "type": "plain_text"
+      },
+      {
+        "name": "DISCORD_CLIENT_SECRET",
+        "type": "secret_text"
+      },
+      {
+        "name": "DISCORD_ENABLED",
+        "type": "plain_text"
+      },
+      {
+        "name": "DISCORD_GUILD_ID",
+        "type": "plain_text"
+      },
+      {
+        "name": "DISCORD_ONGOING_ROLE_ID",
+        "type": "plain_text"
+      },
+      {
+        "name": "DISCORD_REDIRECT_URI",
+        "type": "plain_text"
+      },
+      {
+        "name": "DISCORD_SUPPORTER_ROLE_ID",
+        "type": "plain_text"
+      },
+      {
+        "name": "EMAIL_HASH_SECRET",
+        "type": "secret_text"
+      },
+      {
+        "name": "MAIL_FROM",
+        "type": "plain_text"
+      },
+      {
+        "name": "PAYMENTS_ENABLED",
+        "type": "plain_text"
+      },
+      {
+        "name": "PROJECTS_JSON",
+        "type": "plain_text"
+      },
+      {
+        "name": "RESEND_API_KEY",
+        "type": "secret_text"
+      },
+      {
+        "name": "STRIPE_MODE",
+        "type": "plain_text"
+      },
+      {
+        "name": "STRIPE_SECRET_KEY",
+        "type": "secret_text"
+      },
+      {
+        "name": "STRIPE_WEBHOOK_SECRET",
+        "type": "secret_text"
+      }
+    ],
+    "deployments": {
+      "deployments": [
+        {
+          "id": "e7215d79-0250-4056-b898-2b6fd10f9744",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "f96d0acf-287e-456a-8aa8-f5cf08b1e2ba",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-13T07:49:58.810154Z"
+        },
+        {
+          "id": "08a411e6-b983-4377-8b30-0c44666556eb",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "cfc8d32b-8594-4bef-9e7b-a877a765326e",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T16:09:49.23628Z"
+        },
+        {
+          "id": "70c1f495-907e-4a15-8a66-33a85af2c131",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "cd925b23-3768-494f-aecc-f97ea4f74064",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T16:02:45.980456Z"
+        },
+        {
+          "id": "78511692-5480-433c-be5b-c2110046847a",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "33fdf7e1-72b6-4c8f-b908-368cc1fe9e50",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T14:42:51.54635Z"
+        },
+        {
+          "id": "d770d0ea-aa17-4d49-b008-8aeb41396ef2",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "14ebd334-ef16-41fa-9cd7-91e3bb56dff8",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T09:07:37.950042Z"
+        },
+        {
+          "id": "791ef2c8-7c22-47f3-84c0-bfca78cf8df8",
+          "source": "dash",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/message": "Deployed version d5366db8",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "d5366db8-5dea-41ad-a986-ce6910e85d18",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T04:55:11.37498Z"
+        },
+        {
+          "id": "6602be25-e8e5-4a6e-8644-96835f201faf",
+          "source": "dash",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/message": "Deployed version d3239ed5",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "d3239ed5-3533-4440-af76-6754eec8a9f5",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T04:54:44.289696Z"
+        },
+        {
+          "id": "0ecc0c79-fcbc-49ea-ab58-bc38e49675c8",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "908fb663-8e30-4e4b-a3cd-9759f163481f",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-04T04:52:01.872234Z"
+        },
+        {
+          "id": "5d6c5379-9264-405f-9898-0aa80e132d9c",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "86dc4039-9268-412b-9fc9-5e6ab63dea8a",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-03T07:30:08.654504Z"
+        },
+        {
+          "id": "4da67d5b-7acd-448f-acb2-9fd6479222e2",
+          "source": "dash",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/message": "Deployed version 8b2b28cc",
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "8b2b28cc-7319-44ed-a6c6-82bf05319f1d",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-03T07:14:38.358423Z"
+        }
+      ]
+    }
+  },
+  "villow-site": {
+    "bindingNames": [],
+    "deployments": {
+      "deployments": [
+        {
+          "id": "428c1898-9eb2-4174-be07-4c513acdcd2d",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "2f6b1fb2-5ef1-461e-9c72-d1d16463966f",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-13T15:17:06.589986Z"
+        },
+        {
+          "id": "4a58ef6f-e84f-4b33-b152-47d33996229c",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "71d1b280-b984-4b0b-a2e9-7f674e0718a0",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-03T07:34:49.752146Z"
+        },
+        {
+          "id": "6bd7169d-cca7-4fc3-810e-d602324f99d9",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "fff1af9a-4795-4e84-9148-f42829ca7699",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-11-03T07:29:30.504528Z"
+        },
+        {
+          "id": "cdc37f75-87ac-4687-87c1-4366c38f0bf3",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "0a02a3c9-e0f7-44f3-8c4c-2cdc2c0c59a1",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-10-11T17:28:26.42868Z"
+        },
+        {
+          "id": "bc64d909-a496-4c71-b0d7-2e928720d1f5",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "cc79b554-1a28-4d30-a41e-1090f3846c85",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-09-25T08:41:04.420905Z"
+        },
+        {
+          "id": "9a062995-5bec-49a6-afaf-231dc484cd7e",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "cb6fd5f6-c7e0-445f-8867-02543b3cc00a",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-09-25T06:51:35.605704Z"
+        },
+        {
+          "id": "1b1e10b7-844b-4e2c-9e9c-f3012397d63e",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "c3fe9658-a070-4912-8da6-508e17bf9d38",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-09-25T06:38:46.635936Z"
+        },
+        {
+          "id": "a850e730-c5bc-4224-b118-a185d032775f",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "a5bd2da3-2308-421b-aaf0-05d8761a37be",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-09-25T06:09:09.482758Z"
+        },
+        {
+          "id": "dc02bb45-50cd-4640-bc45-f2f7503c1243",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "8b2127f0-cbb8-4126-bbd8-16133f07bbd7",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-09-20T14:01:46.2175Z"
+        },
+        {
+          "id": "f595f2c3-d89e-4174-a2da-90c1671870d5",
+          "source": "wrangler",
+          "strategy": "percentage",
+          "author_email": "nuciforan@hotmail.com",
+          "annotations": {
+            "workers/triggered_by": "deployment"
+          },
+          "versions": [
+            {
+              "version_id": "b037a7dd-0206-4d5a-bd14-7bd21b37c6e9",
+              "percentage": 100
+            }
+          ],
+          "created_on": "2026-09-18T01:01:47.713003Z"
+        }
+      ]
+    }
+  }
+}

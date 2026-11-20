@@ -1,0 +1,272 @@
+{
+  "interaction": [
+    {
+      "count": "2 of 4",
+      "kept": [
+        "garden",
+        "shelf"
+      ],
+      "marks": [
+        "LIVE",
+        "Live"
+      ],
+      "term": "LIVE"
+    },
+    {
+      "count": "3 of 4",
+      "kept": [
+        "pasta",
+        "shelf",
+        "mountain"
+      ],
+      "marks": [
+        "garden"
+      ],
+      "term": "garden"
+    },
+    {
+      "count": "4 of 4",
+      "kept": [
+        "garden",
+        "pasta",
+        "shelf",
+        "mountain"
+      ],
+      "marks": [],
+      "term": ""
+    },
+    {
+      "count": "0 of 4",
+      "kept": [],
+      "marks": [
+        "A",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      "term": "a"
+    },
+    {
+      "count": "3 of 4",
+      "kept": [
+        "garden",
+        "shelf",
+        "mountain"
+      ],
+      "marks": [
+        "pasta"
+      ],
+      "term": "pasta"
+    },
+    {
+      "count": "4 of 4",
+      "kept": [
+        "garden",
+        "pasta",
+        "shelf",
+        "mountain"
+      ],
+      "marks": [],
+      "term": "[a].*"
+    },
+    {
+      "count": "2 of 4",
+      "kept": [
+        "garden",
+        "shelf"
+      ],
+      "marks": [
+        "LIVE",
+        "Live"
+      ],
+      "term": "  Live  "
+    }
+  ],
+  "responsive": [
+    {
+      "cards": [
+        {
+          "id": "garden",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 273
+        },
+        {
+          "id": "pasta",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 273
+        },
+        {
+          "id": "shelf",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 273
+        },
+        {
+          "id": "mountain",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 273
+        }
+      ],
+      "inputHeight": 46,
+      "overflow": false,
+      "resetHeight": 44,
+      "social": true,
+      "tabsRemoved": true,
+      "watchLater": true,
+      "width": 320
+    },
+    {
+      "cards": [
+        {
+          "id": "garden",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 335
+        },
+        {
+          "id": "pasta",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 335
+        },
+        {
+          "id": "shelf",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 335
+        },
+        {
+          "id": "mountain",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 335
+        }
+      ],
+      "inputHeight": 46,
+      "overflow": false,
+      "resetHeight": 44,
+      "social": true,
+      "tabsRemoved": true,
+      "watchLater": true,
+      "width": 390
+    },
+    {
+      "cards": [
+        {
+          "id": "garden",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 332.5
+        },
+        {
+          "id": "pasta",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 332.5
+        },
+        {
+          "id": "shelf",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 332.5
+        },
+        {
+          "id": "mountain",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 332.5
+        }
+      ],
+      "inputHeight": 46,
+      "overflow": false,
+      "resetHeight": 44,
+      "social": true,
+      "tabsRemoved": true,
+      "watchLater": true,
+      "width": 768
+    },
+    {
+      "cards": [
+        {
+          "id": "garden",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 271.75
+        },
+        {
+          "id": "pasta",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 271.75
+        },
+        {
+          "id": "shelf",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 271.75
+        },
+        {
+          "id": "mountain",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 271.75
+        }
+      ],
+      "inputHeight": 46,
+      "overflow": false,
+      "resetHeight": 44,
+      "social": true,
+      "tabsRemoved": true,
+      "watchLater": true,
+      "width": 1280
+    },
+    {
+      "cards": [
+        {
+          "id": "garden",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 293.5
+        },
+        {
+          "id": "pasta",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 293.5
+        },
+        {
+          "id": "shelf",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 293.5
+        },
+        {
+          "id": "mountain",
+          "imageLoaded": true,
+          "titleOverflow": false,
+          "width": 293.5
+        }
+      ],
+      "inputHeight": 46,
+      "overflow": false,
+      "resetHeight": 44,
+      "social": true,
+      "tabsRemoved": true,
+      "watchLater": true,
+      "width": 1440
+    }
+  ]
+}

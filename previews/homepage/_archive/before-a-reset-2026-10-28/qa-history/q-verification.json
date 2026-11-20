@@ -1,0 +1,403 @@
+{
+  "charts": [
+    {
+      "key": "day",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 253,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "12:00am (next day) · Sample0.10%chance of watching",
+      "width": 320
+    },
+    {
+      "key": "week",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 253,
+      "pointGap": null,
+      "tipFits": true,
+      "tooltip": "Sun · Sample7min app time",
+      "width": 320
+    },
+    {
+      "key": "time",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 253,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "Day 30 · Sample19min app time",
+      "width": 320
+    },
+    {
+      "key": "worth",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 253,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "Optional ratings · Sample86.7%worth watching",
+      "width": 320
+    },
+    {
+      "key": "day",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 253,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "12:00am (next day) · Sample0.10%chance of watching",
+      "width": 390
+    },
+    {
+      "key": "week",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 253,
+      "pointGap": null,
+      "tipFits": true,
+      "tooltip": "Sun · Sample7min app time",
+      "width": 390
+    },
+    {
+      "key": "time",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 253,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "Day 30 · Sample19min app time",
+      "width": 390
+    },
+    {
+      "key": "worth",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 253,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "Optional ratings · Sample86.7%worth watching",
+      "width": 390
+    },
+    {
+      "key": "day",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "12:00am (next day) · Sample0.10%chance of watching",
+      "width": 768
+    },
+    {
+      "key": "week",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": null,
+      "tipFits": true,
+      "tooltip": "Sun · Sample7min app time",
+      "width": 768
+    },
+    {
+      "key": "time",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "Day 30 · Sample19min app time",
+      "width": 768
+    },
+    {
+      "key": "worth",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "Optional ratings · Sample86.7%worth watching",
+      "width": 768
+    },
+    {
+      "key": "day",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "12:00am (next day) · Sample0.10%chance of watching",
+      "width": 1024
+    },
+    {
+      "key": "week",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": null,
+      "tipFits": true,
+      "tooltip": "Sun · Sample7min app time",
+      "width": 1024
+    },
+    {
+      "key": "time",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "Day 30 · Sample19min app time",
+      "width": 1024
+    },
+    {
+      "key": "worth",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "Optional ratings · Sample86.7%worth watching",
+      "width": 1024
+    },
+    {
+      "key": "day",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "12:00am (next day) · Sample0.10%chance of watching",
+      "width": 1280
+    },
+    {
+      "key": "week",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": null,
+      "tipFits": true,
+      "tooltip": "Sun · Sample7min app time",
+      "width": 1280
+    },
+    {
+      "key": "time",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "Day 30 · Sample19min app time",
+      "width": 1280
+    },
+    {
+      "key": "worth",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "Optional ratings · Sample86.7%worth watching",
+      "width": 1280
+    },
+    {
+      "key": "day",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "12:00am (next day) · Sample0.10%chance of watching",
+      "width": 1440
+    },
+    {
+      "key": "week",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": null,
+      "tipFits": true,
+      "tooltip": "Sun · Sample7min app time",
+      "width": 1440
+    },
+    {
+      "key": "time",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "Day 30 · Sample19min app time",
+      "width": 1440
+    },
+    {
+      "key": "worth",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "Optional ratings · Sample86.7%worth watching",
+      "width": 1440
+    },
+    {
+      "key": "day",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "12:00am (next day) · Sample0.10%chance of watching",
+      "width": 1920
+    },
+    {
+      "key": "week",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": null,
+      "tipFits": true,
+      "tooltip": "Sun · Sample7min app time",
+      "width": 1920
+    },
+    {
+      "key": "time",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "Day 30 · Sample19min app time",
+      "width": 1920
+    },
+    {
+      "key": "worth",
+      "onePanel": true,
+      "pageOverflow": false,
+      "plotHeight": 273,
+      "pointGap": 10,
+      "tipFits": true,
+      "tooltip": "Optional ratings · Sample86.7%worth watching",
+      "width": 1920
+    }
+  ],
+  "ratings": [
+    {
+      "buttonHits": true,
+      "imagesLoaded": true,
+      "namesFit": true,
+      "ordered": true,
+      "questionFits": true,
+      "screenHeight": 118.296875,
+      "screenWidth": 191.09375,
+      "state": "ended",
+      "width": 320
+    },
+    {
+      "buttonHits": true,
+      "imagesLoaded": true,
+      "namesFit": true,
+      "ordered": true,
+      "questionFits": true,
+      "screenHeight": 145.15625,
+      "screenWidth": 234.5,
+      "state": "ended",
+      "width": 390
+    },
+    {
+      "buttonHits": true,
+      "imagesLoaded": true,
+      "namesFit": true,
+      "ordered": true,
+      "questionFits": true,
+      "screenHeight": 225.328125,
+      "screenWidth": 364,
+      "state": "ended",
+      "width": 768
+    },
+    {
+      "buttonHits": true,
+      "imagesLoaded": true,
+      "namesFit": true,
+      "ordered": true,
+      "questionFits": true,
+      "screenHeight": 202.34375,
+      "screenWidth": 326.859375,
+      "state": "ended",
+      "width": 1024
+    },
+    {
+      "buttonHits": true,
+      "imagesLoaded": true,
+      "namesFit": true,
+      "ordered": true,
+      "questionFits": true,
+      "screenHeight": 225.328125,
+      "screenWidth": 364,
+      "state": "ended",
+      "width": 1280
+    },
+    {
+      "buttonHits": true,
+      "imagesLoaded": true,
+      "namesFit": true,
+      "ordered": true,
+      "questionFits": true,
+      "screenHeight": 225.328125,
+      "screenWidth": 364,
+      "state": "ended",
+      "width": 1440
+    },
+    {
+      "buttonHits": true,
+      "imagesLoaded": true,
+      "namesFit": true,
+      "ordered": true,
+      "questionFits": true,
+      "screenHeight": 225.328125,
+      "screenWidth": 364,
+      "state": "ended",
+      "width": 1920
+    }
+  ],
+  "highPoint": {
+    "gap": 10,
+    "tipInside": true,
+    "topClearance": 0.171875,
+    "value": "58"
+  },
+  "minute": {
+    "before": {
+      "label": "2:00pm · Sample",
+      "pointLeft": "58.3333%",
+      "value": "1.11%"
+    },
+    "after": {
+      "label": "2:01pm · Sample",
+      "pointLeft": "58.4028%",
+      "value": "1.11%"
+    }
+  },
+  "pointer": {
+    "before": {
+      "label": "1:33pm · Sample",
+      "point": "56.4428%",
+      "value": "1.14%"
+    },
+    "after": {
+      "label": "1:35pm · Sample",
+      "point": "56.5905%",
+      "value": "1.14%"
+    }
+  },
+  "risingCurve": {
+    "before": {
+      "label": "6:01pm · Sample",
+      "value": "4.87%"
+    },
+    "after": {
+      "label": "6:03pm · Sample",
+      "value": "4.92%"
+    }
+  }
+}

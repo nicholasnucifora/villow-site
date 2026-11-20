@@ -1,0 +1,41 @@
+{
+  "baselineMatchesCanonicalApartFromNavigation": true,
+  "options": [
+    {
+      "key": "a",
+      "label": "Baseline",
+      "correctTitle": true,
+      "ownHomeLink": true,
+      "variantStyleOnlyWhenNeeded": true,
+      "captionPreservationChecked": true,
+      "allOtherSectionsPreserved": true
+    },
+    {
+      "key": "b",
+      "label": "Visuals first",
+      "correctTitle": true,
+      "ownHomeLink": true,
+      "variantStyleOnlyWhenNeeded": true,
+      "captionPreservationChecked": true,
+      "allOtherSectionsPreserved": true
+    },
+    {
+      "key": "c",
+      "label": "Messages first",
+      "correctTitle": true,
+      "ownHomeLink": true,
+      "variantStyleOnlyWhenNeeded": true,
+      "captionPreservationChecked": true,
+      "allOtherSectionsPreserved": true
+    },
+    {
+      "key": "d",
+      "label": "Topic rail",
+      "correctTitle": true,
+      "ownHomeLink": true,
+      "variantStyleOnlyWhenNeeded": true,
+      "captionPreservationChecked": true,
+      "allOtherSectionsPreserved": true
+    }
+  ]
+}

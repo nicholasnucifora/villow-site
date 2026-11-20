@@ -1,0 +1,64 @@
+/* S/T/U only. R's saved markup, styling and rotating stories are untouched. */
+.cs-control{max-width:1090px;margin:100px auto 0;color:#244d43;scroll-margin-top:155px}
+.cs-heading{max-width:635px;margin:0 auto 30px;text-align:center}
+.cs-heading h2{margin:0 0 18px;font:400 clamp(34px,3.5vw,46px)/1.17 'Varela Round',sans-serif;letter-spacing:-.045em;text-wrap:balance}
+.cs-heading p{margin:0;font:15px/1.85 system-ui,sans-serif;color:#536f61;text-wrap:pretty}
+.cs-tabs{display:flex;justify-content:center;gap:7px;margin:0 auto 24px;flex-wrap:wrap}
+.cs-tabs[hidden]{display:none}
+.cs-tabs button{appearance:none;border:0;border-radius:999px;padding:11px 23px;min-height:44px;background:#e9eee1;color:#42644e;font:500 14px/1.4 system-ui,sans-serif;cursor:pointer;transition:background 160ms,color 160ms}
+.cs-tabs button:hover{background:#dce6d2}
+.cs-tabs button[aria-selected="true"]{background:#315b49;color:#fffdf5}
+.cs-tabs button:focus-visible,.cs-panel:focus-visible{outline:3px solid #7c9b70;outline-offset:4px}
+.cs-ready .cs-stage{display:grid}
+.cs-ready .cs-panel{grid-area:1/1}
+.cs-ready .cs-panel[hidden]{display:grid;visibility:hidden;pointer-events:none}
+.cs-panel{min-width:0}
+.cs-choice .cs-stage{max-width:850px;margin:auto}
+.cs-choice-panel{display:grid;grid-template-columns:250px minmax(0,1fr);gap:36px;align-items:center;background:#eaf0e2;border-radius:28px;padding:28px 45px 28px 24px;min-height:265px;box-sizing:border-box}
+.cs-choice-panel+.cs-choice-panel{margin-top:18px}
+.cs-ready .cs-choice-panel+.cs-choice-panel{margin-top:0}
+.cs-example-copy{min-width:0}
+.cs-control .cs-context{margin:0 0 10px;color:#60745d;font:500 12px/1.5 system-ui,sans-serif}
+.cs-control h3{margin:0 0 18px;font:400 24px/1.35 'Varela Round',sans-serif;letter-spacing:-.025em;text-wrap:pretty}
+.cs-control .cs-points{display:grid;gap:12px;list-style:none;margin:0;padding:0;color:#486451;font:14px/1.65 system-ui,sans-serif}
+.cs-points li{display:flex;gap:10px;align-items:flex-start}
+.cs-points svg{flex:0 0 18px;margin-top:3px;fill:none;stroke:#66825c;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.cs-caption{margin:18px auto 0;color:#6a7c64;text-align:center;font:12px/1.7 system-ui,sans-serif;text-wrap:pretty}
+.cs-scene{position:relative;height:210px;isolation:isolate}
+.cs-ground{position:absolute;inset:25px 2px 5px;border-radius:48% 48% 40% 40%;background:#dce6d4;transform:rotate(-4deg);z-index:-1}
+.cs-person{position:absolute;bottom:0;left:18px;width:90px;height:auto}
+.cs-object{display:block;max-width:100%;height:auto}
+.cs-scene .cs-object{position:absolute;bottom:11px;right:-5px;width:180px;transform:rotate(3deg)}
+.cs-scene .cs-person{z-index:1}
+.cs-scene-channels .cs-ground{background:#ede5cd;transform:rotate(4deg)}
+.cs-scene-away .cs-ground{background:#dce7e5;transform:rotate(-3deg)}
+.cs-three .cs-heading{max-width:610px;margin-bottom:30px}
+.cs-three-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:50px}
+.cs-story{min-width:0}
+.cs-story .cs-scene{max-width:235px;height:180px;margin:0 auto 22px}
+.cs-story .cs-person{width:77px}
+.cs-story .cs-object{width:165px}
+.cs-story h3{font-size:25px;margin-bottom:14px}
+.cs-three .cs-caption{margin-top:30px}
+.cs-day .cs-heading{max-width:590px}
+.cs-day .cs-tabs{margin-bottom:30px}
+.cs-day-panel{display:grid;align-content:start;background:#eef1e6;border-radius:30px;padding:24px 25px 22px}
+.cs-day-panel+.cs-day-panel{margin-top:20px}
+.cs-ready .cs-day-panel+.cs-day-panel{margin-top:0}
+.cs-day-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;text-align:center}
+.cs-day-piece{min-width:0}
+.cs-day-piece>.cs-object,.cs-clock-art{width:200px;height:137px;max-width:100%;margin:0 auto 15px}
+.cs-clock-art{position:relative}
+.cs-clock-art svg{display:block;width:100%;height:100%}
+.cs-clock-art>span{position:absolute;bottom:0;right:-2px;display:flex;align-items:baseline;gap:4px;padding:6px 11px;border-radius:13px;background:#315b49;color:#fffdf5;font:500 22px/1.3 'Varela Round',sans-serif}
+.cs-clock-art small{font:10px/1.4 system-ui,sans-serif}
+.cs-day-piece h3{font-size:20px;margin-bottom:8px}
+.cs-day-piece>p:last-child{margin:0;font:13px/1.7 system-ui,sans-serif;color:#60745d}
+.cs-control .cs-day-piece .cs-context{margin-bottom:8px}
+.cs-day-note{margin:24px 0 0;text-align:center;font:14px/1.7 'Varela Round',sans-serif;color:#43624d}
+@media(max-width:900px){.cs-three-grid{gap:27px}.cs-choice-panel{gap:24px;padding-right:30px;grid-template-columns:220px minmax(0,1fr)}.cs-story h3{font-size:23px}.cs-day-grid{gap:18px}.cs-day-piece h3{font-size:18px}}
+@media(max-width:760px){.cs-control{margin-top:64px;scroll-margin-top:145px}.cs-heading{margin-bottom:24px;max-width:500px}.cs-heading h2{font-size:35px}.cs-heading p{font-size:14px;line-height:1.8}.cs-tabs{gap:5px;margin-bottom:20px}.cs-tabs button{font-size:12px;padding:10px 15px}.cs-choice-panel{grid-template-columns:170px minmax(0,1fr);gap:18px;padding:22px}.cs-scene{height:180px}.cs-person{width:80px;left:0}.cs-scene .cs-object{width:145px;right:-8px}.cs-control h3{font-size:22px}.cs-control .cs-points{font-size:13px}.cs-three-grid{gap:20px}.cs-story .cs-scene{height:150px}.cs-story .cs-person{width:65px;left:3px}.cs-story .cs-object{width:130px;right:-3px}.cs-three .cs-context{font-size:11px}.cs-story h3{font-size:21px}.cs-day-panel{padding:22px 16px}.cs-day-grid{gap:16px}.cs-day-piece>.cs-object,.cs-clock-art{height:110px}.cs-clock-art>span{font-size:18px;right:0}.cs-day-piece h3{font-size:17px}.cs-day-piece>p:last-child{font-size:12px}.cs-control+.it-l{margin-top:64px!important}}
+@media(max-width:560px){.cs-choice-panel{grid-template-columns:1fr;gap:16px;padding:18px 24px 27px;border-radius:24px}.cs-choice-panel .cs-scene{width:220px;height:158px;justify-self:center}.cs-choice-panel .cs-person{width:76px;left:14px}.cs-choice-panel .cs-object{width:172px;right:0}.cs-ground{inset:13px 3px 0}.cs-choice-panel .cs-example-copy{max-width:320px;justify-self:center;width:100%}.cs-example-copy .cs-context{text-align:center;font-size:11px}.cs-example-copy h3{text-align:center;font-size:22px;margin-bottom:16px}.cs-caption{font-size:11px;max-width:310px}.cs-heading p{max-width:360px;margin:auto}.cs-three-grid{grid-template-columns:1fr;gap:30px;max-width:380px;margin:auto}.cs-story{display:grid;grid-template-columns:100px minmax(0,1fr);column-gap:18px;align-content:center}.cs-story .cs-scene{grid-column:1;grid-row:1/4;width:100%;height:160px;margin:0;align-self:center}.cs-story .cs-person{width:60px;left:0}.cs-story .cs-object{width:100px;right:-4px;bottom:21px;z-index:2}.cs-story .cs-ground{inset:19px 0 10px}.cs-story .cs-context,.cs-story h3,.cs-story .cs-points{grid-column:2}.cs-story h3{font-size:21px;margin-bottom:12px}.cs-story .cs-context{margin-bottom:7px}.cs-three .cs-points{font-size:13px;gap:8px}.cs-three .cs-points svg{display:none}.cs-day-grid{grid-template-columns:1fr;gap:20px;text-align:left}.cs-day-piece{display:grid;grid-template-columns:94px minmax(0,1fr);column-gap:15px;align-content:center}.cs-day-piece>.cs-object,.cs-clock-art{grid-column:1;grid-row:1/4;width:94px;height:90px;margin:0;align-self:center}.cs-day-piece .cs-context,.cs-day-piece h3,.cs-day-piece>p:last-child{grid-column:2}.cs-day-piece h3{font-size:18px}.cs-clock-art>span{font-size:15px;bottom:-1px;padding:3px 7px;right:-2px}.cs-clock-art small{font-size:8px}.cs-day .cs-heading h2{font-size:34px}.cs-day-panel{padding:25px 20px 22px}.cs-day-note{font-size:13px;margin-top:23px}.cs-day .cs-tabs{margin-bottom:22px}}
+@media(max-width:360px){.cs-tabs{gap:4px}.cs-tabs button{font-size:11px;padding-inline:12px}.cs-heading h2{font-size:32px}.cs-choice-panel{padding-inline:20px}.cs-story{grid-template-columns:85px minmax(0,1fr);gap:0 14px}.cs-story h3{font-size:20px}.cs-day-piece{grid-template-columns:78px minmax(0,1fr);gap:0 11px}.cs-day-piece>.cs-object,.cs-clock-art{width:78px}.cs-day-piece h3{font-size:17px}.cs-day-panel{padding-inline:15px}.cs-day .cs-heading h2{font-size:31px}}
+@media(prefers-reduced-motion:reduce){.cs-tabs button{transition:none}}
+@media print{.cs-control{break-inside:avoid}.cs-tabs{display:none}.cs-ready .cs-stage{display:block}.cs-ready .cs-panel[hidden]{display:grid;visibility:visible}.cs-panel+.cs-panel{margin-top:20px!important}}

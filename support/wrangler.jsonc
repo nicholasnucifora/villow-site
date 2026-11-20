@@ -4,17 +4,35 @@
   "main": "worker.mjs",
   "compatibility_date": "2026-09-01",
   "vars": {
+    "AUTO_PUBLISH_MESSAGES": "false",
+    "MODERATION_ENABLED": "false",
     "PAYMENTS_ENABLED": "true",
     "STRIPE_MODE": "test",
     "MAIL_FROM": "Villow <support@mail.villow.app>",
-    "PROJECTS_JSON": "{\"villow\":{\"origin\":\"http://localhost:4321\",\"currency\":\"aud\",\"portal\":\"https://billing.stripe.com/p/login/test_00wcMYfgc6YF8RW4rG3ks00\",\"links\":{\"once\":\"plink_1UXQuP3AH36bMHbIZ1bBK4eu\",\"monthly5\":\"plink_1UXQuM3AH36bMHbIQEM4lQrI\",\"monthly10\":\"plink_1UXQuR3AH36bMHbIA7ekVyds\",\"monthly20\":\"plink_1UXQuN3AH36bMHbIHSNgA9Se\"}}}"
+    "PROJECTS_JSON": "{\"villow\":{\"origin\":\"http://127.0.0.1:4411\",\"currency\":\"aud\",\"portal\":\"https://billing.stripe.com/p/login/test_00wcMYfgc6YF8RW4rG3ks00\",\"links\":{\"once\":\"plink_1UXQuP3AH36bMHbIZ1bBK4eu\",\"monthly5\":\"plink_1UXQuM3AH36bMHbIQEM4lQrI\",\"monthly10\":\"plink_1UXQuR3AH36bMHbIA7ekVyds\",\"monthly20\":\"plink_1UXQuN3AH36bMHbIHSNgA9Se\"}}}",
+    // Integration tests are complete; fake payments must no longer update real roles.
+    "DISCORD_ENABLED": "false",
+    "DISCORD_CLIENT_ID": "1567089987013312694",
+    "DISCORD_GUILD_ID": "1523582670867791882",
+    "DISCORD_SUPPORTER_ROLE_ID": "1567088430628737136",
+    "DISCORD_ONGOING_ROLE_ID": "1567088983496982620",
+    "DISCORD_TEST_USER_ID": "1523582210056126494",
+    "DISCORD_REDIRECT_URI": "https://fixtheweb-support-test.nuciforan.workers.dev/v1/discord/callback"
   },
-  "d1_databases": [{
-    "binding": "DB",
-    "database_name": "fixtheweb-support-test",
-    "database_id": "771fc8a2-e821-4065-aca5-e2ba3b7c8c59",
-    "migrations_dir": "migrations"
-  }],
-  "triggers": { "crons": ["17 3 * * *"] },
-  "observability": { "enabled": false }
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "fixtheweb-support-test",
+      "database_id": "771fc8a2-e821-4065-aca5-e2ba3b7c8c59",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "*/15 * * * *"
+    ]
+  },
+  "observability": {
+    "enabled": false
+  }
 }

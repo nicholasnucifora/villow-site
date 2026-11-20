@@ -1,0 +1,8 @@
+{
+  "method": "User-supplied trees2.png alpha silhouette, removing the trailing left-forest shrub; approved edge-cleaned RGB retained. No extended columns, stretching or image generation. CSS tucks the cut behind the hill.",
+  "width": 3840,
+  "height": 1280,
+  "removedPixels": 66196,
+  "source": "assets/32-grounded-bush/trees2-source.png",
+  "sourceSHA256": "1e2662759fe153dfefdc259a5f0a076be5eb1d0b456527ec4027574bb30ee720"
+}

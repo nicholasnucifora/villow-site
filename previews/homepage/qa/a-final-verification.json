@@ -1,0 +1,31 @@
+{
+  "title": "Villow · Homepage A",
+  "onlyCurrentA": true,
+  "retiredURLs": "302 to /a.html",
+  "privateArchive": "404",
+  "retainedAssets": 15,
+  "deletedFiles": 371,
+  "deletedMiB": 27.84,
+  "layoutMatchesAcceptedX": true,
+  "legacySelectorsIgnored": true,
+  "responsive": [
+    {
+      "brokenImages": 0,
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "brokenImages": 0,
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "brokenImages": 0,
+      "overflow": false,
+      "width": 1440
+    }
+  ],
+  "cloud": "play, scrub to end, rating and return to watching passed",
+  "feed": "save, confirmation and next-card promotion passed",
+  "console": "No warnings/errors"
+}

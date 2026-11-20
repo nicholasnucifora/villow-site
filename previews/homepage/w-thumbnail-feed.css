@@ -1,0 +1,95 @@
+/* The front card keeps its tilt. Its two actions live inside the thumbnail,
+   so the caption can end the card without a separate row of controls. */
+[data-thumbnail-feed] .ifs-front,
+[data-thumbnail-feed] .ifs-front:active { cursor: pointer; touch-action: pan-y pinch-zoom; -webkit-tap-highlight-color: transparent; }
+.version-w-people .wf-section :is(.ifs-stack-space, .ifs-stack) { height: 360px; }
+.version-w-people .wf-section .wf-complete { min-height: 310px; }
+[data-thumbnail-feed] .ifs-card-image { isolation: isolate; }
+[data-thumbnail-feed] .ifs-swipe-feedback { border:0; outline:0; z-index:3; background:var(--wf-swipe-tint,transparent); transition:opacity 150ms ease-out; }
+[data-thumbnail-feed] .ifs-front.is-dragging .ifs-swipe-feedback { opacity:1; transition:none; }
+.wf-swipe-badge { display:grid; place-items:center; width:48px; height:48px; border:0; border-radius:50%; color:#fff; background:rgba(36,93,81,.78); opacity:var(--wf-swipe-progress,0); transform:scale(var(--wf-swipe-scale,.68)); }
+.ifs-swipe-feedback[data-action="remove"] .wf-swipe-badge { background:rgba(0,0,0,.72); }
+.wf-swipe-badge svg { width:24px; height:24px; }
+@media(prefers-reduced-motion:reduce) { .wf-swipe-badge { transform:none; } }
+[data-thumbnail-feed] .ifs-card-copy { min-height: 0; padding-bottom: 2px; }
+[data-thumbnail-feed] .wf-sample {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+[data-thumbnail-feed] .wf-sample:focus-visible { outline-offset: -4px; }
+.wf-thumbnail-actions {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 6px;
+  padding: 8px;
+  pointer-events: none;
+}
+[data-thumbnail-feed] .ifs-card .wf-thumbnail-action {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(255 255 255 / .7);
+  color: #111827;
+  box-shadow: inset 0 0 0 2px rgb(0 0 0 / .06), 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+  -webkit-backdrop-filter: blur(28px) saturate(2.1);
+  backdrop-filter: blur(28px) saturate(2.1);
+  opacity: 0;
+  pointer-events: none;
+}
+.wf-thumbnail-action svg { width: 30px; height: 30px; }
+[data-wf-input="pointer"] .ifs-front .ifs-card-image:hover .wf-thumbnail-action,
+.ifs-front .ifs-card-image:has(:focus-visible) .wf-thumbnail-action {
+  opacity: 1;
+  pointer-events: auto;
+}
+[data-thumbnail-feed] .ifs-card .wf-thumbnail-action:is(:hover, :focus-visible) {
+  width: 60px;
+  height: 60px;
+  margin: -3px;
+  background: rgb(255 255 255 / .82);
+  box-shadow: inset 0 0 0 2px rgb(0 0 0 / .06), 0 25px 50px -12px rgb(0 0 0 / .25);
+}
+.wf-thumbnail-action:is(:hover, :focus-visible) svg { width: 33px; height: 33px; }
+.wf-tap-ripple {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: 50%;
+  background: rgb(255 255 255 / .42);
+  box-shadow: inset 0 0 0 2px rgb(255 255 255 / .5);
+  transform: translate(-50%, -50%);
+  animation: wf-tap-ripple 650ms ease-out both;
+}
+@keyframes wf-tap-ripple {
+  from { opacity: 1; transform: translate(-50%, -50%) scale(0); }
+  to { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  body:not([data-r-preview-motion]) .wf-tap-ripple { width: 48px !important; height: 48px !important; animation: wf-tap-fade 180ms ease-out both !important; }
+  body[data-r-preview-motion] .wf-tap-ripple { animation: wf-tap-ripple 650ms ease-out both !important; }
+  @keyframes wf-tap-fade { from { opacity: 1; } to { opacity: 0; } }
+}
+[data-thumbnail-feed]:not([data-wf-input="touch"]) .t-swipe-cue { display: none; }
+@media (max-width: 760px) {
+  .version-w-people .wf-section :is(.ifs-stack-space, .ifs-stack) { height: 335px; }
+  .version-w-people .wf-section .wf-complete { min-height: 285px; }
+}
+@media (max-width: 360px) {
+  .version-w-people .wf-section :is(.ifs-stack-space, .ifs-stack) { height: 290px; }
+  .version-w-people .wf-section .wf-complete { min-height: 250px; }
+}

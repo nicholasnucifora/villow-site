@@ -1,0 +1,48 @@
+/* YouTube teaching shell only. Native controls follow in the shadow stylesheet. */
+:host { font: 14px/normal Roboto, 'Segoe UI', system-ui, sans-serif; letter-spacing: normal; text-align: left; text-transform: none; color-scheme: light; --yt-spec-text-primary: #0f0f0f; --yt-spec-text-secondary: #606060; }
+:host([data-theme='dark']) { color-scheme: dark; --yt-spec-text-primary: #f1f1f1; --yt-spec-text-secondary: #aaa; }
+.villow-demo, .villow-demo * { box-sizing: border-box; }
+.villow-demo { container: villow-demo / inline-size; min-width: 0; width: 100%; color: var(--app-text, #0f0f0f); }
+.villow-demo[data-device='mobile'] { max-width: 414px; margin-inline: auto; }
+.villow-demo__youtube { min-width: 0; padding: 12px; border-radius: 14px; background: var(--app-surface, #fffdf8); }
+.villow-demo__masthead { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 6px; margin-bottom: 12px; color: var(--yt-spec-text-primary); }
+.villow-demo__masthead > .villow-rings { justify-self: end; }
+.villow-demo[data-story='false'] .villow-demo__masthead { grid-template-columns: minmax(0, 1fr) auto; }
+.villow-demo__youtube-link { display: flex; align-items: center; flex: 0 1 106px; min-width: 70px; max-width: 106px; }
+.villow-demo__youtube-link img { display: block; width: 106px; max-width: 100%; height: auto; }
+.villow-demo__youtube-link:focus-visible, .villow-demo__thumbnail[role='button']:focus-visible { outline: 2px solid var(--app-focus-ring, currentColor); outline-offset: 3px; }
+.villow-demo__teaching-pill { justify-self: center; min-width: 0; padding: 6px 10px; border-radius: 999px; background: color-mix(in srgb, var(--app-accent-text, #547b67) 12%, transparent); color: var(--app-accent-text, #547b67); font-size: 13px; font-weight: 500; line-height: 1.2; text-align: center; }
+/* Match Home's 1190px viewport: 96px rail, 16/32px feed insets, 28px gutter.
+   Both scenes have the same 12px outer shell, so these proportions stay equal. */
+.villow-demo__body { position: relative; }
+.villow-demo__sidebar { position: absolute; inset: 0 auto 0 0; width: calc((100cqi - 24px) * 96 / 1190); color: var(--yt-spec-text-primary); }
+.villow-demo__nav-item { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: calc((100cqi - 24px) * 8 / 1190); height: calc((100cqi - 24px) * 86 / 1190); font-size: calc((100cqi - 24px) * 12 / 1190); white-space: nowrap; }
+.villow-demo__nav-item svg { width: calc((100cqi - 24px) * 32 / 1190); height: calc((100cqi - 24px) * 32 / 1190); }
+.villow-demo__feed { padding-left: calc((100cqi - 24px) * 112 / 1190); padding-right: calc((100cqi - 24px) * 32 / 1190); height: calc((100cqi - 24px) * 1018 / 2380 * .5625 + 98px); overflow: clip; mask-image: linear-gradient(#000 calc(100% - 32px), transparent); }
+.villow-demo__grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px calc((100cqi - 24px) * 28 / 1190); }
+.villow-demo__card { display: block; min-width: 0; width: 100%; color: inherit; text-align: left; }
+.villow-demo__thumbnail { display: block; position: relative; aspect-ratio: 16/9; border-radius: 9px; cursor: pointer; }
+/* Crop the source artwork before filtering, leaving the native blur's alpha
+   free to feather into the surrounding shell. No black backing or outer clip. */
+.villow-demo__media { position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: inherit; }
+.villow-demo__media > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.villow-demo__duration { position: absolute; right: 5px; bottom: 5px; border-radius: 4px; padding: 1px 5px; background: #000b; color: #fff; font-size: 11px; font-weight: 600; }
+.villow-demo__video-title { display: block; margin-top: 9px; font-size: 14px; font-weight: 600; line-height: 1.4; }
+.villow-demo__channel { display: block; margin-top: 3px; color: var(--app-text-secondary, #606060); font-size: 11px; line-height: 1.4; }
+.villow-demo[data-device='mobile'] .villow-demo__grid { grid-template-columns: minmax(0,1fr); }
+.villow-demo[data-device='mobile'] .villow-demo__sidebar { display: none; }
+.villow-demo[data-device='mobile'] .villow-demo__card:nth-child(n+3) { display: none; }
+.villow-demo[data-device='mobile'] .villow-demo__feed { padding-inline: calc((100cqi - 24px) * 16 / 390); height: calc((100cqi - 24px) * 358 / 390 * .5625 + 90px); mask-image: linear-gradient(#000 calc(100% - 24px), transparent); }
+.villow-demo .villow-demo__feed[data-reveal-cap] { height: auto; mask-image: none; }
+.villow-demo__status { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.villow-demo__status[data-visible] { position: static; width: auto; height: auto; margin: 8px 0 0; clip-path: none; white-space: normal; font-size: 13px; }
+@container villow-demo (max-width: 23rem) {
+  .villow-demo__youtube-link { flex-basis: 88px; max-width: 88px; }
+  .villow-demo__teaching-pill { padding: 5px 7px; font-size: 11.5px; }
+  .villow-demo[data-device='desktop'] .villow-demo__video-title { font-size: 12px; }
+  .villow-demo[data-device='desktop'] .villow-demo__channel { font-size: 10px; }
+}
+@container villow-demo (max-width: 19rem) {
+  .villow-demo[data-story='true'] .villow-demo__masthead { grid-template-columns: minmax(0, 1fr) auto; }
+  .villow-demo__teaching-pill { grid-column: 1 / -1; grid-row: 2; }
+}

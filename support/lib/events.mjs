@@ -1,5 +1,6 @@
-import { CONSENT_VERSION, publicFields, sessionSource, verifiedLink } from './config.mjs';
-import { privateHash, normaliseEmail, nowSeconds } from './privacy.mjs';
+import { CONSENT_VERSION, AMOUNT_CONSENT_VERSION, fieldMapping, publicFields, sessionSource, verifiedLink } from './config.mjs';
+import { privateHash, normaliseEmail, nowSeconds, randomToken } from './privacy.mjs';
+import { needsReview } from './message-review.mjs';
 
 const idOf = value => typeof value === 'string' ? value : value?.id || null;
 const subOfInvoice = invoice => idOf(invoice.parent?.subscription_details?.subscription || invoice.subscription);
@@ -12,7 +13,10 @@ async function contributionStatements(db, env, stripe, session, event) {
   if (session.payment_status !== 'paid') return [];
   const kind = source.key === 'once' ? 'once' : 'monthly';
   if (session.mode !== (kind === 'once' ? 'payment' : 'subscription') || session.currency !== source.project.currency || !Number.isSafeInteger(session.amount_total) || session.amount_total < 500) throw new Error('Unexpected paid Checkout Session');
-  const { mapping } = await verifiedLink(stripe, env, source.project, source.key);
+  await verifiedLink(stripe, env, source.project, source.key);
+  // Keys and options can change when a Payment Link is edited. Consent belongs
+  // to the authenticated session snapshot that the supporter actually saw.
+  const mapping = fieldMapping(session.custom_fields);
   const fields = publicFields(session.custom_fields, mapping);
   let emailHash = null;
   if (session.customer_details?.email) emailHash = await privateHash(env, `email:${normaliseEmail(session.customer_details.email)}`);
@@ -24,27 +28,59 @@ async function contributionStatements(db, env, stripe, session, event) {
   // Never update user text, consent, moderation or removal on webhook retries.
   return [
     db.prepare(`INSERT INTO contributions(session_id, project, kind, subscription_id, email_hash,
-      display_name, message, consent, consent_version, consent_at, created_at)
+      display_name, message, consent, consent_version, consent_at, created_at, auto_publish, review_id)
       SELECT ?, ?, ?, ?, ?,
         CASE WHEN EXISTS(SELECT 1 FROM suppressions WHERE project = ? AND email_hash = ?) THEN NULL ELSE ? END,
         CASE WHEN EXISTS(SELECT 1 FROM suppressions WHERE project = ? AND email_hash = ?) THEN NULL ELSE ? END,
         CASE WHEN EXISTS(SELECT 1 FROM suppressions WHERE project = ? AND email_hash = ?) THEN 0 ELSE ? END,
-        ?, ?, ? ON CONFLICT(session_id) DO NOTHING`).bind(
+        ?, ?, ?, ?, ? ON CONFLICT(session_id) DO NOTHING`).bind(
       session.id, source.id, kind, subscription, emailHash,
       source.id, emailHash, consent ? fields.name : null,
       source.id, emailHash, consent ? fields.message : null,
-      source.id, emailHash, consent ? 1 : 0, consent ? CONSENT_VERSION : null, consent ? event.created : null, session.created),
+      source.id, emailHash, consent ? 1 : 0, consent ? (fields.shareAmount ? AMOUNT_CONSENT_VERSION : CONSENT_VERSION) : null, consent ? event.created : null, session.created,
+      env.AUTO_PUBLISH_MESSAGES === 'true' && consent && !needsReview(fields.name, fields.message) ? 1 : 0, randomToken().slice(0, 32)),
     db.prepare(`INSERT INTO payments(payment_id, session_id, subscription_id, amount, currency, paid_at)
       VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(payment_id) DO NOTHING`).bind(payment, session.id, subscription, session.amount_total, session.currency, event.created),
   ];
 }
 
+// Both webhook delivery and a private return can record an authenticated paid
+// session. Stable payment/session IDs preserve decisions on retries and races.
+export async function recordPaidCheckout(db, env, stripe, session) {
+  const statements = await contributionStatements(db, env, stripe, session, { created: session.created });
+  if (statements.length && idOf(session.subscription)) {
+    statements.push(subscriptionStatement(db, await stripe.subscriptions.retrieve(idOf(session.subscription)), { created: nowSeconds() }));
+  }
+  if (statements.length) await db.batch(statements);
+}
+
 function subscriptionStatement(db, subscription, event) {
-  return db.prepare(`INSERT INTO subscriptions(subscription_id, status, cancel_at_period_end, event_created) VALUES (?, ?, ?, ?)
+  const periods = [subscription.current_period_end, ...(subscription.items?.data || []).map(item => item.current_period_end)].filter(Number.isSafeInteger);
+  const end = periods.length ? Math.max(...periods) : null;
+  return db.prepare(`INSERT INTO subscriptions(subscription_id, status, cancel_at_period_end, event_created, current_period_end) VALUES (?, ?, ?, ?, ?)
     ON CONFLICT(subscription_id) DO UPDATE SET status = excluded.status,
-      cancel_at_period_end = excluded.cancel_at_period_end, event_created = excluded.event_created
+      cancel_at_period_end = excluded.cancel_at_period_end, event_created = excluded.event_created,
+      current_period_end = COALESCE(excluded.current_period_end, subscriptions.current_period_end)
     WHERE excluded.event_created >= subscriptions.event_created AND subscriptions.status != 'canceled'`)
-    .bind(subscription.id, subscription.status, subscription.cancel_at_period_end ? 1 : 0, event.created);
+    .bind(subscription.id, subscription.status, subscription.cancel_at_period_end ? 1 : 0, event.created, end);
+}
+
+export async function refreshSupporterSubscriptions(db, stripe, emailHash, now = nowSeconds()) {
+  const { results } = await db.prepare(`SELECT DISTINCT subscription_id FROM contributions
+    WHERE email_hash = ? AND subscription_id IS NOT NULL ORDER BY created_at DESC LIMIT 10`).bind(emailHash).all();
+  for (const row of results) {
+    const current = await stripe.subscriptions.retrieve(row.subscription_id);
+    await subscriptionStatement(db, current, { created: now }).run();
+  }
+}
+
+export async function queueDiscordForEvent(db, event) {
+  const object = event.data.object;
+  const subscription = event.type.startsWith('invoice.') ? subOfInvoice(object) : event.type.startsWith('customer.subscription.') ? object.id : idOf(object.subscription);
+  const { results } = await db.prepare(`SELECT DISTINCT d.email_hash FROM discord_links d JOIN contributions c ON c.email_hash = d.email_hash
+    WHERE c.session_id = ? OR c.subscription_id = ?`).bind(object.id || '', subscription).all();
+  for (const row of results) await db.prepare('UPDATE discord_links SET sync_due = 0, version = version + 1 WHERE email_hash = ?').bind(row.email_hash).run();
+  return results.map(row => row.email_hash);
 }
 
 export async function processEvent(db, env, stripe, event) {
@@ -87,19 +123,24 @@ export async function processEvent(db, env, stripe, event) {
   await db.batch([...statements, eventInsert(db, event)]);
 }
 
-export async function recentSupporters(db, project) {
-  const { results } = await db.prepare(`SELECT c.display_name, c.message, c.kind,
+export async function recentSupporters(db, project, { limit = 10, offset = 0 } = {}) {
+  const { results } = await db.prepare(`SELECT COALESCE(c.censored_name, c.display_name) AS display_name, COALESCE(c.censored_message, c.message) AS message, c.kind, c.consent_version,
+      (SELECT first.amount FROM payments first WHERE first.session_id = c.session_id ORDER BY first.paid_at, first.payment_id LIMIT 1) AS amount,
+      (SELECT first.currency FROM payments first WHERE first.session_id = c.session_id ORDER BY first.paid_at, first.payment_id LIMIT 1) AS currency,
       CASE WHEN c.kind = 'monthly' AND s.status = 'active' THEN 'active'
            WHEN c.kind = 'monthly' THEN 'previous' ELSE NULL END AS monthly_status,
       MAX(p.paid_at) AS contributed_at
     FROM contributions c
     JOIN payments p ON (p.session_id = c.session_id OR (c.subscription_id IS NOT NULL AND p.subscription_id = c.subscription_id))
     LEFT JOIN subscriptions s ON s.subscription_id = c.subscription_id
-    WHERE c.project = ? AND c.consent = 1 AND c.moderation = 'approved' AND c.removed_at IS NULL
+    WHERE c.project = ? AND c.consent = 1 AND (c.moderation = 'approved' OR (c.moderation = 'pending' AND c.auto_publish = 1)) AND c.removed_at IS NULL
       AND (c.display_name IS NOT NULL OR c.message IS NOT NULL)
       AND NOT EXISTS(SELECT 1 FROM suppressions x WHERE x.project = c.project AND x.email_hash = c.email_hash)
-    GROUP BY c.session_id ORDER BY contributed_at DESC, c.session_id DESC LIMIT 10`).bind(project).all();
-  // Explicit response allowlist: no IDs, emails, amounts, Stripe objects or hashes.
+    GROUP BY c.session_id ORDER BY contributed_at DESC, c.session_id DESC LIMIT ? OFFSET ?`).bind(project, limit, offset).all();
+  // Amount is included only when the original checkout explicitly covered it.
+  // The rest of the response remains allowlisted: no IDs, emails or Stripe data.
   return results.map(row => ({ displayName: row.display_name, message: row.message, kind: row.kind,
-    monthlyStatus: row.monthly_status, date: new Date(row.contributed_at * 1000).toISOString().slice(0, 10) }));
+    monthlyStatus: row.monthly_status, date: new Date(row.contributed_at * 1000).toISOString().slice(0, 10),
+    ...(row.consent_version === AMOUNT_CONSENT_VERSION && Number.isSafeInteger(row.amount) ? { amount: row.amount, currency: row.currency } : {}),
+  }));
 }

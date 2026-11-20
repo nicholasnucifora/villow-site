@@ -120,7 +120,7 @@ blocks:
   - type: cta
     variant: fixtheweb
     heading: YouTube could offer these controls to everyone.
-    body: Villow demonstrates that these controls are possible. YouTube could offer them directly to everyone. Fix the Web is building the case through working tools and voluntary feedback. Villow is a prototype we can learn from; better outcomes need evidence, and private viewing data isn't automatically sent to the movement.
+    body: Villow demonstrates that these controls are possible. YouTube could offer them directly to everyone. Fix the Web is building the case through working tools, required app check-ins and optional feedback. Villow is a prototype we can learn from; better outcomes need evidence, and private viewing data isn't automatically sent to the movement. The [app privacy policy](link:appPrivacy) explains the check-ins.
     actions:
       - label: Why this matters →
         href: /youtube-could-do-this

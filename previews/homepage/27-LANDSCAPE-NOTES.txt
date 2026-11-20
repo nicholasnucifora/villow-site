@@ -1,0 +1,71 @@
+PRESET 27 — YOUR LANDSCAPE LAYERS
+Completed 11 November 2026
+http://127.0.0.1:4411/27.html
+
+The numbering continues after Z as 27; future comparisons can use 28, 29, etc.
+Z's main content, styles and generated layer assets remain unchanged.
+
+USER-SUPPLIED FILES
+assets/supplied-landscape/original-source.png — updated full landscape
+assets/supplied-landscape/foreground-source.png — supplied foreground hill
+assets/supplied-landscape/trees-source.png — supplied forest cutout
+These copies are byte-identical to the supplied Desktop PNGs. Their original
+9050 x 3017 canvases and transparency are preserved. Delivery copies are
+3840px WebPs; the source files are not modified.
+
+27 IMPLEMENTATION
+render-27.mjs derives from saved Z with its own 27-supplied-landscape.css.
+Two SVG viewports show the left and right portions of the supplied forest
+image without redrawing it. Each group has independent CSS sizing/position.
+The supplied foreground image is the upper layer, covering the cutout bases.
+There is no need to invent trunks or repaint the hidden lower parts of trees.
+
+The supplied full scene already includes trees and foreground. One built-in
+image_gen edit prepared backdrop-source.png/backdrop.webp with those objects
+removed and the hidden hills filled in. This is the only newly generated
+asset. The sun and glow stay together. Exact prompt, input and generated
+output paths are recorded in assets/supplied-landscape/provenance.json.
+
+Desktop shows the proportional wide background. Below 701px the background
+has a stable 800px width, right-aligned, while the foreground is 900px wide
+and right-aligned. Trees stay separately anchored at both edges, so cropping the
+base image cannot remove them. The original cinema art/controls are retained.
+The header/hero sky is #fdfdfd with a fade at the top of the background.
+
+OTHER PRESETS
+At the user's explicit request, the shared sage-sunrise full-scene assets now
+use the updated original. This refreshes W and the other presets using that
+landscape. Y's tablet and phone deliveries are also crops of the updated
+original, retaining their previous dimensions and CSS positioning. None of
+those layouts were redesigned. Earlier deliveries are saved under
+assets/supplied-landscape/previous/. qa/prepare-27-assets.mjs records encoding
+and crop coordinates; its backups do not overwrite earlier copies.
+
+VALIDATION
+Navigation and semantic-position checks pass, including the numbered tab.
+Browser measurements cover 320, 390, 600, 700, 701, 861, 1024, 1168, 1636 and
+2560px: no horizontal overflow, scenery images loaded, matching sky colours,
+and left tree bounds below the CTA. Visual checks cover narrow phones,
+stacked tablet and desktop; the wide viewport screenshot API clips its
+capture to the browser surface, so the widest layout also uses DOM geometry.
+At 320px, End seeking reveals ratings and Worth it sets aria-pressed=true.
+Updated W/Y image loading is checked in the browser.
+Proof: qa/27-phone-390.png and qa/27-desktop-1168.png.
+Measurements: qa/27-responsive-checks.json.
+Preservation baseline: qa/27-z-preservation-baseline.json.
+Keep the port 4411 preview running. No publication or production changes.
+
+FOREST / CTA REFINEMENT — 11 November 2026
+The hero CTA now disappears only when the cinema/cloud is stacked beneath
+the copy (<=700px). It remains in the side-by-side layout; the header CTA
+always remains. The user explicitly clarified this breakpoint condition.
+The mobile left group is positioned to conceal its long cut shrub edge.
+The right group has a 132px minimum width and a lower anchor. The mobile
+foreground crop is right-aligned so its slope fits the right cutout; a shared
+vertical offset moves foreground and trees together to expose distant hills.
+The actual assets and their supplied source PNGs are unchanged.
+Final checks cover 14 widths from 320 to 2560px, including 700 and 701px:
+no overflow, correct CTA visibility, and both cutout bases behind the hill.
+Alpha-boundary measurements: qa/27-forest-grounding.json (negative gap means
+overlap behind the foreground). Layouts: qa/27-forest-layouts.json.
+Updated proof: qa/27-forest-phone-390.png and qa/27-forest-tablet-861.png.

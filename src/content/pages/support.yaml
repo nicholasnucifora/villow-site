@@ -18,7 +18,7 @@ blocks:
     body: |
       Stripe asks for an optional display name, an optional message, and permission to display them. **Only an explicit “Yes” allows publication.** Leaving permission blank means no. Use a display name you're comfortable making public, and leave personal or payment details out of your message.
 
-      Approved names and messages may appear on Villow and other Fix the Web projects. We show the contribution date and whether the support is one-time or monthly. Messages are reviewed before appearing. We don't publish payment amounts, email addresses or payment details.
+      Approved names and messages may appear on Villow and other Fix the Web projects. We show the contribution date and whether the support is one-time or monthly. Messages are reviewed before appearing. Amounts are shown only if the sharing question you agreed to included them. We never publish email addresses, card details or private payment references.
 
       Stripe processes your payment. Our support service uses Cloudflare to store contribution references, subscription status and your sharing preference. We keep public text only when you consent, and use a protected fingerprint of your checkout email to match removal requests. Resend delivers verification emails when you request removal. These records are separate from your Villow app and extension data.
 
@@ -27,7 +27,7 @@ blocks:
     heading: A few useful things to know
     items:
       - q: Do I have to pay to use Villow?
-        a: No. Supporting the project is optional. There are no supporter-only features or extra access.
+        a: No. Supporting the project is optional and adds no app features. Contributions include private Discord chat access while the supporter community operates, subject to its community rules; monthly supporters also receive an Ongoing Supporter role.
       - q: How do I change or cancel monthly support?
         a: Use “Manage monthly support” above to open Stripe's Customer Portal. Sign in with the email you used at checkout. Removing a public message is separate from cancelling a subscription.
       - q: Why isn't my message visible yet?

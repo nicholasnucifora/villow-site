@@ -1,5 +1,8 @@
 export const API_VERSION = '2026-10-28.endive';
 export const CONSENT_VERSION = 'public-name-message-v1';
+export const AMOUNT_CONSENT_VERSION = 'public-name-message-amount-v2';
+// Stripe limits custom field labels to 50 characters.
+export const AMOUNT_CONSENT_LABEL = 'Share my name, message and amount publicly?';
 export const LABELS = ['Display name', 'Supporter message', 'Can we publicly display your name and message?'];
 export class HttpError extends Error {
   constructor(status, message) { super(message); this.status = status; }
@@ -19,6 +22,13 @@ export function projectConfig(env, id) {
   if (!/^[a-z][a-z0-9-]{0,39}$/.test(id || '') || !p) throw new HttpError(404, 'Unknown project.');
   const origin = new URL(p.origin);
   if (origin.origin !== p.origin || (origin.protocol !== 'https:' && !(env.STRIPE_MODE === 'test' && ['localhost', '127.0.0.1'].includes(origin.hostname)))) throw new Error('Invalid project origin');
+  // Additional interfaces are explicit origins, never a URL supplied in a request.
+  // Loopback is allowed for the owner's local preview, including live payments.
+  if (p.additional_origins !== undefined && !Array.isArray(p.additional_origins)) throw new Error('Invalid additional origins');
+  for (const value of p.additional_origins || []) {
+    const extra = new URL(value);
+    if (extra.origin !== value || (extra.protocol !== 'https:' && !(extra.protocol === 'http:' && ['localhost', '127.0.0.1'].includes(extra.hostname)))) throw new Error('Invalid additional origin');
+  }
   if (p.currency !== 'aud') throw new Error('This integration currently supports AUD only');
   for (const key of ['once', 'monthly5', 'monthly10', 'monthly20']) {
     if (!/^plink_[A-Za-z0-9]+$/.test(p.links?.[key] || '')) throw new Error('Missing Payment Link ID');
@@ -28,13 +38,17 @@ export function projectConfig(env, id) {
   if (portal.pathname.includes('test_') !== (env.STRIPE_MODE === 'test')) throw new Error('Portal mode mismatch');
   return p;
 }
+export function projectOrigin(project, origin) {
+  if (origin !== project.origin && !project.additional_origins?.includes(origin)) throw new HttpError(403, 'Origin not allowed.');
+  return origin;
+}
 export function assertSecrets(env) {
   if (!['test', 'live'].includes(env.STRIPE_MODE)) throw new Error('Missing Stripe mode');
   if (!new RegExp(`^(sk|rk)_${env.STRIPE_MODE}_`).test(env.STRIPE_SECRET_KEY || '')) throw new Error('Stripe key mode mismatch');
   if (!env.STRIPE_WEBHOOK_SECRET?.startsWith('whsec_') || (env.EMAIL_HASH_SECRET || '').length < 32) throw new Error('Missing support secrets');
 }
 export function fieldMapping(fields) {
-  const found = LABELS.map(label => fields?.filter(f => f.label?.custom === label) || []);
+  const found = LABELS.map((label, index) => fields?.filter(f => f.label?.custom === label || (index === 2 && f.label?.custom === AMOUNT_CONSENT_LABEL)) || []);
   if (fields?.length !== 3 || found.some(f => f.length !== 1)) throw new LinkConfigError('field_labels', 'Expected three exact custom field labels');
   const [name, message, consent] = found.map(f => f[0]);
   if (name.type !== 'text' || message.type !== 'text' || consent.type !== 'dropdown' || [name, message, consent].some(f => f.optional !== true)) throw new LinkConfigError('field_types_or_optional', 'Custom field types or optional settings differ');
@@ -51,7 +65,19 @@ export function publicFields(fields, mapping) {
     const f = lookup(key);
     return f?.type === 'text' && typeof f.text?.value === 'string' ? f.text.value.replace(/[\u0000-\u001f\u007f]/g, ' ').trim().slice(0, limit) || null : null;
   };
-  return { consent, name: consent ? clean(mapping.name, 80) : null, message: consent ? clean(mapping.message, 255) : null };
+  // Use the wording actually shown in this Checkout Session, never the current
+  // Payment Link wording: editing a link cannot expand an earlier permission.
+  const shareAmount = consent && lookup(mapping.consent)?.label?.custom === AMOUNT_CONSENT_LABEL;
+  return { consent, shareAmount, name: consent ? clean(mapping.name, 80) : null, message: consent ? clean(mapping.message, 255) : null };
+}
+
+export function checkoutFields(fields) {
+  const mapping = fieldMapping(fields);
+  return fields.map(f => ({ key: f.key,
+    label: f.key === mapping.consent ? { type: 'custom', custom: AMOUNT_CONSENT_LABEL } : f.label,
+    type: f.type, optional: true,
+    ...(f.type === 'text' ? { text: { maximum_length: f.key === mapping.name ? 80 : 255 } } : { dropdown: { options: f.dropdown.options } }),
+  }));
 }
 export function amountCents(value) {
   if (typeof value !== 'string' || !/^\d{1,5}(\.\d{1,2})?$/.test(value)) throw new HttpError(400, 'Enter an AUD amount with at most two decimal places.');
@@ -66,8 +92,9 @@ export function sessionSource(session, env) {
     const pair = Object.entries(raw.links || {}).find(([, value]) => value === link);
     if (pair) return { id, project: projectConfig(env, id), key: pair[0], link };
     // Metadata is written by our authenticated server, never accepted from a browser.
-    if (!link && session.metadata?.support_integration === 'ftw-support-v1' && session.metadata?.support_project === id && session.metadata?.support_link === raw.links?.once) {
-      return { id, project: projectConfig(env, id), key: 'once', link: raw.links.once };
+    if (!link && session.metadata?.support_integration === 'ftw-support-v1' && session.metadata?.support_project === id) {
+      const configured = Object.entries(raw.links || {}).find(([, value]) => value === session.metadata.support_link);
+      if (configured) return { id, project: projectConfig(env, id), key: configured[0], link: configured[1] };
     }
   }
   return null;

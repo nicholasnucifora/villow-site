@@ -1,0 +1,176 @@
+[
+  {
+    "chartHeight": 207,
+    "documentWidth": 305,
+    "imagesLoaded": true,
+    "overflow": [],
+    "pending": 0,
+    "rows": [
+      {
+        "left": 16,
+        "visualLeft": 16
+      },
+      {
+        "left": 16,
+        "visualLeft": 16
+      },
+      {
+        "left": 16,
+        "visualLeft": 16
+      }
+    ],
+    "summaries": "Average daily app time\n24\nmin\nAcross all 30 days\nWorthwhile\n80\n%\nof Worth it / Not worth it ratings (24 of 30)",
+    "width": 320,
+    "timeOfDayHeight": 207,
+    "summariesUnchanged": true,
+    "visibleCharts": [
+      "time-of-day"
+    ],
+    "axisOverflow": []
+  },
+  {
+    "chartHeight": 207,
+    "documentWidth": 375,
+    "imagesLoaded": true,
+    "overflow": [],
+    "pending": 0,
+    "rows": [
+      {
+        "left": 20,
+        "visualLeft": 20
+      },
+      {
+        "left": 20,
+        "visualLeft": 20
+      },
+      {
+        "left": 20,
+        "visualLeft": 20
+      }
+    ],
+    "summaries": "Average daily app time\n24\nmin\nAcross all 30 days\nWorthwhile\n80\n%\nof Worth it / Not worth it ratings (24 of 30)",
+    "width": 390,
+    "timeOfDayHeight": 207,
+    "summariesUnchanged": true,
+    "visibleCharts": [
+      "time-of-day"
+    ],
+    "axisOverflow": []
+  },
+  {
+    "chartHeight": 229,
+    "documentWidth": 753,
+    "imagesLoaded": true,
+    "overflow": [],
+    "pending": 0,
+    "rows": [
+      {
+        "left": 32,
+        "visualLeft": 32
+      },
+      {
+        "left": 32,
+        "visualLeft": 32
+      },
+      {
+        "left": 32,
+        "visualLeft": 32
+      }
+    ],
+    "summaries": "Average daily app time\n24\nmin\nAcross all 30 days\nWorthwhile\n80\n%\nof Worth it / Not worth it ratings (24 of 30)",
+    "width": 768,
+    "timeOfDayHeight": 229,
+    "summariesUnchanged": true,
+    "visibleCharts": [
+      "time-of-day"
+    ],
+    "axisOverflow": []
+  },
+  {
+    "chartHeight": 229,
+    "documentWidth": 1009,
+    "imagesLoaded": true,
+    "overflow": [],
+    "pending": 0,
+    "rows": [
+      {
+        "left": 32,
+        "visualLeft": 353
+      },
+      {
+        "left": 32,
+        "visualLeft": 353
+      },
+      {
+        "left": 32,
+        "visualLeft": 353
+      }
+    ],
+    "summaries": "Average daily app time\n24\nmin\nAcross all 30 days\nWorthwhile\n80\n%\nof Worth it / Not worth it ratings (24 of 30)",
+    "width": 1024,
+    "timeOfDayHeight": 229,
+    "summariesUnchanged": true,
+    "visibleCharts": [
+      "time-of-day"
+    ],
+    "axisOverflow": []
+  },
+  {
+    "chartHeight": 229,
+    "documentWidth": 1265,
+    "imagesLoaded": true,
+    "overflow": [],
+    "pending": 0,
+    "rows": [
+      {
+        "left": 56,
+        "visualLeft": 471.75
+      },
+      {
+        "left": 56,
+        "visualLeft": 471.75
+      },
+      {
+        "left": 56,
+        "visualLeft": 471.75
+      }
+    ],
+    "summaries": "Average daily app time\n24\nmin\nAcross all 30 days\nWorthwhile\n80\n%\nof Worth it / Not worth it ratings (24 of 30)",
+    "width": 1280,
+    "timeOfDayHeight": 229,
+    "summariesUnchanged": true,
+    "visibleCharts": [
+      "time-of-day"
+    ],
+    "axisOverflow": []
+  },
+  {
+    "chartHeight": 229,
+    "documentWidth": 1425,
+    "imagesLoaded": true,
+    "overflow": [],
+    "pending": 0,
+    "rows": [
+      {
+        "left": 92.5,
+        "visualLeft": 535.25
+      },
+      {
+        "left": 92.5,
+        "visualLeft": 535.25
+      },
+      {
+        "left": 92.5,
+        "visualLeft": 535.25
+      }
+    ],
+    "summaries": "Average daily app time\n24\nmin\nAcross all 30 days\nWorthwhile\n80\n%\nof Worth it / Not worth it ratings (24 of 30)",
+    "width": 1440,
+    "timeOfDayHeight": 229,
+    "summariesUnchanged": true,
+    "visibleCharts": [
+      "time-of-day"
+    ],
+    "axisOverflow": []
+  }
+]

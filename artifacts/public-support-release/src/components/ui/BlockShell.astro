@@ -1,0 +1,22 @@
+---
+/* The band every block sits in: its anchor, background and content width. */
+interface Props {
+  type: string;
+  id?: string;
+  background?: "none" | "soft" | "strong";
+  width?: "page" | "narrow" | "prose";
+  labelledBy?: string;
+}
+
+const { type, id, background, width = "page", labelledBy } = Astro.props;
+---
+
+<section
+  class:list={["block", `block--${type}`, background && background !== "none" && `block--bg-${background}`]}
+  id={id}
+  aria-labelledby={labelledBy}
+>
+  <div class:list={["container", width !== "page" && `container--${width}`]}>
+    <slot />
+  </div>
+</section>

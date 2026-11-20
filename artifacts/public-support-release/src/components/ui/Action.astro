@@ -1,0 +1,36 @@
+---
+/* A button-style link. While its URL is missing it stays visible, is marked TBD, and does nothing. */
+import type { Action } from "../../lib/schema";
+import { ui } from "../../lib/content";
+import { inline, resolveHref } from "../../lib/markdown";
+
+interface Props {
+  action: Action;
+  size?: "normal" | "small";
+}
+
+const { action, size = "normal" } = Astro.props;
+const { href } = resolveHref(action.href);
+const classes = ["btn", `btn--${action.style}`, size === "small" && "btn--small"];
+---
+
+{
+  href ? (
+    <a class:list={classes} href={href}>
+      <span set:html={inline(action.label)} />
+    </a>
+  ) : (
+    <a class:list={[...classes, "is-inert"]} role="link" aria-disabled="true" tabindex="0" title={ui.inertLinkTitle}>
+      <span set:html={inline(action.label)} />
+      <span class="tbd tbd--mini">{ui.tbd}</span>
+    </a>
+  )
+}
+
+<style>
+  .btn--small {
+    min-height: 2.5rem;
+    padding-inline: var(--space-md);
+    font-size: var(--text-sm);
+  }
+</style>

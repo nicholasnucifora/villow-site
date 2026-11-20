@@ -1,0 +1,13 @@
+/* A quiet cue accompanies the illustrative stack on touch and narrow layouts. */
+.t-swipe-cue{display:none;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:0 6px;max-width:390px;width:100%;margin:0 auto 12px;color:#547260}
+.t-swipe-direction{display:flex;align-items:center;gap:5px;font:11px/1.4 system-ui,-apple-system,'Segoe UI',sans-serif;white-space:nowrap}
+.t-swipe-direction svg{width:16px;height:16px;flex:none}
+.t-swipe-save{justify-content:flex-end}
+.ifs-section .t-swipe-preview{min-height:44px;padding:7px 8px;border:0;border-radius:7px;background:transparent;color:#315f4c;font:600 11px/1.4 system-ui,-apple-system,'Segoe UI',sans-serif;text-decoration:underline;text-underline-offset:4px;white-space:nowrap}
+.t-swipe-preview:hover{background:#e8efe3}
+.t-swipe-preview:focus-visible{outline:2px solid #8a713f;outline-offset:1px}
+.t-swipe-instruction{grid-column:1/-1;margin:0;font:10.5px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;text-align:center;color:#637b6d}
+.t-swipe-cue[hidden]{display:none!important}
+@media(max-width:760px),(any-pointer:coarse){.t-swipe-cue{display:grid}}
+@media(max-width:360px){.t-swipe-cue{gap:0 3px}.t-swipe-direction{font-size:10px;gap:3px}.t-swipe-direction svg{width:14px;height:14px}.ifs-section .t-swipe-preview{font-size:10.5px;padding-inline:6px}.t-swipe-instruction{font-size:10px}}
+@media print{.t-swipe-cue{display:none!important}}

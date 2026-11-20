@@ -1,0 +1,82 @@
+/* The activity controls and viewing insights share the homepage's paper background. */
+@font-face { font-family:'Villow Inter'; font-style:normal; font-weight:100 900; font-display:swap; src:url('assets/watch-pattern/inter-latin.woff2') format('woff2'); }
+.watch-pattern-walkthrough { margin-top:clamp(32px,5.2vw,66px); padding-bottom:clamp(28px,4vw,54px); }
+.watch-pattern-walkthrough > .i-width { display:grid; gap:clamp(36px,5vw,64px); }
+.watch-pattern-section { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); align-items:center; gap:clamp(32px,5.6vw,72px); width:100%; max-width:1090px; margin:0 auto; padding:0; border:0; scroll-margin-top:112px; }
+.watch-pattern-copy h2 { margin:0; color:#244d43; font:400 clamp(33px,3.3vw,42px)/1.17 'Varela Round',sans-serif; letter-spacing:-.04em; text-wrap:balance; }
+.watch-pattern-copy p { max-width:390px; margin:16px 0 0; color:#536f61; font:15px/1.85 system-ui,sans-serif; }
+.watch-pattern-example { min-width:0; }
+.watch-pattern-learn { grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); }
+.watch-pattern-learn .watch-pattern-copy { grid-area:1/2; }
+.watch-pattern-learn .watch-pattern-example { grid-area:1/1; }
+.watch-pattern-learn .watch-pattern-copy h2 { font-size:clamp(29px,3vw,37px); }
+
+.reflection-demo { --app-primary:#2d6f6b; --app-primary-foreground:#fff; --app-text:#102e3a; --app-text-secondary:#50676f; --app-accent-text:#2d6f6b; position:relative; width:100%; min-width:0; margin:0; color:var(--app-text); font:400 13px/1.5 'Villow Inter',sans-serif; }
+.reflection-demo *, .reflection-demo *::before, .reflection-demo *::after { box-sizing:border-box; }
+.watch-pattern-chart-title { position:absolute; z-index:1; inset:14px 0 auto; text-align:center; font-weight:650; color:#315b45; }
+/* The website chart answers 'which way is more?' instead of a percentage
+   scale no visitor can anchor, so the gutter only has to hold a short word. */
+.reflection-demo .watch-free-demo { --wfd-plot-top:2.75rem; --wfd-plot-left:2.625rem; width:100%; max-width:none; }
+.reflection-demo .watch-free-demo-y { font-size:10.5px; font-weight:600; letter-spacing:.005em; }
+.reflection-demo .watch-free-demo-card { background:#edf1ea; }
+.reflection-demo .watch-free-demo-title { font-size:12px; }
+.demo-sr-only { position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip-path:inset(50%); white-space:nowrap; }
+
+.rating-example { padding:clamp(14px,2.4vw,25px); border-radius:16px; background:#fffefb; box-shadow:0 8px 24px #35574412; }
+.rating-example h3 { margin:0; color:#315b45; font:400 clamp(17px,2.4vw,22px)/1.3 'Varela Round',sans-serif; }
+.rating-suggestion-channel { display:flex; align-items:center; gap:10px; margin-bottom:12px; color:#536f61; font:650 13px/1.4 system-ui,sans-serif; }
+.rating-suggestion-channel img { flex:none; width:40px; height:40px; border-radius:50%; object-fit:cover; }
+.rating-evidence { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px 16px; margin:14px 0 0; padding-top:14px; border-top:1px solid #e1e8dc; }
+.rating-evidence > div { display:flex; flex-direction:column-reverse; gap:3px; }
+.rating-evidence dd { margin:0; color:#315b45; font:400 23px/1.15 'Varela Round',sans-serif; }
+.rating-evidence dt { color:#536f61; font:12px/1.4 system-ui,sans-serif; }
+
+@media(max-width:760px) {
+  .watch-pattern-section { grid-template-columns:minmax(0,1fr); gap:22px; }
+  .watch-pattern-learn .watch-pattern-copy, .watch-pattern-learn .watch-pattern-example { grid-area:auto; }
+  .watch-pattern-copy { text-align:center; }
+  .watch-pattern-copy h2 { font-size:32px; }
+  .watch-pattern-copy p { margin:12px auto 0; font-size:14px; max-width:430px; }
+  .watch-pattern-example { width:100%; max-width:490px; justify-self:center; }
+}
+@media(max-width:380px) {
+  .reflection-demo .watch-free-demo { --wfd-plot-left:2.5rem; --wfd-plot-right:.75rem; }
+  .reflection-demo .watch-free-demo-x-axis > span { font-size:10px; }
+  .watch-pattern-copy h2 { font-size:29px; }
+}
+@media(forced-colors:active) {
+  .watch-pattern-chart-title { position:static; }
+}
+
+/* The homepage's legacy reset disables every animation with !important.
+   Restore only this explicitly requested explanatory loop, using the app's
+   original names, duration and ripple offsets. Other page motion stays as-is. */
+@media(prefers-reduced-motion:reduce) {
+  .watch-pattern-section .watch-free-demo-scene * { animation-duration:var(--wfd-loop)!important; animation-iteration-count:infinite!important; animation-timing-function:linear!important; }
+  .watch-pattern-section .watch-free-demo-ripple { animation-name:wfd-ripple!important; animation-delay:calc(var(--wfd-loop) * (var(--wfd-ripple-at) - 1))!important; }
+  .watch-pattern-section [data-variant='drag'] .watch-free-demo-outside { animation-name:wfd-drag-hole!important; }
+  .watch-pattern-section [data-variant='drag'] .watch-free-demo-inside { animation-name:wfd-drag-band-clip!important; }
+  .watch-pattern-section [data-variant='drag'] .watch-free-demo-band { animation-name:wfd-drag-band!important; }
+  .watch-pattern-section [data-variant='drag'] .watch-free-demo-inside-base { animation-name:wfd-drag-base!important; }
+  .watch-pattern-section [data-variant='drag'] .watch-free-demo-handle { animation-name:wfd-drag-handle!important; }
+  .watch-pattern-section [data-variant='drag'] .watch-free-demo-card { animation-name:wfd-drag-card!important; }
+  .watch-pattern-section [data-variant='drag'] .watch-free-demo-drawer { animation-name:wfd-drag-drawer!important; }
+  .watch-pattern-section [data-variant='drag'] .watch-free-demo-add { animation-name:wfd-drag-add!important; }
+  .watch-pattern-section .watch-free-demo-pointer { animation-name:wfd-drag-pointer-x!important; }
+  .watch-pattern-section .watch-free-demo-pointer > .watch-free-demo-place-y { animation-name:wfd-drag-pointer-y!important; }
+  .watch-pattern-section .watch-free-demo-cursor { animation-name:wfd-drag-cursor!important; }
+  .watch-pattern-section [data-variant='tap'] .watch-free-demo-outside { animation-name:wfd-tap-hole!important; }
+  .watch-pattern-section [data-variant='tap'] .watch-free-demo-inside { animation-name:wfd-tap-band-clip!important; }
+  .watch-pattern-section [data-variant='tap'] .watch-free-demo-band { animation-name:wfd-tap-band!important; }
+  .watch-pattern-section [data-variant='tap'] .watch-free-demo-inside-base { animation-name:wfd-tap-base!important; }
+  .watch-pattern-section [data-variant='tap'] .watch-free-demo-handle { animation-name:wfd-tap-handle!important; }
+  .watch-pattern-section [data-variant='tap'] .watch-free-demo-end-point { animation-name:wfd-tap-end-x!important; }
+  .watch-pattern-section [data-variant='tap'] .watch-free-demo-end-point > .watch-free-demo-place-y { animation-name:wfd-tap-end-y!important; }
+  .watch-pattern-section [data-variant='tap'] .watch-free-demo-card { animation-name:wfd-tap-card!important; }
+  .watch-pattern-section [data-variant='tap'] .watch-free-demo-drawer { animation-name:wfd-tap-drawer!important; }
+  .watch-pattern-section [data-variant='tap'] .watch-free-demo-add { animation-name:wfd-tap-add!important; }
+  .watch-pattern-section .watch-free-demo-open { animation-name:wfd-tap-open!important; }
+  .watch-pattern-section .watch-free-demo-open-finger { animation-name:wfd-tap-open-finger!important; }
+  .watch-pattern-section .watch-free-demo-drag-finger { animation-name:wfd-tap-drag-finger!important; }
+  .watch-pattern-section .watch-free-demo-save-finger { animation-name:wfd-tap-save-finger!important; }
+}

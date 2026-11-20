@@ -19,6 +19,10 @@ blocks:
         a: You can create your own private Villow or join one run by someone you trust. One person manages the hosting and database; friends sign in and choose their viewing setup. [Choose a starting route](/download).
       - q: Is it free?
         a: The software is free and open source. Hosting uses the owner's provider accounts. Practical capacity, group costs and paid-plan requirements are still being tested; free hosting isn't guaranteed. [More on costs](/download#costs).
+      - q: Why does my Villow say “This deployment is temporarily paused”?
+        a: This is Vercel's hosting page. The owner should check the hosting team's email and dashboard for the cause. For Hobby usage limits, Vercel may offer a one-time support boost while the owner reduces usage or considers upgrading. If a friend hosts your Villow, contact them. [Recovery instructions and links](/hosting-help).
+      - q: Can friends use up my free hosting allowance?
+        a: Yes. Everyone on your Villow contributes to the same hosting usage. Once the app is available, its owner can use Admin → People → Revoke access to reduce future activity. This doesn't erase usage already counted or guarantee free hosting. [Shared usage and access controls](/hosting-help#reduce-usage).
       - q: Do I need a computer, and how long does setup take?
         a: Creating a Villow with Setup needs a Windows computer today. Joining a friend's doesn't. Setup duration with new users hasn't been measured yet. Mac and Linux Setup availability is {tbd:setupOtherPlatforms}.
       - q: Does Villow work on my phone?
@@ -85,22 +89,10 @@ blocks:
       - q: How do I leave or revoke access?
         a: Revoke Villow in [Google's account permissions](link:googleSecuritySettings), and ask your host about stored data. Owners can revoke another member and separately delete that revoked member's data in Admin. Logout and Google revocation don't themselves erase the database. [Owner guide](/running-villow#leaving).
       - q: Does Fix the Web receive my viewing data?
-        a: Private viewing measurements stay in the Villow you use. Feedback you voluntarily submit goes to Fix the Web through its survey service. These are different data flows. [More on feedback](/privacy-overview#feedback).
+        a: Private viewing measurements stay in the Villow you use. Responses to required first-use and milestone check-ins, and optional ad hoc feedback, go to the project operator through Tally. These are different data flows. [More on feedback](/privacy-overview#feedback).
       - q: Does Villow use AI for suggestions?
         a: Current suggestions use transparent rules based on your ratings, skips and usage, rather than generative AI. No generative AI features are planned imminently. Six possible uses, their tradeoffs and our current thinking are on the [AI discussion page](/ai).
       - q: Is Villow open source?
         a: Yes. Villow is MIT-licensed ([source code](link:appSource)), and [the extension is open source](link:extensionSource).
       - q: How can I help?
         a: Use Villow, invite friends, share it with creators and people with reach, contribute code or feedback, or help fund maintenance. [Support Villow and Fix the Web](/about#get-involved).
-
-  - type: cta
-    variant: fixtheweb
-    heading: These controls are possible.
-    body: Villow demonstrates working choices for viewers. Fix the Web is asking platforms to offer them directly to everyone.
-    actions:
-      - label: The case for change →
-        href: /youtube-could-do-this
-        style: primary
-      - label: Get started →
-        href: /download
-        style: text

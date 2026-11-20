@@ -1,0 +1,54 @@
+/* Accepted Visuals first baseline: identical in both wide-screen previews. */
+.xl-pair{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none}
+.xl-compare-art{margin-bottom:20px}
+.xl-compare-cell{padding-top:24px}
+.xc-side-marker,.xc-reveal-footer,.xc-shared-control{display:none}
+
+/* Switch at the point where the original comparison would stack. */
+@media(max-width:600px){
+ .xl-comparisons{background:#e9f1e3}
+ .xl-column-headings{display:none}
+ .xl-pair{grid-template-columns:minmax(0,1fr);grid-template-rows:none}
+ .xl-pair>.xl-compare-cell{grid-area:1/1;min-width:0;padding:24px 20px 25px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(7px);transition:opacity 180ms ease,transform 220ms ease,visibility 0s 220ms}
+ [data-xc-selected="villow"] .xl-cell-villow,[data-xc-selected="pattern"] .xl-cell-pattern{opacity:1;visibility:visible;pointer-events:auto;transform:none;transition-delay:0s}
+ .xc-side-marker{display:block;font:400 15px/1.45 'Varela Round',sans-serif;color:#326b4f;margin-bottom:22px}
+ .xl-cell-pattern .xc-side-marker{color:#925d38}
+ .xl-compare-cell>p{max-width:none}
+ .xl-compare-art{margin-bottom:20px}
+ .xc-reveal-footer{display:flex;justify-content:center;padding:0 20px 23px;background:#e9f1e3;transition:background-color 180ms ease}
+ [data-xc-selected="pattern"] .xc-reveal-footer{background:#f6eee3}
+ .xc-reveal-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:9px 15px;border:1px solid #a9be9e;border-radius:999px;background:transparent;color:#315e4a;font:400 13px/1.4 'Varela Round',sans-serif;cursor:pointer;max-width:100%;text-align:center;transition:background-color 150ms ease,color 150ms ease}
+ .xc-reveal-button svg{width:19px;height:19px;flex:none}
+ .xc-reveal-button:hover{background:#dde9d4}
+ [data-xc-selected="pattern"] .xc-reveal-button{background:#32694f;color:#fff;border-color:#32694f}
+ [data-xc-selected="pattern"] .xc-reveal-button:hover{background:#285b43}
+ .xc-reveal-button:focus-visible,.xc-shared-control button:focus-visible{outline:3px solid #547f66;outline-offset:3px}
+ .xc-switch .xc-side-marker{display:none}
+ .xc-shared-control{display:grid;grid-template-columns:1fr 1fr;position:sticky;top:40px;z-index:5;padding:9px;gap:6px;background:#fbfaf2;box-shadow:0 1px 0 #d7dfcf;isolation:isolate}
+ .xc-shared-control button{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:3px;min-width:0;min-height:65px;padding:8px 6px;border:0;border-radius:11px;background:transparent;color:#836f59;font:400 14px/1.35 'Varela Round',sans-serif;cursor:pointer;transition:background-color 180ms ease,color 180ms ease,box-shadow 180ms ease}
+ .xc-shared-control button small{font:11px/1.4 system-ui,sans-serif;color:#826e59}
+ .xc-shared-control [data-xc-select="pattern"][aria-pressed="true"]{background:#efdfcd;color:#87532e;box-shadow:inset 0 0 0 1px #d4b494}
+ .xc-shared-control [data-xc-select="villow"]{color:#3d7053}
+ .xc-shared-control [data-xc-select="villow"] small{color:#55795e}
+ .xc-shared-control [data-xc-select="villow"][aria-pressed="true"]{background:#dcebd2;color:#285d42;box-shadow:inset 0 0 0 1px #8caf83}
+ .xc-shared-control button:hover{background:#eef0e4}
+ .xc-shared-control [aria-pressed="true"]>span{font-weight:600}
+ .xc-switch .xl-compare-row{scroll-margin-top:145px}
+ .xc-switch .xl-compare-cell{padding-top:28px}
+ .xc-switch .xl-pair-topic{scroll-margin-top:142px}
+ .xc-reveal .xl-pair-topic{scroll-margin-top:50px}
+}
+@media(max-width:360px){
+ .xl-pair>.xl-compare-cell{padding-inline:16px}
+ .xc-shared-control{padding:7px;gap:4px}
+ .xc-shared-control button{font-size:13px}
+ .xc-shared-control button small{font-size:10px}
+ .xc-reveal-footer{padding-inline:16px}
+ .xc-reveal-button{font-size:12px}
+}
+@media print{
+ .xl-column-headings{display:grid}
+ .xc-side-marker,.xc-reveal-footer,.xc-shared-control{display:none}
+ .xl-pair{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .xl-pair>.xl-compare-cell{grid-area:auto;opacity:1;visibility:visible;transform:none;pointer-events:auto}
+}

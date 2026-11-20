@@ -1,0 +1,31 @@
+{
+  "method": "Deterministic pixel-edge repair and hidden-base extension from preset 29 originals. No AI generation, repainting, colour grading, resizing or texture synthesis. Lossless WebP output.",
+  "reports": [
+    {
+      "name": "foreground",
+      "source": "assets/supplied-landscape/foreground.webp",
+      "sourceSHA256": "797cb076765d2bcdcb876f2009036ba7685e559b9d4cb9e13c514dfe083d8d79",
+      "delivery": "assets/31-original-landscape/foreground.webp",
+      "width": 3840,
+      "height": 1280,
+      "edgePixels": 25673,
+      "addedBasePixels": 0,
+      "closedMatteHoles": 0,
+      "originalArtPixels": 733667,
+      "unchangedArtPixels": 733667
+    },
+    {
+      "name": "trees",
+      "source": "assets/supplied-landscape/trees.webp",
+      "sourceSHA256": "19d2cd39a63f8a761f7ac0135c632ef06b72c1d1d74e6c9a6c6414989521285c",
+      "delivery": "assets/31-original-landscape/trees.webp",
+      "width": 3840,
+      "height": 1280,
+      "edgePixels": 3150,
+      "addedBasePixels": 84480,
+      "closedMatteHoles": 180,
+      "originalArtPixels": 109605,
+      "unchangedArtPixels": 109605
+    }
+  ]
+}

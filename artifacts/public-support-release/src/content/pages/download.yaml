@@ -1,0 +1,150 @@
+title: Getting started
+description: Create your own private Villow, join a friend's, or try the standalone extension. Understand setup, connected browsers, hosting and costs before you start.
+
+blocks:
+  - type: hero
+    eyebrow: Getting started
+    title: Find your way into Villow.
+    lead: Run your own private Villow or join one run by someone you trust. One person sets it up, then friends sign in. Start with the standalone extension if you'd like to try the browser controls first.
+    actions:
+      - label: Create a private Villow
+        href: "#create"
+        style: primary
+      - label: Join a friend's →
+        href: "#join"
+        style: text
+      - label: Try the extension →
+        href: /extension
+        style: text
+    smallPrint:
+      - Free and open source software
+      - Hosting needs and group costs are still being tested
+
+  - type: cards
+    heading: Three ways to begin
+    items:
+      - title: Create a private Villow
+        href: "#create"
+        body: Run it on hosting and database accounts you control. Use it yourself, or invite friends.
+      - title: Join a friend's
+        href: "#join"
+        body: Ask someone you trust for their Villow address and an invitation. They manage the hosting; you choose your own viewing setup.
+      - title: Try the standalone extension
+        href: /extension#on-its-own
+        body: Add limits to YouTube in a supported browser. Link it to Villow later for the finite feed, reflection, explained suggestions and friends experience.
+
+  - type: section
+    id: create
+    heading: Create your private Villow
+    body: Villow Setup walks you through creating and connecting the accounts your Villow runs on. The setup app is for Windows today; macOS and Linux availability is {tbd:setupOtherPlatforms}. The download link is still being prepared.
+    image: setupScreens
+    actions:
+      - label: Download for Windows
+        href: link:setupWindows
+        style: primary
+      - label: Prefer manual setup? →
+        href: /developers#by-hand
+        style: text
+
+  - type: steps
+    id: steps
+    heading: The setup journey
+    layout: column
+    items:
+      - title: Prepare your accounts
+        body: You'll need a Google account, a Google Cloud project for YouTube access, Vercel for hosting and Supabase for the database. Setup guides the connections.
+      - title: Build your Villow
+        body: Follow Setup to create and connect your projects. Review the provider plans and allowances before creating anything.
+      - title: Sign in and choose your setup
+        body: Choose your name, time zone, country and daily limit. Review your sharing choices for people on your Villow.
+      - title: Use it on your devices
+        body: Open your Villow address in a browser. Add it to the home screen on iPhone, iPad or Android for an app-like experience.
+      - title: Connect your YouTube browsers, if you want
+        body: Install the extension and use a connect link from Villow. Each browser needs its own connection. [Check coverage](/extension#coverage).
+        actions:
+          - label: Chrome Web Store
+            href: link:chromeStore
+          - label: Edge Add-ons
+            href: link:edgeAddons
+          - label: Firefox Add-ons
+            href: link:firefoxAddons
+      - title: Invite friends, if you like
+        body: One person hosts; friends sign in and choose their own limits. [Invitation guidance](#inviting-friends).
+
+  - type: section
+    id: join
+    background: soft
+    heading: Join a friend's Villow
+    body: |
+      Ask the owner for their Villow address and to allow your Google account to sign in. You don't need to run Setup or create hosting accounts yourself.
+
+      Sign in with Google, choose your viewing settings, and review what you want to share with people on this Villow. Social features, ratings and the extension are optional.
+
+      **Only join a Villow run by someone you trust.** Its owner controls the hosting and database and can access stored data. Sharing controls govern what ordinary members see through the app; they don't hide the database from its operator.
+    actions:
+      - label: Permissions and privacy →
+        href: /privacy-overview
+        style: text
+
+  - type: section
+    id: what-youll-need
+    heading: Before you create one
+    body: |
+      - A Windows computer for Setup. This is separate from the devices you'll use Villow on.
+      - Google, Google Cloud, Vercel and Supabase accounts for your own installation.
+      - Time to follow the account and consent steps. Setup duration hasn't been tested with new users yet: {tbd:setupMinutes}.
+      - A willingness to maintain your projects and check their usage, updates and backups.
+    actions:
+      - label: Running your Villow →
+        href: /running-villow
+        style: text
+
+  - type: section
+    id: costs
+    background: soft
+    heading: Free software. Hosting needs still being tested.
+    body: |
+      Villow and Villow Setup are free and open source. Your installation runs on your own provider accounts.
+
+      We haven't established a reliable capacity guide or group cost estimate yet. Free allowances may suit some use, but we can't promise free hosting for you or your group, or say that a paid plan is necessarily required. Check current provider terms, allowances and billing in your accounts.
+    callouts:
+      - heading: Still to verify
+        body: |
+          - Practical group sizes: {tbd:groupSizeGuide}
+          - Which plans different groups need: {tbd:paidPlanProviders}
+          - Exact recovery steps when an allowance is reached: {tbd:freeLimitReached}
+      - heading: Plan for ongoing ownership
+        body: |
+          YouTube API quota is shared by people using your Google Cloud project. Existing paid provider accounts can incur charges under their plans. A custom domain is optional. Uninstalling Setup doesn't close the hosted projects.
+
+  - type: section
+    id: inviting-friends
+    heading: Invite people you trust
+    body: |
+      Give your friend access through your Google Cloud project's allowed-user setup, then send them your Villow address. Exact current steps: {tbd:inviteSteps}.
+
+      While an external Google OAuth project is in Testing, YouTube authorization normally expires after seven days, so people may need to authorize again. Production and verification guidance is still being confirmed: {tbd:productionMove}.
+    image: inviteGoogleCloud
+    actions:
+      - label: Owner help and maintenance →
+        href: /running-villow
+        style: text
+
+  - type: section
+    id: good-to-know
+    heading: Know what you're joining
+    body: |
+      - Villow adds no ads and sells no viewing data. YouTube's embedded player may still show YouTube ads.
+      - Review [Google permissions and the privacy model](/privacy-overview#signing-in) before authorizing.
+      - Operators are responsible for their installation and its use of [YouTube API Services](link:youtubeApiTerms).
+      - Private viewing measurements stay in your installation. Optional feedback you submit goes to Fix the Web.
+
+  - type: cta
+    heading: See the everyday experience first.
+    actions:
+      - label: Take the guided tour
+        href: /demo
+        style: primary
+      - label: Read the FAQ →
+        href: /faq
+        style: text

@@ -1,0 +1,81 @@
+---
+import type { BlockOf } from "../../lib/schema";
+import { ui } from "../../lib/content";
+import { inline, md, slugify } from "../../lib/markdown";
+import Action from "../ui/Action.astro";
+import BlockShell from "../ui/BlockShell.astro";
+
+interface Props {
+  block: BlockOf<"cta">;
+}
+
+const { block } = Astro.props;
+const headingId = `${block.id ?? slugify(block.heading)}-title`;
+const fixTheWeb = block.variant === "fixtheweb";
+---
+
+<BlockShell type="cta" id={block.id} background={block.background} labelledBy={headingId}>
+  <div class:list={["cta", `cta--${block.variant}`]}>
+    {fixTheWeb && <img class="cta__mark" src="/brand/fixtheweb-spider.svg" alt={ui.fixTheWebMark} width="64" height="64" />}
+    {block.eyebrow && <p class="eyebrow" set:html={inline(block.eyebrow)} />}
+    <h2 id={headingId} set:html={inline(block.heading)} />
+    {block.body && <div class="cta__body prose" set:html={md(block.body)} />}
+    {
+      block.actions && (
+        <div class="actions">
+          {block.actions.map((action) => (
+            <Action action={action} />
+          ))}
+        </div>
+      )
+    }
+  </div>
+</BlockShell>
+
+<style>
+  .cta {
+    display: grid;
+    justify-items: center;
+    gap: var(--space-md);
+    padding: clamp(var(--space-xl), 5vw, var(--space-3xl)) clamp(var(--space-lg), 5vw, var(--space-2xl));
+    border-radius: var(--radius-lg);
+    text-align: center;
+    background: var(--color-bg-soft);
+    border: var(--border);
+  }
+  .cta h2 {
+    max-width: 22ch;
+  }
+  .cta__body {
+    max-width: var(--width-prose);
+    font-size: var(--text-lg);
+    color: var(--color-text-muted);
+    text-align: left;
+  }
+  .cta__body :global(p) {
+    text-align: center;
+  }
+  .cta .actions {
+    justify-content: center;
+    margin-top: var(--space-xs);
+  }
+
+  /* Fix the Web's colours, so policy links feel like part of the campaign. */
+  .cta--fixtheweb {
+    background: var(--ftw-bg);
+    color: var(--ftw-text);
+    border-color: transparent;
+    --color-text: var(--ftw-text);
+    --color-text-muted: var(--ftw-muted);
+    --color-accent: var(--ftw-accent);
+    --color-accent-text: var(--ftw-accent);
+    --color-on-accent: var(--ftw-on-accent);
+    --color-highlight: var(--ftw-accent);
+    --color-surface: color-mix(in srgb, var(--ftw-bg) 70%, var(--ftw-text) 8%);
+    --color-border: color-mix(in srgb, var(--ftw-text) 18%, transparent);
+  }
+  .cta__mark {
+    width: 4rem;
+    height: auto;
+  }
+</style>

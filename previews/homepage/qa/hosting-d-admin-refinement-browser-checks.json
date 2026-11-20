@@ -1,0 +1,16 @@
+{
+  "checked": "2026-11-09",
+  "desktop": {
+    "viewport": 1280,
+    "documentWidth": 1280,
+    "adminCalloutBeforeLimits": true,
+    "addressForms": 0,
+    "cardsShareTop": true,
+    "cardBorders": ["0px", "0px", "0px"],
+    "cardFills": ["rgb(240, 225, 215)", "rgb(224, 234, 235)", "rgb(229, 236, 216)"]
+  },
+  "mobile": {"viewport": 390, "documentWidth": 375, "adminInstructionVisible": true, "addressForms": 0},
+  "extensionLink": {"path": "/setup-hosting-d.html", "hash": "#vercel-extension", "answerOpen": true, "numberedSteps": 4},
+  "checks": ["hosting-d.test.mjs passed", "hosting-c.test.mjs passed"],
+  "boostSources": ["src/content/pages/hosting-help.yaml", "https://community.vercel.com/t/what-to-do-when-your-team-is-paused-or-blocked/45069"]
+}

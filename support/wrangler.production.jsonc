@@ -3,12 +3,34 @@
   "account_id": "4dd755707a29c1386e547d5368fef8e4",
   "main": "worker.mjs",
   "compatibility_date": "2026-09-01",
+  // Only these private-admin paths use this Worker. The public site keeps its origin.
+  "workers_dev": true,
+  "preview_urls": false,
+  "routes": [
+    { "pattern": "fixtheweb.org/admin/support", "zone_name": "fixtheweb.org" },
+    { "pattern": "fixtheweb.org/admin/support/*", "zone_name": "fixtheweb.org" }
+  ],
   "vars": {
+    // Owner authorised this bounded activation on 16 November 2026.
+    "AUTO_PUBLISH_MESSAGES": "true",
+    "MODERATION_ENABLED": "true",
+    "MODERATION_ORIGIN": "https://fixtheweb.org",
+    "MODERATION_PROJECT": "villow",
     "PAYMENTS_ENABLED": "true",
     "STRIPE_MODE": "live",
     "MAIL_FROM": "Villow <support@mail.villow.app>",
+    "CONTACT_ENABLED": "true",
+    "CONTACT_TO": "support@villow.app",
+    // Live connection flow is available in the owner's local preview.
+    // Test Discord sync remains disabled to avoid competing role updates.
+    "DISCORD_ENABLED": "true",
+    "DISCORD_CLIENT_ID": "1567089987013312694",
+    "DISCORD_GUILD_ID": "1523582670867791882",
+    "DISCORD_SUPPORTER_ROLE_ID": "1567088430628737136",
+    "DISCORD_ONGOING_ROLE_ID": "1567088983496982620",
+    "DISCORD_REDIRECT_URI": "https://fixtheweb-support.nuciforan.workers.dev/v1/discord/callback",
     // Owner-supplied live IDs validated against Stripe before launch.
-    "PROJECTS_JSON": "{\"villow\":{\"origin\":\"https://villow.app\",\"currency\":\"aud\",\"portal\":\"https://billing.stripe.com/p/login/14AcN6c7ph2D9fMgkd5J600\",\"links\":{\"once\":\"plink_1UXPaMKrVuH4uUXYu052bdnG\",\"monthly5\":\"plink_1UXPDWKrVuH4uUXYGnL6gNLV\",\"monthly10\":\"plink_1UXPU5KrVuH4uUXYs6DJOXjM\",\"monthly20\":\"plink_1UXPV2KrVuH4uUXYVdsaF44O\"}}}"
+    "PROJECTS_JSON": "{\"villow\":{\"origin\":\"https://villow.app\",\"additional_origins\":[\"http://127.0.0.1:4411\",\"http://localhost:4411\"],\"currency\":\"aud\",\"portal\":\"https://billing.stripe.com/p/login/14AcN6c7ph2D9fMgkd5J600\",\"links\":{\"once\":\"plink_1UXPaMKrVuH4uUXYu052bdnG\",\"monthly5\":\"plink_1UXPDWKrVuH4uUXYGnL6gNLV\",\"monthly10\":\"plink_1UXPU5KrVuH4uUXYs6DJOXjM\",\"monthly20\":\"plink_1UXPV2KrVuH4uUXYVdsaF44O\"}}}"
   },
   "d1_databases": [{
     "binding": "DB",
@@ -16,6 +38,6 @@
     "database_id": "71446adf-ba53-4cd2-9efb-b1c782e8c996",
     "migrations_dir": "migrations"
   }],
-  "triggers": { "crons": ["17 3 * * *"] },
+  "triggers": { "crons": ["*/15 * * * *"] },
   "observability": { "enabled": false }
 }

@@ -1,0 +1,14 @@
+---
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import Base from "../layouts/Base.astro";
+
+// Keep the reviewed policy source byte-for-byte; only its surrounding layout changes.
+const source = readFileSync(resolve("src/content/policies/extension-privacy.html"), "utf8");
+const policy = source.match(/<main>([\s\S]*?)<\/main>/)?.[1];
+if (!policy) throw new Error("The extension privacy source has no main policy content.");
+---
+
+<Base title="Browser extension privacy policy" description="How the Villow browser extension handles your information." path="/extension-privacy">
+  <article class="extension-policy container container--prose prose" data-extension-policy set:html={policy} />
+</Base>

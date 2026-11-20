@@ -33,8 +33,8 @@ theme: fern
 links:
   # Fix the Web
   fixTheWeb: https://fixtheweb.org
-  discord:
-  reddit:
+  discord: https://discord.gg/kBXuDtHFsW
+  reddit: https://www.reddit.com/r/FixTheWeb/
   newsletter:
 
   # Getting Villow
@@ -52,7 +52,7 @@ links:
   extensionPrivacy: /extension-privacy # the extension stores' policy URL; update deliberately with its build hash
   appPrivacy: /app-privacy
   sitePrivacy: /site-privacy
-  terms:
+  terms: /terms # local draft only; not effective or approved for publication
   contact: mailto:support@villow.app
 
   # Official third-party pages the copy refers to (see LAUNCH_CHECKLIST.md)
@@ -66,6 +66,9 @@ links:
 # ── Not decided yet ──────────────────────────────────────────────────────────
 # Use these in copy as {tbd:key}. Fill in `value` and the chip becomes that text.
 tbd:
+  termsOperator:
+    note: legal operator
+    value: Nicholas Francis Nucifora, an individual/sole trader (ABN 68 737 669 690)
   setupMinutes:
     note: setup time in minutes
     value:
@@ -101,13 +104,13 @@ tbd:
     value:
   appPolicyEffectiveDate:
     note: date this policy takes effect
-    value:
+    value: Not yet effective — local review revision 2026-11-14, pending an authorised release.
   appPolicyRetention:
     note: how long other data is kept
-    value:
+    value: Retention is described by data category in the app privacy policy. Local reference cleanup and authored-data export are implemented; complete coverage of older/shared API copies and their source dates remains a release blocker. Deployment-specific backup and provider settings also require verification.
   appPolicyMinimumAge:
     note: minimum age
-    value:
+    value: The connected Villow web app is for people aged 16 and over. You must also meet the age and eligibility requirements of YouTube, Google and any other service you connect. Linking the extension to a Villow account is subject to the same app eligibility rule. This does not set a minimum age for reading the website or using the standalone extension without a Villow connection.
   ownerUpdates:
     note: verified update and rollback procedure
     value:
@@ -127,6 +130,16 @@ tbd:
 # ratio is width/height. The placeholder frame uses it too.
 # Use demo data only: no real creators' thumbnails, names or faces, and no real people's usage.
 images:
+  vercelPausedDark:
+    label: Vercel paused deployment in dark appearance
+    ratio: 570/300
+    src: /images/hosting-help/vercel-paused-dark.png
+    alt: Black Vercel page saying This deployment is temporarily paused, with a small request identifier beneath it.
+  vercelPausedLight:
+    label: Vercel paused deployment in light appearance
+    ratio: 568/303
+    src: /images/hosting-help/vercel-paused-light.png
+    alt: White Vercel page saying This deployment is temporarily paused, with a small request identifier beneath it.
   homeHero:
     label: Phone and desktop home feed, demo data
     ratio: 16/10

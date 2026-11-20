@@ -1,0 +1,84 @@
+{
+  "responsive": [
+    {
+      "inside": true,
+      "noOverflow": true,
+      "noOverlap": true,
+      "screenScroll": 0,
+      "screenWidth": 91.34375,
+      "width": 320
+    },
+    {
+      "inside": true,
+      "noOverflow": true,
+      "noOverlap": true,
+      "screenScroll": 0,
+      "screenWidth": 109.90625,
+      "width": 390
+    },
+    {
+      "inside": true,
+      "noOverflow": true,
+      "noOverlap": true,
+      "screenScroll": 0,
+      "screenWidth": 106.859375,
+      "width": 768
+    },
+    {
+      "inside": true,
+      "noOverflow": true,
+      "noOverlap": true,
+      "screenScroll": 0,
+      "screenWidth": 140.234375,
+      "width": 1024
+    },
+    {
+      "inside": true,
+      "noOverflow": true,
+      "noOverlap": true,
+      "screenScroll": 0,
+      "screenWidth": 196.109375,
+      "width": 1280
+    },
+    {
+      "inside": true,
+      "noOverflow": true,
+      "noOverlap": true,
+      "screenScroll": 0,
+      "screenWidth": 203.65625,
+      "width": 1440
+    }
+  ],
+  "compactGallery": [
+    {
+      "inside": true,
+      "noOverlap": true,
+      "view": "cinema-cushion"
+    },
+    {
+      "inside": true,
+      "noOverlap": true,
+      "view": "cinema-reading-chair"
+    },
+    {
+      "inside": true,
+      "noOverlap": true,
+      "view": "cinema-hammock"
+    },
+    {
+      "inside": true,
+      "noOverlap": true,
+      "view": "cinema-director"
+    },
+    {
+      "inside": true,
+      "noOverlap": true,
+      "view": "cinema-evening"
+    },
+    {
+      "inside": true,
+      "noOverlap": true,
+      "view": "cinema-cloud-cat"
+    }
+  ]
+}

@@ -12,7 +12,7 @@ blocks:
   - type: notice
     tone: draft
     heading: This policy is a draft.
-    body: It hasn't been reviewed yet, and anything marked TBD is still to be decided. Don't rely on it as final.
+    body: This unpublished revision describes the local implementation under review. API-data retention and shared-copy deletion still have a release limitation, explained below. It is not a claim of completed compliance or a policy to accept yet.
 
   - type: prose
     file: app-privacy

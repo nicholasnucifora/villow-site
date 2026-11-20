@@ -1,0 +1,37 @@
+{
+  "viewports": [
+    {
+      "columns": "273px",
+      "oldConceptExamples": 0,
+      "overflow": false,
+      "streakAndTasks": 2,
+      "width": 320
+    },
+    {
+      "columns": "335px",
+      "oldConceptExamples": 0,
+      "overflow": false,
+      "streakAndTasks": 2,
+      "width": 390
+    },
+    {
+      "columns": "325.5px 325.5px",
+      "oldConceptExamples": 0,
+      "overflow": false,
+      "streakAndTasks": 2,
+      "width": 768
+    },
+    {
+      "columns": "505px 505px",
+      "oldConceptExamples": 0,
+      "overflow": false,
+      "streakAndTasks": 2,
+      "width": 1440
+    }
+  ],
+  "oldConceptDemonstrations": 0,
+  "workingExamplesRetained": 2,
+  "placeholderLink": "no href, aria-disabled; click and Enter retain URL and scroll",
+  "separatePageCreated": false,
+  "closingPreserved": true
+}

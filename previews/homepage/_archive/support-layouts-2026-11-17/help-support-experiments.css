@@ -1,0 +1,106 @@
+/* E — passing words. The words themselves, rather than containers, form the strip. */
+.help-notes-words .help-message-viewport{--message-gap:36px;mask-image:linear-gradient(to right,transparent,#000 24px,#000 calc(100% - 24px),transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
+.help-notes-words .help-supporters{align-items:stretch}
+.help-notes-words .help-supporters li{display:flex;flex-direction:column;width:340px;height:238px;padding:38px 10px 14px;background:none;border-radius:0;position:relative}
+.help-notes-words .help-supporters li>p{order:0;font-family:'Varela Round',sans-serif;font-size:22px;line-height:1.5;letter-spacing:-.35px;margin:0;color:#315c49;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.help-notes-words .help-supporters li::before{content:'“';position:absolute;top:-5px;left:7px;font:64px/1 Georgia,serif;color:#b5c5a2}
+.help-notes-words .help-supporter-meta{order:1;gap:4px 9px;margin-top:auto;margin-bottom:25px;max-height:36px;overflow:hidden;font-size:11px}
+.help-notes-words .help-supporter-meta strong{max-width:150px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:14px}
+.help-notes-words .help-note-read{position:absolute;left:10px;bottom:14px}
+.help-notes-words .help-message-viewport+.help-message-viewport{margin-top:24px}
+
+/* F–H share accessible note selection, but each tells a different visual story. */
+.help-voice-showcase{position:relative;min-width:0;color:#315c49}
+.help-voice-stage{position:relative;min-width:0;touch-action:pan-y pinch-zoom;cursor:grab}
+.help-voice-stage:focus-visible{outline:0;box-shadow:0 5px 0 #b3c29c;border-radius:8px}
+.help-voice-pages{list-style:none;margin:0;padding:0;display:grid;transform:translateX(var(--voice-drag,0px));transition:transform .2s ease}
+.help-voice-pages>li{grid-area:1/1;visibility:hidden;opacity:0;min-width:0;overflow-wrap:anywhere;pointer-events:none}
+.help-voice-pages>li[data-active=true]{visibility:visible;opacity:1;pointer-events:auto}
+.help-voice-pages>li>p{margin:0;color:#315c49;font-family:'Varela Round',sans-serif;font-weight:400}
+.help-voice-pages .help-supporter-meta{position:relative;z-index:1}
+.help-voice-person{border:0;font:inherit;color:inherit;cursor:pointer;min-width:0}
+.help-voice-name{overflow-wrap:anywhere}
+.help-voice-seed{display:grid;place-items:center;flex:none;font-family:'Varela Round',sans-serif}
+.help-voice-foot{display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:12px;color:#71816d}
+.help-voice-next{border:0;background:#e7eedd;border-radius:100px;padding:11px 18px;font:inherit;color:#315c49;cursor:pointer}
+.help-voice-next:hover{background:#dae5cf}
+@media(prefers-reduced-motion:no-preference){.help-voice-pages>li{transition:opacity .5s ease}}
+body[data-r-preview-motion] .help-voice-pages>li{transition:opacity .5s ease}
+
+/* F — an editorial pull quote, with a small index of people. */
+.help-voice-spotlight{display:grid;grid-template-columns:minmax(0,1fr) 200px;column-gap:70px;row-gap:28px;padding:20px 0}
+.help-voice-spotlight .help-voice-stage{padding:48px 0 14px}
+.help-voice-spotlight .help-voice-stage::before{content:'“';position:absolute;top:-49px;left:-6px;font:180px/1 Georgia,serif;color:#d8e3ca;pointer-events:none}
+.help-voice-spotlight .help-voice-pages>li{display:flex;flex-direction:column;justify-content:center;min-height:260px}
+.help-voice-spotlight .help-voice-pages>li>p{order:-1;font-size:clamp(27px,3.3vw,43px);line-height:1.35;letter-spacing:-1.4px;margin-bottom:30px;text-wrap:pretty}
+.help-voice-spotlight .help-voice-pages>li[data-long=true]>p{font-size:clamp(23px,2.6vw,33px);line-height:1.45;letter-spacing:-.7px}
+.help-voice-spotlight .help-voice-people{display:flex;flex-direction:column;gap:9px;max-height:420px;overflow:auto;align-self:center;padding:8px}
+.help-voice-spotlight .help-voice-person{display:flex;align-items:center;gap:12px;text-align:left;background:none;border-radius:100px;padding:7px;font-size:14px}
+.help-voice-spotlight .help-voice-seed{width:38px;height:38px;border-radius:50%;background:#e7eedd;color:#547252}
+.help-voice-spotlight .help-voice-person[aria-pressed=true]{background:#e7eedd}
+.help-voice-spotlight .help-voice-person[aria-pressed=true] .help-voice-seed{background:#41694f;color:#fbfaf3}
+.help-voice-spotlight .help-voice-foot{grid-column:1/-1}
+
+/* G — a small bundle of correspondence, with a turned corner and postage mark. */
+.help-voice-letters{max-width:780px;margin:28px auto 0;padding:24px 22px 0}
+.help-voice-letters .help-voice-stage{isolation:isolate;margin-bottom:40px;border-radius:6px 28px 6px 6px;box-shadow:0 14px 35px #304f3810}
+.help-voice-letters .help-voice-pages{position:relative;background:#f4efdf;padding:38px 44px;border-radius:6px 28px 6px 6px}
+.help-voice-letters .help-voice-stage::before,.help-voice-letters .help-voice-stage::after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:8px;background:#dfe7d2;transform:rotate(-4deg)}
+.help-voice-letters .help-voice-stage::after{background:#ece8d5;transform:rotate(3deg);inset:6px -5px -7px 5px;z-index:-2}
+.help-voice-letters .help-voice-pages>li{display:flex;flex-direction:column;min-height:240px;justify-content:center}
+.help-voice-letters .help-voice-pages>li::before{content:'♥';display:block;align-self:flex-end;font-size:25px;line-height:1;color:#9aaa7a;transform:rotate(12deg);margin-bottom:20px}
+.help-voice-letters .help-voice-pages>li>p{order:0;font-size:clamp(20px,2.3vw,27px);line-height:1.65;letter-spacing:-.4px;margin:0 0 28px}
+.help-voice-letters .help-supporter-meta{order:1}
+.help-voice-letters .help-voice-people{display:flex;justify-content:center;gap:8px;overflow:auto;padding:8px 2px;margin-bottom:18px}
+.help-voice-letters .help-voice-person{flex:0 0 auto;background:none;padding:5px;border-radius:50%}
+.help-voice-letters .help-voice-name{display:none}
+.help-voice-letters .help-voice-seed{width:34px;height:34px;border-radius:50%;background:#e5ebdc;font-size:13px}
+.help-voice-letters .help-voice-person[aria-pressed=true] .help-voice-seed{background:#41694f;color:#fffdf5}
+
+/* H — each person grows a stem. Choosing a bloom opens their words above it. */
+.help-voice-garden{padding:10px 0 0}
+.help-voice-garden .help-voice-stage{max-width:800px;margin:0 auto;padding:12px 20px 0;text-align:center}
+.help-voice-garden .help-voice-pages>li{display:flex;flex-direction:column;justify-content:center;min-height:215px}
+.help-voice-garden .help-voice-pages>li>p{order:-1;font-size:clamp(24px,3vw,36px);line-height:1.5;letter-spacing:-.8px;margin-bottom:24px;text-wrap:pretty}
+.help-voice-garden .help-voice-pages>li[data-long=true]>p{font-size:clamp(21px,2.4vw,29px)}
+.help-voice-garden .help-supporter-meta{justify-content:center}
+.help-voice-garden .help-voice-people{position:relative;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;align-items:end;max-width:830px;margin:25px auto 12px;padding:0 25px 30px;isolation:isolate}
+.help-voice-garden .help-voice-people::before{content:'';position:absolute;bottom:13px;left:0;right:0;height:38px;background:#e1e8d4;border-radius:50% 50% 45% 45%;z-index:-1}
+.help-voice-garden .help-voice-person{--stem:45px;position:relative;display:flex;align-items:center;flex-direction:column;gap:8px;background:none;padding:5px 3px calc(var(--stem) + 10px);font-size:12px}
+.help-voice-garden .help-voice-person:nth-child(3n+2){--stem:80px}
+.help-voice-garden .help-voice-person:nth-child(3n){--stem:60px}
+.help-voice-garden .help-voice-seed{width:63px;height:63px;border-radius:44% 56% 35% 65% / 53% 40% 60% 47%;background:#e0e7bd;color:#456646;font-size:21px;transform:rotate(-8deg);transition:transform .25s ease,background .25s ease}
+.help-voice-garden .help-voice-person:nth-child(even) .help-voice-seed{background:#e8dec6;border-radius:63% 37% 59% 41% / 48% 60% 40% 52%;transform:rotate(7deg)}
+.help-voice-garden .help-voice-person::before{content:'';position:absolute;bottom:0;height:var(--stem);width:3px;background:#a6bb8b;border-radius:100%;transform:rotate(-4deg);z-index:-1}
+.help-voice-garden .help-voice-person::after{content:'';position:absolute;bottom:18px;margin-left:18px;width:23px;height:13px;border-radius:100% 0 100% 0;background:#c2d1ab;transform:rotate(-10deg)}
+.help-voice-garden .help-voice-person[aria-pressed=true] .help-voice-seed{background:#54754e;color:#fffdf5;transform:rotate(0) scale(1.12)}
+.help-voice-garden .help-voice-foot{max-width:780px;margin:0 auto}
+
+@media(max-width:760px){
+ .help-notes-words .help-message-viewport{--message-gap:24px;mask-image:linear-gradient(to right,transparent,#000 16px,#000 calc(100% - 16px),transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 16px,#000 calc(100% - 16px),transparent)}
+ .help-notes-words .help-supporters li{width:min(310px,80vw);height:230px;padding:36px 8px 14px}
+ .help-notes-words .help-supporters li>p{font-size:21px}
+ .help-notes-words .help-note-read{left:8px}
+ .help-voice-spotlight{grid-template-columns:1fr;gap:10px}
+ .help-voice-spotlight .help-voice-stage{padding-top:35px}
+ .help-voice-spotlight .help-voice-stage::before{font-size:130px;top:-34px}
+ .help-voice-spotlight .help-voice-pages>li{min-height:220px}
+ .help-voice-spotlight .help-voice-people{flex-direction:row;max-height:none;gap:8px;padding:12px 2px}
+ .help-voice-spotlight .help-voice-person{flex:none;gap:7px;font-size:12px;padding:4px 8px 4px 4px}
+ .help-voice-spotlight .help-voice-seed{width:30px;height:30px}
+ .help-voice-letters{padding:15px 10px 0}
+ .help-voice-letters .help-voice-stage{margin-bottom:28px}
+ .help-voice-letters .help-voice-pages{padding:24px}
+ .help-voice-letters .help-voice-pages>li{min-height:240px}
+ .help-voice-letters .help-voice-pages>li>p{font-size:20px;line-height:1.6}
+ .help-voice-letters .help-voice-people{justify-content:flex-start}
+ .help-voice-garden .help-voice-stage{padding:0 4px}
+ .help-voice-garden .help-voice-pages>li{min-height:220px}
+ .help-voice-garden .help-voice-people{gap:0;padding:0 0 25px;margin-top:20px}
+ .help-voice-garden .help-voice-seed{width:38px;height:40px;font-size:16px}
+ .help-voice-garden .help-voice-name{font-size:10px;max-width:47px}
+ .help-voice-garden .help-voice-person{--stem:30px}
+ .help-voice-garden .help-voice-person:nth-child(3n+2){--stem:60px}
+ .help-voice-garden .help-voice-person:nth-child(3n){--stem:45px}
+}
+@media(prefers-reduced-motion:reduce){.help-voice-pages,.help-voice-seed{transition:none}}

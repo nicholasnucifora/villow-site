@@ -1,0 +1,64 @@
+---
+/* Jump links to every block on the page that has both an id and a heading. */
+import type { Block, BlockOf } from "../../lib/schema";
+import { inline } from "../../lib/markdown";
+import BlockShell from "../ui/BlockShell.astro";
+
+interface Props {
+  block: BlockOf<"toc">;
+  blocks: Block[];
+}
+
+const { block, blocks } = Astro.props;
+const entries = blocks.flatMap((b) => (b.id && "heading" in b && b.heading && b.type !== "toc" ? [{ id: b.id, heading: b.heading }] : []));
+---
+
+<BlockShell type="toc" id={block.id} background={block.background}>
+  <nav class="toc" aria-label={block.heading}>
+    {block.heading && <p class="toc__heading">{block.heading}</p>}
+    <ul>
+      {
+        entries.map((entry) => (
+          <li>
+            <a href={`#${entry.id}`} set:html={inline(entry.heading)} />
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</BlockShell>
+
+<style>
+  .toc {
+    display: grid;
+    gap: var(--space-sm);
+  }
+  .toc__heading {
+    font-size: var(--text-xs);
+    font-weight: var(--weight-strong);
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+  }
+  .toc ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .toc a {
+    display: block;
+    padding: var(--space-2xs) var(--space-sm);
+    border-radius: var(--radius-pill);
+    border: var(--border);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: var(--text-sm);
+    text-decoration: none;
+  }
+  .toc a:hover {
+    border-color: var(--color-accent);
+  }
+</style>

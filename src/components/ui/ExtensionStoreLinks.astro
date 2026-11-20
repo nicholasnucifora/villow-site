@@ -1,0 +1,9 @@
+---
+import { extensionStoreMarkup } from '../../lib/extension-store-links.js';
+import '../../styles/extension-store-links.css';
+---
+<Fragment set:html={extensionStoreMarkup()} />
+<script>
+  import { initialiseExtensionStores } from '../../lib/extension-store-links.js';
+  initialiseExtensionStores();
+</script>

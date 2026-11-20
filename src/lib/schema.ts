@@ -145,6 +145,7 @@ const steps = z.strictObject({
 const cards = z.strictObject({
   type: z.literal("cards"),
   ...blockBase,
+  variant: z.enum(["default", "screenshots"]).default("default"),
   heading: text.optional(),
   intro: text.optional(),
   items: z.array(

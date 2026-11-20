@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-10",
+  "mode": "Supplied originals plus one built-in image_gen background edit",
+  "sources": [
+    "C:/Users/Nebula PC/OneDrive/Desktop/w-background-original Updated.png",
+    "C:/Users/Nebula PC/OneDrive/Desktop/front hill.png",
+    "C:/Users/Nebula PC/OneDrive/Desktop/tree_forest.png"
+  ],
+  "background": {
+    "prompt": "Use case: precise-object-edit. Edit target: the attached updated wide landscape, for an aligned website background layer. Preserve the full 3:1 composition, original pale neutral-white sky, cream clouds, three birds, pale sage rolling middle-distance hills and exactly the same sun position, sun size and warm glow. Remove ONLY all trees and bushes from the left and right edges, and the nearest/darkest foreground hill along the bottom. Reconstruct the naturally continuous middle-distance hills and sky behind those removed elements all the way to the edges and bottom. Do not leave holes. Do not move, resize or redraw the sun, clouds, birds or existing middle hill contours. Match the original smooth gentle shading and colours closely. No new objects, trees, shrubs, foreground hill, text or border. Keep landscape aspect ratio exactly 3:1; opaque full canvas. This will sit behind the user's original transparent tree and foreground layers.",
+    "source": "C:/Users/Nebula PC/.codex/generated_images/01a1bbf5-0840-7600-a1af-48b492fe1751/exec-36fdad15-f8cf-46e4-8e40-86311f0006f0.png",
+    "delivery": "backdrop.webp"
+  },
+  "processing": "WebP encoding/resizing; legacy presets retain their existing crop dimensions. Supplied PNG originals are copied unchanged. New tree viewports display portions of the supplied image; no new tree or hill illustration."
+}

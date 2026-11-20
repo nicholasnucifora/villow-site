@@ -1,0 +1,15 @@
+.w-devices{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:90px;align-items:center;margin:110px auto 100px;padding-top:55px;border-top:1px solid #dde4d6;color:#244d43}
+.w-device-copy{max-width:440px}
+.w-device-copy h2{font:400 clamp(28px,2.6vw,35px)/1.22 'Varela Round',sans-serif;letter-spacing:-.04em;margin:0 0 20px}
+.w-device-copy p{font-size:15px;line-height:1.85;color:#536f61;margin:0;max-width:420px;text-wrap:pretty}
+.w-device-copy .w-browser-note{font-size:12px;line-height:1.8;margin-top:13px;max-width:390px}
+.w-device-art{margin:0;max-width:500px;justify-self:end;width:100%}
+.w-device-art img{display:block;width:100%;height:auto}
+
+.w-closing .hc-inner{max-width:1040px}
+.w-closing h2{font-size:clamp(42px,5.1vw,64px)}
+.w-closing .hc-copy{max-width:660px}
+@media(max-width:900px){.w-devices{gap:45px;margin-top:90px;margin-bottom:80px}.w-device-copy p{font-size:14px}.w-closing h2{font-size:50px}}
+@media(max-width:600px){.w-devices{grid-template-columns:1fr;gap:32px;margin:75px auto 60px;padding-top:40px}.w-device-copy{max-width:430px}.w-device-copy h2{font-size:30px}.w-device-art{max-width:350px;justify-self:center}.w-device-copy .w-browser-note{font-size:12px}.w-closing h2{font-size:40px}}
+@media(max-width:360px){.w-device-copy h2{font-size:28px}.w-closing h2{font-size:35px}}
+

@@ -1,0 +1,23 @@
+{
+  "preservedFiles": 55,
+  "changed": [],
+  "sameOtherContent": true,
+  "originalCopyUnchanged": true,
+  "storyCount": 5,
+  "assets": [
+    {
+      "file": "w-watcher-browser-v4.webp",
+      "width": 1536,
+      "height": 1024,
+      "alpha": true,
+      "cornerAlpha": 0
+    },
+    {
+      "file": "w-watcher-allrounder-v3.webp",
+      "width": 1536,
+      "height": 1024,
+      "alpha": true,
+      "cornerAlpha": 0
+    }
+  ]
+}

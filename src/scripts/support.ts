@@ -1,3 +1,4 @@
+import { mountCheckoutReturn } from '../../previews/homepage/help-checkout-return.js';
 const root = document.querySelector<HTMLElement>("[data-support]");
 if (root) {
   const copy = JSON.parse(root.dataset.copy || "{}");
@@ -11,6 +12,8 @@ if (root) {
   let enabled = false;
   let token: string | null = null;
   const fragment = new URLSearchParams(location.hash.slice(1));
+  const checkoutToken = fragment.get('checkout') || history.state?.supportCheckoutToken;
+  if (fragment.has('checkout')) history.replaceState({ ...history.state, supportCheckoutToken: checkoutToken }, '', location.pathname + location.search);
   if (fragment.has("remove")) {
     token = fragment.get("remove");
     history.replaceState(null, "", location.pathname + location.search);
@@ -27,7 +30,7 @@ if (root) {
       ...(body ? { headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : {}),
     });
     const data = await response.json();
-    if (!response.ok) throw new Error(data.error || copy.error);
+    if (!response.ok) throw Object.assign(new Error(data.error || copy.error), { status: response.status });
     return data;
   }
   function changeAmount() {
@@ -58,12 +61,15 @@ if (root) {
       location.assign(target.href);
     } catch (error) { paymentStatus.textContent = error instanceof Error ? error.message : copy.error; pay.disabled = !enabled; }
   });
+  let feedRequest = 0;
   async function loadFeed() {
+    const current = ++feedRequest;
     const status = get("[data-feed-status]");
     const list = get("[data-supporters]");
     try {
       if (!api) { status.textContent = copy.empty; return; }
       const { supporters } = await request("supporters");
+      if (current !== feedRequest) return;
       list.replaceChildren();
       for (const supporter of supporters) {
         const item = document.createElement("li");
@@ -83,7 +89,7 @@ if (root) {
         meta.append(badge, time); item.append(meta); list.append(item);
       }
       status.textContent = supporters.length ? "" : copy.empty;
-    } catch { status.textContent = copy.feedError; }
+    } catch { if (current === feedRequest) status.textContent = copy.feedError; }
   }
   removal.addEventListener("submit", async event => {
     event.preventDefault();
@@ -108,6 +114,8 @@ if (root) {
   });
   get("[data-keep]").addEventListener("click", () => { token = null; get("[data-confirm-panel]").hidden = true; });
   changeAmount();
+  const confirmation = mountCheckoutReturn(root, { payment: returned, token: checkoutToken, request, reloadFeed: loadFeed });
+  window.addEventListener('pageshow', event => { if (event.persisted) void loadFeed(); });
   void loadFeed();
   void (async () => {
     paymentStatus.textContent = returnMessage || copy.unavailable;
@@ -115,6 +123,7 @@ if (root) {
     removal.querySelector("button")!.disabled = false;
     try {
       const config = await request("config");
+      confirmation.configure(config);
       enabled = config.enabled === true;
       pay.disabled = !enabled;
       paymentStatus.textContent = [returnMessage, enabled ? config.mode === "test" ? copy.test : copy.ready : copy.unavailable].filter(Boolean).join(" ");
@@ -122,6 +131,6 @@ if (root) {
         const portal = get<HTMLAnchorElement>("[data-portal]"); portal.href = config.portal; portal.hidden = false;
         get("[data-portal-unavailable]").hidden = true;
       }
-    } catch { paymentStatus.textContent = returnMessage || copy.error; }
+    } catch { paymentStatus.textContent = returnMessage || copy.error; confirmation.unavailable(); }
   })();
 }

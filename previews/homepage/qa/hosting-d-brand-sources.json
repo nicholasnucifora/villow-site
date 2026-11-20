@@ -1,0 +1,9 @@
+{
+  "checked": "2026-11-09",
+  "assets": [
+    {"file": "assets/extension-youtube-logo.png", "source": "Existing app-owned YouTube artwork reused unchanged", "guidance": "https://developers.google.com/youtube/terms/branding-guidelines"},
+    {"file": "assets/hosting-help/vercel-symbol.svg", "source": "https://vercel.com/geist/brands/assets/vercel-symbol-black.svg", "guidance": "https://vercel.com/geist/brands"},
+    {"file": "assets/hosting-help/supabase-icon.svg", "source": "https://supabase.com/brand-assets/supabase-icon-green-transparent.svg", "guidance": "https://supabase.com/brand"},
+    {"file": "assets/villow-mark-small-on-light.svg", "source": "Existing Villow brand asset reused unchanged"}
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "images": [
+    {
+      "loaded": true,
+      "src": "assets/w-watcher-gardener-v1.webp"
+    },
+    {
+      "loaded": true,
+      "src": "assets/w-watcher-shorts-v1.webp"
+    },
+    {
+      "loaded": true,
+      "src": "assets/w-watcher-browser-v4.webp"
+    },
+    {
+      "loaded": true,
+      "src": "assets/w-watcher-evenings-v1.webp"
+    },
+    {
+      "loaded": true,
+      "src": "assets/w-watcher-allrounder-v3.webp"
+    }
+  ],
+  "labels": [
+    "1 of 5: The channel gardener",
+    "2 of 5: The Shorts fan",
+    "3 of 5: The curious browser",
+    "4 of 5: The evening planner",
+    "5 of 5: The all-rounder"
+  ],
+  "markers": 5,
+  "overflow": false,
+  "slides": 5,
+  "story": "allrounder",
+  "viewport": {
+    "height": 1170,
+    "width": 351
+  },
+  "keyboardWrap": "gardener",
+  "keyboardEnd": "allrounder",
+  "desktop": {
+    "markerCount": 5,
+    "overflow": false,
+    "stageHeight": 336.609375,
+    "width": 1280
+  },
+  "final": {
+    "images": [
+      {
+        "loaded": true,
+        "src": "assets/w-watcher-gardener-v1.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/w-watcher-shorts-v1.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/w-watcher-browser-v4.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/w-watcher-evenings-v1.webp"
+      },
+      {
+        "loaded": true,
+        "src": "assets/w-watcher-allrounder-v3.webp"
+      }
+    ],
+    "motion": "manual",
+    "overflow": false,
+    "rotation": "paused",
+    "selected": [
+      "allrounder"
+    ],
+    "story": "allrounder",
+    "visibleSlides": [
+      "5 of 5: The all-rounder"
+    ]
+  },
+  "consoleErrors": []
+}

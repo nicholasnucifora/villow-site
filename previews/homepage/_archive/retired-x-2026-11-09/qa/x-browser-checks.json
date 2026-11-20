@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-09",
+  "url": "http://127.0.0.1:4411/x.html",
+  "checkedWidths": [320, 390, 768, 861, 1024, 1280, 1920],
+  "horizontalOverflow": false,
+  "tablet861": {"sceneWidth": 610, "copyToSceneGap": 27, "stacked": true},
+  "desktop1280": {"heroLeft": 87.5, "sceneWidth": 578.609375, "twoColumns": true},
+  "mobile390Footer": {"waveHeight": 40, "sectionBackgroundImage": "none"},
+  "narrow320": {"screenWidth": 134.5, "ratingPromptFits": true},
+  "player": {
+    "keyboardSeekEndShowsReflection": true,
+    "worthItSetsAriaPressed": true,
+    "keyboardSeekHomeResetsProgress": true,
+    "manualPlayEntersPlaying": true,
+    "playbackFinishesAtOptionalRating": true,
+    "heroImagesLoaded": true,
+    "consoleWarningsOrErrors": [],
+    "prefersReducedMotionInitially": true
+  },
+  "checks": [
+    "qa/x-preservation.test.mjs",
+    "qa/page-preview-navigation.test.mjs",
+    "qa/study-navigation-position.test.mjs"
+  ],
+  "proof": ["qa/x-hero-desktop.png", "qa/x-footer-mobile.png"],
+  "scope": "Local preview; W preserved apart from shared navigation. Other W artwork remains."
+}

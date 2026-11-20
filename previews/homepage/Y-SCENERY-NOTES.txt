@@ -1,0 +1,63 @@
+Preset Y — Scenery that fits
+Local comparison: http://127.0.0.1:4411/y.html
+Reference: http://127.0.0.1:4411/w.html
+
+Art direction
+- Retains W's original wide landscape above 1600px, including its soft gradients,
+  sage palette, pale sunrise, clouds and trees.
+- Two image_gen edits recompose that same supplied image for tablet and phone.
+  These remain AI-generated illustrations, not human retouching or layered art.
+- Phone: assets/y-landscape/phone-source.png, 1536 x 1024.
+- Tablet: assets/y-landscape/tablet-source.png, 1774 x 887.
+- Matching WebP delivery files are 15 KB and 21 KB. Encoding only; no stretching.
+- Exact generation prompts/reference/mode: assets/y-landscape/provenance.json.
+- Sources select at 700px and 1600px. CSS crops the scenery edges around the sun;
+  peripheral trees/clouds can leave the frame. No per-device JS.
+
+Layout
+- Refinement after the user's screenshots: the landscape fills the hero behind
+  its text and cinema, rather than appearing as a smaller strip underneath.
+- Header, body and hero share #fdfdfd, sampled from the image's neutral sky.
+  The old blue-white page background is removed from Y's opening scene.
+- Landscape scale is anchored to a minimum art height (900px phone, 1000px
+  tablet, 740px wide). Width changes crop the sides rather than miniaturising
+  the hills and sun. Larger screens can expand the original wide image to fill.
+- A phone-only sky fade keeps birds away from the stacked copy; sun and hills
+  stay behind the cinema. Images retain their natural proportions.
+- The cinema uses its natural 2:1 stage at every size. Content sets the stacked
+  hero's height; the two-column hero has room for text above the horizon.
+- Copy and cinema remain beside each other above 700px, stacking below.
+- Narrow artwork is capped at 520px. Small phones gain 20px around the scene;
+  the reflection prompt also fits inside the original player at 320px.
+- The footer reuses W's existing SVG curves at their original aspect ratio in
+  an independent decorative band. Closing text no longer stretches the hills.
+- render-y.mjs derives from saved W without replacing its cinema or interactions.
+  All changes are in this preview folder. X stays retired. Nothing published.
+
+Initial verification, 10 November 2026
+- Browser sizes: 320, 390, 600, 601, 700, 701, 768, 861, 1024, 1100, 1101,
+  1280, 1920 and 2560px. No horizontal overflow; correct landscape source loaded.
+- Visual review: small phones, stacked 600/700px, side-by-side 861/1024px,
+  original desktop hero, and phone/wide footer. Proofs: qa/y-*.png.
+- At 320px keyboard seeking, reflection fit, selecting Worth it and resetting
+  by seeking were checked. Browser showed no warnings or errors.
+- Existing page-preview-navigation and study-navigation-position checks passed.
+- Source comparison confirmed unchanged cinema markup and remaining W content,
+  apart from the preview identity/current local links. Y-only CSS stays isolated.
+- Machine-readable measurements: qa/y-responsive-checks.json.
+
+Full-background refinement verification, 10 November 2026
+- Checked 15 widths from 320 to 2560px, including 700/701, 1100/1101,
+  1600/1601 and the supplied screenshot's 1168px width. No horizontal overflow.
+- Background covers the full hero at every size; header and hero are both
+  rgb(253,253,253). Landscape rendered width stays 1350px across phones and
+  2000px across tablets rather than shrinking with the viewport.
+- New proof screenshots: qa/y-unified-phone-390.png and
+  qa/y-unified-desktop-1168.png. Metrics: qa/y-unified-scene-checks.json.
+- 320px keyboard seeking, end rating and reset passed. Existing navigation,
+  semantic position and source preservation checks passed again.
+- W and the footer treatment are unchanged by this refinement.
+
+Rebuild with node previews/homepage/render-y.mjs, then
+node previews/homepage/sync-preview-pages.mjs.
+The expanded server is node previews/homepage/serve-r.mjs on port 4411.

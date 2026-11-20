@@ -1,0 +1,124 @@
+/* 30: whole backgrounds scale naturally; trees and the nearest hill are
+   separate layers. Hero height follows content so scenery never drifts away. */
+.version-30-blended {--i-sky:#fdfdfd;background-color:var(--i-sky)}
+.version-30-blended .preview-site-header,
+.version-30-blended .ip-hero {background:var(--i-sky)}
+.version-30-blended .ip-hero[data-ip-view] .i-hero-inner {
+ min-height:0;
+ padding-top:24px;
+ padding-bottom:clamp(84px,calc(13.3vw - 30px),504px);
+ align-items:center;
+}
+.version-30-blended .ip-hero .ip-product-space {min-height:0;align-self:center}
+.version-30-blended .ip-hero[data-ip-view] [data-ic-panel] {width:100%;max-width:680px;margin:0 auto}
+.version-30-blended .ip-hero[data-ip-view] .ic-stage {height:auto;min-height:0;aspect-ratio:2/1}
+.version-30-blended .ip-hero .ig-cinema {height:100%;min-height:0}
+.version-30-blended .ip-hero .ig-cinema-art {transform:none}
+.version-30-blended .p27-scenery {position:absolute;inset:0;z-index:0;pointer-events:none;user-select:none;overflow:hidden}
+.version-30-blended .p27-scenery-backdrop {position:absolute;inset:auto 0 0;display:block;width:100%;mask-image:linear-gradient(to bottom,transparent,#000 22%)}
+.version-30-blended .p27-scenery-backdrop img {display:block;width:100%;height:auto}
+.version-30-blended .p27-scenery-trees {position:absolute;display:block;height:auto;z-index:1}
+.version-30-blended .p27-scenery-trees-left {
+ --forest-width:clamp(148px,calc(38vw - 300px),440px);
+ left:0;width:var(--forest-width);
+ bottom:calc(3.2vw - 10px - var(--forest-width)*.182162 + clamp(14px,1.2vw,32px));
+}
+.version-30-blended .p27-scenery-trees-right {
+ --forest-width:clamp(132px,9.5vw,240px);
+ right:-4px;width:var(--forest-width);
+ bottom:calc(3.2vw - 14px - var(--forest-width)*.455405 + clamp(8px,.6vw,16px));
+}
+.version-30-blended .p27-scenery-foreground {position:absolute;z-index:2;inset:auto 0 0;display:block;width:100%;height:auto}
+/* Lift the entire, bottom-anchored landscape by shortening the empty space
+   below the hero content. The adjustment starts at zero, so resizing through
+   1200px has no jump. The narrower hero refinements are scoped below. */
+@media (min-width:1200px) {
+ .version-30-blended .ip-hero[data-ip-view] .i-hero-inner {
+  padding-bottom:calc(clamp(84px,calc(13.3vw - 30px),504px) - clamp(0px,calc(8vw - 96px),160px));
+ }
+ .version-30-blended .p27-scenery-trees-left {
+  --forest-width:calc(clamp(148px,calc(38vw - 300px),440px) + clamp(0px,calc(8vw - 96px),80px));
+ }
+ .version-30-blended .p27-scenery-trees-right {
+  --forest-width:calc(clamp(132px,9.5vw,240px) + clamp(0px,calc(2.5vw - 30px),32px));
+ }
+}
+@media (max-width:1100px) {
+ .version-30-blended .ip-hero[data-ip-view] [data-ic-panel] {max-width:600px}
+}
+@media (max-width:700px) {
+ .version-30-blended .ip-hero[data-ip-view] .i-hero-inner {
+  width:calc(100% - 40px);max-width:600px;min-height:0;
+  padding-top:20px;padding-bottom:118px;
+  display:grid;grid-template-columns:minmax(0,1fr);gap:0;
+ }
+ .version-30-blended .ip-hero .i-hero-copy {padding-top:0}
+ .version-30-blended .ip-hero .i-hero-copy > .i-primary {display:inline-flex}
+ .version-30-blended .ip-hero .i-lead {max-width:510px}
+ .version-30-blended .ip-hero .ip-product-space {margin-top:8px}
+ .version-30-blended .ip-hero[data-ip-view] [data-ic-panel] {max-width:440px}
+ .version-30-blended .p27-scenery {--p27-ground-drop:clamp(0px,calc(40px - 5.7vw),22px)}
+ .version-30-blended .p27-scenery-backdrop {width:800px;left:auto;right:0}
+ /* Extended hidden bases let the original trailing shrubs show above the hill. */
+ .version-30-blended .p27-scenery-trees-left {--forest-width:clamp(160px,28vw,195px);left:-12px;bottom:calc(clamp(5px,calc(83px - 14vw),28px) - var(--p27-ground-drop) - var(--forest-width)*.182162 + 12px)}
+ /* The right-aligned foreground keeps the same ground beneath this group. */
+ .version-30-blended .p27-scenery-trees-right {--forest-width:132px;right:-4px;bottom:calc(22px - var(--p27-ground-drop) - var(--forest-width)*.455405 + 8px)}
+}
+@media (max-width:700px) {
+ /* Shift hill and trees together, revealing the distant hills on phones. */
+ .version-30-blended .p27-scenery-foreground {width:900px;max-width:none;left:auto;right:0;bottom:calc(0px - var(--p27-ground-drop))}
+}
+@media (max-width:360px) {
+ .version-30-blended .ip-hero[data-ip-view] [data-ic-panel] {width:calc(100% + 20px);max-width:none;margin-inline:-10px}
+}
+@container (max-width:95px) {
+ .version-30-blended .ig-cinema-reflection {bottom:16px}
+}
+
+/* Keep W's meadow shapes. Their shallow depth is controlled separately from
+   page width and footer text height, so narrow windows don't inflate the waves. */
+.version-30-blended .fs-closing {
+ --meadow-band:clamp(72px,calc(3vw + 44px),130px);
+ position:relative;isolation:isolate;
+ background-image:linear-gradient(to bottom,#fbfaf3 calc(100% - 4px),#c7cfb7 0);
+ padding-bottom:calc(44px + var(--meadow-band));
+}
+.version-30-blended .fs-closing::after {
+ content:"";position:absolute;z-index:-1;inset:auto 0 -1px;
+ height:var(--meadow-band);
+ background:url('assets/p-meadow-simple.svg') 45% bottom / max(900px,100%) clamp(160px,calc(18vw + 80px),510px) no-repeat;
+ pointer-events:none;
+}
+
+/* Preserve 28: keep the desktop scene, with a landscape-led hero when it stacks. */
+@media (max-width:700px) {
+ .version-30-blended .ip-hero .ip-product-space {display:none}
+ .version-30-blended .ip-hero[data-ip-view] .i-hero-inner {padding-bottom:140px}
+ .version-30-blended .ip-hero .i-hero-copy {width:100%;max-width:540px;margin-inline:auto;text-align:center}
+ .version-30-blended .ip-hero .i-hero-copy h1,
+ .version-30-blended .ip-hero .i-lead {margin-inline:auto}
+}
+
+/* Match each section's existing one-column breakpoint. */
+@media (max-width:760px) {
+ .version-30-blended .wf-copy,
+ .version-30-blended .it-l-header {width:100%;max-width:460px;justify-self:center;margin-inline:auto;text-align:center}
+ .version-30-blended .wf-copy > :is(h2,p),
+ .version-30-blended .it-l-header > :is(h2,p) {margin-inline:auto}
+}
+@media (max-width:650px) {
+ .version-30-blended .n-social-header {text-align:center}
+ .version-30-blended .n-social-header > :is(h2,p),
+ .version-30-blended .n-social-card > :is(h3,p) {margin-inline:auto;text-align:center}
+ .version-30-blended .n-social-card > p {max-width:430px}
+ .version-30-blended .n-devices {flex-direction:column;text-align:center;gap:18px}
+ .version-30-blended .n-devices > div {max-width:430px}
+}
+@media (max-width:600px) {
+ .version-30-blended .v-watching-choices {max-width:335px;margin-inline:auto}
+ .version-30-blended .m-concepts {text-align:center;justify-items:center}
+ .version-30-blended .m-concepts .rd-concepts-link {justify-self:center}
+ .version-30-blended .hc-inner {text-align:center}
+ .version-30-blended .hc-inner > :is(h2,p) {margin-inline:auto}
+ .version-30-blended .hc-actions {justify-content:center}
+}

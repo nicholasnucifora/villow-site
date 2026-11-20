@@ -1,0 +1,58 @@
+/* C stays selected. D–F compare card treatments with the same motion and reader. */
+.help-notes-compact .help-message-viewport{--message-gap:16px;mask-image:linear-gradient(to right,transparent,#000 30px,#000 calc(100% - 30px),transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 30px,#000 calc(100% - 30px),transparent)}
+.help-notes-compact .help-supporters li{position:relative;width:300px;height:168px;padding:16px;border-radius:17px}
+.help-notes-compact .help-supporters{align-items:stretch}
+.help-notes-compact .help-supporters li>p{margin-top:8px;font-size:15px;line-height:1.55;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden}
+.help-notes-compact .help-supporter-meta{gap:2px 8px;font-size:11px;line-height:1.3}
+.help-notes-compact .help-supporter-meta{max-height:36px;overflow:hidden}
+.help-notes-compact .help-supporter-meta strong{font-size:14px;max-width:160px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.help-notes-compact .help-supporter-amount{font-size:12px}
+.help-notes-compact .help-supporter-meta time::before{margin-right:7px}
+.help-notes-compact .help-message-viewport+.help-message-viewport{margin-top:16px}
+.help-notes-compact .help-message-viewport[data-single=true]{mask-image:none;-webkit-mask-image:none}
+.help-supporters li[data-readable=true]{cursor:pointer}
+.help-note-read{position:absolute;inset:0;z-index:1;display:block;width:100%;height:100%;border:0;border-radius:inherit;background:none;padding:0;color:inherit;cursor:pointer;font:inherit}
+.help-note-read:focus-visible{outline:2px solid #54755e;outline-offset:-4px}
+.help-supporters li[data-readable=true]:hover{filter:brightness(.98)}
+
+/* D · Quotations — a generous opening mark, with the signature beneath. */
+.help-notes-quotes .help-supporters li{width:320px;padding:18px 18px 18px 44px;background:#e9efdf;border-radius:22px}
+.help-notes-quotes .help-supporters li::before{content:'“';position:absolute;left:12px;top:2px;font:72px/1 Georgia,serif;color:#98ac80;pointer-events:none}
+.help-notes-quotes .help-supporters li>p{margin:0;font-family:'Varela Round',sans-serif;font-size:17px;line-height:1.5;-webkit-line-clamp:3}
+.help-notes-quotes .help-supporter-meta{position:absolute;left:44px;right:18px;bottom:17px;gap:2px 7px}
+.help-notes-quotes .help-supporter-meta strong{font-size:13px}
+.help-notes-quotes [data-message-viewport-secondary] li{background:#f0ecdF}
+
+/* E · Folded notes — warm paper, serif text and a quiet folded corner. */
+.help-notes-paper .help-supporters li{padding:17px 22px 17px 19px;background:#f1eddc;border-radius:7px 24px 7px 7px;overflow:hidden}
+.help-notes-paper .help-supporters li::after{content:'';position:absolute;top:0;right:0;width:22px;height:22px;background:linear-gradient(45deg,#dddac4 49%,#fbfaf3 50%);border-radius:0 0 0 5px;pointer-events:none}
+.help-notes-paper .help-supporters li>p{margin:0;font:400 17px/1.35 Georgia,serif;-webkit-line-clamp:4;color:#3f5b47}
+.help-notes-paper .help-supporter-meta{position:absolute;left:19px;right:18px;bottom:15px;gap:2px 7px}
+.help-notes-paper .help-supporter-meta strong{font-size:13px}
+.help-notes-paper [data-message-viewport-secondary] li{background:#e8eee0}
+.help-notes-paper [data-message-viewport-secondary] li::after{background:linear-gradient(45deg,#cdd9c4 49%,#fbfaf3 50%)}
+
+/* F · Conversation — pill-shaped signatures and softly coloured speech bubbles. */
+.help-notes-bubbles .help-supporters li{padding:16px 20px;background:#e2ecdf;border-radius:25px 25px 25px 5px}
+.help-notes-bubbles .help-supporters li[data-note-tone="1"]{background:#f1e8d8}
+.help-notes-bubbles .help-supporters li[data-note-tone="2"]{background:#e3edeb}
+.help-notes-bubbles [data-message-viewport-secondary] li{border-radius:25px 25px 5px 25px}
+.help-notes-bubbles .help-supporter-meta{max-height:42px;gap:3px 7px;align-items:center}
+.help-notes-bubbles .help-supporter-meta strong{padding:2px 9px;border-radius:100px;background:#fbfaf380;font-size:13px}
+.help-notes-bubbles .help-supporters li>p{margin-top:10px;font-size:16px;line-height:1.5;-webkit-line-clamp:3}
+
+.help-note-reader{box-sizing:border-box;width:min(580px,calc(100% - 32px));max-height:calc(100dvh - 40px);overflow:auto;border:0;border-radius:22px;padding:32px;background:#fbfaf3;color:#315c49;box-shadow:0 25px 90px #193f3330}
+.help-note-reader::backdrop{background:#193f334d;backdrop-filter:blur(3px)}
+.secondary-preview .help-note-reader-title{font:600 18px/1.5 'Varela Round',sans-serif;margin:0 0 4px;overflow-wrap:anywhere}
+.help-note-reader-meta{font-size:12px;color:#71816d;margin:0 0 24px}
+.help-note-reader-text{font:400 23px/1.65 'Varela Round',sans-serif;overflow-wrap:anywhere;margin:24px 0 28px;user-select:text}
+.help-note-reader-text::before{content:'“';color:#9bac82}
+.help-note-reader-text::after{content:'”';color:#9bac82}
+.help-note-reader-close{display:block;margin-left:auto;border:0;background:#e7eedd;border-radius:100px;padding:11px 19px;font:inherit;font-size:13px;color:#315c49;cursor:pointer}
+
+@media(max-width:760px){
+ .help-notes-compact .help-supporters li{width:270px}
+ .help-note-reader{padding:24px}
+ .help-note-reader-text{font-size:20px}
+ .help-notes-compact .help-message-viewport{mask-image:linear-gradient(to right,transparent,#000 16px,#000 calc(100% - 16px),transparent);-webkit-mask-image:linear-gradient(to right,transparent,#000 16px,#000 calc(100% - 16px),transparent)}
+}

@@ -1,0 +1,102 @@
+title: Vercel hosting help
+description: What to do when your Villow says its deployment is temporarily paused, including Vercel support, shared usage, access controls and billing.
+
+blocks:
+  - type: hero
+    eyebrow: Owner help
+    title: Has your Villow been paused?
+    lead: If you see “This deployment is temporarily paused”, start with the Vercel account that hosts your Villow. If a friend invited you, contact them; they manage the hosting.
+    actions:
+      - label: Open Vercel support
+        href: https://vercel.com/help
+        style: primary
+      - label: Open Vercel dashboard →
+        href: https://vercel.com/dashboard
+        style: text
+
+  - type: cards
+    id: paused-screens
+    variant: screenshots
+    heading: Does your screen look like this?
+    intro: These are actual Vercel paused screens. Yours may be black or white. The small request identifier will be different; match the message above it.
+    items:
+      - title: Dark appearance
+        image: vercelPausedDark
+      - title: Light appearance
+        image: vercelPausedLight
+
+  - type: section
+    id: recognize
+    heading: What the paused screen means
+    body: |
+      Vercel can show a plain black or white page with **This deployment is temporarily paused** and a small request identifier underneath. This is the hosting provider's page, shown before Villow can load. The identifier alone doesn't tell you which limit was reached.
+
+      Check Vercel's email and the correct team's dashboard for the reason. Exceeding a Hobby allowance can pause your Villow for everyone using it, but a pause can also have other causes. Use the recovery instructions for the reason Vercel gives you.
+
+      Everyone using the same Villow contributes to its hosting usage. Friends don't receive a separate Vercel allowance just because they sign in with a different Google account. Review the actual usage metric before deciding what to change.
+
+  - type: steps
+    id: support-boost
+    heading: Ask about a one-time support boost
+    intro: Vercel documents a one-time boost for Hobby-limit pauses. It can give you time to reduce usage before deciding whether to pay.
+    layout: column
+    items:
+      - title: Open the Vercel support agent
+        body: Open [vercel.com/help](https://vercel.com/help) and sign in with the same Vercel account you used when setting up Villow. You can do this while your Villow is paused.
+      - title: Choose Vercel
+        body: When the agent offers **Vercel** and **v0**, choose **Vercel**. That is the service hosting your Villow.
+      - title: Select your own hosting team or projects
+        body: Under the account question, open the dropdown and select the team containing your Villow project. It may be labelled **Your name's projects**. Choose your own entry; if you have several teams, check the project's team in the Vercel dashboard first.
+      - title: Send this message
+        body: |
+          If Vercel's email or dashboard confirms a Hobby usage-limit pause, you can copy and send:
+
+          > My Villow website has been paused because I reached a Hobby usage limit. Could you check whether I can receive a one-time courtesy boost? I'd like time to review and reduce my usage before deciding whether to upgrade.
+
+          You can edit this to match your situation. If the reason is unclear, ask the agent which limit or issue caused the pause first.
+      - title: Read the offer and complete its form
+        body: If the agent offers a courtesy unblock, read its terms and complete the request form below its reply. Wait for an explicit confirmation that your account has been unblocked, note the expiry, then reopen your existing Villow address. One owner reported a confirmed 3× allowance for 30 days on 31 October 2026. Vercel controls eligibility, amount and duration; this isn't a guaranteed extra free month or a recurring reset.
+
+  - type: section
+    id: reduce-usage
+    heading: Use the extra time to reduce future usage
+    body: |
+      If you want to keep your Villow within the free allowance, review usage in Vercel and decide how many people you can continue hosting. Group capacity is still being tested; there isn't a reliable number of friends that guarantees free hosting.
+
+      Once Villow is available again, sign in as its owner and open **Admin → People**. Choose **Revoke access** beside a person and confirm. They can no longer use this Villow until you choose **Restore access**. Let them know if you are reducing your group.
+
+      Revoking access reduces that person's future app activity. It doesn't erase already-counted Vercel usage or guarantee the remaining activity will fit the free plan. Permanent account/data deletion is a separate action and isn't needed just to stop access.
+
+      These controls need Villow's running backend, so they cannot work from Vercel's paused screen. A support boost, when granted, can restore the opportunity to use them. Check usage again before the temporary allowance expires; continuing above the normal limit can lead to another pause.
+
+  - type: section
+    id: upgrade
+    heading: Upgrade directly with Vercel if you choose
+    body: |
+      Setup uses your own Vercel account and creates the project under the team you confirm. Sign in to the [Vercel dashboard](https://vercel.com/dashboard), select that team, then open **Settings → Billing → Upgrade** and review the plan before paying. If you chose a shared team, its owner or someone with billing permission may need to do this.
+
+      Check [current Pro pricing](https://vercel.com/docs/plans/pro-plan). The subscription can include additional usage charges; it isn't unlimited hosting for a fixed fee. Friends who only use Villow don't need Vercel developer seats. Setup doesn't handle payments or change your subscription automatically.
+
+  - type: section
+    id: waiting
+    heading: What if you prefer to wait?
+    body: |
+      Hobby usage generally uses a rolling 30-day window, rather than resetting on the first of each month. Recovery timing depends on the limit and Vercel's instructions; don't assume an exact date or automatic unpause. If the same activity resumes, the allowance may be reached again.
+
+      Villow can't replace Vercel's paused page on Hobby or Pro. Vercel's custom platform error-page feature requires Enterprise. Keep this guide bookmarked so you can find help even when your own Villow won't open.
+
+  - type: section
+    id: sources
+    heading: Check the current provider guidance
+    body: |
+      Reviewed 31 October 2026. The support offer described above was reported by a Villow owner; it is an example, not a promise for every account.
+
+      - [Vercel's one-time support boost guidance](https://community.vercel.com/t/what-to-do-when-your-team-is-paused-or-blocked/45069)
+      - [Deployment paused: reasons and next steps](https://vercel.com/docs/errors/deployment_paused)
+      - [Hobby limits and upgrading](https://vercel.com/docs/plans/hobby)
+      - [Vercel staff explanation of the rolling usage window](https://community.vercel.com/t/account-paused/1383/3)
+      - [Custom platform error pages](https://vercel.com/docs/custom-error-pages)
+    actions:
+      - label: Running your Villow →
+        href: /running-villow
+        style: text

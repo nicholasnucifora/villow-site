@@ -1,0 +1,20 @@
+{
+  "checkedOn": "2026-11-09",
+  "overview": "http://127.0.0.1:4411/setup-hosting-d.html",
+  "troubleshooting": "http://127.0.0.1:4411/setup-hosting-troubleshooting-d.html",
+  "widthsChecked": [319, 390, 1280],
+  "horizontalOverflow": false,
+  "desktopOverviewVisuallyReviewed": true,
+  "desktopExpandedTroubleshootingVisuallyReviewed": true,
+  "phoneExpandedTroubleshootingVisuallyReviewed": true,
+  "desktopTopicSidebarHiddenOnPhones": true,
+  "directTopicLinksOpenAnswers": true,
+  "repeatedTopicLinkReopensClosedAnswer": true,
+  "keyboardSummaryAndHelpLinkNavigation": true,
+  "reloadPositionsRequestedTopicBelowPreviewRail": true,
+  "setupPathPreservedBetweenOverviewAndTroubleshooting": true,
+  "adminRejectsInsecureAddress": true,
+  "pausedScreenshotNaturalWidth": 570,
+  "consoleWarningsOrErrorsObserved": [],
+  "notes": "B and C preservation and route/anchor checks passed separately. Provider dashboards, Discord and live Admin accounts were not operated."
+}

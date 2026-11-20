@@ -1,0 +1,8 @@
+/* The illustration occupies the lower edge, not the entire hero. The upper
+   fade only blends its sky into the HTML background; it does not cover copy. */
+.i-illustration{position:absolute;z-index:0;inset:auto 0 -28px;pointer-events:none;user-select:none;overflow:hidden;line-height:0;mask-image:linear-gradient(to bottom,transparent,#000 21%)}
+.i-illustration picture{display:block;width:100%;max-width:2560px;margin-inline:auto}
+.i-illustration img{display:block;width:100%;height:auto;max-height:640px;object-fit:cover;object-position:center bottom}
+@media(min-width:701px){.i-hero-illustrated .i-hero-inner{min-height:clamp(580px,calc(100svh - 185px),740px);padding-bottom:115px}}
+@media(min-width:2561px){.i-illustration{background:linear-gradient(transparent 66%,#add6c3)}}
+@media(max-width:700px){.i-illustration{bottom:-8px;mask-image:linear-gradient(to bottom,transparent,#000 18%)}.i-illustration img{max-height:none;aspect-ratio:1000/569;object-fit:cover}}

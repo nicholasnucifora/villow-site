@@ -1,0 +1,13 @@
+/* The new series begins with one A, based on the selected former X. */
+.version-a :is(#your-choices,#feed-to-watch-later,#o-limits,#o-viewing,#across-devices,#watch-with-people,#good-company,#watch-together,#beyond-watching,#help-shape-web){scroll-margin-top:75px}
+.version-a .i-preview-note{align-items:center}
+
+/* A brief bridge between chosen boundaries and viewing insights. */
+.version-a .a-integrated{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:64px;align-items:center;max-width:980px;margin:56px auto 0;padding-top:28px;border-top:1px solid #dce5d4;color:#244d43;scroll-margin-top:90px}
+.version-a .a-integrated h2{margin:0;font:400 32px/1.23 'Varela Round',sans-serif;letter-spacing:-.035em;text-wrap:balance;max-width:350px}
+.version-a .a-integrated-copy p{margin:0;font-size:15px;line-height:1.85;color:#536f61;text-wrap:pretty}
+.version-a .a-integrated-copy .a-integrated-placement{font-size:12px;line-height:1.7;margin-top:10px;color:#5b7d64}
+.version-a .a-integrated+.s-viewing{margin-top:78px}
+@media(max-width:900px){.version-a .a-integrated{gap:36px;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}.version-a .a-integrated h2{font-size:29px}.version-a .a-integrated-copy p{font-size:14px}}
+@media(max-width:600px){.version-a .a-integrated{grid-template-columns:1fr;gap:18px;margin-top:42px;padding-top:25px}.version-a .a-integrated h2{font-size:28px;max-width:320px;text-wrap:pretty}.version-a .a-integrated-copy p{font-size:14px;line-height:1.8}.version-a .a-integrated-copy .a-integrated-placement{font-size:12px;margin-top:9px}.version-a .a-integrated+.s-viewing{margin-top:62px}}
+@media(max-width:360px){.version-a .a-integrated h2{font-size:26px}}

@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-28",
+  "responsive": [
+    {
+      "accessibleCells": true,
+      "brokenImages": 0,
+      "headerFont": "17px",
+      "headerTextFits": true,
+      "overflow": false,
+      "playerFits": true,
+      "repeatedLabels": 0,
+      "taskTargets": [
+        44,
+        44
+      ],
+      "width": 320
+    },
+    {
+      "accessibleCells": true,
+      "brokenImages": 0,
+      "headerFont": "18px",
+      "headerTextFits": true,
+      "overflow": false,
+      "playerFits": true,
+      "repeatedLabels": 0,
+      "taskTargets": [
+        44,
+        44
+      ],
+      "width": 390
+    },
+    {
+      "accessibleCells": true,
+      "brokenImages": 0,
+      "headerFont": "18px",
+      "headerTextFits": true,
+      "overflow": false,
+      "playerFits": true,
+      "repeatedLabels": 0,
+      "taskTargets": [
+        44,
+        44
+      ],
+      "width": 600
+    },
+    {
+      "accessibleCells": true,
+      "brokenImages": 0,
+      "headerFont": "23px",
+      "headerTextFits": true,
+      "overflow": false,
+      "playerFits": true,
+      "repeatedLabels": 0,
+      "taskTargets": [
+        44,
+        44
+      ],
+      "width": 768
+    },
+    {
+      "accessibleCells": true,
+      "brokenImages": 0,
+      "headerFont": "26px",
+      "headerTextFits": true,
+      "overflow": false,
+      "playerFits": true,
+      "repeatedLabels": 0,
+      "taskTargets": [
+        44,
+        44
+      ],
+      "width": 1024
+    },
+    {
+      "accessibleCells": true,
+      "brokenImages": 0,
+      "headerFont": "28px",
+      "headerTextFits": true,
+      "overflow": false,
+      "playerFits": true,
+      "repeatedLabels": 0,
+      "taskTargets": [
+        44,
+        44
+      ],
+      "width": 1440
+    }
+  ],
+  "stickyHeader": {
+    "desktopTop": 42,
+    "mobileTop": 40,
+    "observed": true
+  },
+  "keyboardCompletion": "Space toggles native task completion on and off"
+}
